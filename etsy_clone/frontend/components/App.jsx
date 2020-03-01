@@ -9,17 +9,18 @@ import NavbarContainer from './navbar/navbar_container';
 
 const App = () => (
     <div>
-        <header>
+        <header className="header">
             {/* <h1>Etsy Clone</h1> */}
             {/* <GreetingContainer /> */}
             <NavbarContainer />
-            // Navbar
-            // Sign In 
-            // Cart icon 
         </header>
 
         <Route path="/signin" component={LoginFormContainer} />
         <Route path="/signup" component={SignupFormContainer} />
+
+        <div className="splash">
+                <h1>insert main page content here</h1>
+        </div>
     </div>
 );
 

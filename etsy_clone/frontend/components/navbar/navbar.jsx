@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Popup from './popup'
+import Popup from './popup';
+import {cartIcon, searchIcon, etsyLogo} from '../../../app/assets/images/svgs/icons'
 
 
 class Navbar extends React.Component {
@@ -22,11 +23,11 @@ class Navbar extends React.Component {
 
         const display = currentUser ? (
             <div>
-                <button onClick={signOut}>Log Out</button>
+                <p className="signin-signout" onClick={signOut}>Sign Out</p>
             </div>
         ) : (
             <div>
-                <button onClick={this.togglePopup}>Sign In</button>
+                <p className="signin-signout" onClick={this.togglePopup}>Sign In</p>
 
 
                     {this.state.showPopup ?
@@ -40,14 +41,29 @@ class Navbar extends React.Component {
             </div>
         );
 
+
+
         return(
-            <div>
-                <form className="searchbar" /*onSubmit={}*/>
-                    <input type="text" name="search" placeholder="Search for items or shops"/>
-                    <button type="submit"><i className="fa fa-search" ></i></button>
-                </form>
+            <div className="navbar">
+                <div className="navbar-inner">
+                    <div className="etsyLogo">
+                        {etsyLogo}
+                    </div>
+
+                    <form className="searchbar" /*onSubmit={}*/>
+                        <input type="text" name="search" placeholder="Search for items or shops"/>
+                            <div className="navbar-icon search-icon">
+                                {searchIcon}
+                            </div>
+                    </form>
+                    
+                    { display }
+
+                    <div className="navbar-icon cart-icon">
+                        { cartIcon }
+                    </div>
+                </div>
                 
-                { display }
             </div>
         )
     }

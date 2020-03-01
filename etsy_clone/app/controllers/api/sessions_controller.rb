@@ -15,7 +15,7 @@ class Api::SessionsController < ApplicationController
             signout
             render json: {}
         else
-            render json: ['Cannot log out'], status: 422
+            render json: ['Cannot sign out'], status: 422
         end
     end
 end
