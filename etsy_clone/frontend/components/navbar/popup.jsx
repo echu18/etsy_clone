@@ -30,35 +30,35 @@ class Popup extends React.Component {
 
         const display = this.state.formType === 'Sign In' ? (
                 <div>
-                    <SigninFormContainer />
+                    <SigninFormContainer formType={this.state.formType}/>
                 </div>
             ) : (
                 <div>
-                    <SignupFormContainer />
+                    <SignupFormContainer formType={this.state.formType}/>
                 </div>
             );
 
 
-        const signInPopup = (
-            <div> 
-                {display}
-                <button onClick={closePopup}>Close</button>
-                    {/* <button onClick={signIn}>Sign In</button>  */ }
-            </div>
-        )
-
-        const toggleButton = (this.state.formType === "Sign In") ?  (
-            <button onClick={this.toggleFormType}>Sign Up</button>
-        ) : (
-            <button onClick={this.toggleFormType}>Sign In</button>
-
-        )
-
+            
+            const toggleButton = (this.state.formType === "Sign In") ?  (
+                <button onClick={this.toggleFormType}>Sign Up</button>
+                ) : (
+                    <button onClick={this.toggleFormType}>Sign In</button>
+                    
+                )
+                    
+                const popup = (
+                    <div> 
+                        {display}
+                        <button onClick={closePopup}>Close</button>
+                    </div>
+                )
+                
         return (
 
             <div className="popup">
                 {toggleButton}
-                {signInPopup}
+                {popup}
             </div>
            
         )

@@ -25,14 +25,18 @@ class SessionForm extends React.Component {
         };
     }
 
-    // toggleFormType() {
-    //     this.setState({
-    //         formtype: (formType === 'Sign In') ? 'Sign Up' : 'Sign In'
-    //     })
-    // }
+
 
     render() {
-       
+        // const {formType} = this.props;
+
+       const firstName = (
+           this.state.formType === 'Sign Up' ? (
+               <label>First Name:
+                        <input type="text" onChange={this.handleInput('username')} placeholder="enter first name" />
+               </label>
+           ) : null
+       )
 
 
         return (
@@ -42,15 +46,17 @@ class SessionForm extends React.Component {
                     <ErrorList errors={this.props.errors} />
                     {/* {display} */}
 
-                    <label>Username:
-                        <input type="text" onChange={this.handleInput('username')} placeholder="enter username" />
+                    {firstName}
+
+                    <label>Email:
+                        <input type="text" onChange={this.handleInput('email')} placeholder="enter email" />
                     </label>
                 
                     <label>Password:
-                        <input type="password" onChange={this.handleInput('password')} placeholder="enter password" />
+                        <input type="password" onChange={this.handleInput('password')} placeholder="secret password" />
                     </label>
 
-                    <button>{this.props.formType}</button>
+                    <button>{(this.state.formType) === 'Sign Up' ? 'Register' : 'Sign In'}</button>
                 </form>
             </div>
         )
