@@ -1,8 +1,9 @@
 var path = require('path');
 
 module.exports = {
-    entry: './frontend/entry.jsx',
+    entry: './frontend/etsy_clone.jsx',
     output: {
+        path: path.join(__dirname, 'app', 'assets', 'javascripts'),
         filename: './bundle.js',
     },
     module: {
