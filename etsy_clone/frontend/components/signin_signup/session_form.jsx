@@ -7,7 +7,8 @@ class SessionForm extends React.Component {
         super(props);
         this.state = {
             username: "",
-            password: ""
+            password: "",
+            formType: this.props.formType
         };
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -24,31 +25,27 @@ class SessionForm extends React.Component {
         };
     }
 
+    // toggleFormType() {
+    //     this.setState({
+    //         formtype: (formType === 'Sign In') ? 'Sign Up' : 'Sign In'
+    //     })
+    // }
+
     render() {
-        const display = this.props.currentUser ? (<Redirect to="/" />
-        ) : this.props.formType === 'Log In' ? (
-            <div>
-                <Link to="/signup">Sign Up</Link>
-                <h1>Log In</h1>
-            </div>
-        ) : (
-                    <div>
-                        <Link to="/login">Log In</Link>
-                        <h1>Sign Up</h1>
-                    </div>
-                );
+       
 
 
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>
+                    <h1>{this.state.formType} YOOOOOO</h1>
                     <ErrorList errors={this.props.errors} />
-                    {display}
+                    {/* {display} */}
 
                     <label>Username:
                         <input type="text" onChange={this.handleInput('username')} placeholder="enter username" />
                     </label>
-
+                
                     <label>Password:
                         <input type="password" onChange={this.handleInput('password')} placeholder="enter password" />
                     </label>

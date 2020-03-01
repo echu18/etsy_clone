@@ -4,7 +4,7 @@ class Api::SessionsController < ApplicationController
         if @user.nil?
             render json: ['Wrong credentials'], status: 401
         else 
-            login(@user)
+            signin(@user)
             render 'api/users/show'
         end
     end
@@ -12,7 +12,7 @@ class Api::SessionsController < ApplicationController
 
     def destroy
         if current_user
-            logout
+            signout
             render json: {}
         else
             render json: ['Cannot log out'], status: 422

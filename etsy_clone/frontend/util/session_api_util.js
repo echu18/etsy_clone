@@ -9,7 +9,7 @@ export const signup = (user) => {
     })
 }
 
-export const login = (user) => {
+export const signin = (user) => {
     return $.ajax({
         url: `/api/session`,
         method: 'POST',
@@ -17,7 +17,7 @@ export const login = (user) => {
     })
 }
 
-export const logout = () => {
+export const signout = () => {
     return $.ajax({
         url: `/api/session`,
         method: 'DELETE'
