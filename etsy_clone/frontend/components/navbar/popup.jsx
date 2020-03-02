@@ -7,23 +7,13 @@ class Popup extends React.Component {
     constructor(props) {
         super(props);
         this.state={
-            formType: "Sign In",
+            formType: "Sign in",
             showOverlay: 'show-popup-overlay'
         }
-        this.toggleFormType =this.toggleFormType.bind(this);
+        this.toggleFormType = this.toggleFormType.bind(this);
     }
 
 
-    toggleFormType() {
-        (this.state.formType === 'Sign In') ?
-            (this.setState({
-                formType:  'Sign Up'
-            })) : (
-                (this.setState({
-                    formType: 'Sign In'
-                }))
-            ) 
-    }
 
 
     toggleOverlay() {
@@ -37,11 +27,22 @@ class Popup extends React.Component {
             )
     }
 
+    toggleFormType() {
+        (this.state.formType === 'Sign in') ?
+            (this.setState({
+                formType: 'Sign up'
+            })) : (
+                (this.setState({
+                    formType: 'Sign in'
+                }))
+            )
+    }
+
     
     render() {
         const {closePopup} = this.props;
 
-        const display = this.state.formType === 'Sign In' ? (
+        const display = this.state.formType === 'Sign in' ? (
                 <div>
                     <SigninFormContainer formType={this.state.formType}/>
                 </div>
@@ -51,25 +52,36 @@ class Popup extends React.Component {
                 </div>
             );
 
+        const toggleButton = (this.state.formType === "Sign in") ? (
+            <button className='signin-signup-toggle' onClick={this.toggleFormType}>Register</button>
+        ) : (
+                <button className='signin-signup-toggle' onClick={this.toggleFormType}>Sign in</button>
 
+            )
+
+        const sessionFormHeader = (this.state.formType === "Sign in") ? (
+            <h2 className='form-name'>{this.state.formType}</h2>
+        ) : (
+            <div>
+                <h2 className='form-name'>Create your account</h2>
+                <p className='form-name-caption'>Registration is easy.</p>
+            </div>
+        )
             
-            const toggleButton = (this.state.formType === "Sign In") ?  (
-                <button className='signin-signup-toggle' onClick={this.toggleFormType}>Register</button>
-                ) : (
-                    <button className='signin-signup-toggle' onClick={this.toggleFormType}>Sign In</button>
-                    
-                )
-    
+            
         return (
 
             <div className="popup">
                 <div className={this.state.showOverlay} onClick={closePopup}></div>
+                
                 <div className="popup-inner">
                     <div className='popup-topline'>
+                        {sessionFormHeader}
                         {toggleButton}
-                        {display}
                     </div>
-                    {/* <button onClick={closePopup} onClick={this.toggleOverlay}>Close</button> */}
+
+                    {display}
+                    <button onClick={closePopup} onClick={this.toggleOverlay}>Close</button>
                 </div>
             </div>
            

@@ -7,8 +7,9 @@ class SessionForm extends React.Component {
         super(props);
         this.state = {
             username: "",
-            password: "",
-            formType: this.props.formType
+            email: "",
+            password: "", 
+
         };
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -28,35 +29,42 @@ class SessionForm extends React.Component {
 
 
     render() {
-        // const {formType} = this.props;
 
        const firstName = (
-           this.state.formType === 'Sign Up' ? (
+           this.props.formType === 'Sign up' ? (
+            <div className="field">
                <label className='field-label firstname-label'>First Name:
                         <input className='form-field' type="text" onChange={this.handleInput('username')} placeholder="enter first name" />
                </label>
+            </div >
+
            ) : null
        )
+
+     
 
 
         return (
             <div>
-                <form onSubmit={this.handleSubmit}>
-                    <h1 className='form-name'>{this.state.formType}</h1>
+                <form className="session-form" onSubmit={this.handleSubmit}>
                     <ErrorList errors={this.props.errors} />
-                    {/* {display} */}
+
 
                     {firstName}
-
-                    <label className='field-label email-label'>Email address:
-                        <input className='form-field' type="text" onChange={this.handleInput('email')} placeholder="enter email" />
-                    </label>
+                    <div className="field">
+                        <label className='field-label email-label'>Email address
+                            <input className='form-field' type="text" onChange={this.handleInput('email')} placeholder="enter email" />
+                        </label>
+                    </div>
                 
-                    <label className='field-label password-label'>Password:
-                        <input className='form-field' type="password" onChange={this.handleInput('password')} placeholder="secret password" />
-                    </label>
+                    <div className="field">
+                        <label className='field-label password-label'>Password
+                            <input className='form-field' type="password" onChange={this.handleInput('password')} placeholder="secret password" />
+                        </label>
+                    </div>
 
-                    <button className="signin-register-btn">{(this.state.formType) === 'Sign Up' ? 'Register' : 'Sign In'}</button>
+                    <button className="signin-register-btn">{(this.props.formType) === 'Sign up' ? 'Register' : 'Sign in'}</button>
+                    
                 </form>
             </div>
         )

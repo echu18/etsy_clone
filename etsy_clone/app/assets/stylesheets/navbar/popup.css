@@ -1,15 +1,19 @@
 .popup-inner {
   position: fixed;
-  width: 350px;
-  height: 700px;
+  /* width: 37vw;
+  height: 87vh; */
+  max-width: 20vw;
+  min-width: 325px;
+  height: 87vh;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  border-radius: 5px;
+  border-radius: 3px;
   margin: auto;
   background-color: #FFFFFF;
   z-index: 2;
+  padding: 20px;
 }
 
 /* .popup_inner {
