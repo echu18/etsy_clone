@@ -1,17 +1,19 @@
 .navbar {
-    background-color: darksalmon;
+    background-color: #FFFFFF;
     width: 100%;
     height: 100px;
     display: flex;
     justify-content: center;
-    
+    /* align-items: center; */
+    font-family: 'Arial', sans-serif;
 }
 
 .navbar-inner {
     width: 100%;
-    height: 100%;
+    height: 50%;
     flex-wrap: nowrap;
     padding-left: 5vh;
+    padding-top: 1vh;
     padding-right: 5vh;
     display: flex;
     justify-content: center;
@@ -19,22 +21,48 @@
 }
 
 .etsyLogo > svg {
-    width: 70px;
-    height: 70px;
-    padding: 5px 5px 0 0;
+    width: 80px;
+    height: 80px;
+    padding: 5px 15px 0 0;
+    margin: 0;
+    fill: #F1651F;
+}
+
+.etsyLogo:hover {
+    cursor: pointer;
+}
+
+.searchbar-form {
+    display: flex;
+    align-items: center;
+    /* padding: 0px 0px 10px 0px; */
     margin: 0;
 }
 
-/* .etsyLogo {
-    padding: 0;
-    margin: 0;
-} */
-
-.searchbar input[type="text"] {
+.searchbar-form input[type="text"] {
     width: 80vh;
-    height: 3.5vh;
+    height: 4vh;
     border-radius: 20px;
+    background-color: #F1F1F1;
+    font-size: 1.5vh;
+    border: 0.5px solid #898989;
+    box-shadow: #E8E8E8;
+    outline: none;
+
+    /* box shadow */
+    /* -webkit-box-shadow:inset 0 0 1.5px 0.001px #000;
+    -moz-box-shadow:inset 0 0 1.5px 0.001px #000; */
+    box-shadow:inset 0 0 1.5px 0.1px #000;
+    box-shadow: 0 0 1px 0.1px #000;
+
+    background: transparent;
 }
+
+/* padding for searchbar placeholder text */
+.searchbar-form input[type="text"]::placeholder {
+    padding: 5px 0px 5px 10px;
+}
+
 
 
 .navbar-icon {
@@ -43,13 +71,32 @@
 }
 
 
+
+.search-icon > svg {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    /* z-index: 2; */
+}
+
 .search-icon {
     display: inline-block;
     position: relative;
-    /* left: 900px; */
-    top: 5px;
-    right: 30px;
+    padding: 10px;
+    width: 20px;
+    height: 20px;
+    right: 45px;
     z-index: 2;
+}
+
+
+
+.search-icon:hover {
+    background-color: #e8e8e8;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 
 .signin-signout {
@@ -65,9 +112,21 @@
     cursor: pointer;
 }
 
+.cart-icon > svg{
+    width: 25px;
+    height: 25px;
+    padding: 5px;
+
+    margin: 0;
+}
+
 .cart-icon {
-    box-sizing: border-box;
-    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
 }
 
 .cart-icon:hover {

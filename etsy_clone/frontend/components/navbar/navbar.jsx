@@ -17,17 +17,18 @@ class Navbar extends React.Component {
        });
    }
 
+   
 
     render() {
         const { currentUser, signOut, signIn } = this.props;
 
         const display = currentUser ? (
             <div>
-                <p className="signin-signout" onClick={signOut}>Sign Out</p>
+                <p className="signin-signout" onClick={signOut}>Sign out</p>
             </div>
         ) : (
             <div>
-                <p className="signin-signout" onClick={this.togglePopup}>Sign In</p>
+                <p className="signin-signout" onClick={this.togglePopup}>Sign in</p>
 
 
                     {this.state.showPopup ?
@@ -50,12 +51,14 @@ class Navbar extends React.Component {
                         {etsyLogo}
                     </div>
 
-                    <form className="searchbar" /*onSubmit={}*/>
+                <div className="searchbar">
+                    <form className="searchbar-form" /*onSubmit={}*/>
                         <input type="text" name="search" placeholder="Search for items or shops"/>
                             <div className="navbar-icon search-icon">
                                 {searchIcon}
                             </div>
                     </form>
+                </div>
                     
                     { display }
 

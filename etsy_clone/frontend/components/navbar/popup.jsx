@@ -7,7 +7,8 @@ class Popup extends React.Component {
     constructor(props) {
         super(props);
         this.state={
-            formType: "Sign In"
+            formType: "Sign In",
+            showOverlay: 'show-popup-overlay'
         }
         this.toggleFormType =this.toggleFormType.bind(this);
     }
@@ -25,6 +26,18 @@ class Popup extends React.Component {
     }
 
 
+    toggleOverlay() {
+        (this.state.show === "show-popup-overlay") ?
+            (this.setState({
+                showOverlay: "hide-popup-overlay"
+            })) : (
+                (this.setState({
+                    showOverlay: "show-popup-overlay"
+                }))
+            )
+    }
+
+    
     render() {
         const {closePopup} = this.props;
 
@@ -47,18 +60,19 @@ class Popup extends React.Component {
                     
                 )
                     
-                const popup = (
-                    <div> 
-                        {display}
-                        <button onClick={closePopup}>Close</button>
-                    </div>
-                )
+                // const popup = (
+                   
+                // )
                 
         return (
 
             <div className="popup">
-                {toggleButton}
-                {popup}
+                <div className={this.state.showOverlay} onClick={closePopup}></div>
+                <div className="popup-inner">
+                    {toggleButton}
+                    {display}
+                    <button onClick={closePopup} onClick={this.toggleOverlay}>Close</button>
+                </div>
             </div>
            
         )
