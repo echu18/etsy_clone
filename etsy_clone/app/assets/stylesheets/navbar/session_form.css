@@ -1,0 +1,28 @@
+.form-name {
+    display: inline-block;
+    font-size: 30px;
+    font-weight: 300;
+}
+
+.field-label {
+    font-size: 15px;
+}
+
+.signin-signup-toggle {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 12px;
+    font-size: 15px;
+    padding: 5px;
+}
+
+
+.signin-signup-toggle:hover {
+    cursor: pointer;
+    box-shadow:inset 0 0 1.5px 0.1px #000;
+    box-shadow: 0 0 1px 0.1px #000;
+}
+

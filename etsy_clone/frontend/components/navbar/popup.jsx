@@ -54,24 +54,22 @@ class Popup extends React.Component {
 
             
             const toggleButton = (this.state.formType === "Sign In") ?  (
-                <button onClick={this.toggleFormType}>Sign Up</button>
+                <button className='signin-signup-toggle' onClick={this.toggleFormType}>Register</button>
                 ) : (
-                    <button onClick={this.toggleFormType}>Sign In</button>
+                    <button className='signin-signup-toggle' onClick={this.toggleFormType}>Sign In</button>
                     
                 )
-                    
-                // const popup = (
-                   
-                // )
-                
+    
         return (
 
             <div className="popup">
                 <div className={this.state.showOverlay} onClick={closePopup}></div>
                 <div className="popup-inner">
-                    {toggleButton}
-                    {display}
-                    <button onClick={closePopup} onClick={this.toggleOverlay}>Close</button>
+                    <div className='popup-topline'>
+                        {toggleButton}
+                        {display}
+                    </div>
+                    {/* <button onClick={closePopup} onClick={this.toggleOverlay}>Close</button> */}
                 </div>
             </div>
            
