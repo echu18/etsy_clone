@@ -1,20 +1,24 @@
 .session-form{
     font-family: 'Arial', sans-serif;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 .form-name {
     display: inline-block;
     font-size: 23px;
     padding-bottom: 10px;
-    font-weight: 300;
+    /* font-weight: 300; */
+}
+
+.form-name-caption {
+    font-weight: lighter;
 }
 
 .field-label {
     font-size: 15px;
     /* padding-top: 10px; */
     padding-bottom: 10px; 
-    font-weight: 700;
+    /* font-weight: 700; */
 }
 
 .signin-signup-toggle {
