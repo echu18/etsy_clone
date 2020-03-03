@@ -1,17 +1,15 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 import { AuthRoute } from '../util/route_util';
-import GreetingContainer from './greeting/greeting_container';
 import SignupFormContainer from '../components/signin_signup/signup_form_container';
 import LoginFormContainer from '../components/signin_signup/signin_form_container';
 import NavbarContainer from './navbar/navbar_container';
+import SplashContainer from './main_content/splash_container';
 
 
 const App = () => (
     <div>
         <header className="header">
-            {/* <h1>Etsy Clone</h1> */}
-            {/* <GreetingContainer /> */}
             <NavbarContainer />
         </header>
 
@@ -19,8 +17,11 @@ const App = () => (
         <Route path="/signup" component={SignupFormContainer} />
 
         <div className="splash">
-                <h1>insert main page content here</h1>
+            <SplashContainer />
         </div>
+
+        <footer className='footer'>
+        </footer>
     </div>
 );
 

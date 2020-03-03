@@ -2,3 +2,14 @@
     padding-left: 20%;
     padding-right: 20%;
 } */
+
+#inner {
+    width: 72vw;
+    padding-left: 5vh;
+    padding-right: 5vh;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+        background-color: gray;
+
+}

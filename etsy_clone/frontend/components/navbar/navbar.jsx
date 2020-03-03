@@ -50,14 +50,14 @@ class Navbar extends React.Component {
 
         return(
             <div className="navbar">
-                <div className="navbar-inner">
+                <div className="navbar-inner" id='inner'>
                     <div className="etsyLogo">
                         {etsyLogo}
                     </div>
 
                 <div className="searchbar">
                     <form className="searchbar-form" /*onSubmit={}*/>
-                        <input type="text" name="search" placeholder="Search for items or shops"/>
+                        <input type="text" name="search" placeholder="Search for items or shops" autocomplete='off'/>
                             <div className="navbar-icon search-icon">
                                 {searchIcon}
                             </div>

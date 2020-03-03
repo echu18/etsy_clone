@@ -1,0 +1,39 @@
+.main-hero-banner {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    height: 50vh;
+}
+
+.hero-block {
+    margin: 10px;
+}
+
+
+.hero-large {
+    min-width: 800px;
+    /* min-width: 800px; */
+    width: 60%;
+    height: 50%;
+    background-color: rgb(201, 146, 146);
+}
+.hero-medium {
+    min-width: 500px;
+    /* min-width: 500px; */
+    width: 20%;
+    height: 50%; 
+    background-color: rgb(180, 225, 228);
+
+}
+.hero-small {
+    min-width: 300px;
+    /* min-width: 300px; */
+    width: 20%;
+    height: 50%;
+    background-color: rgb(178, 211, 185);
+
+}
+
+.hero-large > .text-container {
+
+}

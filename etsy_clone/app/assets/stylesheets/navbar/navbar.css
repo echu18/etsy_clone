@@ -7,18 +7,17 @@
     /* align-items: center; */
     font-family: 'Arial', sans-serif;
     font-size: 14px;
+    padding-top: 0.5vh;
 }
 
 .navbar-inner {
-    width: 100%;
     height: 50%;
     flex-wrap: nowrap;
-    padding-left: 5vh;
     padding-top: 1vh;
-    padding-right: 5vh;
-    display: flex;
-    justify-content: center;
+    /* display: flex;
+    justify-content: center; */
     align-items: center;
+
 }
 
 .etsyLogo > svg {
@@ -42,13 +41,14 @@
 
 .searchbar-form input[type="text"] {
     width: 80vh;
-    height: 4vh;
-    border-radius: 20px;
+    height: 5.3vh;
+    border-radius: 25px;
     background-color:#EFF1F0;
     font-size: 1.5vh;
     border: 0.5px solid #898989;
     box-shadow: #E8E8E8;
     outline: none;
+    text-indent: 30px;
 
     /* box shadow */
     /* -webkit-box-shadow:inset 0 0 1.5px 0.001px #000;
@@ -59,9 +59,10 @@
     background: transparent;
 }
 
+
 /* padding for searchbar placeholder text */
 .searchbar-form input[type="text"]::placeholder {
-    padding: 5px 0px 5px 10px;
+    /* padding: 5px 0px 5px 0px; */
 }
 
 
