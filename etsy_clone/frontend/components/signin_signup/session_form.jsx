@@ -12,6 +12,7 @@ class SessionForm extends React.Component {
 
         };
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.loginDemoUser = this.loginDemoUser.bind(this);
     }
 
     handleSubmit(e) {
@@ -26,13 +27,19 @@ class SessionForm extends React.Component {
         };
     }
 
+    loginDemoUser(){
+        this.setState({
+            email: 'DemoUser',
+            password: '123456'
+        })
+    }
 
     render() {
 
        const firstName = (
            this.props.formType === 'Sign up' ? (
             <div className="field">
-               <label className='field-label firstname-label'>First Name:
+               <label className='field-label firstname-label'>First name
                         <input className='form-field' type="text" onChange={this.handleInput('username')} placeholder="enter first name" />
                </label>
             </div >
@@ -49,12 +56,12 @@ class SessionForm extends React.Component {
                     <ErrorList errors={this.props.errors} />
 
 
-                    {firstName}
                     <div className="field">
                         <label className='field-label email-label'>Email address
                             <input className='form-field' type="text" onChange={this.handleInput('email')} placeholder="enter email" />
                         </label>
                     </div>
+                    {firstName}
                 
                     <div className="field">
                         <label className='field-label password-label'>Password
@@ -62,8 +69,10 @@ class SessionForm extends React.Component {
                         </label>
                     </div>
 
-                    <button className="signin-register-btn">{(this.props.formType) === 'Sign up' ? 'Register' : 'Sign in'}</button>
-                    
+                    <div className='form-field-btns'>
+                        <button className="signin-register-btn">{(this.props.formType) === 'Sign up' ? 'Register' : 'Sign in'}</button>
+                        <button className="demo-user-btn" onClick={this.loginDemoUser}>Demo User</button>
+                    </div>
                 </form>
             </div>
         )
