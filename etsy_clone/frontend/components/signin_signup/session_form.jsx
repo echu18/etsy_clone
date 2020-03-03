@@ -35,11 +35,15 @@ class SessionForm extends React.Component {
     }
 
     render() {
+        const required = (
+            <span class="required">*</span>
+        )
+
 
        const firstName = (
            this.props.formType === 'Sign up' ? (
             <div className="field">
-               <label className='field-label firstname-label'>First name
+                   <label className='field-label firstname-label'>First name {this.props.formType === 'Sign up' ? required : null} 
                         <input className='form-field' type="text" onChange={this.handleInput('username')} placeholder="enter first name" />
                </label>
             </div >
@@ -47,9 +51,7 @@ class SessionForm extends React.Component {
            ) : null
        )
 
-     
-
-
+    
         return (
             <div>
                 <form className="session-form" onSubmit={this.handleSubmit}>
@@ -57,14 +59,14 @@ class SessionForm extends React.Component {
 
 
                     <div className="field">
-                        <label className='field-label email-label'>Email address
+                        <label className='field-label email-label'>Email address {this.props.formType === 'Sign up' ? required : null} 
                             <input className='form-field' type="text" onChange={this.handleInput('email')} placeholder="enter email" />
                         </label>
                     </div>
                     {firstName}
                 
                     <div className="field">
-                        <label className='field-label password-label'>Password
+                        <label className='field-label password-label'>Password {this.props.formType === 'Sign up' ? required : null} 
                             <input className='form-field' type="password" onChange={this.handleInput('password')} placeholder="secret password" />
                         </label>
                     </div>
