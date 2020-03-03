@@ -13,8 +13,9 @@ class Popup extends React.Component {
         this.toggleFormType = this.toggleFormType.bind(this);
     }
 
-
-
+    componentDidUpdate() {
+        this.props.clearErrors()
+    }
 
     toggleOverlay() {
         (this.state.show === "show-popup-overlay") ?
@@ -60,7 +61,7 @@ class Popup extends React.Component {
             )
 
         const sessionFormHeader = (this.state.formType === "Sign in") ? (
-            <h2 className='form-name'>{this.state.formType}</h2>
+            <h2 className='form-name'>Sign in</h2>
         ) : (
             <div>
                 <h2 className='form-name'>Create your account</h2>
@@ -81,7 +82,7 @@ class Popup extends React.Component {
                     </div>
 
                     {display}
-                    <button onClick={closePopup} onClick={this.toggleOverlay}>Close</button>
+                    {/* <button onClick={closePopup} onClick={this.toggleOverlay}>Close</button> */}
                 </div>
             </div>
            

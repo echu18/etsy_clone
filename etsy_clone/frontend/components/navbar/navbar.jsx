@@ -9,6 +9,7 @@ class Navbar extends React.Component {
         super(props);
         this.state = {showPopup: false};
         this.togglePopup = this.togglePopup.bind(this);
+        this.signOutAndClear = this.signOutAndClear.bind(this);
     }
     
    togglePopup() {
@@ -17,19 +18,21 @@ class Navbar extends React.Component {
        });
    }
 
+    signOutAndClear () {
+        this.props.signOut();
+        this.setState({ showPopup: false })
+    }
    
-
     render() {
-        const { currentUser, signOut, signIn } = this.props;
+        const { currentUser, signOut, signIn, clearErrors } = this.props;
 
         const display = currentUser ? (
             <div>
-                <p className="signin-signout" onClick={signOut}>Sign out</p>
+                <p className="signin-signout" onClick={this.signOutAndClear}>Sign out</p>
             </div>
         ) : (
             <div>
                 <p className="signin-signout" onClick={this.togglePopup}>Sign in</p>
-
 
                     {this.state.showPopup ?
 
@@ -37,6 +40,7 @@ class Navbar extends React.Component {
                         text='hello'
                         closePopup={this.togglePopup}
                         currentUser={currentUser}
+                        clearErrors={clearErrors}
                     /> : null
                     }
             </div>
