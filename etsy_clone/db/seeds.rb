@@ -10,6 +10,7 @@
 
 User.destroy_all
 
+demouser = User.create(username: 'DemoUser', email: 'DemoUser', password: '123456')
 u1 = User.create(username: 'jamie', email: 'jamie@cc.com', password: '123456')
 u2 = User.create(username: 'winston', email: 'winston@cc.com', password: '123456')
 u3 = User.create(username: 'fred', email: 'fred@cc.com', password: '123456')
