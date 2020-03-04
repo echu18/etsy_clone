@@ -7,7 +7,7 @@
     justify-content: center;
     flex-wrap: wrap;
     /* align-items: center; */
-    font-family: 'Arial', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 14px;
 }
 
@@ -15,7 +15,8 @@
     box-sizing: border-box;
     display: flex;
     flex-wrap: no-wrap;
-    padding-top: 1.5vh;
+    padding: 14px 0px 15px 0px;
+    /* padding: 1.5vh 0 1.5vh 0; */
     /* justify-content: space-around; */
     align-items: center;
 }
@@ -55,14 +56,16 @@
 .searchbar-form input[type="text"] {
     min-height: 43px;
     width: 62.6vw;
-    height: 51px;
+    height: 50px;
     /* height: 5.3vh; */
     border-radius: 25px;
     font-size: 16px;
-    border: 0.5px solid #949292;
-    box-shadow: #E8E8E8;
+    border-top: 0.3px solid rgba(34, 34, 34, 0.15);
+    border-bottom: 0.3px solid rgba(34, 34, 34, 0.15);
+    border-left: 0.3px solid rgba(34, 34, 34, 0.15);
+    box-shadow: 1px 1px 10px #E8E8E8;
     outline: none;
-    text-indent: 30px;
+    text-indent: 17px;
 
     /* box shadow */
     /* -webkit-box-shadow:inset 0 0 1.5px 0.001px #000;
@@ -99,8 +102,8 @@
     display: flex;
     justify-content: center;
     position: absolute;
-    width: 26px;
-    height: 24px;
+    width: 28px;
+    height: 26px;
     /* z-index: 2; */
 }
 
@@ -131,7 +134,7 @@
     padding: 10px; /* this is for the hover circle, do not remove */
     border-radius: 30px;
     box-sizing: border-box;
-    margin: 0px 20px 0 0;
+    margin: 0px 25px 0 0;
 }
 
 .signin-signout:hover {

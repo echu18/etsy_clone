@@ -9,19 +9,24 @@ import SplashContainer from './main_content/splash_container';
 
 const App = () => (
     <div>
-        <header className="header">
-            <NavbarContainer />
-        </header>
-
-        <Route path="/signin" component={LoginFormContainer} />
-        <Route path="/signup" component={SignupFormContainer} />
-
-        <div className="splash">
-            <SplashContainer />
+        <div id='main'>
+            <header className="header">
+                <NavbarContainer />
+            </header>
         </div>
+        <span id='category-divider'></span>
 
-        <footer className='footer'>
-        </footer>
+        <div id='main'>
+            <Route path="/signin" component={LoginFormContainer} />
+            <Route path="/signup" component={SignupFormContainer} />
+
+            <div className="splash">
+                <SplashContainer />
+            </div>
+
+            <footer className='footer'>
+            </footer>
+        </div>
     </div>
 );
 

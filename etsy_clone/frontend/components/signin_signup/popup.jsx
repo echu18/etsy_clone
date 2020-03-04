@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import SignupFormContainer from '../signin_signup/signup_form_container';
-import SigninFormContainer from '../signin_signup/signin_form_container';
+import SignupFormContainer from './signup_form_container';
+import SigninFormContainer from './signin_form_container';
 
 class Popup extends React.Component {
     constructor(props) {
@@ -61,10 +61,10 @@ class Popup extends React.Component {
             )
 
         const sessionFormHeader = (this.state.formType === "Sign in") ? (
-            <h2 className='form-name'>Sign in</h2>
+            <p className='form-name'>Sign in</p>
         ) : (
             <div>
-                <h2 className='form-name'>Create your account</h2>
+                <p className='form-name'>Create your account</p>
                 <p className='form-name-caption'>Registration is easy.</p>
             </div>
         )

@@ -9,7 +9,7 @@ const categoriesBar = props => (
     <ul>
         {categories.map((cat) => {
             return <li className='cat-single'>
-                        <h2 className='cat-header'>{cat}</h2>
+                        <p className='cat-header'>{cat}</p>
                         <categoryDropdownContainer header={cat} />
                     </li>
         })}

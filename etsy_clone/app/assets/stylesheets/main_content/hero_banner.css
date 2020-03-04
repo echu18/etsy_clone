@@ -1,38 +1,54 @@
 .main-hero-banner {
+    box-sizing: border-box;
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
     width: 100vw;
-    height: 50vh;
+    height: 30vh;
+    border: 1px solid red;
+}
+
+.main-hero-banner > div {
+    border-radius: 10px;
+
 }
 
 .hero-block {
-    margin: 10px;
+    /* margin:10px; */
 }
 
 
 .hero-large {
-    flex-grow: 3;
-    min-width: 800px;
-    /* min-width: 800px; */
-    width: 60%;
-    height: 50%;
+    min-width: 600px;
+    width: 59%;
+    height: 100%;
     background-color: rgb(201, 146, 146);
 }
+
+.hero-medium-small {
+    box-sizing: border-box;
+    width: 39%;
+    height: 100%;
+    margin-left: 2%;
+    /* border: 1px solid red; */
+}
+
 .hero-medium {
-    min-width: 500px;
-    /* min-width: 500px; */
-    width: 20%;
-    height: 50%; 
+    box-sizing: border-box;
+    /* min-width: 500px;
+    width: 20%; */
+    height: 68%;  
+    margin-bottom: 4%;
     background-color: rgb(180, 225, 228);
 
 }
-.hero-small {
-    min-width: 300px;
-    /* min-width: 300px; */
-    width: 20%;
-    height: 50%;
-    background-color: rgb(178, 211, 185);
 
+.hero-small {
+    box-sizing: border-box;
+    /* min-width: 300px;
+    width: 20%; */
+    height: 28%;
+    background-color: rgb(178, 211, 185);
 }
 
 .hero-large > .text-container {

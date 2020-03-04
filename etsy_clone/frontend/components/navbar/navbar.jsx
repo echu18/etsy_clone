@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Popup from './popup';
+import Popup from '../signin_signup/popup';
 import CategoryDropdownContainer from './categories/category_dropdown_container'
 import {cartIcon, searchIcon, etsyLogo} from '../../../app/assets/images/svgs/icons'
 
@@ -77,7 +77,6 @@ class Navbar extends React.Component {
                         return <CategoryDropdownContainer header={cat} />
                     })}
                 </div>
-                <span id='category-divider'></span>
             </div>
         )
     }

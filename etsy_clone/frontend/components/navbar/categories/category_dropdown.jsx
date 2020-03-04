@@ -12,7 +12,7 @@ class categoryDropdown extends React.Component {
     render() {
         return (
             <div className='cat-header'>
-                <h2>{this.state.header}</h2>
+                <p>{this.state.header}</p>
             </div>
         )
     }

@@ -1,21 +1,27 @@
 #category-divider {
-    width: 100vw !important;
-    /* height: 2px; */
-    border-bottom: 2px solid gray;
+    display: flex;
+    position: absolute;
+    box-sizing: border-box;
+    width: 100vw;
+    height: 0px;
+    border-bottom: 2px solid #EFEFEF;
     margin: 0px;
+    padding: 0px;
+    z-index: 2;
 }
 
 .categories-bar {
+    box-sizing: border-box;
     display: flex;
     justify-content: space-between;
     align-items: center;
     /* justify-content: space-around; */
     width: auto;
-    height: 45px;
-    /* background-color: red; */
+    height: 34px;
+    padding-bottom: 10px;
 }
 
 
 .cat-header{
-    font-size: 14px;
+    font-size: 15px;
 }

@@ -1,0 +1,20 @@
+.main-headline-text {
+    
+    width: 100%;
+    height: 100%;
+    padding: 36px 0px 36px 0px;  
+    transform: scale(0.92);
+}
+
+
+.main-headline-text p {
+    display: flex;
+    justify-content: center;
+    font-size: 33px;
+    /* font-family: 'Martel', serif; */
+    /* font-family: 'Scope One', serif; */
+    font-family: 'Roboto Slab', serif;  /* font-weight is specify in font import url */
+    letter-spacing: 1px;
+    /* font-weight: 200; */
+}
+

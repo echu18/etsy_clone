@@ -13,9 +13,9 @@ class Splash extends React.Component{
     render() {
         return(
             <div id='splash-main' id='inner'>
-                <section className='main-headline-text' id='inner'>
-                    <h2>If it’s handcrafted, vintage, custom, or unique, it’s on Etsy.</h2>
-                </section>
+                <div className='main-headline-text' id='inner'>
+                    <p>If it’s handcrafted, vintage, custom, or unique, it’s on Etsy.</p>
+                </div>
 
                 {/* .main-hero-banner */}
                 <HeroBanner />
