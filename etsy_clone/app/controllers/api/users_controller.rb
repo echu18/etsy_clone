@@ -14,7 +14,7 @@ class Api::UsersController < ApplicationController
     if @user && @user.update_attributes(user_params)
       render :show
     elsif !@user
-      render json: ['Could not locate user'], status: 400
+      render json: ['Could not find user'], status: 400
     else
       render json: @user.errors.full_messages, status: 401
     end

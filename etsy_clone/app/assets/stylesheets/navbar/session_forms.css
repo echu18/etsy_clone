@@ -136,4 +136,7 @@
     /* background-color: rgb(250, 149, 99); */
 }
 
-
+/* For form field required asterisk - do not remove */
+.required {
+    color: red;
+}
