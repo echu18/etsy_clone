@@ -2,9 +2,12 @@
   position: fixed;
   /* width: 37vw;
   height: 87vh; */
+  height: 100%;
   max-width: 23vw;
   min-width: 350px;
-  height: 86vh;
+  min-height: 450px;
+  max-height: 550px;
+  /* height: 86vh; */
   top: 0;
   left: 0;
   right: 0;

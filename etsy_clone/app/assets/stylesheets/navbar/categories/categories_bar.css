@@ -1,0 +1,21 @@
+#category-divider {
+    width: 100vw !important;
+    /* height: 2px; */
+    border-bottom: 2px solid gray;
+    margin: 0px;
+}
+
+.categories-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* justify-content: space-around; */
+    width: auto;
+    height: 45px;
+    /* background-color: red; */
+}
+
+
+.cat-header{
+    font-size: 14px;
+}

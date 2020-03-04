@@ -11,6 +11,7 @@
 
 
 .hero-large {
+    flex-grow: 3;
     min-width: 800px;
     /* min-width: 800px; */
     width: 60%;

@@ -1,30 +1,38 @@
 .navbar {
     background-color: #FFFFFF;
     width: 100%;
-    height: 100px;
+    height: auto;
+    /* height: 100px; */
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     /* align-items: center; */
     font-family: 'Arial', sans-serif;
     font-size: 14px;
-    padding-top: 0.5vh;
 }
 
 .navbar-inner {
-    height: 50%;
-    flex-wrap: nowrap;
-    padding-top: 1vh;
-    /* display: flex;
-    justify-content: center; */
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: no-wrap;
+    padding-top: 1.5vh;
+    /* justify-content: space-around; */
     align-items: center;
-
 }
 
+@media only screen and (min-width: 80%) {
+  .navbar-inner {
+      flex-wrap: wrap;
+  }
+}
+
+
 .etsyLogo > svg {
-    width: 80px;
-    height: 80px;
-    padding: 5px 15px 0 0;
-    margin: 0;
+    box-sizing: border-box;
+    width: 90px;
+    height: 50px;
+    /* padding: 5px 15px 0 0; */
+    margin: 0px 10px 0px -5px;
     fill: #F1651F;
 }
 
@@ -32,20 +40,26 @@
     cursor: pointer;
 }
 
+/* search form container */
 .searchbar-form {
+    max-height: 52px;
+    box-sizing: border-box;
     display: flex;
     align-items: center;
+    justify-content: center;
     /* padding: 0px 0px 10px 0px; */
-    margin: 0 -30px 0 0;
+    margin: 0 -15px 0 0;
+    
 }
 
 .searchbar-form input[type="text"] {
-    width: 80vh;
-    height: 5.3vh;
+    min-height: 43px;
+    width: 62.6vw;
+    height: 51px;
+    /* height: 5.3vh; */
     border-radius: 25px;
-    background-color:#EFF1F0;
-    font-size: 1.5vh;
-    border: 0.5px solid #898989;
+    font-size: 16px;
+    border: 0.5px solid #949292;
     box-shadow: #E8E8E8;
     outline: none;
     text-indent: 30px;
@@ -59,18 +73,26 @@
     background: transparent;
 }
 
+.searchbar-form input[type="text"], textarea{
+    background-image: linear-gradient(#EEEEEE,#EFEFEF, #EEEEEE);
+}
+
+
+/* searchbar-form clicked state, add below: */
+
+
 
 /* padding for searchbar placeholder text */
 .searchbar-form input[type="text"]::placeholder {
-    /* padding: 5px 0px 5px 0px; */
+    font-size: 18px;
 }
 
 
 
-.navbar-icon {
+/* .navbar-icon {
     height: 20px;
     width: 20px;
-}
+} */
 
 
 
@@ -78,8 +100,8 @@
     display: flex;
     justify-content: center;
     position: absolute;
-    width: 20px;
-    height: 20px;
+    width: 26px;
+    height: 24px;
     /* z-index: 2; */
 }
 
@@ -102,16 +124,15 @@
 }
 
 .signin-signout {
-    /* font-weight: bold; */
+    font-weight: bold;
     white-space: nowrap;
     display: flex;
     justify-content: center;
     min-width: auto;
-    /* display: inline-block; */
-    padding: 10px;
+    padding: 10px; /* this is for the hover circle, do not remove */
     border-radius: 30px;
     box-sizing: border-box;
-    margin-right: 10px;
+    margin: 0px 20px 0 0;
 }
 
 .signin-signout:hover {
@@ -120,20 +141,20 @@
 }
 
 .cart-icon > svg{
-    width: 25px;
-    height: 25px;
-    padding: 5px;
-
-    margin: 0;
+    box-sizing: border-box;
+    width: 26px;
+    height: 26px;
+    /* padding: 5px; */
 }
 
 .cart-icon {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40px;
-    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
     border-radius: 50%;
+    /* margin: 0px 0px 0px 0px; */
 }
 
 .cart-icon:hover {

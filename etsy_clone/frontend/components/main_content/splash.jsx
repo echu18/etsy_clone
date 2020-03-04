@@ -12,14 +12,13 @@ class Splash extends React.Component{
 
     render() {
         return(
-            <div id='splash-main'>
+            <div id='splash-main' id='inner'>
                 <section className='main-headline-text' id='inner'>
                     <h2>If it’s handcrafted, vintage, custom, or unique, it’s on Etsy. here ya go you weeb</h2>
                 </section>
 
-                <section className='main-hero-banner' id='inner'>
-                    <HeroBanner />
-                </section>
+                {/* .main-hero-banner */}
+                <HeroBanner />
 
                 <section className='main-buzzwords-banner'>
                     <div className='buzzwords-block-1'></div>
