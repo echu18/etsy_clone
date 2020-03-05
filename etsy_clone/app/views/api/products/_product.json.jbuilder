@@ -1,3 +1,2 @@
-json.extract! product, :id, :name, :description, :price, :seller_id, :category_id
+json.extract! @product, :id, :name, :description, :price, :seller_id, :category_id, :photos
 
-# Add product's reviews + likes

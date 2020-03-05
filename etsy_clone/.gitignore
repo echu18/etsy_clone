@@ -4,3 +4,13 @@ bundle.js
 bundle.js.map
 tmp/
 Gemfile.lock
+
+
+.byebug_history
+
+npm-debug.log
+/config/master.key
+/storage/*
+/yarn-error.log/public/assets
+/log/*
+/log/.keep

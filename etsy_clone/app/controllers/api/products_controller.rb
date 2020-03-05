@@ -1,15 +1,22 @@
 class Api::ProductsController < ApplicationController
+    include Rails.application.routes.url_helpers
+    
     def index
         @products = Product.all
     end
 
     def show
-        @product = selected_product
+        @product = Product.with_attached_photos.find(params[:id])
     end
 
-    # def create
-    #   - will manually seed data for now
-    # end
+    def create
+    @product = product.new(product_params)
+    if @product.save
+      render :show
+    else
+      render json: @product.errors.full_messages, status: 401
+    end
+  end
 
     # def update
 
@@ -21,13 +28,10 @@ class Api::ProductsController < ApplicationController
 
 
     private
-    def selected_product
-        Product.find_by(params[:id])
-        # Product.with_attached_photos.find_by(params[:id])
-    end
+  
 
     def product_params
-        params.require(:product).permit(:name, :description, :price, :seller_id, :category_id)
+        params.require(:product).permit(:name, :description, :price, :seller_id, :category_id, photos: [])
     end
 
     

@@ -36,7 +36,7 @@ class SessionForm extends React.Component {
 
     render() {
         const required = (
-            <span class="required">*</span>
+            <span className="required">*</span>
         )
 
 
@@ -51,11 +51,18 @@ class SessionForm extends React.Component {
            ) : null
        )
 
+       const {errors} = this.props;
     
         return (
             <div>
                 <form className="session-form" onSubmit={this.handleSubmit}>
-                    <ErrorList errors={this.props.errors} />
+                    <div className='session-errors'>
+                        <ul>
+                            {/* <ErrorList errors={this.props.errors} /> */}
+                            {/* {errors.map((error, idx) => <li key={idx}>{error}</li>)} */}
+                            {errors === undefined ? null : errors.map((error, idx) => <li key={idx}>{error}</li>)}
+                        </ul>
+                    </div>
 
 
                     <div className="field">
@@ -73,7 +80,9 @@ class SessionForm extends React.Component {
 
                     <div className='form-field-btns'>
                         <button className="signin-register-btn">{(this.props.formType) === 'Sign up' ? 'Register' : 'Sign in'}</button>
-                        <button className="demo-user-btn" onClick={this.loginDemoUser}>Demo User</button>
+                        
+                        {/*only shows demo user button on login form */}
+                        {this.props.formType === 'Sign in' ? <button className="demo-user-btn" onClick={this.loginDemoUser}>Demo User</button> : null}
                     </div>
                 </form>
             </div>

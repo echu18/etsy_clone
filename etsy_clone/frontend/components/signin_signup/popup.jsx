@@ -11,6 +11,7 @@ class Popup extends React.Component {
             showOverlay: 'show-popup-overlay'
         }
         this.toggleFormType = this.toggleFormType.bind(this);
+        this.closePopup = this.closePopup.bind(this);
     }
 
     componentDidUpdate() {
@@ -39,9 +40,14 @@ class Popup extends React.Component {
             )
     }
 
+    closePopup() {
+        this.props.closePopup()
+        this.props.clearErrors()
+    }
+
     
     render() {
-        const {closePopup} = this.props;
+        // const {closePopup} = this.props;
 
         const display = this.state.formType === 'Sign in' ? (
                 <div>
@@ -73,7 +79,7 @@ class Popup extends React.Component {
         return (
 
             <div className="popup">
-                <div className={this.state.showOverlay} onClick={closePopup}></div>
+                <div className={this.state.showOverlay} onClick={this.closePopup}></div>
                 
                 <div className="popup-inner">
                     <div className='popup-topline'>

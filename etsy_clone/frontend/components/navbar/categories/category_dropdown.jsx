@@ -3,7 +3,6 @@ import React from 'react';
 class categoryDropdown extends React.Component {
     constructor(props) {
         super(props);
-        this.state= this.props;
     }
     // componentDidMount() {
     //     this.props.fetchPost(this.props.post.id)
@@ -12,7 +11,7 @@ class categoryDropdown extends React.Component {
     render() {
         return (
             <div className='cat-header'>
-                <p>{this.state.header}</p>
+                <p>{this.props.header}</p>
             </div>
         )
     }

@@ -58,7 +58,7 @@ class Navbar extends React.Component {
 
                     <div className="searchbar">
                         <form className="searchbar-form" /*onSubmit={}*/>
-                            <input type="text" name="search" placeholder="Search for items or shops" autocomplete='off'/>
+                            <input type="text" name="search" placeholder="Search for items or shops" autoComplete='off'/>
                                 <div className="navbar-icon search-icon">
                                     {searchIcon}
                                 </div>
@@ -73,8 +73,8 @@ class Navbar extends React.Component {
                 </div>
 
                 <div className='categories-bar' id='inner'>
-                    {categories.map(cat => {
-                        return <CategoryDropdownContainer header={cat} />
+                    {categories.map((cat, idx) => {
+                        return <CategoryDropdownContainer header={cat} key={idx} />
                     })}
                 </div>
             </div>

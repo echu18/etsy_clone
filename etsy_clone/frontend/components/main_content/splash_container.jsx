@@ -3,14 +3,14 @@ import Splash from './splash';
 // import { signUp, signIn, signOut, clearErrors } from '../../actions/session_actions';
 import { connect } from 'react-redux';
 
-const mapStateToProps = (state, ownProps) => {
+const mapStateToProps = (state, ownProps) => ({
 
-}
+})
 
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = dispatch => ({
 
-}
+})
 
 
 

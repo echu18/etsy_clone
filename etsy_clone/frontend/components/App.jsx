@@ -1,9 +1,12 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 import { AuthRoute } from '../util/route_util';
+import NavbarContainer from './navbar/navbar_container';
 import SignupFormContainer from '../components/signin_signup/signup_form_container';
 import LoginFormContainer from '../components/signin_signup/signin_form_container';
-import NavbarContainer from './navbar/navbar_container';
+
+import ProductShowContainer from './product/product_show_container';
+
 import SplashContainer from './main_content/splash_container';
 
 
@@ -19,6 +22,7 @@ const App = () => (
         <div id='main'>
             <Route path="/signin" component={LoginFormContainer} />
             <Route path="/signup" component={SignupFormContainer} />
+            <Route exact path="/products/:productId" component={ProductShowContainer} />
 
             <div className="splash">
                 <SplashContainer />

@@ -11,8 +11,8 @@
 #  updated_at      :datetime         not null
 #
 class User < ApplicationRecord
-    validates :username, uniqueness: true
-    validates :email, presence: true, uniqueness: true
+    # validates :username
+    validates :email, presence: true, uniqueness: {message: 'has already been registered'}
     validates :password, length: {minimum: 6, allow_nil: true}
 
 

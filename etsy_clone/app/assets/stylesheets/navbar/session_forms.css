@@ -138,5 +138,15 @@
 
 /* For form field required asterisk - do not remove */
 .required {
+    display: inline-block;
     color: red;
+}
+
+.session-errors {
+    color: red;
+}
+
+.error-list {
+    display: flex;
+    flex-direction: column;
 }

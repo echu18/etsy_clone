@@ -1,0 +1,17 @@
+.product-photos {
+    display: flex;
+    flex-direction: row;
+    height: 500px;
+    width: 500px;
+    border: 1px solid red;
+}
+
+.product-photo {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    height: 100px;
+    width: 100px;
+    z-index: 200;
+    border: 1px solid blue;
+}

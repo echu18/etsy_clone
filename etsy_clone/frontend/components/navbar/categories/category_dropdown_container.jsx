@@ -6,15 +6,15 @@ import { connect } from 'react-redux';
 
 
 
-const mapStateToProps = (state, ownProps) => {
+const mapStateToProps = (state, ownProps) => ({
 // map headers, text, subcat titles
     // header: this.state.header
-}
+})
 
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = dispatch => ({
 
-}
+})
 
 export default connect(mapStateToProps, mapDispatchToProps)(categoryDropdown)
 
