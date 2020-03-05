@@ -7,7 +7,7 @@ const HeroBanner = (props) => (
         <div className='hero-block-large'>
                 <div className='hero-large-text'>
                     <h3>Standing out just got so easy.</h3>
-                <p>Shop fashion <div className='angle-arrow-icon arrow-hero-large'>{angleArrowIcon}</div></p>
+                    <p>Shop fashion <div className='angle-arrow-icon arrow-hero-large'>{angleArrowIcon}</div></p>
                 </div>
 
                 <div className='hero-container'>
@@ -29,7 +29,8 @@ const HeroBanner = (props) => (
             <div className='hero-block-small'>
                 {/* <div className='hero-container'> */}
                     <div className='hero-small-text'>
-                    <p>Free shipping coming right up <div className='angle-arrow-icon arrow-hero-small'>{angleArrowIcon}</div></p>
+                        <p>Free shipping coming right up </p>
+                        <div className='angle-arrow-icon arrow-hero-small'>{angleArrowIcon}</div>
                     </div>
                 {/* </div> */}
             </div>
