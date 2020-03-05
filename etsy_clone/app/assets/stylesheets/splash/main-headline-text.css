@@ -10,11 +10,13 @@
 .main-headline-text p {
     display: flex;
     justify-content: center;
+    text-align: center;
     font-size: 33px;
     /* font-family: 'Martel', serif; */
     /* font-family: 'Scope One', serif; */
     font-family: 'Roboto Slab', serif;  /* font-weight is specify in font import url */
     letter-spacing: 1px;
     font-weight: 700;
+    min-width: 950px;
 }
 
