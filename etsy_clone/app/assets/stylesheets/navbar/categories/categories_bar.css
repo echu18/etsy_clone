@@ -5,8 +5,8 @@
     width: 100vw;
     height: 0px;
     border-bottom: 2px solid #EFEFEF;
-    margin: 0px;
-    padding: 0px;
+    /* padding-bottom: -2px; */
+    /* padding: 0px; */
     z-index: 2;
 }
 
@@ -17,8 +17,9 @@
     align-items: center;
     /* justify-content: space-around; */
     width: auto;
-    height: 34px;
+    height: 33px;
     padding-bottom: 10px;
+    /* padding-bottom: 10px; */
 }
 
 
