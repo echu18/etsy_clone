@@ -24,5 +24,7 @@
 
 
 .cat-header{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
     font-size: 15px;
 }
