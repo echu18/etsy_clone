@@ -61,4 +61,6 @@ Rails.application.configure do
 
 
   # config.active_job.queue_adapter = :inline
+
+  config.assets.prefix = "/dev-assets"
 end
