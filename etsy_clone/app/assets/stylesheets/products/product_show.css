@@ -1,17 +1,29 @@
-.product-photos {
-    display: flex;
-    flex-direction: row;
+.photo-carousel {
     height: 500px;
     width: 500px;
+}
+
+
+.photos-small-container {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: auto;
     border: 1px solid red;
 }
 
-.product-photo {
+.photo-small {
     display: flex;
     padding: 0;
     margin: 0;
     height: 100px;
     width: 100px;
     z-index: 200;
-    border: 1px solid blue;
+    opacity: 0.5;
+}
+
+
+.photo-small:hover {
+    border: 1px solid greenyellow;
+    opacity: 1;
 }

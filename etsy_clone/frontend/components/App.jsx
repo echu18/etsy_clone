@@ -20,13 +20,14 @@ const App = () => (
         <span id='category-divider'></span>
 
         <div id='main'>
+            <Route exact path="/" component={SplashContainer} />
             <Route path="/signin" component={LoginFormContainer} />
             <Route path="/signup" component={SignupFormContainer} />
             <Route exact path="/products/:productId" component={ProductShowContainer} />
 
-            <div className="splash">
+            {/* <div className="splash">
                 <SplashContainer />
-            </div>
+            </div> */}
 
             <footer className='footer'>
             </footer>

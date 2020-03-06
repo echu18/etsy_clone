@@ -1,4 +1,5 @@
 import React from 'react';
+import ProductImageContainer from './product_image_container';
 
 class ProductShow extends React.Component {
     componentDidMount() {
@@ -8,12 +9,13 @@ class ProductShow extends React.Component {
     render() {
         if (this.props.product === undefined) return null;
 
-        const { name, description, price, category, seller, photoUrls} = this.props.product;
+        const { name, description, price, category, photoUrls} = this.props.product;
         const urls = Array.from(photoUrls)
 
         // console.log('photos')
+        console.log(this.props.product.seller_id)
         return (
-            <div className='product-card'>
+            <div className='product-listing-container'>
 
                 <p className='product-name'>{name}</p>
                 <p className='product-description'>{description}</p>
@@ -27,11 +29,7 @@ class ProductShow extends React.Component {
 
         
                 {/* <img className='product-photo' src={urls[1]}/> */}
-                <div className='product-photos'>
-                    {urls.map((url, idx) => {
-                        return <img className='product-photo' src={url} key={idx}/>
-                    })}
-                </div>
+                <ProductImageContainer urls={urls} product={this.props.product} />
             </div>
         )
     }
