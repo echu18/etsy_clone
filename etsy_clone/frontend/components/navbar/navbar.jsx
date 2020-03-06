@@ -57,12 +57,14 @@ class Navbar extends React.Component {
                     </div>
 
                     <div className="searchbar">
-                        <form className="searchbar-form" /*onSubmit={}*/>
-                            <input type="text" name="search" placeholder="Search for items or shops" autoComplete='off'/>
-                                <div className="navbar-icon search-icon">
-                                    {searchIcon}
-                                </div>
-                        </form>
+                        <div className="searchbar-form" >
+                            <form /*onSubmit={}*/>
+                                <input type="text" name="search" placeholder="Search for items or shops" autoComplete='off'/>      
+                            </form>
+                            <div className="navbar-icon search-icon">
+                                {searchIcon}
+                            </div>
+                        </div>
                     </div>
                     
                     { display }
