@@ -1,11 +1,11 @@
 import React from 'react'
 import { connect } from 'react-redux';
-import { fetchProducts, fetchProduct } from '../../actions/product_actions'
+import { withRouter } from 'react-router-dom';
 import ProductImage from './product_image';
 
 
 const mapStateToProps = (state, ownProps) => ({
-    
+    // product: state.entities.products[ownProps.match.params.productId]
 })
 
 const mapDispatchToProps = dispatch => ({

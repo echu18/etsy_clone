@@ -4,10 +4,12 @@ class ProductImage extends React.Component {
     constructor(props){
         super(props);
         this.state={
-            currentPhoto: this.props.urls[0]
+            urls: this.props.product.photoUrls,
+            currentPhoto: this.props.product.photoUrls[0]
         }
-
+        // console.log(this.props)
         this.changePhoto = this.changePhoto.bind(this);
+        this.handleClick = this.handleClick.bind(this);
     }
 
 
@@ -16,27 +18,32 @@ class ProductImage extends React.Component {
         this.setState({currentPhoto: this.props.urls[idx]});
     }
 
+    handleClick(e) {
+        // e.preventDefault();
+        this.changePhoto(e.currentTarget.id);
+    }
+
 
 
     render() {
         const {urls} = this.props;
 
         return (
-            // <div className='photo-carousel'>
-            //     <div className='photos-small-container'>
-            //         {urls.map((url, idx) => {
-            //             return (
-            //                 <div onClick={this.changePhoto(idx)}>
-            //                     <img className='photo-small' src={url} key={idx}/>
-            //                 </div>
-            //             )
-            //         })}
-            //     </div>
+            <div className='photo-carousel'>
+                <div className='photos-small-panel'>
+                    {urls.map((url, idx) => {
+                        return (
+                            <div className='photo-small-container'id={idx} onClick={e => this.handleClick(e)}>
+                                <img className='photo-small' src={url} key={idx}/>
+                            </div>
+                        )
+                    })}
+                </div>
 
-            //     <div className='photo-large-container'>
-            //         <img className='photo-large' src={urls.slice(1)}/> // needs to be state: currentphoto
-            //     </div>
-            // </div>
+                <div className='photo-large-container'>
+                    <img className='photo-large' src={this.state.currentPhoto}/> 
+                </div>
+            </div>
         )
     }
 }

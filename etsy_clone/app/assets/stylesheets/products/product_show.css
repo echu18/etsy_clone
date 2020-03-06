@@ -4,7 +4,7 @@
 }
 
 
-.photos-small-container {
+.photos-small-panel {
     display: flex;
     flex-direction: column;
     height: auto;
@@ -13,6 +13,7 @@
 }
 
 .photo-small {
+    box-sizing: border-box;
     display: flex;
     padding: 0;
     margin: 0;
@@ -26,4 +27,10 @@
 .photo-small:hover {
     border: 1px solid greenyellow;
     opacity: 1;
+}
+
+
+.photo-large {
+    height: 200px;
+    width: 200px;
 }

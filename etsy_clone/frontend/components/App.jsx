@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import { AuthRoute } from '../util/route_util';
 import NavbarContainer from './navbar/navbar_container';
 import SignupFormContainer from '../components/signin_signup/signup_form_container';
@@ -20,11 +20,11 @@ const App = () => (
         <span id='category-divider'></span>
 
         <div id='main'>
-            <Route exact path="/" component={SplashContainer} />
-            <Route path="/signin" component={LoginFormContainer} />
-            <Route path="/signup" component={SignupFormContainer} />
-            <Route exact path="/products/:productId" component={ProductShowContainer} />
-
+                <Route path="/signin" component={LoginFormContainer} />
+                <Route path="/signup" component={SignupFormContainer} />
+                <Route exact path="/products/:productId" component={ProductShowContainer} />
+                <Route exact path="/" component={SplashContainer} />
+            
             {/* <div className="splash">
                 <SplashContainer />
             </div> */}

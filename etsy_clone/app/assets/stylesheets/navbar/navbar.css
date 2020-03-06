@@ -125,6 +125,7 @@
     background-color: #e8e8e8;
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
+    animation: zoominoutsinglefeatured 15s forwards;
 }
 
 .signin-signout {
@@ -166,4 +167,17 @@
 .cart-icon:hover {
     background-color: gainsboro;
     cursor: pointer;
+}
+
+
+@keyframes zoominoutsinglefeatured {
+    0% {
+        transform: scale(1,1);
+    }
+    50% {
+        transform: scale(1.2,1.2);
+    }
+    100% {
+        transform: scale(1,1);
+    }
 }
