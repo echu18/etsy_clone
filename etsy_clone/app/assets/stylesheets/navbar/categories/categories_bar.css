@@ -30,10 +30,11 @@
     letter-spacing: 0.5px;
 }
 
-/* .cat-header:not(:first-of-type) {
-    margin-left: 2px;
+.cat-header:not(:first-of-type) {
+    padding: 0px 10px 0px 0px;
+
 }
 
 .cat-header:not(:last-of-type){
-    margin-right: 2px;
-} */
+    padding: 0px 0px 0px 10px;
+}

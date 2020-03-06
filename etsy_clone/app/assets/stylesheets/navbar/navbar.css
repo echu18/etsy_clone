@@ -15,7 +15,7 @@
     box-sizing: border-box;
     display: flex;
     flex-wrap: no-wrap;
-    padding: 9.5px 0px 15px 0px;
+    padding: 12px 0px 15px 0px;
     /* padding: 1.5vh 0 1.5vh 0; */
     /* justify-content: space-around; */
     align-items: center;

@@ -16,10 +16,14 @@ class ProductShow extends React.Component {
         console.log(this.props.product.seller_id)
         return (
             <div className='product-listing-container'>
+                <ProductImageContainer urls={urls} product={this.props.product} {...this.props} />
 
-                <p className='product-name'>{name}</p>
-                <p className='product-description'>{description}</p>
-                <p className='product-price'>${price}</p>
+                <div className='product-sidebar'>
+                    <p className='review-header'>Reviews ********</p>
+                    <p className='product-name'>{name}</p>
+                    <p className='product-price'>${price}</p>
+                    <p className='product-description'>{description}</p>
+                </div>
                 {/* <p className='product-category'>{category}</p> */}
 
                 {/* <div className='seller-info'>
@@ -28,8 +32,6 @@ class ProductShow extends React.Component {
                 </div> */}
 
         
-                {/* <img className='product-photo' src={urls[1]}/> */}
-                <ProductImageContainer urls={urls} product={this.props.product} {...this.props} />
             </div>
         )
     }

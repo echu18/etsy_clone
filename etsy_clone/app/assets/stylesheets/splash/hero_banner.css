@@ -76,6 +76,7 @@
     min-height: auto;
     height: 107%;
     min-height: 200px;
+    /* min-width: 0; */
     width: 100%;
     z-index: 0;
 }

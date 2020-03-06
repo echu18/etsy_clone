@@ -1,61 +1,37 @@
-.photo-carousel {
+.product-listing-container {
     display: flex;
-    height: 500px;
-    width: 48vw;
-    /* border: 1px solid blue; */
+    justify-content: space-around;
+    margin-top: 30px;
 }
 
 
-.photos-small-panel {
-    display: flex;
-    flex-direction: column;
-    height: auto;
-    width: 64px;
-    /* border: 1px solid red; */
-}
-
-.photo-small {
-    box-sizing: border-box;
-    display: flex;
-    border-radius: 5px;
-    padding: 0;
-    margin: 0;
-    height: 64px;
-    width: 100%;
-    opacity: 0.5;
-    /* margin: 3px; */
-}
-
-.photo-small-container:not(:first-child) {
-    margin-top: 3px;
-}
-
-.photo-small-container:not(:last-child) {
-    margin-bottom: 3px;
+.product-sidebar {
+    display: block;
+    min-width: 22vw;
+    border: 1px solid green;
 }
 
 
-.photo-small:hover {
-    border: 1px solid black;
-    opacity: 1;
+.review-header {
+    margin: 5px;
+    border: 1px solid turquoise;
+}
+
+.product-name {
+    text-align: left;
+    font-size: 29.5px;
+    font-family: 'Roboto Slab', serif;  /* font-weight is specify in font import url */
+    font-weight: 700;
+    border: 1px solid orange;
 }
 
 
-.photo-large-container {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    /* border: 1px solid fuchsia; */
+.product-price {
+    font-family: 'Roboto', sans-serif;
+    font-size: 28px;
 }
 
-.photo-large {
-    display: flex;
-    justify-content: center;
-    height: auto;
-    width: auto;
-    max-width: 800px;
-    min-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 5px;
-}
+
+
+
+
