@@ -1,8 +1,8 @@
 .photo-carousel {
     display: flex;
     height: 500px;
-    width: 40vw;
-    border: 1px solid blue;
+    width: 48vw;
+    /* border: 1px solid blue; */
 }
 
 
@@ -44,13 +44,18 @@
 .photo-large-container {
     display: flex;
     justify-content: center;
-    width: 30vw;
-    border: 1px solid fuchsia;
-
+    width: 100%;
+    /* border: 1px solid fuchsia; */
 }
 
 .photo-large {
     display: flex;
-    height: 200px;
-    width: 200px;
+    justify-content: center;
+    height: auto;
+    width: auto;
+    max-width: 800px;
+    min-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
 }
