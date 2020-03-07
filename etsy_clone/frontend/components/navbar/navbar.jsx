@@ -8,6 +8,8 @@ import {cartIcon, searchIcon, etsyLogo} from '../../../app/assets/images/svgs/ic
 class Navbar extends React.Component {
     constructor(props) {
         super(props);
+
+        
         this.state = {showPopup: false};
         this.togglePopup = this.togglePopup.bind(this);
         this.signOutAndClear = this.signOutAndClear.bind(this);

@@ -3,11 +3,12 @@
     position: absolute;
     box-sizing: border-box;
     width: 100vw;
-    height: 124px;
-    border-bottom: 2px solid #EFEFEF;
+    /* height: 124px; */
+    height: 106px;
+    border-bottom: 2px solid rgb(221, 221, 221);
     /* padding-bottom: -2px; */
     /* padding: 0px; */
-    z-index: 2;
+    z-index: -5;
 }
 
 .categories-bar {
@@ -19,6 +20,7 @@
     width: auto;
     height: 31px;
     /* padding-bottom: 10px; */
+
 }
 
 

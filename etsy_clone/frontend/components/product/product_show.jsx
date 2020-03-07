@@ -18,18 +18,24 @@ class ProductShow extends React.Component {
         console.log(urls)
         
         return (
-            <div className='product-card'>
+            <div className='product-listing-container'>
                 <ProductImageContainer urls={urls} product={this.props.product} {...this.props} />
 
-                <p className='product-name'>{name}</p>
-                <p className='product-description'>{description}</p>
-                <p className='product-price'>${price}</p>
-                {/* <p className='product-category'>{category}</p> */}
+                <div className='product-sidebar'>
+                    <p className='product-name'>{name}</p>
+                    <p className='product-price'>${price}</p>
+                    <p className='product-description'>{description}</p>
+                    {/* <p className='product-category'>{category}</p> */}
 
-                <div className='seller-info'>
-                    <p>{this.props.users[sellerId].username}</p>
-                     {/* <img src={seller.photo}/>  */}
+
+                    <div className='seller-info'>
+                        <p>{this.props.users[sellerId].username}</p>
+                        {/* <img src={seller.photo}/>  */}
+                    </div>
                 </div>
+
+
+               
 
                 {/* <img className='product-photo' src={urls[1]}/> */}
                 {/* <div className='product-photos'>

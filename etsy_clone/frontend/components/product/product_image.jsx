@@ -43,6 +43,7 @@ class ProductImage extends React.Component {
                 </div>
 
                 <div className='photo-large-container'>
+                    
                     <img className='photo-large' src={this.state.currentPhoto}/> 
                 </div>
             </div>

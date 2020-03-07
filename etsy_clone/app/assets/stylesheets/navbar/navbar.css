@@ -15,9 +15,8 @@
     box-sizing: border-box;
     display: flex;
     flex-wrap: no-wrap;
-    padding: 12px 0px 15px 0px;
-    /* padding: 1.5vh 0 1.5vh 0; */
-    /* justify-content: space-around; */
+    padding: 12px 0px 7px 0px;
+    /* padding: 12px 0px 15px 0px; */
     align-items: center;
 }
 
