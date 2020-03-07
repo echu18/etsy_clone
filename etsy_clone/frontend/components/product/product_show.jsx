@@ -19,7 +19,7 @@ class ProductShow extends React.Component {
         
         return (
             <div className='product-card'>
-                <ProductImageContainer/>
+                <ProductImageContainer urls={urls} product={this.props.product} {...this.props} />
 
                 <p className='product-name'>{name}</p>
                 <p className='product-description'>{description}</p>

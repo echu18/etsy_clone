@@ -25,12 +25,12 @@
     .main-headline-text p {
             text-align: center;
 
-        font-size: 29.5px;
+        font-size: 29.5px;main
 
         font-family: 'Roboto Slab', serif;  /* font-weight is specify in font import url */
         font-weight: 700;
         min-width: 600px;
-        transform: scale(0.7);
+        /* transform: scale(0.7); */
     }
     
 }

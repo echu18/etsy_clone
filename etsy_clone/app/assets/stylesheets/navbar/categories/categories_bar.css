@@ -3,7 +3,7 @@
     position: absolute;
     box-sizing: border-box;
     width: 100vw;
-    height: 0px;
+    height: 124px;
     border-bottom: 2px solid #EFEFEF;
     /* padding-bottom: -2px; */
     /* padding: 0px; */
@@ -42,5 +42,17 @@
 @media only screen and (max-width: 900px) {
     .categories-bar {
         display: none;
+    }
+
+    #category-divider {
+        display: flex;
+        position: absolute;
+        box-sizing: border-box;
+        width: 100vw;
+        height: 121px;
+        border-bottom: 1px solid #EFEFEF;
+        /* padding-bottom: -2px; */
+        /* padding: 0px; */
+        z-index: 2;
     }
 }

@@ -21,13 +21,6 @@
     align-items: center;
 }
 
-@media only screen and (min-width: 80%) {
-  .navbar-inner {
-      flex-wrap: wrap;
-  }
-}
-
-
 .etsyLogo > svg {
     box-sizing: border-box;
     width: 87px;
@@ -50,13 +43,13 @@
     justify-content: center;
     padding: 0px 0px 10px 0px;
     margin: 0 3px 0 0;
-    
 }
 
 .searchbar-form input[type="text"] {
     
     /* min-height: 46px; */
     /* width: 62.6vw; */
+    width: 56.9vw;
     width: 56.9vw;
     height: 43.5px;
     /* height: 5.3vh; */
@@ -195,3 +188,74 @@
 
 
 
+@media only screen and (min-width: 80%) {
+  .navbar-inner {
+      flex-wrap: wrap;
+  }
+}
+
+
+@media only screen and (max-width: 900px) {
+    .navbar {
+        background-color: #FFFFFF;
+        width: 100%;
+        height: auto;
+        /* height: 100px; */
+        /* display: flex; */
+        /* justify-content: center; */
+        /* flex-wrap: wrap; */
+        /* align-items: center; */
+        font-family: 'Roboto', sans-serif;
+        font-size: 13px;
+    }
+
+    .searchbar-form {
+        max-height: 52px;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 70px 0px 10px 0px;
+        margin: 0 3px 0 -30px;
+    }
+
+    .searchbar-form input[type="text"] {
+        width: 60vw;
+    }
+
+    .etsyLogo > svg {
+        box-sizing: border-box;
+        width: 87px;
+        height: 40px;
+        /* padding: 5px 15px 0 0; */
+        /* margin: -4px 6px -1px -4px; */
+        margin: 0px 0px 40px 0px;
+        fill: #F1651F;
+    }
+
+
+    .signin-signout {
+        font-weight: 900;
+        white-space: nowrap;
+        display: flex;
+        justify-content: center;
+        min-width: auto;
+        padding: 10px; /* this is for the hover circle, do not remove */
+        border-radius: 30px;
+        box-sizing: border-box;
+        margin: 0px 15% 40px -220px;
+    }
+
+    .cart-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 40px;
+        min-height: 40px;
+        border-radius: 50%;
+        padding: 2px 0px 0px 0px;
+        margin: 0px 0px 40px -80px;
+    }
+
+
+}
