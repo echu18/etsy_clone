@@ -9,6 +9,7 @@
     /* align-items: center; */
     font-family: 'Roboto', sans-serif;
     font-size: 13px;
+    padding-right: 0px;
 }
 
 .navbar-inner {
@@ -35,6 +36,7 @@
 
 /* search form container */
 .searchbar-form {
+    
     max-height: 52px;
     box-sizing: border-box;
     display: flex;
@@ -48,8 +50,9 @@
     
     /* min-height: 46px; */
     /* width: 62.6vw; */
-    width: 56.9vw;
-    width: 56.9vw;
+    /* width: 56.9vw; */
+    min-width: 50vw;
+    max-width: 56.9vw;
     height: 43.5px;
     /* height: 5.3vh; */
     border-radius: 25px;

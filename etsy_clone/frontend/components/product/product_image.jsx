@@ -1,4 +1,6 @@
 import React from 'react';
+import { leftArrow, rightArrow, resizeImage, filledHeart, emptyHeart } from '../../../app/assets/images/svgs/icons'
+
 
 class ProductImage extends React.Component {
     constructor(props){
@@ -42,8 +44,17 @@ class ProductImage extends React.Component {
                     })}
                 </div>
 
-                <div className='photo-large-container'>
+                    <div className='arrow-icons photo-carousel'>
+                        <div className='left-arrow-icon'>
+                            {leftArrow}
+                        </div>
+
+                        <div className='right-arrow-icon'>
+                            {rightArrow}
+                        </div>
+                    </div>
                     
+                <div className='photo-large-container'>
                     <img className='photo-large' src={this.state.currentPhoto}/> 
                 </div>
             </div>

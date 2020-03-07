@@ -22,15 +22,17 @@ class ProductShow extends React.Component {
                 <ProductImageContainer urls={urls} product={this.props.product} {...this.props} />
 
                 <div className='product-sidebar'>
-                    <p className='product-name'>{name}</p>
-                    <p className='product-price'>${price}</p>
-                    <p className='product-description'>{description}</p>
-                    {/* <p className='product-category'>{category}</p> */}
+                    <div className='product-text'>
+                        <p className='product-name'>{name}</p>
+                        <p className='product-price'>${price}</p>
+                        <p className='product-description'>{description}</p>
+                        {/* <p className='product-category'>{category}</p> */}
 
 
-                    <div className='seller-info'>
-                        <p>{this.props.users[sellerId].username}</p>
-                        {/* <img src={seller.photo}/>  */}
+                        <div className='seller-info'>
+                            <p>{this.props.users[sellerId].username}</p>
+                            {/* <img src={seller.photo}/>  */}
+                        </div>
                     </div>
                 </div>
 

@@ -57,7 +57,7 @@ class Navbar extends React.Component {
 
 
         return(
-            <div className="navbar" id='main'>
+            <div className="navbar">
                 <div className="navbar-inner" id='inner' >
                     <div className="etsyLogo" onClick={this.redirectToHome}>
                         {etsyLogo}

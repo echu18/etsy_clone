@@ -12,14 +12,13 @@ import SplashContainer from './main_content/splash_container';
 
 const App = () => (
     <div id='app'>
+        <span id='category-divider'></span>
+        
         <div id='main'>
             <header className="header">
                 <NavbarContainer />
             </header>
-        </div>
-        <span id='category-divider'></span>
-
-        <div id='main'>
+        
                 <Route path="/signin" component={LoginFormContainer} />
                 <Route path="/signup" component={SignupFormContainer} />
                 <Route exact path="/products/:productId" component={ProductShowContainer} />
