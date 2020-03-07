@@ -7,14 +7,14 @@
 
 .product-sidebar {
     display: block;
-    min-width: 22vw;
-    border: 1px solid green;
+    max-width: 22vw;
+    /* border: 1px solid green; */
 }
 
 
 .review-header {
     margin: 5px;
-    border: 1px solid turquoise;
+    /* border: 1px solid turquoise; */
 }
 
 .product-name {
@@ -22,7 +22,7 @@
     font-size: 29.5px;
     font-family: 'Roboto Slab', serif;  /* font-weight is specify in font import url */
     font-weight: 700;
-    border: 1px solid orange;
+    /* border: 1px solid orange; */
 }
 
 
@@ -31,7 +31,28 @@
     font-size: 28px;
 }
 
+.seller-info {
+    font-size: 100px;
+    width: 100px;
+    height: 100px;
+}
 
 
 
 
+
+@media only screen and (max-width: 900px) {
+    .product-listing-container {
+        display: flex;
+        flex-direction: column;
+        margin-top: 30px;
+    }
+
+
+    /* .product-sidebar {
+        display: block;
+        max-width: 22vw;
+        border: 1px solid green;
+    } */
+ 
+}

@@ -11,7 +11,7 @@ import SplashContainer from './main_content/splash_container';
 
 
 const App = () => (
-    <div>
+    <div id='app'>
         <div id='main'>
             <header className="header">
                 <NavbarContainer />
@@ -24,7 +24,7 @@ const App = () => (
                 <Route path="/signup" component={SignupFormContainer} />
                 <Route exact path="/products/:productId" component={ProductShowContainer} />
                 <Route exact path="/" component={SplashContainer} />
-            
+                {/* <Route path="/products" component={ProductShowContainer} /> */}
             {/* <div className="splash">
                 <SplashContainer />
             </div> */}

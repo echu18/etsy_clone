@@ -33,7 +33,7 @@
     width: 87px;
     height: 40px;
     /* padding: 5px 15px 0 0; */
-    margin: 2px 6px -1px -5px;
+    margin: -4px 6px -1px -4px;
     fill: #F1651F;
 }
 
@@ -48,7 +48,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    /* padding: 0px 0px 10px 0px; */
+    padding: 0px 0px 10px 0px;
     margin: 0 3px 0 0;
     
 }
@@ -116,7 +116,8 @@
 
     display: inline-block;
     position: relative;
-    padding: 0px 15px 5px 0px;
+    /* padding: 0px 15px 5px 0px; */
+    margin: 0px 15px 5px 0px;
     width: 20px;
     height: 45px;
     right: 21px;
@@ -144,7 +145,7 @@
     padding: 10px; /* this is for the hover circle, do not remove */
     border-radius: 30px;
     box-sizing: border-box;
-    margin: 0px 20px 0 0;
+    margin: 0px 15% 0 -30%;
 }
 
 .signin-signout:hover {
@@ -167,7 +168,7 @@
     min-height: 40px;
     border-radius: 50%;
     padding: 2px 0px 0px 0px;
-    /* margin: 0px 0px 0px 0px; */
+    margin: 0px 0px 0px 0.5%;
 }
 
 
@@ -177,6 +178,9 @@
 }
 
 
+/* SEARCH ICON HOVER ZOOM OUT EFFECT*/
+
+/* 
 @keyframes zoominoutsinglefeatured {
     0% {
         transform: scale(1,1);
@@ -187,4 +191,7 @@
     100% {
         transform: scale(1,1);
     }
-}
+} */
+
+
+

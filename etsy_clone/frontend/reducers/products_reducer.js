@@ -1,6 +1,6 @@
-import { RECEIVE_PRODUCTS, RECEIVE_PRODUCT } from '../actions/product_actions';
+import { RECEIVE_PRODUCTS, RECEIVE_PRODUCT, RECEIVE_PRODUCT_SELLER } from '../actions/product_actions';
 
-export default (state={}, action) => {
+const productsReducer = (state={}, action) => {
     Object.freeze(state);
     switch (action.type) {
         case RECEIVE_PRODUCTS:
@@ -10,8 +10,12 @@ export default (state={}, action) => {
                 });
             return products
         case RECEIVE_PRODUCT:
-            return Object.assign({}, state, {[action.product.id]: action.product})
+            // const product = action.payload.products
+            const product = action.product
+            return Object.assign({}, state, product)
         default:
             return state
     }
 }
+
+export default productsReducer;

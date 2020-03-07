@@ -33,8 +33,8 @@ class ProductImage extends React.Component {
                 <div className='photos-small-panel'>
                     {urls.map((url, idx) => {
                         return (
-                            <div className='photo-small-container'id={idx} onMouseOver={e => this.handleClick(e)}>
-                                <img className='photo-small' src={url} key={idx}/>
+                            <div className='photo-small-container' id={idx} key={idx} onMouseOver={e => this.handleClick(e)}>
+                                <img className='photo-small' src={url} />
                             </div>
                         )
                     })}

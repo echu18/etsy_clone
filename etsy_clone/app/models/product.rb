@@ -15,7 +15,7 @@ class Product < ApplicationRecord
     validates :name, :price, presence: true
     validates :price, presence: true, format: { with: /\A\d+(?:\.\d{2})?\z/ }, numericality: { greater_than: 0, less_than: 1000000 }
 
-    # belongs_to :seller, foreign_key: :seller_id, class_name: :User
+    belongs_to :seller, foreign_key: :seller_id, class_name: :User
     has_many_attached :photos
 
     # belongs_to :category, foreign_key: :category_id, class_name: :Category   - category table not created yet
