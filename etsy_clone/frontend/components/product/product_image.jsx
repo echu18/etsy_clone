@@ -5,7 +5,7 @@ class ProductImage extends React.Component {
         super(props);
         this.state={
             urls: this.props.product.photoUrls,
-            currentPhoto: this.props.product.photoUrls[0]
+            currentPhoto: this.props.photoUrls[0]
         }
         // console.log(this.props)
         this.changePhoto = this.changePhoto.bind(this);
