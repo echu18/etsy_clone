@@ -20,7 +20,8 @@ u4 = User.create(username: 'mindy', email: 'mindy@cc.com', password: '123456')
 u5 = User.create(username: 'sean', email: 'sean@cc.com', password: '123456')
 u6 = User.create(username: 'jerry', email: 'jerry@cc.com', password: '123456')
 
-u1.photo.attach(io: file1, filename: 'smug_knife_cat.jpg');
+file123 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/test/print5.jpg')
+u1.photos.attach(io: file123, filename: 'print5.jpg');
 
 
 p1 = Product.create(name:'Cat Memes Sticker Pack', description: 'This sticker pack includes six waterproof vinyl stickers of cat memes. They\'re perfect for laptops, water bottles (hand wash only), phones and whatever you can think of. These stickers make a good gift for meme addicts or a treat for yourself. These stickers were printed on vinyl waterproof and tear proof laser paper.

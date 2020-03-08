@@ -13,7 +13,9 @@ class ProductShow extends React.Component {
         const { name, description, price, category, photoUrls } = this.props.product;
         const urls = Array.from(photoUrls)
         const sellerId = this.props.product.seller_id;
-              
+        const sellerPhotoUrl = this.props.users[sellerId].photoUrls[0];
+
+
         return (
             <div className='product-listing-container'>
                 <ProductImageContainer urls={urls} product={this.props.product} {...this.props} />
@@ -22,13 +24,17 @@ class ProductShow extends React.Component {
                     <div className='product-text'>
                         <p className='product-name'>{name}</p>
                         <p className='product-price'>${price}</p>
+
+                        
+
+
                         <p className='product-description'>{description}</p>
                         {/* <p className='product-category'>{category}</p> */}
 
-
+                
                         <div className='seller-info'>
                             <p>{this.props.users[sellerId].username}</p>
-                            {/* <img src={seller.photo}/>  */}
+                             <img src={sellerPhotoUrl} />
                         </div>
                     </div>
                 </div>

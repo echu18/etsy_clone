@@ -30,24 +30,15 @@ class ProductImage extends React.Component {
 
     handleNextPhoto(e){
         e.preventDefault();
-        console.log(`oldIdx: ${this.state.currentPhotoIdx}`)
-        // debugger
+
         let newPhotoIdx = ((this.state.currentPhotoIdx + 1) % this.state.urls.length);
-        console.log(`newIdx: ${newPhotoIdx}`)
         this.changePhoto(newPhotoIdx);
     }
 
     handlePreviousPhoto(e){
         e.preventDefault();
-        console.log(`oldIdx: ${this.state.currentPhotoIdx}`)
-        // debugger
-        let newPhotoIdx = this.state.currentPhotoIdx - 1;
 
-        newPhotoIdx = newPhotoIdx < 0 ? (
-            this.state.urls.length - (-newPhotoIdx % this.state.urls.length)
-            ) : (newPhotoIdx % this.state.urls.length);
-
-        console.log(`newIdx: ${newPhotoIdx}`)
+        let newPhotoIdx = (this.state.currentPhotoIdx + this.state.urls.length - 1) % this.state.urls.length;
 
         this.changePhoto(newPhotoIdx);
     }
