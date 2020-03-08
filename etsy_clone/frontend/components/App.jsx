@@ -6,7 +6,7 @@ import SignupFormContainer from '../components/signin_signup/signup_form_contain
 import LoginFormContainer from '../components/signin_signup/signin_form_container';
 // import CartSidebarContainer from '../components/product/cart_sidebar_container';
 
-import ProductShowContainer from './product/product_show_container';
+import ProductShowContainer from './products/product_show_container';
 
 import SplashContainer from './main_content/splash_container';
 

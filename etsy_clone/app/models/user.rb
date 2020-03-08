@@ -9,6 +9,7 @@
 #  session_token   :string
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
+#  store_name      :string
 #
 class User < ApplicationRecord
     # validates :username

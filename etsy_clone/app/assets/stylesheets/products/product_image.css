@@ -73,11 +73,13 @@
     display: flex;
     justify-content: space-between;
     position: absolute;
-    height: 6vh;
+    /* height: 6vh !important; */
+    height: 20px  !important ;
     width: 43vw;
     top: 54.5%;
     left: 19.5%;
     z-index: 2;
+    /* border: 1px solid blue; */
 }
 
 

@@ -13,7 +13,7 @@ User.destroy_all
 Product.destroy_all
 
 demouser = User.create(username: 'DemoUser', email: 'DemoUser', password: '123456')
-u1 = User.create(username: 'jamie', email: 'jamie@cc.com', password: '123456')
+u1 = User.create(username: 'jamie', email: 'jamie@cc.com', password: '123456', store_name: 'MemeEconomy')
 u2 = User.create(username: 'winston', email: 'winston@cc.com', password: '123456')
 u3 = User.create(username: 'fred', email: 'fred@cc.com', password: '123456')
 u4 = User.create(username: 'mindy', email: 'mindy@cc.com', password: '123456')
