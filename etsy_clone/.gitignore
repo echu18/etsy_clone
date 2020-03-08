@@ -14,3 +14,5 @@ npm-debug.log
 /public/assets
 /log/*
 /log/.keep
+# Ignore master key for decrypting credentials and more.
+/config/master.key

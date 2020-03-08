@@ -10,8 +10,9 @@ class Api::ProductsController < ApplicationController
     end
 
     def create
-    @product = product.new(product_params)
-    if @product.save
+    @product = Product.new(product_params)
+    if @product.save!
+      # @product.photos.attach(params[:photos])
       render :show
     else
       render json: @product.errors.full_messages, status: 401

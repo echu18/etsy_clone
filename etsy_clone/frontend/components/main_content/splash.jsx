@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import HeroBanner from './hero_banner';
+import CatModuleContainer from './cat_module_container';
 
 
 
@@ -9,6 +10,10 @@ class Splash extends React.Component{
         super(props)
     }
 
+
+    componentDidMount() {
+        this.props.fetchProducts
+    }
 
     render() {
         return(
@@ -31,7 +36,7 @@ class Splash extends React.Component{
 
                 <section className='cat-module-1'>
                     {/* Header 1 (category title + see more) */}
-                    {/* categoryModuleContainer */}
+                    {/* {catModuleContainer} */}
                 </section>
 
                 <section className='cat-module-2'>

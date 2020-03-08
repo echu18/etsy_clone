@@ -34,18 +34,18 @@ p1 = Product.create(name:'Cat Memes Sticker Pack', description: 'This sticker pa
     Cat on stairs (sixth image): 6 cm at longest measurement', 
     price: 9.47, seller_id: u1.id, category_id: 22)
 
-file1 = open('http://etsy-clone-dev.s3-us-west-1.amazonaws.com/test/smug_knife_cat.jpg')
-file2 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/test/crying+cat.jpg')
-file3 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/test/saladcat.png')
-file4 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/test/pizza_cat.png')
-file5 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/test/sitting_cat.png')
-p1.photos.attach(io: file1, filename: 'smug_knife_cat.jpg')
-p1.photos.attach(io: file2, filename: 'crying+cat.jpg')
-p1.photos.attach(io: file3, filename: 'saladcat.png')
-p1.photos.attach(io: file4, filename: 'pizza_cat.png')
-p1.photos.attach(io: file5, filename: 'sitting_cat.png')
+# file1 = open('http://etsy-clone-dev.s3-us-west-1.amazonaws.com/test/smug_knife_cat.jpg')
+# file2 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/test/crying+cat.jpg')
+# file3 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/test/saladcat.png')
+# file4 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/test/pizza_cat.png')
+# file5 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/test/sitting_cat.png')
+# p1.photos.attach(io: file1, filename: 'smug_knife_cat.jpg')
+# p1.photos.attach(io: file2, filename: 'crying+cat.jpg')
+# p1.photos.attach(io: file3, filename: 'saladcat.png')
+# p1.photos.attach(io: file4, filename: 'pizza_cat.png')
+# p1.photos.attach(io: file5, filename: 'sitting_cat.png')
 
 
 
-r1 = Review.create(body: 'The quality, from the imaging to the material, are great and my friend loved them! They included a complimentary set as a holiday gift and thank you which I thought was so nice! I definitely recommend buying from him and will be coming back in the future 😊',
-author_id: u2.id, product_id: p1.id, rating: 5)
+# r1 = Review.create(body: 'The quality, from the imaging to the material, are great and my friend loved them! They included a complimentary set as a holiday gift and thank you which I thought was so nice! I definitely recommend buying from him and will be coming back in the future 😊',
+# author_id: u2.id, product_id: p1.id, rating: 5)
