@@ -13,10 +13,7 @@ class ProductShow extends React.Component {
         const { name, description, price, category, photoUrls } = this.props.product;
         const urls = Array.from(photoUrls)
         const sellerId = this.props.product.seller_id;
-      
-        // console.log(this.props.users[this.props.product.seller_id].username)
-        console.log(urls)
-        
+              
         return (
             <div className='product-listing-container'>
                 <ProductImageContainer urls={urls} product={this.props.product} {...this.props} />

@@ -6,25 +6,50 @@ class ProductImage extends React.Component {
     constructor(props){
         super(props);
         this.state={
-            // urls: this.props.product.photoUrls,
             urls: this.props.urls,
             // currentPhoto: this.props.product.photoUrls[0]
-            currentPhoto: this.props.urls[0]
+            currentPhotoIdx: 0
         }
-        // console.log(this.props)
+
         this.changePhoto = this.changePhoto.bind(this);
-        this.handleClick = this.handleClick.bind(this);
+        this.handleHover = this.handleHover.bind(this);
+        this.handleNextPhoto = this.handleNextPhoto.bind(this);
+        this.handlePreviousPhoto = this.handlePreviousPhoto.bind(this);
     }
 
 
 
     changePhoto(idx) {
-        this.setState({currentPhoto: this.props.urls[idx]});
+        this.setState({currentPhotoIdx: idx});
     }
 
-    handleClick(e) {
+    handleHover(e) {
         // e.preventDefault();
         this.changePhoto(e.currentTarget.id);
+    }
+
+    handleNextPhoto(e){
+        e.preventDefault();
+        console.log(`oldIdx: ${this.state.currentPhotoIdx}`)
+        // debugger
+        let newPhotoIdx = ((this.state.currentPhotoIdx + 1) % this.state.urls.length);
+        console.log(`newIdx: ${newPhotoIdx}`)
+        this.changePhoto(newPhotoIdx);
+    }
+
+    handlePreviousPhoto(e){
+        e.preventDefault();
+        console.log(`oldIdx: ${this.state.currentPhotoIdx}`)
+        // debugger
+        let newPhotoIdx = this.state.currentPhotoIdx - 1;
+
+        newPhotoIdx = newPhotoIdx < 0 ? (
+            this.state.urls.length - (-newPhotoIdx % this.state.urls.length)
+            ) : (newPhotoIdx % this.state.urls.length);
+
+        console.log(`newIdx: ${newPhotoIdx}`)
+
+        this.changePhoto(newPhotoIdx);
     }
 
 
@@ -37,7 +62,7 @@ class ProductImage extends React.Component {
                 <div className='photos-small-panel'>
                     {urls.map((url, idx) => {
                         return (
-                            <div className='photo-small-container' id={idx} key={idx} onMouseOver={e => this.handleClick(e)}>
+                            <div className='photo-small-container' id={idx} key={idx} onMouseOver={e => this.handleHover(e)}>
                                 <img className='photo-small' src={url} />
                             </div>
                         )
@@ -45,17 +70,17 @@ class ProductImage extends React.Component {
                 </div>
 
                     <div className='arrow-icons photo-carousel'>
-                        <div className='left-arrow-icon'>
+                        <div className='left-arrow-icon' onClick={e => this.handlePreviousPhoto(e)}>
                             {leftArrow}
                         </div>
 
-                        <div className='right-arrow-icon'>
+                    <div className='right-arrow-icon' onClick={e => this.handleNextPhoto(e)}>
                             {rightArrow}
                         </div>
                     </div>
                     
                 <div className='photo-large-container'>
-                    <img className='photo-large' src={this.state.currentPhoto}/> 
+                    <img className='photo-large' src={this.state.urls[this.state.currentPhotoIdx]}/> 
                 </div>
             </div>
         )
