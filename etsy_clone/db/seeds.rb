@@ -11,7 +11,6 @@ require 'open-uri'
 
 User.destroy_all
 Product.destroy_all
-Review.destroy_all
 
 demouser = User.create(username: 'DemoUser', email: 'DemoUser', password: '123456')
 u1 = User.create(username: 'jamie', email: 'jamie@cc.com', password: '123456', store_name: 'MemeEconomy')
@@ -46,6 +45,7 @@ p1.photos.attach(io: file4, filename: 'pizza_cat.png')
 p1.photos.attach(io: file5, filename: 'sitting_cat.png')
 
 
-
-r1 = Review.create(body: 'The quality, from the imaging to the material, are great and my friend loved them! They included a complimentary set as a holiday gift and thank you which I thought was so nice! I definitely recommend buying from him and will be coming back in the future 😊',
-author_id: u2.id, product_id: p1.id, rating: 5)
+# p1 = Product.create(name:'earring', description: 'very nice', price: 23.99, seller_id: 1, category_id: 22)
+# file1 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/test/smug_knife_cat.jpg')
+# p1.photos.attach(io: file1, filename: 'smug_knife_cat.jpg')
+# p1.save!
