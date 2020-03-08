@@ -4,6 +4,7 @@ import { AuthRoute } from '../util/route_util';
 import NavbarContainer from './navbar/navbar_container';
 import SignupFormContainer from '../components/signin_signup/signup_form_container';
 import LoginFormContainer from '../components/signin_signup/signin_form_container';
+// import CartSidebarContainer from '../components/product/cart_sidebar_container';
 
 import ProductShowContainer from './product/product_show_container';
 

@@ -51,11 +51,11 @@ class Popup extends React.Component {
 
         const display = this.state.formType === 'Sign in' ? (
                 <div>
-                    <SigninFormContainer formType={this.state.formType}/>
+                    <SigninFormContainer formType={this.state.formType} closePopup={this.closePopUp}/>
                 </div>
             ) : (
                 <div>
-                    <SignupFormContainer formType={this.state.formType}/>
+                    <SignupFormContainer formType={this.state.formType} closePopup={this.closePopUp}/>
                 </div>
             );
 
