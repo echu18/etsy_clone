@@ -34,18 +34,52 @@ p1 = Product.create(name:'Cat Memes Sticker Pack', description: 'This sticker pa
     Cat on stairs (sixth image): 6 cm at longest measurement', 
     price: 9.47, seller_id: u1.id, category_id: 22)
 
-file1 = open('http://etsy-clone-dev.s3-us-west-1.amazonaws.com/test/smug_knife_cat.jpg')
-file2 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/test/crying+cat.jpg')
-file3 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/test/saladcat.png')
-file4 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/test/pizza_cat.png')
-file5 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/test/sitting_cat.png')
-p1.photos.attach(io: file1, filename: 'smug_knife_cat.jpg')
-p1.photos.attach(io: file2, filename: 'crying+cat.jpg')
-p1.photos.attach(io: file3, filename: 'saladcat.png')
-p1.photos.attach(io: file4, filename: 'pizza_cat.png')
-p1.photos.attach(io: file5, filename: 'sitting_cat.png')
+file101 = open('http://etsy-clone-dev.s3-us-west-1.amazonaws.com/test/smug_knife_cat.jpg')
+file102 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/test/crying+cat.jpg')
+file103 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/test/saladcat.png')
+file104 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/test/pizza_cat.png')
+file105 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/test/sitting_cat.png')
+p1.photos.attach(io: file101, filename: 'smug_knife_cat.jpg')
+p1.photos.attach(io: file102, filename: 'crying+cat.jpg')
+p1.photos.attach(io: file103, filename: 'saladcat.png')
+p1.photos.attach(io: file104, filename: 'pizza_cat.png')
+p1.photos.attach(io: file105, filename: 'sitting_cat.png')
 
 
+p2 = Product.create(name:'Surprised Pikachu Enamel Pin - Pokemon Enamel Pin - Funny Enamel Pin - Funny Meme Badge - Gamer Gift', description:'This surprised pikachu enamel pin is the perfect badge for people who love the surprised pikachu meme! Pop it on your coat lapel, bag, or anywhere else and always be prepared for the moment you need to whip out a surprised pika!
+This pin bears a rubber butterfly clutch which is more secure than its metal cousin so you can worry less about it falling off! It comes with a backing card approximately 55 x 85mm in size.
+Please note: As an eco-friendly store I have opted to exclude the plastic packaging in which enamel pins are normally wrapped. Instead, your pin will come in a colourful paper bag.
 
-# r1 = Review.create(body: 'The quality, from the imaging to the material, are great and my friend loved them! They included a complimentary set as a holiday gift and thank you which I thought was so nice! I definitely recommend buying from him and will be coming back in the future 😊',
-# author_id: u2.id, product_id: p1.id, rating: 5)
+DETAILS
+* Soft enamel pin with a black dye backing
+* Rubber clutch fastening
+* Size: Approx 25 x 20mm
+* Comes with backing card approx 55 x 85mm
+* Great for bags, coat lapels, etc', price: 8.49, seller_id: u1.id, category_id: 22)
+file106 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/test/pikachu1.jpg')
+file107 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/test/pikachu2.jpg')
+file108 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/test/pikachu3.jpg')
+file109 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/test/pikachu4.jpg')
+file110 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/test/pikachu5.jpg')
+
+p2.photos.attach(io: file106, filename: 'pikachu1.jpg')
+p2.photos.attach(io: file107, filename: 'pikachu2.jpg')
+p2.photos.attach(io: file108, filename: 'pikachu3.jpg')
+p2.photos.attach(io: file109, filename: 'pikachu4.jpg')
+p2.photos.attach(io: file110, filename: 'pikachu5.jpg')
+
+
+r1 = Review.create(body: 'The quality, from the imaging to the material, are great and my friend loved them! They included a complimentary set as a holiday gift and thank you which I thought was so nice! I definitely recommend buying from him and will be coming back in the future 😊',
+author_id: u2.id, product_id: p1.id, rating: 5)
+
+r2 = Review.create(body: 'My friend was so surprised at his present his face just lit up!! The Pikachu badge was so well made and very well received! :)',
+author_id: u2.id, product_id: p2.id, rating: 5)
+
+r3 = Review.create(body: 'So pleased with this product! It arrived quickly and was good quality. Exactly what I was after thank you :)',
+author_id: u3.id, product_id: p2.id, rating: 5)
+
+r4 = Review.create(body: 'Mint. My sister loved it and it has joined her rapidly- growing pin collection on her school lanyard and bag.',
+author_id: u4.id, product_id: p2.id, rating: 4)
+
+r5 = Review.create(body: 'The pin is cute and well made. Shipping took about a week longer than estimated.',
+author_id: u5.id, product_id: p2.id, rating: 4)
