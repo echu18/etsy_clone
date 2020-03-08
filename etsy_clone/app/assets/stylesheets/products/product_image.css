@@ -47,7 +47,7 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    border: 1px solid fuchsia;
+    /* border: 1px solid fuchsia; */
 
 }
 
@@ -60,7 +60,6 @@
     min-width: 600px;
     /* padding: 0 5px 0 5px; */
     margin-left: 10px;
-    padding-right: 10px;
     /* margin-right: 10%; */
     /* border-radius: 5px; */
     border-radius: 5px;
@@ -123,7 +122,7 @@
         display: flex;
         justify-content: center;
         width: 100%;
-        border: 1px solid fuchsia;
+        /* border: 1px solid fuchsia; */
         overflow: none;
 
     } 
@@ -153,7 +152,7 @@
         display: flex;
         justify-content: center;
         width: 100%;
-        border: 1px solid fuchsia;
+        /* border: 1px solid fuchsia; */
         overflow: none;
 
     } 
@@ -184,7 +183,7 @@
         display: flex;
         justify-content: center;
         width: 100%;
-        border: 1px solid fuchsia;
+        /* border: 1px solid fuchsia; */
         overflow: none;
 
     } 
@@ -214,7 +213,7 @@
         display: flex;
         justify-content: center;
         /* max-width: 10vw; */
-        border: 1px solid fuchsia;
+        /* border: 1px solid fuchsia; */
         overflow: none;
 
     } 
