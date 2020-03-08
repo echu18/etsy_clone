@@ -27,7 +27,7 @@ class Splash extends React.Component{
                 </section>
 
                 
-                <Link to='products/15'>Cat Memes</Link>
+                <Link to='products/5'>Cat Memes</Link>
 
                 <section className='cat-module-1'>
                     {/* Header 1 (category title + see more) */}

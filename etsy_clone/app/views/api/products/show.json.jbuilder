@@ -13,6 +13,23 @@ json.users do
     end
 end
 
+json.reviews do 
+    json.array! @product.reviews do |review|
+        json.id review.id
+        json.body review.body
+        json.author_id review.author_id
+        json.rating review.rating
+    end
+end
+
+# json.reviews do 
+#     @product.reviews do |review|
+#         json.set! review.id do
+#             json.partial! 'api/reviews/review', review: review
+#         end
+#     end
+# end
+
 
 # json.reviews do 
 #     @product.reviews.each do |review|
