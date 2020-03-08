@@ -25,7 +25,7 @@ end
 # json.reviews do 
 #     @product.reviews do |review|
 #         json.set! review.id do
-#             json.partial! 'api/reviews/review', review: review
+#             json.partial! 'api/re views/review', review: review
 #         end
 #     end
 # end

@@ -34,16 +34,16 @@ p1 = Product.create(name:'Cat Memes Sticker Pack', description: 'This sticker pa
     Cat on stairs (sixth image): 6 cm at longest measurement', 
     price: 9.47, seller_id: u1.id, category_id: 22)
 
-# file1 = open('http://etsy-clone-dev.s3-us-west-1.amazonaws.com/test/smug_knife_cat.jpg')
-# file2 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/test/crying+cat.jpg')
-# file3 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/test/saladcat.png')
-# file4 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/test/pizza_cat.png')
-# file5 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/test/sitting_cat.png')
-# p1.photos.attach(io: file1, filename: 'smug_knife_cat.jpg')
-# p1.photos.attach(io: file2, filename: 'crying+cat.jpg')
-# p1.photos.attach(io: file3, filename: 'saladcat.png')
-# p1.photos.attach(io: file4, filename: 'pizza_cat.png')
-# p1.photos.attach(io: file5, filename: 'sitting_cat.png')
+file1 = open('http://etsy-clone-dev.s3-us-west-1.amazonaws.com/test/smug_knife_cat.jpg')
+file2 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/test/crying+cat.jpg')
+file3 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/test/saladcat.png')
+file4 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/test/pizza_cat.png')
+file5 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/test/sitting_cat.png')
+p1.photos.attach(io: file1, filename: 'smug_knife_cat.jpg')
+p1.photos.attach(io: file2, filename: 'crying+cat.jpg')
+p1.photos.attach(io: file3, filename: 'saladcat.png')
+p1.photos.attach(io: file4, filename: 'pizza_cat.png')
+p1.photos.attach(io: file5, filename: 'sitting_cat.png')
 
 
 
