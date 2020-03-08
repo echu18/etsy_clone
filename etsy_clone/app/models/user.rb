@@ -9,11 +9,16 @@
 #  session_token   :string
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
+#  store_name      :string
 #
 class User < ApplicationRecord
     # validates :username
     validates :email, presence: true, uniqueness: {message: 'has already been registered'}
     validates :password, length: {minimum: 6, allow_nil: true}
+
+    has_many :reviews, foreign_key: :author_id, class_name: :Review
+
+    has_many_attached :photos
 
 
     ## AASPIRE

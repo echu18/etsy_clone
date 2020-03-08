@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter, Redirect } from 'react-router-dom';
 import Popup from '../signin_signup/popup';
 import CategoryDropdownContainer from './categories/category_dropdown_container'
 import {cartIcon, searchIcon, etsyLogo} from '../../../app/assets/images/svgs/icons'
@@ -8,9 +8,12 @@ import {cartIcon, searchIcon, etsyLogo} from '../../../app/assets/images/svgs/ic
 class Navbar extends React.Component {
     constructor(props) {
         super(props);
+
+        
         this.state = {showPopup: false};
         this.togglePopup = this.togglePopup.bind(this);
         this.signOutAndClear = this.signOutAndClear.bind(this);
+        this.redirectToHome = this.redirectToHome.bind(this);
     }
     
    togglePopup() {
@@ -22,6 +25,10 @@ class Navbar extends React.Component {
     signOutAndClear () {
         this.props.signOut();
         this.setState({ showPopup: false })
+    }
+
+    redirectToHome () {
+        this.props.history.push('/')
     }
    
     render() {
@@ -51,8 +58,8 @@ class Navbar extends React.Component {
 
         return(
             <div className="navbar">
-                <div className="navbar-inner" id='inner'>
-                    <div className="etsyLogo">
+                <div className="navbar-inner" id='inner' >
+                    <div className="etsyLogo" onClick={this.redirectToHome}>
                         {etsyLogo}
                     </div>
 
@@ -84,7 +91,8 @@ class Navbar extends React.Component {
     }
 }
 
-export default Navbar;
+// export default Navbar;
+export default withRouter(Navbar);
 
 
 

@@ -1,0 +1,235 @@
+.photo-carousel {
+    display: flex;
+    /* height: 500px; */
+    height: 80vh;
+    width: 53vw;
+    /* width: auto; */
+}
+
+
+.photos-small-panel {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    min-width: 64px;
+    width: 64px;
+    /* border: 1px solid red; */
+}
+
+.photo-small {
+    box-sizing: border-box;
+    display: flex;
+    border-radius: 5px;
+    padding: 0;
+    margin: 0;
+    height: 64px;
+    width: 100%;
+    opacity: 0.5;
+    /* margin: 3px; */
+}
+
+.photo-small-container:not(:first-child) {
+    margin-top: 3px;
+}
+
+.photo-small-container:not(:last-child) {
+    margin-bottom: 3px;
+}
+
+
+.photo-small:hover {
+    border: 1px solid black;
+    opacity: 1;
+}
+
+
+.photo-large-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    /* border: 1px solid fuchsia; */
+
+}
+
+.photo-large {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: auto;
+    max-width: 800px;
+    min-width: 600px;
+    /* padding: 0 5px 0 5px; */
+    margin-left: 10px;
+    /* margin-right: 10%; */
+    /* border-radius: 5px; */
+    border-radius: 5px;
+}
+
+
+
+.arrow-icons{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    /* height: 6vh !important; */
+    height: 20px  !important ;
+    width: 43vw;
+    top: 54.5%;
+    left: 19.5%;
+    z-index: 2;
+    /* border: 1px solid blue; */
+}
+
+
+.left-arrow-icon {
+    height: 48px;
+    width: 48px;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    box-shadow: 1px 1px 50px -12px gray;
+}
+
+.left-arrow-icon > svg {
+    transform: scale(0.5)
+}
+
+.right-arrow-icon {
+    height: 48px;
+    width: 48px;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    box-shadow: 1px 1px 50px -12px gray;
+}
+
+.right-arrow-icon > svg {
+    transform: scale(0.5)
+}
+
+
+
+/* Media Query Breakpoints */
+
+@media only screen and (max-width: 1700px) {
+    .photo-carousel {
+        display: flex;
+        height: 500px;
+        max-width: 50vw;        
+    }
+
+
+    .photo-large-container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        /* border: 1px solid fuchsia; */
+        overflow: none;
+
+    } 
+
+    .photo-large {
+        display: flex;
+        justify-content: center;
+        max-width: 700px;
+        min-width: 200px;
+        padding: 0 10px 0 10px;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 5px;
+    } 
+}
+
+
+@media only screen and (max-width: 1500px) {
+    .photo-carousel {
+        display: flex;
+        /* height: 500px; */
+        max-width: 50vw;
+    }
+
+
+    .photo-large-container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        /* border: 1px solid fuchsia; */
+        overflow: none;
+
+    } 
+
+    .photo-large {
+        display: flex;
+        justify-content: center;
+        max-width: 700px;
+        min-width: 200px;
+        padding: 0 10px 0 10px;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 5px;
+    } 
+}
+
+
+
+@media only screen and (max-width: 1200px) {
+    .photo-carousel {
+        display: flex;
+        height: 500px;
+        max-width: 45vw;
+    }    
+
+
+    .photo-large-container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        /* border: 1px solid fuchsia; */
+        overflow: none;
+
+    } 
+
+    .photo-large {
+        display: flex;
+        justify-content: center;
+        max-width: 400px;
+        /* min-width: 200px; */
+        /* max-height: 400px; */
+        padding: 0 10px 0 10px;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 5px;
+    } 
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .photo-carousel {
+        display: flex;
+        max-width: 200vw;
+    }    
+
+
+    .photo-large-container {
+        display: flex;
+        justify-content: center;
+        /* max-width: 10vw; */
+        /* border: 1px solid fuchsia; */
+        overflow: none;
+
+    } 
+
+    .photo-large {
+        display: flex;
+        justify-content: center;
+        /* height: auto;
+        width: auto; */
+        /* max-width: 400px; */
+        /* min-width: 200px; */
+        padding: 0 10px 0 10px;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 5px;
+    } 
+}
+
+

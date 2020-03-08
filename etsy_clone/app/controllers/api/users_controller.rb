@@ -1,4 +1,6 @@
 class Api::UsersController < ApplicationController
+  include Rails.application.routes.url_helpers
+
   def create
     @user = User.new(user_params)
     if @user.save
@@ -21,7 +23,7 @@ class Api::UsersController < ApplicationController
   end
   
   def show
-    @user = selected_user
+    @user = User.with_attached_photos.find(params[:id])
   end
   
   def index
@@ -39,12 +41,8 @@ class Api::UsersController < ApplicationController
   end
   
   private
-  
-  def selected_user
-    User.find(params[:id])
-  end
-  
+
   def user_params
-    params.require(:user).permit(:username, :email, :password)
+    params.require(:user).permit(:username, :email, :password, :store_name, photos: [])
   end
 end

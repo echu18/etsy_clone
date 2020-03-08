@@ -8,32 +8,25 @@
     flex-wrap: wrap;
     /* align-items: center; */
     font-family: 'Roboto', sans-serif;
-    font-size: 14px;
+    font-size: 13px;
+    padding-right: 0px;
 }
 
 .navbar-inner {
     box-sizing: border-box;
     display: flex;
     flex-wrap: no-wrap;
-    padding: 14px 0px 15px 0px;
-    /* padding: 1.5vh 0 1.5vh 0; */
-    /* justify-content: space-around; */
+    padding: 12px 0px 7px 0px;
+    /* padding: 12px 0px 15px 0px; */
     align-items: center;
 }
 
-@media only screen and (min-width: 80%) {
-  .navbar-inner {
-      flex-wrap: wrap;
-  }
-}
-
-
 .etsyLogo > svg {
     box-sizing: border-box;
-    width: 90px;
-    height: 50px;
+    width: 87px;
+    height: 40px;
     /* padding: 5px 15px 0 0; */
-    margin: 0px 10px 0px -5px;
+    margin: -4px 6px -1px -4px;
     fill: #F1651F;
 }
 
@@ -43,20 +36,24 @@
 
 /* search form container */
 .searchbar-form {
+    
     max-height: 52px;
     box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: center;
-    /* padding: 0px 0px 10px 0px; */
-    margin: 0 -15px 0 0;
-    
+    padding: 0px 0px 10px 0px;
+    margin: 0 3px 0 0;
 }
 
 .searchbar-form input[type="text"] {
-    min-height: 43px;
-    width: 62.6vw;
-    height: 50px;
+    
+    /* min-height: 46px; */
+    /* width: 62.6vw; */
+    /* width: 56.9vw; */
+    min-width: 50vw;
+    max-width: 56.9vw;
+    height: 43.5px;
     /* height: 5.3vh; */
     border-radius: 25px;
     font-size: 16px;
@@ -104,18 +101,21 @@
     justify-content: center;
     position: absolute;
     width: 28px;
-    height: 26px;
-    margin: 14px 20px auto auto;
+    height: 24.5px;
+    margin: 13px 0px auto -27px;
     /* z-index: 2; */
 }
 
 .search-icon {
+        box-sizing: border-box;
+
     display: inline-block;
     position: relative;
-    padding: 0px 15px 5px 0px;
+    /* padding: 0px 15px 5px 0px; */
+    margin: 0px 15px 5px 0px;
     width: 20px;
-    height: 46.5px;
-    right: 35.5px;
+    height: 45px;
+    right: 21px;
     z-index: 2;
 }
 
@@ -123,12 +123,16 @@
 
 .search-icon:hover {
     background-color: #e8e8e8;
-    border-top-right-radius: 25px;
-    border-bottom-right-radius: 25px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    /* border-top: 0.3px solid black;
+    border-right: 0.3px solid black;
+    border-bottom: 0.3px solid black; */
+    /* animation: zoominoutsinglefeatured 15s forwards; */
 }
 
 .signin-signout {
-    font-weight: bold;
+    font-weight: 900;
     white-space: nowrap;
     display: flex;
     justify-content: center;
@@ -136,7 +140,7 @@
     padding: 10px; /* this is for the hover circle, do not remove */
     border-radius: 30px;
     box-sizing: border-box;
-    margin: 0px 25px 0 0;
+    margin: 0px 15% 0 -30%;
 }
 
 .signin-signout:hover {
@@ -146,8 +150,8 @@
 
 .cart-icon > svg{
     box-sizing: border-box;
-    width: 26px;
-    height: 26px;
+    width: 24px;
+    height: 24px;
     /* padding: 5px; */
 }
 
@@ -158,12 +162,102 @@
     min-width: 40px;
     min-height: 40px;
     border-radius: 50%;
-    padding: 0px 0px 0px 0px;
-    /* margin: 0px 0px 0px 0px; */
+    padding: 2px 0px 0px 0px;
+    margin: 0px 0px 0px 0.5%;
 }
 
 
 .cart-icon:hover {
     background-color: gainsboro;
     cursor: pointer;
+}
+
+
+/* SEARCH ICON HOVER ZOOM OUT EFFECT*/
+
+/* 
+@keyframes zoominoutsinglefeatured {
+    0% {
+        transform: scale(1,1);
+    }
+    50% {
+        transform: scale(1.2,1.2);
+    }
+    100% {
+        transform: scale(1,1);
+    }
+} */
+
+
+
+@media only screen and (min-width: 80%) {
+  .navbar-inner {
+      flex-wrap: wrap;
+  }
+}
+
+
+@media only screen and (max-width: 900px) {
+    .navbar {
+        background-color: #FFFFFF;
+        width: 100%;
+        height: auto;
+        /* height: 100px; */
+        /* display: flex; */
+        /* justify-content: center; */
+        /* flex-wrap: wrap; */
+        /* align-items: center; */
+        font-family: 'Roboto', sans-serif;
+        font-size: 13px;
+    }
+
+    .searchbar-form {
+        max-height: 52px;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 70px 0px 10px 0px;
+        margin: 0 3px 0 -30px;
+    }
+
+    .searchbar-form input[type="text"] {
+        width: 60vw;
+    }
+
+    .etsyLogo > svg {
+        box-sizing: border-box;
+        width: 87px;
+        height: 40px;
+        /* padding: 5px 15px 0 0; */
+        /* margin: -4px 6px -1px -4px; */
+        margin: 0px 0px 40px 0px;
+        fill: #F1651F;
+    }
+
+
+    .signin-signout {
+        font-weight: 900;
+        white-space: nowrap;
+        display: flex;
+        justify-content: center;
+        min-width: auto;
+        padding: 10px; /* this is for the hover circle, do not remove */
+        border-radius: 30px;
+        box-sizing: border-box;
+        margin: 0px 15% 40px -220px;
+    }
+
+    .cart-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 40px;
+        min-height: 40px;
+        border-radius: 50%;
+        padding: 2px 0px 0px 0px;
+        margin: 0px 0px 40px -80px;
+    }
+
+
 }

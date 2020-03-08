@@ -1,4 +1,4 @@
-import {getProducts, getProduct} from '../util/product_api_util';
+import { getProducts, getProduct } from '../util/product_api_util';
 
 export const RECEIVE_PRODUCTS = 'RECEIVE_PRODUCTS';
 export const RECEIVE_PRODUCT = 'RECEIVE_PRODUCT';
@@ -9,10 +9,15 @@ const receiveProducts = products => ({
     products
 })
 
-const receiveProduct = product => ({
+const receiveProduct = payload => ({
     type: RECEIVE_PRODUCT,
-    product
+    payload
 });
+
+// const receiveProduct = product => ({
+//     type: RECEIVE_PRODUCT,
+//     product
+// });
 
 const receiveErrors = errors => ({
     type: RECEIVE_ERRORS,
@@ -21,7 +26,7 @@ const receiveErrors = errors => ({
 
 export const fetchProducts = () => dispatch => getProducts()
     .then(products => dispatch(receiveProducts(products)),
-    error => dispatch(receiveErrors(error.responseJSON)))
+        error => dispatch(receiveErrors(error.responseJSON)))
 
 
 export const fetchProduct = (id) => dispatch => getProduct(id)
