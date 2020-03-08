@@ -5,7 +5,7 @@ export const getUser = userId => {
     })
 }
 
-export const getAllUsers = () => {
+export const getUsers = () => {
     return $.ajax({
         url: `/api/users/`,
         method: 'GET'

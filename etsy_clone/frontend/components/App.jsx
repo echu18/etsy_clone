@@ -7,6 +7,7 @@ import LoginFormContainer from '../components/signin_signup/signin_form_containe
 // import CartSidebarContainer from '../components/product/cart_sidebar_container';
 
 import ProductShowContainer from './products/product_show_container';
+// import ReviewContainer from './reviews/review_container';
 
 import SplashContainer from './main_content/splash_container';
 
@@ -23,6 +24,7 @@ const App = () => (
                 <Route path="/signin" component={LoginFormContainer} />
                 <Route path="/signup" component={SignupFormContainer} />
                 <Route exact path="/products/:productId" component={ProductShowContainer} />
+                {/* <Route exact path="/products/:productId/reviews" component={ReviewContainer} /> */}
                 <Route exact path="/" component={SplashContainer} />
                 {/* <Route path="/products" component={ProductShowContainer} /> */}
             {/* <div className="splash">

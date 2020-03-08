@@ -16,6 +16,8 @@ class User < ApplicationRecord
     validates :email, presence: true, uniqueness: {message: 'has already been registered'}
     validates :password, length: {minimum: 6, allow_nil: true}
 
+    has_many :reviews, foreign_key: :author_id, class_name: :Review
+
     has_many_attached :photos
 
 

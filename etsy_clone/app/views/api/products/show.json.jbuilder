@@ -15,9 +15,9 @@ end
 
 
 # json.reviews do 
-#     @product.reviews each do |review|
+#     @product.reviews.each do |review|
 #         json.set! review.id do
-#             json.partial! 'review', review: review
+#             json.partial! 'api/reviews/review', review: review
 #         end
 #     end
 # end
