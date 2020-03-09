@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, withRouter, Redirect } from 'react-router-dom';
 import Popup from '../signin_signup/popup';
 import CategoryDropdownContainer from './categories/category_dropdown_container'
-import {cartIcon, searchIcon, etsyLogo} from '../../../app/assets/images/svgs/icons'
+import {cartIcon, searchIcon, etsyLogo, memesyLogo} from '../../../app/assets/images/svgs/icons'
 
 
 class Navbar extends React.Component {
@@ -60,6 +60,7 @@ class Navbar extends React.Component {
             <div className="navbar">
                 <div className="navbar-inner" id='inner' >
                     <div className="etsyLogo" onClick={this.redirectToHome}>
+                        {/* {memesyLogo } */}
                         {etsyLogo}
                     </div>
 

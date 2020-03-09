@@ -1,7 +1,36 @@
+.review-header-divider {
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    /* margin-bottom: -40px; */
+    /* padding: 12px 0px 12px 0px; */
+    margin: 20px 0px 20px 0px;
+    border-bottom: 1.5px solid gainsboro;
+    /* border: 1px solid red; */
+    z-index: -5;
+}
+
+.review-header {
+        box-sizing: border-box;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: bolder;
+    height: auto;
+    width: fit-content;
+    padding: 0px 0px 10px 0px;
+    margin-bottom: -1.5px;
+
+    border-bottom: 1.5px solid gray;
+}
+
+
+
 .all-reviews-container {
     display: flex;
     flex-direction: column;
     height: auto;
     width: 68.5%;
-    border: 1px solid orange;
+    margin-top: 20px;
+    /* border: 1px solid orange; */
 }

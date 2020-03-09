@@ -1,16 +1,50 @@
-.single-review { /* main container for ALL reviews on product_show page */
+.single-review { /* main width container for ALL reviews on product_show page */
     display: flex;
     height: 200px;
-    width: auto;
+    width: 80%;
     /* border: 1px solid fuchsia; */
     font-family: 'Roboto', sans-serif;
 }
+
+.faqs-btn {
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* width: 90px; */
+    width: fit-content;
+    font-weight: 500;
+    white-space: nowrap;
+    /* max-width: 70px; */
+    padding: 7px 12px 7px 12px; /* this is for the hover circle, do not remove */
+    border-radius: 30px;
+    box-sizing: border-box;
+    background: none;
+    margin: 20px 0px 0px -10px;
+    border-style: none;
+    overflow: visible;
+    /* border: 1px solid red; */
+}
+
+.faqs-btn > svg {
+    padding: 5px;
+    width: 12px;
+    height: 12px;
+    transform: rotate(90deg);
+    /* border: 1px solid red; */
+}
+
+.faqs-btn:hover {
+    background-color: rgb(248, 245, 245);
+    cursor: pointer;
+}
+
 
 .review-content {  /* aligns all review content */
     display: flex;
     flex-direction: column;
     margin-top: -25px;
-    margin-left: 50px;
+    margin-left: 55px;
 }
 
 .min-header {
