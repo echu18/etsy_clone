@@ -6,6 +6,7 @@ import ProductShow from './product_show';
 
 const mapStateToProps = (state, ownProps) => ({
     product: state.entities.products[ownProps.match.params.productId],
+    reviews: state.entities.reviews,
     users: state.entities.users
 })
 

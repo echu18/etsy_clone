@@ -13,7 +13,7 @@ const receiveReview = review => ({
     review
 })
 
-export const fetcReviews = (productId) => dispatch => getReviews(productId)
+export const fetchReviews = (productId) => dispatch => getReviews(productId)
     .then(reviews => dispatch(receiveReviews(reviews)))
 
 export const fetchReview = (productId, reviewId) => dispatch => getReview(productId, reviewId)

@@ -11,3 +11,4 @@ export const getProduct = productId => {
         method: 'GET'
     })
 }
+

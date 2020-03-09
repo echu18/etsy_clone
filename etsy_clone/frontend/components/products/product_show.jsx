@@ -12,11 +12,11 @@ class ProductShow extends React.Component {
     render() {
         if (this.props.product === undefined) return null;
 
-        const { name, description, price, category, photoUrls } = this.props.product;
+        const { name, description, price, category, photoUrls} = this.props.product;
         const urls = Array.from(photoUrls)
         const sellerId = this.props.product.seller_id;
         const sellerPhotoUrl = this.props.users[sellerId].photoUrls[0];
-
+        const reviews = Object.values(this.props.reviews);
 
         return (
             <div className='product-listing-container'>
@@ -55,13 +55,15 @@ class ProductShow extends React.Component {
                 {/* <ReviewContainer /> */}
 
 
-                
-                <div className='all-reviews-container'>
-                    <div className='testReview'>
-
-                    </div>
-                </div>
-               
+                {!reviews ? null : (
+                    reviews.map((review, idx )=> {
+                        return <div className='all-reviews-container' key={idx}>
+                                    <div className='testReview'>
+                                        <ReviewContainer review={review}/>
+                                    </div>
+                                </div>
+                    }))
+                }
 
                 {/* <img className='product-photo' src={urls[1]}/> */}
                 {/* <div className='product-photos'>

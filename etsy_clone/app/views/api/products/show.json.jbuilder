@@ -7,12 +7,27 @@ end
 
 
 json.users do 
+
     json.set! @product.seller_id do
         json.partial! 'api/users/user', user: @product.seller
         json.photoUrls @product.seller.photos.map { |file| url_for(file) }
     end
+
+    @product.authors.each do |author|
+        json.set! author.id do 
+            json.partial! 'api/users/user', user: author
+        end
+    end
+
+    @product.reviews do |review|
+        json.review.author_id do
+            json.partial! 'api/users/user', user: review.author
+        end
+    end
+
 end
 
+    
 json.reviews do 
     json.array! @product.reviews do |review|
         json.id review.id
@@ -21,6 +36,17 @@ json.reviews do
         json.rating review.rating
     end
 end
+
+
+
+
+
+
+
+
+
+
+
 
 # json.reviews do 
 #     @product.reviews do |review|
