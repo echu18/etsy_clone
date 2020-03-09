@@ -11,6 +11,8 @@ export default (state = {}, action) => {
                 reviews[review.id] = review;
             });
             return reviews
+        case RECEIVE_REVIEW:
+            return Object.assign({}, state, action.review)
         case RECEIVE_PRODUCT:
             return Object.assign({}, state, action.payload.reviews)
         default:

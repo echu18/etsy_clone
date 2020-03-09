@@ -25,7 +25,7 @@
     font-family: 'Raleway', sans-serif;
     height: 20px;
     width: 100%;
-    margin: 10px 5px 15px 5px;
+    margin: 10px 5px 15px 0px;
 }
 
 .review-count {
@@ -55,7 +55,7 @@
     font-size: 25px;
     font-family: 'Martel', serif;  /* font-weight is specify in font import url */
     /* letter-spacing: 0rem; */
-    margin: 5px 5px 30px 5px;
+    margin: 5px 5px 30px 0px;
     /* font-weight: 700; */
     /* border: 1px solid orange; */
 }
@@ -86,12 +86,24 @@
 
 
 .product-description-container {
+    display: flex;
+    flex-direction: column;
     height: auto;
     width: auto;
     /* border: 1px solid fuchsia; */
 }
 
-.product-description {
+.product-description-container > label {
+    font-family: 'Raleway', sans-serif;
+    height: auto;
+    font-size: 14px;
+    padding: 1.5px 1.5px;
+    /* border: 1px solid blue; */
+    margin-bottom: 10px;
+    color: rgb(114, 114, 114);
+}
+
+.product-description-text {
     font-family: 'Raleway', sans-serif;
     line-height: 1.5;
     /* margin: 100px 0px 500px 0px; */

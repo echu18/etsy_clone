@@ -36,7 +36,7 @@ class Review extends React.Component {
         
         return(
             <div className='review-container'>
-                    <img src={(!author.photoUrls) ? (null) : (Array.from(author.photoUrls)[0])}/>
+                {(Array.from(author.photoUrls).length === 0) ? <img src='https://etsy-clone-seed.s3-us-west-1.amazonaws.com/profile-images/anon.png'/> : <img src={(Array.from(author.photoUrls)[0])}/>}
                 
                 
                     <div className='review-content'>

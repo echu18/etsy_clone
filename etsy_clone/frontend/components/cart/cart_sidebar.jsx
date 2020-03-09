@@ -1,4 +1,4 @@
-
+import React from 'react';
 
 
 class cartSidebar extends React.Component {
@@ -15,7 +15,7 @@ class cartSidebar extends React.Component {
     render() {
         return (
             <div className='cart-sidebar-container'>
-                <label for='sidebar-quantity'>Quantity</label>
+                <p className='sidebar-quantity'>Quantity  </p>
                 <select id='sidebar-quantity-dropdown'>
                     <option value='1'>1</option>
                     <option value='2'>2</option>
@@ -25,7 +25,10 @@ class cartSidebar extends React.Component {
                     <option value='6'>6</option>
                     <option value='7'>7</option>
                 </select>
+                <input type="submit" className='addtocart-btn' value="Add to cart"/>
             </div>
         )
     }
 }
+
+export default cartSidebar;

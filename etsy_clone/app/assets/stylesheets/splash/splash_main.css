@@ -8,3 +8,20 @@
 /* temporary - gray background */
 .main-hero-banner{
 }
+
+.prods {
+    display: flex;
+    height: 300px;
+    width: 100%;
+}
+
+
+.prod-card {
+    height: auto;
+    width: 100px;
+}
+
+.prod-card > img {
+    height: 100px;
+    width: 100px;
+}

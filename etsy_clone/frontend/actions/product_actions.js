@@ -4,9 +4,9 @@ export const RECEIVE_PRODUCTS = 'RECEIVE_PRODUCTS';
 export const RECEIVE_PRODUCT = 'RECEIVE_PRODUCT';
 export const RECEIVE_ERRORS = 'RECEIVE_ERRORS';
 
-const receiveProducts = products => ({
+const receiveProducts = payload => ({
     type: RECEIVE_PRODUCTS,
-    products
+    payload
 })
 
 const receiveProduct = payload => ({

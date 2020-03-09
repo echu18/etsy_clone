@@ -7,7 +7,6 @@ end
 
 
 json.users do 
-
     json.set! @product.seller_id do
         json.partial! 'api/users/user', user: @product.seller
         json.photoUrls @product.seller.photos.map { |file| url_for(file) }

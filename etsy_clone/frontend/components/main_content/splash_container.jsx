@@ -1,6 +1,7 @@
 import React from 'react';
 import Splash from './splash';
 import { connect } from 'react-redux';
+import {fetchProducts} from '../../actions/product_actions';
 
 
 const mapStateToProps = (state, ownProps) => ({

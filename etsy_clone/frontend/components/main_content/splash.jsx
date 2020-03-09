@@ -31,6 +31,18 @@ class Splash extends React.Component{
                     <div className='buzzwords-block-3'></div>
                 </section>
 
+
+                { /* <div className='prods'>
+                    {products.map((prod, idx) => {
+                        return (
+                            <div className='prod-card' key={idx}>
+                                {/* <img src={prod.photoUrls[0]}></img> */}
+                               {/* } <p>{prod.price}</p>
+                            </div>
+                        )
+                    })}
+                </div> */}
+
                 
                 <section className='cat-module-1'>
                     {/* Header 1 (category title + see more) */}

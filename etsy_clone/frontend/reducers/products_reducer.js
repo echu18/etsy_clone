@@ -5,7 +5,7 @@ export default (state = {}, action) => {
     switch (action.type) {
         case RECEIVE_PRODUCTS:
             const products = {}
-            action.products.forEach(product => {
+            action.payload.products.forEach(product => {
                 products[product.id] = product;
             });
             return products

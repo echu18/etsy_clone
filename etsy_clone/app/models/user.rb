@@ -17,6 +17,7 @@ class User < ApplicationRecord
     validates :password, length: {minimum: 6, allow_nil: true}
 
     has_many :reviews, foreign_key: :author_id, class_name: :Review
+    has_many :products, foreign_key: :seller_id, class_name: :Product
 
     has_many_attached :photos
 

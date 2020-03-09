@@ -12,9 +12,9 @@ class Api::ProductsController < ApplicationController
     def create
     @product = Product.new(product_params)
 
-    if params[:photos]
-      @product.photos.attach(params[:photos])
-    end
+    # if params[:photos]
+    #   @product.photos.attach(params[:photos])
+    # end
     if @product.save!
       # @product.photos.attach(params[:photos])
       render :show
