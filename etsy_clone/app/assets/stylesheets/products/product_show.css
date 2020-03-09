@@ -12,11 +12,10 @@
     /* max-width: 22vw; */
     min-width: 410px;
     max-width: 410px;
-    height: auto;
-    /* min-width: 30%;
-    max-width: 30%; */
-    /* border: 1px solid green; */
+    /* height: auto; */
+    height: 2000px;
     margin-left: 10px;
+    border: 1px solid green;
 }
 
 

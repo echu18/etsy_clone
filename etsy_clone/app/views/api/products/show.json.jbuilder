@@ -22,6 +22,7 @@ json.users do
     @product.reviews do |review|
         json.review.author_id do
             json.partial! 'api/users/user', user: review.author
+            json.photoUrls review.author.photos.map { |file| url_for(file) }
         end
     end
 

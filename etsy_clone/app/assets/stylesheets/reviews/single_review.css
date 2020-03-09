@@ -1,0 +1,6 @@
+.single-review {
+    display: flex;
+    height: 150px;
+    width: auto;
+    border: 1px solid fuchsia;
+}

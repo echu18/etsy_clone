@@ -55,22 +55,16 @@ class ProductShow extends React.Component {
                 {/* <ReviewContainer /> */}
 
 
-                {!reviews ? null : (
-                    reviews.map((review, idx )=> {
-                        return <div className='all-reviews-container' key={idx}>
-                                    <div className='testReview'>
-                                        <ReviewContainer review={review}/>
-                                    </div>
-                                </div>
-                    }))
-                }
 
-                {/* <img className='product-photo' src={urls[1]}/> */}
-                {/* <div className='product-photos'>
-                    {urls.map((url, idx) => {
-                        return <img className='product-photo' src={url} key={idx} />
-                    })}
-                </div> */}
+                <div className='all-reviews-container' id='main'>
+                    {!reviews ? null : (
+                        reviews.map((review, idx )=> {
+                            return <div className='single-review' key={idx}>
+                                        <ReviewContainer review={review} />
+                                    </div>
+                        }))
+                    }
+                </div>
             </div>
         )
     }

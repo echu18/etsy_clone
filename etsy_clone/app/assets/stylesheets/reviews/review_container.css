@@ -1,3 +1,10 @@
 .reviewer-info > p {
     font-size: 48px;
 }
+
+
+.reviewer-info > img {
+    display: block;
+    height: 40px;
+    width: 40px;
+}

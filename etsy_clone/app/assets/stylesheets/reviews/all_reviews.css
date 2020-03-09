@@ -1,7 +1,7 @@
 .all-reviews-container {
     display: flex;
-    /* display: inline-block; */
-    height: 500px;
-    width: 100%;
+    flex-direction: column;
+    height: auto;
+    width: 68.5%;
     border: 1px solid orange;
 }

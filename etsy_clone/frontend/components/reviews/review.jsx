@@ -20,12 +20,13 @@ class Review extends React.Component {
         const review = this.props.review;
         // const author = ;
         const author = this.props.users[this.state.authorId];
-        console.log(author)
+
+        console.log(author.photoUrls)
         return(
             <div className='review-container'>
                 <div className='reviewer-info'>
                     <p>{author.username}</p>
-                    {/*<img src={reviewerPhotoUrl}/> */}
+                    <img src={(!author.photoUrls) ? (null) : (author.photoUrls.first)}/>
                 </div>
 
                 <div className='review-rating'>
