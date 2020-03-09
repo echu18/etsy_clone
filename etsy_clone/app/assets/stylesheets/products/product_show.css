@@ -19,16 +19,19 @@
 }
 
 
-.review-header {
+.review-sidebar-header {
+    height: 20px;
+    width: 100%;
     margin: 5px;
-    /* border: 1px solid turquoise; */
+    border: 1px solid turquoise;
 }
 
 .product-name {
     text-align: left;
     font-size: 29.5px;
-    font-family: 'Roboto Slab', serif;  /* font-weight is specify in font import url */
-    font-weight: 700;
+    font-family: 'Martel', serif;  /* font-weight is specify in font import url */
+    /* letter-spacing: 0rem; */
+    /* font-weight: 700; */
     /* border: 1px solid orange; */
 }
 

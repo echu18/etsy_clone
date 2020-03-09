@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {starIcon} from '../../../app/assets/images/svgs/icons'
 
 class Review extends React.Component {
     constructor(props) {
@@ -7,6 +7,7 @@ class Review extends React.Component {
         this.state={
             authorId: this.props.review.author_id,
         }
+        // this.rating= this.rating.bind(this)
     }
 
 
@@ -14,27 +15,44 @@ class Review extends React.Component {
     //    this.props.fetchUser(this.state.authorId);
     // }
     
+    
+
+   
+
+
     render() { 
-        
+
+
         // const reviewerPhotoUrl = this.props.users[1].photoUrls[0];
         const review = this.props.review;
         // const author = ;
         const author = this.props.users[this.state.authorId];
 
-        console.log(author.photoUrls)
+        const rating = this.props.review.rating;
+
+        const stars = [starIcon, starIcon, starIcon, starIcon, starIcon]
+        const starSeq = stars.slice(0, rating)
+
+        // console.log(author.photoUrls)
         return(
             <div className='review-container'>
-                <div className='reviewer-info'>
-                    <p>{author.username}</p>
-                    <img src={(!author.photoUrls) ? (null) : (author.photoUrls.first)}/>
-                </div>
+                    <img src={(!author.photoUrls) ? (null) : (author.photoUrls)}/>
+                
+                
+                    <div className='review-content'>
+                        <div className='min-header'>
+                            <h3 className='review-author'>{author.username}</h3>
+                            <h3 className='review-date'>Jan 23, 2020</h3>
+                        </div>
+                        
+                        <div className='review-rating'>
+                            {starSeq}
 
-                <div className='review-rating'>
-                   {/* // translate rating to number of stars */}
-                </div>
+                        </div>
 
-                <div className='review-body'>
-                    <p>{review.body}</p>
+                        <div className='review-body'>
+                            <p>{review.body}</p>
+                    </div>
                 </div>
             </div>
 

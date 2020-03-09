@@ -1,6 +1,63 @@
-.single-review {
+.single-review { /* main container for ALL reviews on product_show page */
     display: flex;
-    height: 150px;
+    height: 200px;
     width: auto;
-    border: 1px solid fuchsia;
+    /* border: 1px solid fuchsia; */
+    font-family: 'Roboto', sans-serif;
 }
+
+.review-content {  /* aligns all review content */
+    display: flex;
+    flex-direction: column;
+    margin-top: -25px;
+    margin-left: 50px;
+}
+
+.min-header {
+    display: flex;
+    font-size: 14px;
+    height: auto;
+    width: 200px;
+    margin-bottom: 10px;
+    /* border: 1px solid blue; */
+}
+
+/* .reviewer-info {
+    display: flex;
+    align-items: center;
+} */
+
+
+.review-author {
+    width: auto;
+    text-decoration: underline;
+
+}
+
+.review-date {
+    width: auto;
+    margin-left: 7px;
+}
+
+.review-container > img {
+    display: block;
+    height: 40px;
+    width: 40px;
+}
+
+.review-rating  {
+    display: flex;
+    flex-wrap: nowrap;;
+    width: 100px;
+    height: 20px;
+    margin-bottom: 7px;
+}
+
+.review-rating  > svg{
+    display: flex;
+    height: 16px;
+    width: 16px;
+}
+
+
+

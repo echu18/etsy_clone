@@ -2,6 +2,7 @@ import React from 'react';
 // import ProductImageContainer from './product_image_container';
 import ProductImage from './product_image';
 import ReviewContainer from '../reviews/review_container.jsx';
+import { starIcon } from '../../../app/assets/images/svgs/icons'
 
 
 class ProductShow extends React.Component {
@@ -17,6 +18,9 @@ class ProductShow extends React.Component {
         const sellerId = this.props.product.seller_id;
         const sellerPhotoUrl = this.props.users[sellerId].photoUrls[0];
         const reviews = Object.values(this.props.reviews);
+        const storeName = this.props.users[sellerId].store_name;
+        const stars = [starIcon, starIcon, starIcon, starIcon, starIcon];
+        // const starSeq = stars.slice(0, );  // Average rating
 
         return (
             <div className='product-listing-container'>
@@ -24,6 +28,12 @@ class ProductShow extends React.Component {
                     <ProductImage urls={urls} product={this.props.product} {...this.props} />
 
                     <div className='product-sidebar'>
+                        <div className='review-sidebar-header'> 
+                            {storeName}
+                            {/* <div className='mini-stars'>{starSeq}</div> */}
+                         </div>
+
+
                         <div className='product-text'>
                             <p className='product-name'>{name}</p>
                             <p className='product-price'>${price}</p>
@@ -42,7 +52,7 @@ class ProductShow extends React.Component {
                                     <img src={sellerPhotoUrl} />
                                     <div className='seller-info'>
                                         <h2>{this.props.users[sellerId].username}</h2>
-                                        <p>Owner of {' '}{this.props.users[sellerId].store_name}</p>
+                                        <p>Owner of {' '}{storeName}</p>
                                     </div>
                                 </div>
                             </div>
@@ -50,12 +60,7 @@ class ProductShow extends React.Component {
                     </div>
                 </div>
 
-                // Render multiple product review containers
-                // Grab the ~ 7 most recent reviews, iterate thru each and pass props to ReviewContainer for render 
-                {/* <ReviewContainer /> */}
-
-
-
+                <div className='review-header'>Reviews for this item </div>
                 <div className='all-reviews-container' id='main'>
                     {!reviews ? null : (
                         reviews.map((review, idx )=> {
