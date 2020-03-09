@@ -20,12 +20,35 @@
 
 
 .review-sidebar-header {
+    display: flex;
+    align-items: center;
     font-family: 'Raleway', sans-serif;
     height: 20px;
     width: 100%;
     margin: 10px 5px 10px 5px;
-    /* border: 1px solid turquoise; */
 }
+
+.review-count {
+    font-family: 'Univers', sans-serif;
+    letter-spacing: -1.5px;
+    font-weight: 100;
+    width: 50px;
+}
+
+.mini-stars {
+     display: flex;
+    flex-wrap: nowrap;
+    width: auto;
+    height: 20px;
+    margin: 0px 7px 0px 10px;
+}
+
+.mini-stars  > svg{
+    display: flex;
+    height: 16px;
+    width: 16px;
+}
+
 
 .product-name {
     text-align: left;
@@ -62,7 +85,7 @@
 
 
 .product-description-container {
-    height: 800px;
+    height: auto;
     width: auto;
     /* border: 1px solid fuchsia; */
 }
@@ -142,8 +165,8 @@
 
 .seller-photo-text-container > img {
     display: flex;
-    width: 80px;
-    height: 80px;
+    width: 90px;
+    height: 90px;
     border-radius: 50%;
     /* border: 1px solid blue; */
 }

@@ -20,7 +20,23 @@ class Product < ApplicationRecord
     has_many :authors, through: :reviews
     has_many_attached :photos
 
+    attr_reader :avg_rating
     # belongs_to :category, foreign_key: :category_id, class_name: :Category   - category table not created yet
     # has_many :cart_items, foreign_key: :product_id, class_name: :CartItem - cart table not created yet
-    # has_many :reviews, foreign_key: :product_id, class_name: :Review  -review table not created yet
+
+
+
+    def self.avg_rating(product_id)
+        product = Product.find_by(id: product_id)
+        return 0 if product.nil?
+
+        total = 0 
+        
+        product.reviews.each {|review| total += review.rating}
+
+        @avg_rating = (total/product.reviews.count)
+    end
+
+
+
 end

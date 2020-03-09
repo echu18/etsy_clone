@@ -21,8 +21,8 @@ class ProductShow extends React.Component {
         const reviews = Object.values(this.props.reviews);
         const storeName = this.props.users[sellerId].store_name;
         const stars = [starIcon, starIcon, starIcon, starIcon, starIcon];
-        // const starSeq = stars.slice(0, );  // Average rating
-
+        const starSeq = stars.slice(0, this.props.product.avg_rating);  // Average rating
+        
         return (
             <div className='product-listing-container'>
                 <div className='image-and-sidebar'>
@@ -31,7 +31,8 @@ class ProductShow extends React.Component {
                     <div className='product-sidebar'>
                         <div className='review-sidebar-header'> 
                             {storeName}
-                            {/* <div className='mini-stars'>{starSeq}</div> */}
+                            <div className='mini-stars'>{starSeq}</div>
+                            <p className='review-count'>( {reviews ? reviews.length : null} )</p>
                          </div>
 
                         <div className='product-text'>
