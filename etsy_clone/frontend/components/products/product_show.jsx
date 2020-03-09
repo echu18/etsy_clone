@@ -49,6 +49,8 @@ class ProductShow extends React.Component {
 
                                 {/* <p className='product-category'>{category}</p> */}
 
+                                /* Shop rating, total shop reviews */
+
                             <button className='faqs-btn'>FAQs {rightArrow}</button>
                             <div className='seller-info-container'>
                                 <h3>Meet your seller</h3>
