@@ -16,6 +16,7 @@ json.users do
     @product.authors.each do |author|
         json.set! author.id do 
             json.partial! 'api/users/user', user: author
+            json.photoUrls author.photos.map { |file| url_for(file) }
         end
     end
 

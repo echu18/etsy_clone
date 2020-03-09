@@ -21,10 +21,17 @@ u4 = User.create(username: 'Mindy', email: 'mindy@cc.com', password: '123456')
 u5 = User.create(username: 'Sean', email: 'sean@cc.com', password: '123456')
 u6 = User.create(username: 'Jerry', email: 'jerry@cc.com', password: '123456')
 
-file123 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/test/print5.jpg')
-file223 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/test/sitting_cat.png')
-u1.photos.attach(io: file123, filename: 'print5.jpg')
-u2.photos.attach(io: file223, filename: 'sitting_cat.png')
+file200 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/profile-images/crying_cat.jpg')
+file201 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/profile-images/pizza_cat.png')
+file202 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/profile-images/smug_knife_cat.jpg')
+file203 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/profile-images/tired_cat.png')
+file204 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/profile-images/sitting_cat.png')
+
+u1.photos.attach(io: file200, filename: 'crying_cat.jpg')
+u2.photos.attach(io: file201, filename: 'pizza_cat.png')
+u3.photos.attach(io: file202, filename: 'smug_knife_cat.jpg')
+u4.photos.attach(io: file203, filename: 'tired_cat.png')
+u5.photos.attach(io: file204, filename: 'sitting_cat.png')
 
 
 p1 = Product.create(name:'Cat Memes Sticker Pack', description: 'This sticker pack includes six waterproof vinyl stickers of cat memes. They\'re perfect for laptops, water bottles (hand wash only), phones and whatever you can think of. These stickers make a good gift for meme addicts or a treat for yourself. These stickers were printed on vinyl waterproof and tear proof laser paper.
@@ -36,17 +43,17 @@ p1 = Product.create(name:'Cat Memes Sticker Pack', description: 'This sticker pa
     Cat on stairs (sixth image): 6 cm at longest measurement', 
     price: 9.47, seller_id: u1.id, category_id: 22)
 
-file101 = open('http://etsy-clone-dev.s3-us-west-1.amazonaws.com/test/smug_knife_cat.jpg')
-file102 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/test/crying+cat.jpg')
-file103 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/test/saladcat.png')
-file104 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/test/pizza_cat.png')
-file105 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/test/sitting_cat.png')
-p1.photos.attach(io: file101, filename: 'smug_knife_cat.jpg')
-p1.photos.attach(io: file102, filename: 'crying+cat.jpg')
-p1.photos.attach(io: file103, filename: 'saladcat.png')
-p1.photos.attach(io: file104, filename: 'pizza_cat.png')
-p1.photos.attach(io: file105, filename: 'sitting_cat.png')
+file100 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/profile-images/crying_cat.jpg')
+file101 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/profile-images/pizza_cat.png')
+file102 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/profile-images/smug_knife_cat.jpg')
+file103 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/profile-images/tired_cat.png')
+file104 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/profile-images/sitting_cat.png')
 
+p1.photos.attach(io: file100, filename: 'crying_cat.jpg')
+p1.photos.attach(io: file101, filename: 'pizza_cat.png')
+p1.photos.attach(io: file102, filename: 'smug_knife_cat.jpg')
+p1.photos.attach(io: file103, filename: 'tired_cat.png')
+p1.photos.attach(io: file104, filename: 'sitting_cat.png')
 
 p2 = Product.create(name:'Surprised Pikachu Enamel Pin - Pokemon Enamel Pin - Funny Enamel Pin - Funny Meme Badge - Gamer Gift', description:'This surprised pikachu enamel pin is the perfect badge for people who love the surprised pikachu meme! Pop it on your coat lapel, bag, or anywhere else and always be prepared for the moment you need to whip out a surprised pika!
 This pin bears a rubber butterfly clutch which is more secure than its metal cousin so you can worry less about it falling off! It comes with a backing card approximately 55 x 85mm in size.
@@ -58,11 +65,11 @@ DETAILS
 * Size: Approx 25 x 20mm
 * Comes with backing card approx 55 x 85mm
 * Great for bags, coat lapels, etc', price: 8.49, seller_id: u1.id, category_id: 22)
-file106 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/test/pikachu1.jpg')
-file107 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/test/pikachu2.jpg')
-file108 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/test/pikachu3.jpg')
-file109 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/test/pikachu4.jpg')
-file110 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/test/pikachu5.jpg')
+file106 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/pikachu1.jpg')
+file107 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/pikachu2.jpg')
+file108 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/pikachu3.jpg')
+file109 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/pikachu4.jpg')
+file110 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/pikachu5.jpg')
 
 p2.photos.attach(io: file106, filename: 'pikachu1.jpg')
 p2.photos.attach(io: file107, filename: 'pikachu2.jpg')

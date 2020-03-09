@@ -165,8 +165,8 @@
 }
 
 .seller-photo-text-container > img {
-    display: flex;
-    width: 90px;
+    object-fit: cover;
+    width: auto;
     height: 90px;
     border-radius: 50%;
     /* border: 1px solid blue; */

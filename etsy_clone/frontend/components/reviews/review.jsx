@@ -33,10 +33,10 @@ class Review extends React.Component {
         const stars = [starIcon, starIcon, starIcon, starIcon, starIcon]
         const starSeq = stars.slice(0, rating)
 
-        // console.log(author.photoUrls)
+        
         return(
             <div className='review-container'>
-                    <img src={(!author.photoUrls) ? (null) : (author.photoUrls)}/>
+                    <img src={(!author.photoUrls) ? (null) : (Array.from(author.photoUrls)[0])}/>
                 
                 
                     <div className='review-content'>

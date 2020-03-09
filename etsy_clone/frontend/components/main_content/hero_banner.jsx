@@ -11,7 +11,7 @@ const HeroBanner = (props) => (
                 </div>
 
                 <div className='hero-container'>
-                    <img className='hero-large-img' src='https://etsy-clone-dev.s3-us-west-1.amazonaws.com/splash-images/hero-img-large-resize.jpg'/>
+                    <img className='hero-large-img' src='https://etsy-clone-seed.s3-us-west-1.amazonaws.com/splash-images/hero-img-large-resize.jpg'/>
                 </div>
         </div>
 
@@ -22,7 +22,7 @@ const HeroBanner = (props) => (
                     <p>Shop gifts </p><div className='angle-arrow-icon arrow-hero-medium'>{angleArrowIcon}</div>
                     </div>
                     <div className='hero-container'> { /* hero container div maintains margin and whitespace */}
-                        <img className='hero-medium-img' src="https://etsy-clone-dev.s3-us-west-1.amazonaws.com/splash-images/hero-medium.jpg"/>
+                        <img className='hero-medium-img' src="https://etsy-clone-seed.s3-us-west-1.amazonaws.com/splash-images/hero-medium.jpg"/>
                     </div>
             </div>
 

@@ -1,6 +1,6 @@
 .single-review { /* main width container for ALL reviews on product_show page */
     display: flex;
-    height: 200px;
+    height: 170px;
     width: 80%;
     /* border: 1px solid fuchsia; */
     font-family: 'Roboto', sans-serif;
@@ -75,8 +75,9 @@
 
 .review-container > img {
     display: block;
-    height: 40px;
-    width: 40px;
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
 }
 
 .review-rating  {
