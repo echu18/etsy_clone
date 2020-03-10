@@ -270,7 +270,7 @@
 
     .hero-medium-img {
         display: flex;
-        object-fit: scale-down;
+        object-fit: cover;
 
         /* height: 180%; */
         /* width:  100%; */

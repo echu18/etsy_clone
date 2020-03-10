@@ -19,8 +19,7 @@
     padding: 12px 0px 7px 0px;
     /* padding: 12px 0px 15px 0px; */
     align-items: center;
-    /* width: 100%; */
-    border: 1px solid red;
+    width: 100%;
 }
 
 .etsyLogo > svg {
@@ -49,8 +48,10 @@
 }
 
 .searchbar-form input[type="text"] {
-    min-width: 50vw;
-    max-width: 56.9vw;
+    min-width: 56.7vw;
+    /* max-width: 56.9vw; */
+    /* min-width: 50vw;
+    max-width: 56.9vw; */
     height: 43.5px;
     border-radius: 25px;
     font-size: 16px;
@@ -69,7 +70,6 @@
     box-shadow: 0 0 1px 0.1px #000;
     
     background: transparent;
-    border: 1px solid blue;
 }
 
 .searchbar-form input[type="text"], textarea{
@@ -195,18 +195,28 @@
 }
 
 
+@media only screen and (max-width: 1500px) {
+  .searchbar-form input[type="text"] {
+        min-width: 70vw;
+    }
+}
+
+
+
 @media only screen and (max-width: 900px) {
     .navbar {
         background-color: #FFFFFF;
-        width: 100%;
+        /* width: 100%; */
+        /* min-width: 1000px; */
         height: auto;
         /* height: 100px; */
-        /* display: flex; */
-        /* justify-content: center; */
+        display: flex; 
+        justify-content: flex-start;
         /* flex-wrap: wrap; */
         /* align-items: center; */
         font-family: 'Roboto', sans-serif;
         font-size: 13px;
+        /* padding-left: 10px; */
     }
 
     .searchbar-form {
@@ -216,11 +226,14 @@
         align-items: center;
         justify-content: center;
         padding: 70px 0px 10px 0px;
-        margin: 0 3px 0 -30px;
+        margin: 0 3px 0 -80px;
     }
 
     .searchbar-form input[type="text"] {
-        width: 60vw;
+                min-width: 680px;
+
+        width: 75vw;
+
     }
 
     .etsyLogo > svg {
