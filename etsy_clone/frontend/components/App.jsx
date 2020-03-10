@@ -25,12 +25,12 @@ const App = () => (
                 <Route path="/signup" component={SignupFormContainer} />
                 <Route exact path="/products/:productId" component={ProductShowContainer} />
                 {/* <Route exact path="/products/:productId/reviews" component={ReviewContainer} /> */}
-                <Route exact path="/" component={SplashContainer} />
+                <Route path="/" component={SplashContainer} />
                 {/* <Route path="/products" component={ProductShowContainer} /> */}
             {/* <div className="splash">
                 <SplashContainer />
             </div> */}
-
+                {/* <SplashContainer /> */}
             <footer className='footer'>
             </footer>
         </div>

@@ -5,10 +5,11 @@ export default (state = {}, action) => {
     switch (action.type) {
         case RECEIVE_PRODUCTS:
             const products = {}
-            action.payload.products.forEach(product => {
-                products[product.id] = product;
+            action.products.forEach(product => {
+                return products[product.id] = product;
             });
             return products
+            // return action.payload.products
         case RECEIVE_PRODUCT:
             return Object.assign({}, state, action.payload.products)
         default:

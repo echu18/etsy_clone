@@ -1,6 +1,6 @@
 export const getProducts = () => {
     return $.ajax({
-        url: `/api/posts`,
+        url: `/api/products`,
         method: 'GET'
     })
 }

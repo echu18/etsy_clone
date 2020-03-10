@@ -6,18 +6,19 @@ import React from 'react';
 class ProductCard extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
+        // this.state = {
             
-        }
-
+        // }
     }
 
     render() {
-        const { product } = this.props;
+        const product = this.props.product;
 
+        if (!product) return null;
+        
         return (
             <div className='product-card-container'>
-                {/* <img className='product-card-image' src={}/> */}
+                {/* <img className='product-card-image' src={Array.from(product.photoUrls)[0]}/> */}
                 <p className='product-card-price'> {product.price}</p>
             </div>
         )
