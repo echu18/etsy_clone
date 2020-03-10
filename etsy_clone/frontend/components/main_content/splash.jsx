@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { withRouter } from 'react-router';
 import HeroBanner from './hero_banner';
 import CatModuleContainer from './cat_module_container';
+import { checkMark } from '../../../app/assets/images/svgs/icons';
 
 
 
@@ -23,16 +24,31 @@ class Splash extends React.Component{
             <div id='splash-main' id='inner'>
                 <div className='main-headline-text' id='inner'>
                     <p>If it’s handcrafted, vintage, custom, or unique, it’s on Etsy.</p>
+                    {/* <p>If it’s anime, gaming, or trending, it’s on Memesy.</p> */}
                 </div>
 
                 {/* .main-hero-banner */}
                 <div className='splash-inner'>
                     <HeroBanner />
 
-                <section className='main-buzzwords-banner'>
-                    <div className='buzzwords-block-1'></div>
-                    <div className='buzzwords-block-2'></div>
-                    <div className='buzzwords-block-3'></div>
+                <section className='buzzwords-banner'>
+                    <div className='buzzwords-block'>
+                        
+                            <h2><div className='checkmark check-1'> {checkMark}</div>Unique everything</h2>
+                        <p>We have millions of one-of-a-kind items, so you can find whatever you need (or really, really want).</p>
+                    </div>
+
+                    <div className='buzzwords-block'>
+                       
+                        <h2><div className='checkmark check-2'> {checkMark}</div>Independent sellers</h2>
+                        <p>Buy directly from someone who put their heart and soul into making something special.</p>
+                    </div>
+
+                    <div className='buzzwords-block'>
+                        
+                        <h2><div className='checkmark check-3'> {checkMark}</div>Secure shopping</h2>
+                        <p>We use best-in-class technology to protect your transactions.</p>
+                    </div>
                 </section>
 
                     <div className='cat-module-1'>

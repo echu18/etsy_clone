@@ -11,9 +11,8 @@
 #main {
     min-width: 700px;
     max-width: 69.6vw;
-
     height: 2000px;
-    border: 1px solid turquoise;
+    /* border: 1px solid turquoise; */
 }
 
 

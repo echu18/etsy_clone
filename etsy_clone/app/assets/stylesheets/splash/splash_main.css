@@ -13,8 +13,8 @@
 .cat-module-1 {
     display: flex;
     flex-direction: column;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 0px;
+    /* margin-bottom: 20px; */
     /* border: 1px solid red; */
 }
 
@@ -26,8 +26,8 @@
     font-size: 15px;
     letter-spacing: 0.7px;
     display: flex;
-    height: 30px;
-    margin-top: 5px;
+    height: auto;
+    margin-bottom: 5px;
     /* margin: 5px 0px 5px 0px; */
     /* border: 1px solid turquoise; */
 }
@@ -45,6 +45,76 @@
 
     /* border: 1px solid purple; */
 }
+
+.buzzwords-banner {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 100px;
+    margin: 35px 0px 30px 0px;
+    /* border: 1px solid fuchsia; */
+}
+
+
+
+
+.buzzwords-block {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 25%;
+    height: 100%;
+    padding: 1.5% 0 2% 0;
+}
+
+.buzzwords-block > h2 {
+    position: relative;
+    font-size: 17px;
+    margin-bottom: 3px;
+}
+
+.buzzwords-block > p {
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+
+.checkmark > svg {
+    /* display: flex; */
+    
+    fill: #F1651F;
+}
+
+
+.check-1 {
+    position: absolute;
+    height: 7%;
+    width: 7%;
+    left: 22%;
+    top: -13%;
+}
+.check-2 {
+    position: absolute;
+    height: 7%;
+    width: 7%;
+    left: 20%;
+    top: -13%;
+}
+.check-3 {
+    position: absolute;
+    height: 7%;
+    width: 7%;
+    left: 23%;
+    top: -13%;
+}
+
+
+
+
+
+
 
 /* .prods {
     display: flex;
