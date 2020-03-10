@@ -13,13 +13,14 @@ class ProductCard extends React.Component {
 
     render() {
         const product = this.props.product;
+        const price = (new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(this.props.product.price));
 
         if (!product) return null;
-        
+        // console.log(Array.from(product.photoUrls))
         return (
-            <div className='product-card-container'>
-                {/* <img className='product-card-image' src={Array.from(product.photoUrls)[0]}/> */}
-                <p className='product-card-price'> {product.price}</p>
+            <div>
+                <img className='product-card-image' src={Array.from(product.photoUrls)[0]}/>
+                <p className='product-card-price'> {price}</p>
             </div>
         )
     }

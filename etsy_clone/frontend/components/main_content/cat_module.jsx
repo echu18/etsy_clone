@@ -14,16 +14,15 @@ class CatModule extends React.Component {
 
     render() {
         const category = this.props.category;
-        const numProduct = this.props.num;
-        const products = this.props.products;
+        // const numProduct = this.props.num;
+        const products = this.props.products.slice(0,6);
         // debugger
         if (!products) return null;
 
         return (
             <div className='cat-module-container'>
                 {products.map((prod, idx) => {
-                    return <div className='cat-prod-card' key={idx}>
-                        <ProductCard product={prod}/>
+                    return <div className='product-card-container' key={idx}>
                         <ProductCard product={prod}/>
                     </div>
                 })}

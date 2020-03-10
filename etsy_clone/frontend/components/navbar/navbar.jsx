@@ -82,7 +82,7 @@ class Navbar extends React.Component {
                     </div>
                 </div>
 
-                <div className='categories-bar' id='inner'>
+                <div className='categories-bar' >
                     {categories.map((cat, idx) => {
                         return <CategoryDropdownContainer header={cat} key={idx} />
                     })}

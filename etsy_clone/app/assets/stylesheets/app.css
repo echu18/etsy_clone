@@ -1,9 +1,10 @@
 #app {
-     display: flex;
+    display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     width: 100%;
     height: 100%;
+    color: #212121;
 }
 
 
@@ -29,7 +30,7 @@
 
 @media only screen and (max-width: 1500px) {
     #main {
-        width: 93vw;
+        min-width: 93vw;
         /* max-width: 95%; */
 
         /* margin-left: 5%;
@@ -37,10 +38,10 @@
         /* min-width: 500px; */
         /* min-width: 69.6vw; */
 
-            /* min-width: 700px;
-            max-width: 69.6vw; */
-            height: 2000px;
-            border: 1px solid red;
+        /* min-width: 700px;
+        max-width: 69.6vw; */
+        height: 2000px;
+        border: 1px solid red;
 
     }
 }

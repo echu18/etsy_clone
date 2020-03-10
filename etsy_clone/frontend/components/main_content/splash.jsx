@@ -26,7 +26,8 @@ class Splash extends React.Component{
                 </div>
 
                 {/* .main-hero-banner */}
-                <HeroBanner />
+                <div className='splash-inner'>
+                    <HeroBanner />
 
                 <section className='main-buzzwords-banner'>
                     <div className='buzzwords-block-1'></div>
@@ -34,23 +35,21 @@ class Splash extends React.Component{
                     <div className='buzzwords-block-3'></div>
                 </section>
 
+                    <div className='cat-module-1'>
+                        <div className='cat-module-header'>
+                            <p className='cat-title'>Our picks for you</p> 
+                            <a href="#">See more</a>
+                        </div>
 
-                { /* <div className='prods'>
-                    {products.map((prod, idx) => {
-                        return (
-                            <div className='prod-card' key={idx}>
-                                {/* <img src={prod.photoUrls[0]}></img> */}
-                               {/* } <p>{prod.price}</p>
-                            </div>
-                        )
-                    })}
-                </div> */}
+                        <CatModuleContainer props={this.props} />
+                        {/* Header 1 (category title + see more) */}
+                    </div>
+
+                </div>
+            
 
                 
-                <div className='cat-module-1'>
-                    <CatModuleContainer props={this.props}/>
-                    {/* Header 1 (category title + see more) */}
-                </div>
+                
 
                 <div className='cat-module-2'>
                     {/* Header 2 (category title + see more) */}
