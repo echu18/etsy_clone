@@ -1,6 +1,7 @@
 .product-card-container {
-    height: 190px;
-    width: 210px;
+    /* height: 190px; */
+    height: auto;
+    width: 207px;
     font-family: 'Arial', sans-serif; 
     font-size: 15px;
     font-weight: normal;
@@ -11,19 +12,20 @@
 }
 
 .product-card-container:not(:last-of-type){
-    margin: 0px 10px 0px 0px;
+    /* margin: 0px 10px 0px 0px; */
 }
 
 .product-card-image {
     display: flex;
     object-fit: cover;
     /* max-height: 150px; */
-    height: 160px;
+    height: 163px;
     width: 100%;
     border-radius: 2px;
 }
 
 .product-card-price {
+    font-size: 17px;
     margin: 6px 0px 6px 0px;
 }
 

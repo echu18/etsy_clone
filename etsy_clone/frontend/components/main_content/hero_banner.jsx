@@ -7,7 +7,7 @@ const HeroBanner = (props) => (
         <div className='hero-block-large'>
                 <div className='hero-large-text'>
                     <h3>Standing out just got so easy.</h3>
-                <p>Shop fashion </p><div className='angle-arrow-icon arrow-hero-large'>{angleArrowIcon}</div>
+                    <p>Shop fashion </p><div className='angle-arrow-icon arrow-hero-large'>{angleArrowIcon}</div>
                 </div>
 
                 <div className='hero-container'>

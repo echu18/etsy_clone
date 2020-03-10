@@ -10,7 +10,8 @@
 
 #main {
     min-width: 700px;
-    max-width: 69.6vw;
+    /* max-width: 69.6vw; */
+    max-width: 69.3vw;
     height: 2000px;
     /* border: 1px solid turquoise; */
 }

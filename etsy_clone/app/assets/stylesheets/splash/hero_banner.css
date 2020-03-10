@@ -3,10 +3,10 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    /* min-height: 320px; */
-    /* min-height: 320px; */
+    min-height: 320px;
     width: 100vw;
     height: 34vh;
+    /* min-height: 34vh; */
     max-height: 33.5vh;
     /* border: 1px solid fuchsia; */
 }
