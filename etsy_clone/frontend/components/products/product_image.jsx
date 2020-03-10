@@ -8,7 +8,8 @@ class ProductImage extends React.Component {
         this.state={
             urls: this.props.urls,
             // currentPhoto: this.props.product.photoUrls[0]
-            currentPhotoIdx: 0
+            currentPhotoIdx: 0,
+            currentPhotoMini: ""
         }
 
         this.changePhoto = this.changePhoto.bind(this);
@@ -25,6 +26,7 @@ class ProductImage extends React.Component {
 
     handleHover(e) {
         // e.preventDefault();
+        $()
         this.changePhoto(e.currentTarget.id);
     }
 
@@ -43,7 +45,7 @@ class ProductImage extends React.Component {
         this.changePhoto(newPhotoIdx);
     }
 
-
+// { idx === this.state.currentPhotoIdx ? "display-current-mini" : "" } 
 
     render() {
         const {urls} = this.props;
@@ -53,8 +55,8 @@ class ProductImage extends React.Component {
                 <div className='photos-small-panel'>
                     {urls.map((url, idx) => {
                         return (
-                            <div className='photo-small-container' id={idx} key={idx} onMouseOver={e => this.handleHover(e)}>
-                                <img className='photo-small' src={url} />
+                            <div className='photo-small-container'  key={idx} onMouseOver={e => this.handleHover(e)}>
+                                <img className='photo-small opaque' id={idx} src={url} />
                             </div>
                         )
                     })}

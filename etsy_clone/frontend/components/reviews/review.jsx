@@ -32,7 +32,6 @@ class Review extends React.Component {
 
         const stars = [starIcon, starIcon, starIcon, starIcon, starIcon]
         const starSeq = stars.slice(0, rating)
-
         
         return(
             <div className='review-container'>

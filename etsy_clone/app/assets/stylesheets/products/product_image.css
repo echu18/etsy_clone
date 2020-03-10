@@ -24,7 +24,6 @@
     margin: 0;
     height: 64px;
     width: 100%;
-    opacity: 0.5;
     /* margin: 3px; */
 }
 
@@ -40,6 +39,10 @@
 .photo-small:hover {
     border: 1px solid black;
     opacity: 1;
+}
+
+#display-current-mini {
+    opacity: 1 !important; 
 }
 
 

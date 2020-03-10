@@ -27,7 +27,8 @@ class ProductShow extends React.Component {
     render() {
         if (this.props.product === undefined) return null;
 
-        const { name, description, category, photoUrls, price} = this.props.product;
+        const { name, description, category, photoUrls} = this.props.product;
+        const price = (new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(this.props.product.price));
         const urls = Array.from(photoUrls);
         const sellerId = this.props.product.seller_id;
         const seller = this.props.users[sellerId];
@@ -37,6 +38,9 @@ class ProductShow extends React.Component {
         const stars = [starIcon, starIcon, starIcon, starIcon, starIcon];
         const starSeq = stars.slice(0, this.props.product.avg_rating);  // Average rating
         
+
+        
+
         return (
             <div className='product-listing-container'>
                 <div className='image-and-sidebar'>
@@ -51,7 +55,7 @@ class ProductShow extends React.Component {
 
                         <div className='product-text'>
                             <p className='product-name'>{name}</p>
-                            <p className='product-price'><span>$</span>{price}</p>
+                            <p className='product-price'>{price}</p>
 
                             <CartSidebarContainer className='cart-sidebar-container'/>
                             
