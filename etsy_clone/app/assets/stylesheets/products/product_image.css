@@ -206,7 +206,7 @@
         display: flex;
         justify-content: center;
         width: 100%;
-        border: 1px solid fuchsia;
+        /* border: 1px solid fuchsia; */
         overflow: none;
 
     } 
