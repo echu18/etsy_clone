@@ -33,7 +33,7 @@ class Product < ApplicationRecord
         total = 0 
         
         self.reviews.each {|review| total += review.rating}
-        @avg_rating = (total == 0 ?) 0 : ((total/self.reviews.count) * 1.0)
+        @avg_rating = (total == 0)  ? 0 : ((total/self.reviews.count) * 1.0)
 
         @avg_rating
     end
