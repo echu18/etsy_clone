@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-class cartSidebar extends React.Component {
+class CartSidebar extends React.Component {
     constructor(props) {
         super(props);
         this.state={
@@ -31,4 +31,4 @@ class cartSidebar extends React.Component {
     }
 }
 
-export default cartSidebar;
+export default CartSidebar;

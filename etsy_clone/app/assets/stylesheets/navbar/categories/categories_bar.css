@@ -12,6 +12,7 @@
 }
 
 .categories-bar {
+    position: relative;
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
@@ -20,6 +21,7 @@
     /* width: auto; */
     height: 30px;
     width: 100vw;
+    padding: 0px 15px 0px 0px;
     /* padding-bottom: 10px; */
 }
 
@@ -32,25 +34,27 @@
     letter-spacing: 0.5px;
 }
 
-.navbar-cat-header:not(:first-of-type) {
+/* .navbar-cat-header:not(:first-of-type) {
     padding: 0px 10px 0px 0px;
 
 }
 
 .navbar-cat-header:not(:last-of-type){
     padding: 0px 0px 0px 10px;
-}
+} */
 
 .gift-icon {
+    position: absolute;
+    right: 3.5%;
+    top: 21.5%;
     display: flex;
-    height: 100px;
-    width: 100px;
+    height: auto;
+    width: auto;
 }
 
 .gift-icon > svg {
-    height: 100px;
-    width: 100px;
-    border: 1px solid red;
+    height: 15px;
+    width: 15px;
 }
 
 

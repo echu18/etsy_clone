@@ -1,6 +1,6 @@
 import React from 'react';
 
-class categoryDropdown extends React.Component {
+class CategoryDropdown extends React.Component {
     constructor(props) {
         super(props);
     }
@@ -17,4 +17,4 @@ class categoryDropdown extends React.Component {
     }
 }
 
-export default categoryDropdown;
+export default CategoryDropdown;

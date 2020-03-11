@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, withRouter, Redirect } from 'react-router-dom';
 import Popup from '../signin_signup/popup';
 import CategoryDropdownContainer from './categories/category_dropdown_container'
-import {cartIcon, searchIcon, etsyLogo} from '../../../app/assets/images/svgs/icons'
+import {cartIcon, searchIcon, etsyLogo, giftIcon} from '../../../app/assets/images/svgs/icons'
 
 
 class Navbar extends React.Component {
@@ -33,7 +33,7 @@ class Navbar extends React.Component {
    
     render() {
         const { currentUser, signOut, signIn, clearErrors } = this.props;
-        const categories = ['Jewelry & Accessories', 'Clothing & Shoes', 'Home & Living', 'Wedding & Party', 'Toys & Entertainment', 'Art & Collectibles', 'Craft Supplies', 'Vintage', 'Gifts'];
+        const categories = ['Jewelry & Accessories', 'Clothing & Shoes', 'Home & Living', 'Wedding & Party', 'Toys & Entertainment', 'Art & Collectibles', 'Craft Supplies', 'Vintage'];
 
         const display = currentUser ? (
             <div>
@@ -86,6 +86,8 @@ class Navbar extends React.Component {
                     {categories.map((cat, idx) => {
                         return <CategoryDropdownContainer header={cat} key={idx} />
                     })}
+                    <div className='gift-icon'>{giftIcon}</div>
+                     <CategoryDropdownContainer header={'Gifts'}  />
                 </div>
             </div>
         )

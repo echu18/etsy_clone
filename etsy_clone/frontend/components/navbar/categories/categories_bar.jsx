@@ -1,26 +1,26 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { giftIcon } from '../../../../app/assets/images/svgs/icons';
+import CategoryDropdownContainer from './category_dropdown_container'
 
 
 
 // Links to each category
 const categories = ['Jewelry & Accessories', 'Clothing & Shoes', 'Home & Living', 'Wedding & Party', 'Toys & Entertainment', 'Art & Collectibles', 'Craft Supplies', 'Vintage'];
 
-const categoriesBar = props => (
+const CategoriesBar = props => (
     <ul>
-        {categories.map((cat) => {
+        {/* {categories.map((cat) => {
             return <li className='cat-single'>
-                        <h2 className='cat-header'>{cat}</h2>
-                        <categoryDropdownContainer header={cat} />
+                        <h2 className='navbar-cat-header'>{cat}</h2>
+                        <CategoryDropdownContainer header={cat} />
                     </li>
-        })}
-        <li className='cat-single'>
-            <h2 className='cat-header'><div className='gift-icon'>{giftIcon}</div>Gifts</h2>
-            <categoryDropdownContainer header={'Gifts'} />
-        </li>
-
+        })} */}
+        {/* <li className='cat-single'>
+            <h2 className='navbar-cat-header'>Gifts</h2>
+            <CategoryDropdownContainer header={'Gifts'} />
+        </li> */}
+        {/* <div className='gift-icon'>{giftIcon}</div> */}
     </ul>
 )
 
-export default categoriesBar;
+export default CategoriesBar;
