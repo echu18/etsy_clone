@@ -1,15 +1,122 @@
 #splash-main {
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     justify-content: center;
 }
 
 
-/* temporary - gray background */
-.main-hero-banner{
+.splash-inner {
+    display: flex;
+    flex-direction: column;
 }
 
-.prods {
+.cat-module-1 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0px;
+    /* margin-bottom: 20px; */
+    /* border: 1px solid red; */
+}
+
+.cat-module-header {
+    display: flex;
+    align-items: center;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    letter-spacing: 0.7px;
+    display: flex;
+    height: auto;
+    margin-bottom: 5px;
+    /* margin: 5px 0px 5px 0px; */
+    /* border: 1px solid turquoise; */
+}
+
+.cat-module-header > a {
+    /* display: flex;
+    align-self: flex-end; */
+    height: auto;
+    font-family: 'Raleway', sans-serif;
+    font-size: 12px;
+    text-decoration: none;
+    margin: 0px 0px -1px 12px;
+    color: #212121;
+    font-weight: bolder;
+
+    /* border: 1px solid purple; */
+}
+
+.buzzwords-banner {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 100px;
+    margin: 30px 0px 16px 0px;
+    /* border: 1px solid fuchsia; */
+}
+
+
+
+
+.buzzwords-block {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 25%;
+    height: 100%;
+    padding: 1.5% 0 2% 0;
+}
+
+.buzzwords-block > h2 {
+    position: relative;
+    font-size: 17px;
+    margin-bottom: 3px;
+}
+
+.buzzwords-block > p {
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+
+.checkmark > svg {
+    /* display: flex; */
+    
+    fill: #F1651F;
+}
+
+
+.check-1 {
+    position: absolute;
+    height: 7%;
+    width: 7%;
+    left: 22%;
+    top: -20%;
+}
+.check-2 {
+    position: absolute;
+    height: 7%;
+    width: 7%;
+    left: 20%;
+    top: -20%;
+}
+.check-3 {
+    position: absolute;
+    height: 7%;
+    width: 7%;
+    left: 23%;
+    top: -20%;
+}
+
+
+
+
+
+
+
+/* .prods {
     display: flex;
     height: 300px;
     width: 100%;
@@ -24,4 +131,4 @@
 .prod-card > img {
     height: 100px;
     width: 100px;
-}
+} */

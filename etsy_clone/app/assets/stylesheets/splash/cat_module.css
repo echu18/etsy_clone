@@ -1,0 +1,19 @@
+.cat-module-container {
+    display: flex;
+    justify-content: space-between;
+    height: 190px;
+    /* height: auto; */
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    /* border: 1px solid red; */
+
+}
+
+
+/* .cat-module {
+    display: flex;
+    justify-content: space-between;
+    width: auto;
+    border: 1px solid pink;
+} */

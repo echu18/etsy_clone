@@ -1,8 +1,9 @@
 .cart-sidebar-container {
+    line-height: 1.2;
     display: flex;
     flex-direction: column;
     height: 200px;
-    margin: 30px 0px 100px 0px;
+    margin: 50px 0px 0px 0px;
     /* border: 1px solid red; */
 }
 
@@ -34,6 +35,11 @@
     margin-bottom: 15px;
 }
 
+/* #sidebar-quantity-dropdown:hover {
+    cursor: pointer;
+} */
+
+
 .addtocart-btn {
     box-sizing: border-box;
     width: 100%;
@@ -46,7 +52,11 @@
     margin-bottom: 5px;
 }
 
-.addtocart-btn:hover {
+/* .addtocart-btn:hover {
     box-shadow: 0px 0px 10px 2px #E8E8E8;
     transform: scale(1.02);
-}
+    cursor: pointer;
+    background-color:#3c3c3c;
+} */
+
+.addtocart-btn:focus { outline: none}

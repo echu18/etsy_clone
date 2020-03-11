@@ -1,15 +1,17 @@
 #app {
-     display: flex;
+    display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     width: 100%;
     height: 100%;
+    color: #212121;
 }
 
 
 #main {
     min-width: 700px;
-    max-width: 69.6vw;
+    /* max-width: 69.6vw; */
+    max-width: 69.3vw;
     height: 2000px;
     /* border: 1px solid turquoise; */
 }
@@ -18,7 +20,7 @@
 
 
 #inner {  
-    width: 100%;
+    width: auto;
     border-collapse: collapse;
     box-sizing: border-box;
 }
@@ -26,8 +28,10 @@
 
 
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1500px) {
     #main {
+        min-width: 93vw;
+        display: block;
         /* max-width: 95%; */
 
         /* margin-left: 5%;
@@ -35,13 +39,29 @@
         /* min-width: 500px; */
         /* min-width: 69.6vw; */
 
+        /* min-width: 700px;
+        max-width: 69.6vw; */
+        height: 2000px;
+        border: 1px solid red;
+
     }
 }
 
+
+/* @media only screen and (max-width: 1400px) {
+    #main {
+        margin-left: 5%;
+        margin-right: 5%;
+        min-width: 900px;
+        border: 1px solid green;
+    }
+} 
+ 
 @media only screen and (max-width: 900px) {
     #main {
         /* margin-left: 5%;
         margin-right: 5%; */
-        min-width: 700px;
+        /* min-width: 900px;
+        border: 1px solid blue;
     }
-}
+} */

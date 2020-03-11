@@ -15,24 +15,24 @@ Review.destroy_all
 
 demouser = User.create(username: 'DemoUser', email: 'DemoUser', password: '123456')
 u1 = User.create(username: 'Jamie', email: 'jamie@cc.com', password: '123456', store_name: 'MemeEconomy')
-u2 = User.create(username: 'Winston', email: 'winston@cc.com', password: '123456')
-u3 = User.create(username: 'Fred', email: 'fred@cc.com', password: '123456')
-u4 = User.create(username: 'Mindy', email: 'mindy@cc.com', password: '123456')
-u5 = User.create(username: 'Sean', email: 'sean@cc.com', password: '123456')
-u6 = User.create(username: 'Jerry', email: 'jerry@cc.com', password: '123456')
+u2 = User.create(username: 'Winston', email: 'winston@cc.com', password: '123456', store_name: 'ToastyPrints')
+u3 = User.create(username: 'Fred', email: 'fred@cc.com', password: '123456', store_name: 'ScrapbookLemons')
+u4 = User.create(username: 'Mindy', email: 'mindy@cc.com', password: '123456', store_name: 'CuriousCurator')
+u5 = User.create(username: 'Sean', email: 'sean@cc.com', password: '123456', store_name: 'LightningCrew')
+u6 = User.create(username: 'Jerry', email: 'jerry@cc.com', password: '123456', store_name: 'SeaMule')
 u7 = User.create(username: 'June', email: 'june@cc.com', password: '123456')
 u8 = User.create(username: 'Emmy', email: 'emmy@cc.com', password: '123456')
-u9 = User.create(username: 'Kyle', email: 'kyle@cc.com', password: '123456')
+u9 = User.create(username: 'Kyle', email: 'kyle@cc.com', password: '123456', store_name: 'RetroAMSupply')
 u10 = User.create(username: 'Peter', email: 'peter@cc.com', password: '123456')
-u11 = User.create(username: 'Jenna', email: 'jenna@cc.com', password: '123456')
-u12 = User.create(username: 'Arthur', email: 'arthur@cc.com', password: '123456')
-u13 = User.create(username: 'Justin', email: 'justin@cc.com', password: '123456')
+u11 = User.create(username: 'Jenna', email: 'jenna@cc.com', password: '123456', store_name: 'HelloCart')
+u12 = User.create(username: 'Arthur', email: 'arthur@cc.com', password: '123456', store_name: 'ArtKing')
+u13 = User.create(username: 'Justin', email: 'justin@cc.com', password: '123456', store_name: 'KitschKat')
 u14 = User.create(username: 'Dianne', email: 'dianne@cc.com', password: '123456')
-u15 = User.create(username: 'Harold', email: 'harold@cc.com', password: '123456')
+u15 = User.create(username: 'Harold', email: 'harold@cc.com', password: '123456', store_name: 'BubbleTeaSupply')
 u16 = User.create(username: 'Valeria', email: 'valeria@cc.com', password: '123456')
-u17 = User.create(username: 'Vanessa', email: 'vanessa@cc.com', password: '123456')
+u17 = User.create(username: 'Vanessa', email: 'vanessa@cc.com', password: '123456', store_name: 'SpicyWater')
 u18 = User.create(username: 'Joel', email: 'joel@cc.com', password: '123456')
-u19 = User.create(username: 'Michaela', email: 'michaela@cc.com', password: '123456')
+u19 = User.create(username: 'Michaela', email: 'michaela@cc.com', password: '123456', store_name: 'MichaelaDraws')
 
 file200 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/profile-images/crying_cat.jpg')
 file201 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/profile-images/pizza_cat.png')
@@ -62,7 +62,7 @@ u10.photos.attach(io: file209, filename: 'cat5.jpg')
 
 
 
-p1 = Product.create!(name:'Cat Memes Sticker Pack', description: 'This sticker pack includes six waterproof vinyl stickers of cat memes. They\'re perfect for laptops, water bottles (hand wash only), phones and whatever you can think of. These stickers make a good gift for meme addicts or a treat for yourself. These stickers were printed on vinyl waterproof and tear proof laser paper.
+p1 = Product.create(name:'Cat Memes Sticker Pack', description: 'This sticker pack includes six waterproof vinyl stickers of cat memes. They\'re perfect for laptops, water bottles (hand wash only), phones and whatever you can think of. These stickers make a good gift for meme addicts or a treat for yourself. These stickers were printed on vinyl waterproof and tear proof laser paper.
     Measurements:
     Woman yelling and cat being yelled at (second image): 5.7 cm and 3.7 cm at longest measurements
     Coughing cat (third image): 7.5 cm at longest measurement
@@ -88,7 +88,7 @@ r2 = Review.create(body: 'These are so rad! I love everything I ordered, and I w
 r3 = Review.create(body: 'I LOVE CATS SO MUCH', author_id: u1.id, product_id: p1.id, rating: 4)
 
 
-p2 = Product.create!(name:'Surprised Pikachu Enamel Pin - Pokemon Enamel Pin - Funny Enamel Pin - Funny Meme Badge - Gamer Gift', description:'This surprised pikachu enamel pin is the perfect badge for people who love the surprised pikachu meme! Pop it on your coat lapel, bag, or anywhere else and always be prepared for the moment you need to whip out a surprised pika!
+p2 = Product.create(name:'Surprised Pikachu Enamel Pin - Pokemon Enamel Pin - Funny Enamel Pin - Funny Meme Badge - Gamer Gift', description:'This surprised pikachu enamel pin is the perfect badge for people who love the surprised pikachu meme! Pop it on your coat lapel, bag, or anywhere else and always be prepared for the moment you need to whip out a surprised pika!
 This pin bears a rubber butterfly clutch which is more secure than its metal cousin so you can worry less about it falling off! It comes with a backing card approximately 55 x 85mm in size.
 Please note: As an eco-friendly store I have opted to exclude the plastic packaging in which enamel pins are normally wrapped. Instead, your pin will come in a colourful paper bag.',
 price: 8.49, seller_id: u4.id, category_id: 22)
@@ -126,7 +126,7 @@ r9 = Review.create(body: 'Just ok. GENGAR IS BEST MON', author_id: u1.id, produc
 
 
 
-p3 = Product.create!(name:'Doge meme poster Aristocrat Dog internet modern pop art design', description: "Do you feel like you need a fancy touch in your living room? With this awesome Aristocrat Doge poster, you\’ll have all the luxury you need. The doge meme is a trend that has branched out into many offshoots and styles, so why not hang a depiction that is dignified and adorable on your wall? The colors are highly saturated into a matte, acid-free paper in multiple sizes, ready to be prepared for your office or living room. The print is easily delivered right to you, with multiple dimension choices available for you right away, so it will always be able to fit on your wall. Whether you are a fan of dogs or a fan of jokes on the internet, this translation of meme into art is now available and an easy purchase for a little extra color in your life, or for a friend that enjoys art for themselves. Let your love of fun and art collide with a purchase of this print!", 
+p3 = Product.create(name:'Doge meme poster Aristocrat Dog internet modern pop art design', description: "Do you feel like you need a fancy touch in your living room? With this awesome Aristocrat Doge poster, you\’ll have all the luxury you need. The doge meme is a trend that has branched out into many offshoots and styles, so why not hang a depiction that is dignified and adorable on your wall? The colors are highly saturated into a matte, acid-free paper in multiple sizes, ready to be prepared for your office or living room. The print is easily delivered right to you, with multiple dimension choices available for you right away, so it will always be able to fit on your wall. Whether you are a fan of dogs or a fan of jokes on the internet, this translation of meme into art is now available and an easy purchase for a little extra color in your life, or for a friend that enjoys art for themselves. Let your love of fun and art collide with a purchase of this print!", 
     price: 12.00, seller_id: u13.id, category_id: 22)
 
 
@@ -153,3 +153,110 @@ author_id: u19.id, product_id: p3.id, rating: 5)
 
 r12 = Review.create(body: 'SUCH COLOR MUCH WOW', 
 author_id: u1.id, product_id: p3.id, rating: 5)
+
+
+
+
+p4 = Product.create(name:'Gundam RX-78-2 Enamel Pin', description: "The most popular gundam, RX-78, is now available as a pin! This enamel pin is high quality and made to last.", 
+    price: 11.99, seller_id: u12.id, category_id: 22)
+
+
+file117 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/gundam11.jpg')
+file118 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/gundam12.jpg')
+file119 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/gundam13.jpg')
+
+p4.photos.attach(io: file117, filename: 'gundam11.jpg')
+p4.photos.attach(io: file118, filename: 'gundam11.jpg')
+p4.photos.attach(io: file119, filename: 'gundam11.jpg')
+
+
+
+r13 = Review.create(body: 'Awesomely cute and high quality, made out of metal and heavy, with 2 awesome caps to take care of that weight! I am very happy with this one', 
+author_id: u4.id, product_id: p4.id, rating: 5)
+
+r14 = Review.create(body: 'I love this pin! It took a little while to get here, but it\'s worth it. Super clean lines on the design', 
+author_id: u12.id, product_id: p4.id, rating: 4)
+
+
+
+
+
+
+p5 = Product.create(name:'Kawaii Anime Magical Girl T-Shirt | Japanese Kanji Shirts | Fairy Kei Tshirt | Cute Ringer Graphic Tee | Pastel Aesthetic | Espi Lane Shirt', description: "Japanese Kawaii Magical Girl Shirt
+
+• graphic print t shirt
+• choose ringer or classic crew t-shirt
+• for magical anime & sailor moon lovers
+• eco-friendly water based ink
+• see below for size info
+• printed in my USA loft
+• available in unisex or womens close fit t-shirt styles", 
+    price: 21.00, seller_id: u7.id, category_id: 22)
+
+
+file120 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/shirt1.jpg')
+file121 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/shirt2.jpg')
+
+p5.photos.attach(io: file120, filename: 'shirt1.jpg')
+p5.photos.attach(io: file121, filename: 'shirt2.jpg')
+
+
+
+r15 = Review.create(body: 'I love these shirts!! So cute!', 
+author_id: u4.id, product_id: p5.id, rating: 5)
+
+r16 = Review.create(body: 'Came on time, and amazing communication! (Sizing might be a little bigger than expected)', 
+author_id: u12.id, product_id: p5.id, rating: 4)
+
+
+
+
+p6 = Product.create(name:'Pokemon Terrarium Sleepy Charmander Terrarium Pokeball Charmander gifts Pokemon go Best Pokemon Gifts For Him/Her', description: "Best Pokemon Gifts For The Pokemon Lover .", 
+    price: 28.70, seller_id: u8.id, category_id: 22)
+
+
+file122 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/pokeball1.jpg')
+file123 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/pokeball2.jpg')
+file124 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/pokeball3.jpg')
+file125 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/pokeball4.jpg')
+file126 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/pokeball5.jpg')
+
+p6.photos.attach(io: file122, filename: 'pokeball1.jpg')
+p6.photos.attach(io: file123, filename: 'pokeball2.jpg')
+p6.photos.attach(io: file124, filename: 'pokeball3.jpg')
+p6.photos.attach(io: file125, filename: 'pokeball4.jpg')
+p6.photos.attach(io: file126, filename: 'pokeball5.jpg')
+
+
+
+r17 = Review.create(body: 'Shipping was pretty fast! Would purchase from here again! Thank you!!', 
+author_id: u4.id, product_id: p6.id, rating: 5)
+
+
+
+
+
+
+p7 = Product.create(name:'Gundam Head RX-78-2 Sticker | Mobile Suit Gundam Exceed Mech Robot Anime Planner Laptop Vinyl Sticker Gift', description: "Best Pokemon Gifts For The Pokemon Lover .", 
+    price: 2.5, seller_id: u17.id, category_id: 22)
+
+
+file127 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/gundam1.jpg')
+file128 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/gundam2.jpg')
+
+p7.photos.attach(io: file127, filename: 'gundam1.jpg')
+p7.photos.attach(io: file128, filename: 'gundam2.jpg')
+
+
+r18 = Review.create(body: 'Lovely quality gundam head sticker!!! Packaged nicely along with a goodie print. Tysm xxx', 
+author_id: u5.id, product_id: p7.id, rating: 4)
+
+r19 = Review.create(body: 'So nice! The colors pop even more in person. Will def consider buying more in the future.', 
+author_id: u3.id, product_id: p7.id, rating: 4)
+
+r20 = Review.create(body: 'Came with a few extra stickers and a post card! Very pleasant surprise', 
+author_id: u16.id, product_id: p7.id, rating: 5)
+
+
+
+

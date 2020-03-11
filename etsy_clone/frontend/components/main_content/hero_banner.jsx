@@ -7,7 +7,7 @@ const HeroBanner = (props) => (
         <div className='hero-block-large'>
                 <div className='hero-large-text'>
                     <h3>Standing out just got so easy.</h3>
-                <p>Shop fashion </p><div className='angle-arrow-icon arrow-hero-large'>{angleArrowIcon}</div>
+                    <p>Shop fashion </p><div className='angle-arrow-icon arrow-hero-large'>{angleArrowIcon}</div>
                 </div>
 
                 <div className='hero-container'>
@@ -19,7 +19,7 @@ const HeroBanner = (props) => (
             <div className='hero-block-medium'>
                     <div className='hero-medium-text'>
                         <h3>Bridesmaids must-haves</h3>
-                    <p>Shop gifts </p><div className='angle-arrow-icon arrow-hero-medium'>{angleArrowIcon}</div>
+                    <p>Shop gifts <span className='angle-arrow-icon arrow-hero-medium'>{angleArrowIcon}</span></p>
                     </div>
                     <div className='hero-container'> { /* hero container div maintains margin and whitespace */}
                         <img className='hero-medium-img' src="https://etsy-clone-seed.s3-us-west-1.amazonaws.com/splash-images/hero-medium.jpg"/>

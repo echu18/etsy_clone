@@ -10,7 +10,7 @@ class categoryDropdown extends React.Component {
 
     render() {
         return (
-            <div className='cat-header'>
+            <div className='navbar-cat-header'>
                 <p>{this.props.header}</p>
             </div>
         )

@@ -7,8 +7,8 @@ class ProductImage extends React.Component {
         super(props);
         this.state={
             urls: this.props.urls,
-            // currentPhoto: this.props.product.photoUrls[0]
-            currentPhotoIdx: 0
+            currentPhotoIdx: 0,
+            currentPhotoMini: ""
         }
 
         this.changePhoto = this.changePhoto.bind(this);
@@ -43,11 +43,11 @@ class ProductImage extends React.Component {
         this.changePhoto(newPhotoIdx);
     }
 
-
+// { idx === this.state.currentPhotoIdx ? "display-current-mini" : "" } 
 
     render() {
         const {urls} = this.props;
-
+        
         return (
             <div className='photo-carousel'>
                 <div className='photos-small-panel'>
@@ -60,7 +60,12 @@ class ProductImage extends React.Component {
                     })}
                 </div>
 
-                    <div className='arrow-icons photo-carousel'>
+                {/* <div className='arrow-container'></div> */}
+
+                
+                    
+                <div className='photo-large-container'>
+                    <div className='arrow-icons'>
                         <div className='left-arrow-icon' onClick={this.handlePreviousPhoto}>
                             {leftArrow}
                         </div>
@@ -69,8 +74,6 @@ class ProductImage extends React.Component {
                             {rightArrow}
                         </div>
                     </div>
-                    
-                <div className='photo-large-container'>
                     <img className='photo-large' src={this.state.urls[this.state.currentPhotoIdx]}/> 
                 </div>
             </div>

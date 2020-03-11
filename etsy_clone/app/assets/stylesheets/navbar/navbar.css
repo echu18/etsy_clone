@@ -4,7 +4,7 @@
     height: auto;
     /* height: 100px; */
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     flex-wrap: wrap;
     /* align-items: center; */
     font-family: 'Roboto', sans-serif;
@@ -19,6 +19,7 @@
     padding: 12px 0px 7px 0px;
     /* padding: 12px 0px 15px 0px; */
     align-items: center;
+    width: 100%;
 }
 
 .etsyLogo > svg {
@@ -47,14 +48,11 @@
 }
 
 .searchbar-form input[type="text"] {
-    
-    /* min-height: 46px; */
-    /* width: 62.6vw; */
-    /* width: 56.9vw; */
-    min-width: 50vw;
-    max-width: 56.9vw;
+    min-width: 56.7vw;
+    /* max-width: 56.9vw; */
+    /* min-width: 50vw;
+    max-width: 56.9vw; */
     height: 43.5px;
-    /* height: 5.3vh; */
     border-radius: 25px;
     font-size: 16px;
     border-top: 0.3px solid rgba(34, 34, 34, 0.15);
@@ -64,13 +62,13 @@
     box-shadow: 1px 1px 10px #E8E8E8;
     outline: none;
     text-indent: 17px;
-
+    
     /* box shadow */
     /* -webkit-box-shadow:inset 0 0 1.5px 0.001px #000;
     -moz-box-shadow:inset 0 0 1.5px 0.001px #000; */
     box-shadow:inset 0 0 1.5px 0.1px #000;
     box-shadow: 0 0 1px 0.1px #000;
-
+    
     background: transparent;
 }
 
@@ -197,18 +195,28 @@
 }
 
 
+@media only screen and (max-width: 1500px) {
+  .searchbar-form input[type="text"] {
+        min-width: 76vw;
+    }
+}
+
+
+
 @media only screen and (max-width: 900px) {
     .navbar {
         background-color: #FFFFFF;
-        width: 100%;
+        /* width: 100%; */
+        /* min-width: 1000px; */
         height: auto;
         /* height: 100px; */
-        /* display: flex; */
-        /* justify-content: center; */
+        display: flex; 
+        justify-content: flex-start;
         /* flex-wrap: wrap; */
         /* align-items: center; */
         font-family: 'Roboto', sans-serif;
         font-size: 13px;
+        /* padding-left: 10px; */
     }
 
     .searchbar-form {
@@ -218,11 +226,14 @@
         align-items: center;
         justify-content: center;
         padding: 70px 0px 10px 0px;
-        margin: 0 3px 0 -30px;
+        margin: 0 3px 0 -80px;
     }
 
     .searchbar-form input[type="text"] {
-        width: 60vw;
+                min-width: 680px;
+
+        width: 75vw;
+
     }
 
     .etsyLogo > svg {

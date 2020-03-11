@@ -1,10 +1,10 @@
 import React from 'react'
 import { connect } from 'react-redux';
 import { fetchProducts, fetchProduct } from '../../actions/product_actions'
-import CatModule from '../main_content/cat_module';
+import CatModule from './cat_module';
 
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state, ownProps) => ({
     products: Object.values(state.entities.products)
 })
 
