@@ -24,7 +24,7 @@ class ProductImage extends React.Component {
     }
 
     handleHover(e) {
-        e.preventDefault();
+        // e.preventDefault();
         this.changePhoto(e.currentTarget.id);
     }
 

@@ -185,7 +185,7 @@
         flex-wrap: wrap;
         min-height: 320px;
         width: 100vw;
-        height: 100vh;
+        /* height: 100vh; */
         max-height: 400px;
         /* border: 1px solid red; */
     }

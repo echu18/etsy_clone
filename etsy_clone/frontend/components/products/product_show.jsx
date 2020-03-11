@@ -3,43 +3,49 @@ import React from 'react';
 import ProductImage from './product_image';
 import ReviewContainer from '../reviews/review_container.jsx';
 import CartSidebarContainer from '../cart/cart_sidebar_container';
-import { starIcon, rightArrow, memesyLogo } from '../../../app/assets/images/svgs/icons'
+import { starIcon, rightArrow } from '../../../app/assets/images/svgs/icons'
 
 
 class ProductShow extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+
     componentDidMount() {
+        // debugger
+        this.props.fetchProduct(this.props.match.params.productId)
+    }
+    componentWillMount() {
+        // debugger
         this.props.fetchProduct(this.props.match.params.productId)
     }
 
-    // getAllReviews(num) {
-    //     if (!reviews) {
-    //         return null;
-    //     } else {
-    //         reviewArr = reviews.map((review, idx) => {
-    //             return <div className='single-review' key={idx}>
-    //                 <ReviewContainer review={review} />
-    //             </div>
-    //         })
+    // componentWillReceiveProps(nextProps){
+    //     if (nextProps.product.id !== this.props.product.id){
+    //         this.props.fetchProduct(nextProps.match.params.productId)
+    //         this.setState({render: true})
     //     }
-    //     return reviewArr;
+    //     // this.props.fetchProduct(this.props.match.params.productId)
     // }
 
+    
     render() {
         if (this.props.product === undefined) return null;
-
+        if (this.props.product.seller_id === undefined) return null;
+        if (this.props.users[this.props.product.seller_id] === undefined) return null;
+        if (Object.keys(this.props.users).length < 1) return null;
+        
         const { name, description, category, photoUrls} = this.props.product;
         const price = (new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(this.props.product.price));
-        const urls = Array.from(photoUrls);
+        const urls = Array.from(this.props.product.photoUrls);
         const sellerId = this.props.product.seller_id;
         const seller = this.props.users[sellerId];
         const sellerPhotoUrl = this.props.users[sellerId].photoUrls[0];
         const reviews = Object.values(this.props.reviews);
         const storeName = this.props.users[sellerId].store_name;
         const stars = [starIcon, starIcon, starIcon, starIcon, starIcon];
-        const starSeq = stars.slice(0, this.props.product.avg_rating);  // Average rating
-        
-
-        
+        const starSeq = stars.slice(0, this.props.product.avg_rating); 
+                
 
         return (
             <div className='product-listing-container'>
@@ -67,9 +73,7 @@ class ProductShow extends React.Component {
                                 <p className='product-description-text'>{description}</p>
                             </div>
 
-                                {/* <p className='product-category'>{category}</p> */}
-
-                                {/* Shop rating, total shop reviews */}
+                     
 
                             <button className='faqs-btn'>FAQs {rightArrow}</button>
                             <div className='seller-info-container'>

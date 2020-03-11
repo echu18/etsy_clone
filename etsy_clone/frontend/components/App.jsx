@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Link } from 'react-router-dom';
 import { AuthRoute } from '../util/route_util';
 import NavbarContainer from './navbar/navbar_container';
 import SignupFormContainer from '../components/signin_signup/signup_form_container';
@@ -20,17 +20,13 @@ const App = () => (
             <header className="header">
                 <NavbarContainer />
             </header>
-        
-                <Route path="/signin" component={LoginFormContainer} />
-                <Route path="/signup" component={SignupFormContainer} />
-                <Route exact path="/products/:productId" component={ProductShowContainer} />
-                {/* <Route exact path="/products/:productId/reviews" component={ReviewContainer} /> */}
+            <Switch>
                 <Route exact path="/" component={SplashContainer} />
-                {/* <Route path="/products" component={ProductShowContainer} /> */}
-            {/* <div className="splash">
-                <SplashContainer />
-            </div> */}
-                {/* <SplashContainer /> */}
+                <Route exact path="/products/:productId" component={ProductShowContainer} />
+                <Route exact path="/signin" component={LoginFormContainer} />
+                <Route exact path="/signup" component={SignupFormContainer} />
+                {/* <Route exact path="/products/:productId/reviews" component={ReviewContainer} /> */}
+            </Switch>
             <footer className='footer'>
             </footer>
         </div>
