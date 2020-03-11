@@ -1,6 +1,14 @@
+.all-reviews-container {
+    margin-top: 50px;
+    /* border: 1px solid red; */
+}
+
+
+
 .review-header-divider {
     box-sizing: border-box;
-    width: 95%;
+    /* width: 95%; */
+    width: 44.5vw;
     height: auto;
     /* margin-bottom: -40px; */
     /* padding: 12px 0px 12px 0px; */
@@ -11,7 +19,7 @@
 }
 
 .review-header {
-        box-sizing: border-box;
+    box-sizing: border-box;
 
     font-family: 'Roboto', sans-serif;
     font-size: 15px;

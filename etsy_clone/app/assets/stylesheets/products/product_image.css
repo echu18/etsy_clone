@@ -7,7 +7,7 @@
     min-width: 45vw;
     /* width: auto; */
     position: relative;
-    border: 1px solid greenyellow
+    /* border: 1px solid greenyellow */
 }
 
 
@@ -52,23 +52,34 @@
     display: flex;
     justify-content: center;
     width: 100%;
+  
 }
 
 .photo-large {
     display: flex;
     justify-content: center;
+    object-fit: cover;
     height: 100%;
-    /* width: auto; */
     max-width: 800px;
     min-width: 300px;
-    /* padding: 0 5px 0 5px; */
     margin-left: 10px;
-    /* margin-right: 10%; */
-    /* border-radius: 5px; */
     border-radius: 5px;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
+    animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 0.1s;
 }
 
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+} 
 
 
 .arrow-icons{
