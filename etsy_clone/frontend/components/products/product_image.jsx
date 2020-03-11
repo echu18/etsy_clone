@@ -7,7 +7,6 @@ class ProductImage extends React.Component {
         super(props);
         this.state={
             urls: this.props.urls,
-            // currentPhoto: this.props.product.photoUrls[0]
             currentPhotoIdx: 0,
             currentPhotoMini: ""
         }
@@ -25,8 +24,7 @@ class ProductImage extends React.Component {
     }
 
     handleHover(e) {
-        // e.preventDefault();
-        $()
+        e.preventDefault();
         this.changePhoto(e.currentTarget.id);
     }
 
@@ -49,20 +47,25 @@ class ProductImage extends React.Component {
 
     render() {
         const {urls} = this.props;
-
+        
         return (
             <div className='photo-carousel'>
                 <div className='photos-small-panel'>
                     {urls.map((url, idx) => {
                         return (
-                            <div className='photo-small-container'  key={idx} onMouseOver={e => this.handleHover(e)}>
-                                <img className='photo-small opaque' id={idx} src={url} />
+                            <div className='photo-small-container' id={idx} key={idx} onMouseOver={e => this.handleHover(e)}>
+                                <img className='photo-small' src={url} />
                             </div>
                         )
                     })}
                 </div>
 
-                    <div className='arrow-icons photo-carousel'>
+                {/* <div className='arrow-container'></div> */}
+
+                
+                    
+                <div className='photo-large-container'>
+                    <div className='arrow-icons'>
                         <div className='left-arrow-icon' onClick={this.handlePreviousPhoto}>
                             {leftArrow}
                         </div>
@@ -71,8 +74,6 @@ class ProductImage extends React.Component {
                             {rightArrow}
                         </div>
                     </div>
-                    
-                <div className='photo-large-container'>
                     <img className='photo-large' src={this.state.urls[this.state.currentPhotoIdx]}/> 
                 </div>
             </div>

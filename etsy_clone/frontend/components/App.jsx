@@ -25,7 +25,7 @@ const App = () => (
                 <Route path="/signup" component={SignupFormContainer} />
                 <Route exact path="/products/:productId" component={ProductShowContainer} />
                 {/* <Route exact path="/products/:productId/reviews" component={ReviewContainer} /> */}
-                <Route path="/" component={SplashContainer} />
+                <Route exact path="/" component={SplashContainer} />
                 {/* <Route path="/products" component={ProductShowContainer} /> */}
             {/* <div className="splash">
                 <SplashContainer />
