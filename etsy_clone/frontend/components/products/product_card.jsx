@@ -21,7 +21,7 @@ class ProductCard extends React.Component {
             <Link to={`/products/${product.id}`}>
                 <img className='product-card-image' src={Array.from(product.photoUrls)[0]}/>
                 <p className='product-card-price'> {price}</p>
-             </Link >
+            </Link >
         )
     }
 }

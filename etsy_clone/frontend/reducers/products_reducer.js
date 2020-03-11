@@ -1,4 +1,6 @@
 import { RECEIVE_PRODUCTS, RECEIVE_PRODUCT } from '../actions/product_actions';
+import { RECEIVE_CART_ITEM, RECEIVE_CART_ITEMS } from '../actions/cart_item_actions'
+
 
 export default (state = {}, action) => {
     Object.freeze(state);

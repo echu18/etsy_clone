@@ -77,9 +77,11 @@ class Navbar extends React.Component {
                     
                     { display }
 
-                    <div className="navbar-icon cart-icon">
-                        { cartIcon }
-                    </div>
+                    
+                        {!!this.props.currentUser ? (
+                            <Link to={`/users/${this.props.currentUser.id}/cart_items`}>
+                            <div className="navbar-icon cart-icon">{cartIcon}</div>
+                        </Link>) : <div className="navbar-icon cart-icon">{cartIcon}</div> }                   
                 </div>
 
                 <div className='categories-bar' >
