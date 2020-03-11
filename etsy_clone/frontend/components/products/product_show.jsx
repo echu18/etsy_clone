@@ -12,22 +12,10 @@ class ProductShow extends React.Component {
     }
 
     componentDidMount() {
-        // debugger
+        this.props.clearReviews()
         this.props.fetchProduct(this.props.match.params.productId)
     }
-    componentWillMount() {
-        // debugger
-        this.props.fetchProduct(this.props.match.params.productId)
-    }
-
-    // componentWillReceiveProps(nextProps){
-    //     if (nextProps.product.id !== this.props.product.id){
-    //         this.props.fetchProduct(nextProps.match.params.productId)
-    //         this.setState({render: true})
-    //     }
-    //     // this.props.fetchProduct(this.props.match.params.productId)
-    // }
-
+ 
     
     render() {
         if (this.props.product === undefined) return null;

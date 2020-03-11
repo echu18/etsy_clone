@@ -1,4 +1,4 @@
-import { RECEIVE_REVIEW, RECEIVE_REVIEWS} from '../actions/review_actions';
+import { RECEIVE_REVIEW, RECEIVE_REVIEWS, CLEAR_REVIEWS} from '../actions/review_actions';
 import { RECEIVE_PRODUCTS, RECEIVE_PRODUCT } from '../actions/product_actions';
 
 
@@ -15,6 +15,8 @@ export default (state = {}, action) => {
             return Object.assign({}, state, action.review)
         case RECEIVE_PRODUCT:
             return Object.assign({}, state, action.payload.reviews)
+        case CLEAR_REVIEWS:
+            return {}
         default:
             return state
     }
