@@ -33,8 +33,9 @@ class Product < ApplicationRecord
         total = 0 
         
         self.reviews.each {|review| total += review.rating}
-
         @avg_rating = ((total/self.reviews.count) * 1.0)
+
+        @avg_rating == 0 ? 0 : @avg_rating
     end
     # def self.avg_rating(product_id)
     #     product = Product.find_by(id: product_id)
