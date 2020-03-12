@@ -1,24 +1,25 @@
 
-export const getCartItem = (userId, cartItemId) => {
+// export const getCartItem = (userId, cartItemId) => {
+//     return $.ajax({
+//         url: `/api/users/${userId}/cart_items/${cartItemId}`,
+//         method: 'GET'
+//     })
+// }
+
+export const getCartItems = () => {
     return $.ajax({
-        url: `/api/users/${userId}/cart_items/${cartItemId}`,
+        url: `/api/cart_items`,
         method: 'GET'
     })
 }
 
-export const getCartItems = (userId) => {
-    return $.ajax({
-        url: `/api/users/${userId}/cart_items`,
-        method: 'GET'
-    })
-}
 
-
-export const createCartItem = (userId, data) => {
+export const createCartItem = (cart_item) => {
+    
     return $.ajax({
-        url: `/api/users/${userId}/cart_items`,
+        url: `/api/cart_items`,
         method: 'POST',
-        data: {data}
+        data: { cart_item }
     })
 }
 

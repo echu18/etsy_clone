@@ -51,7 +51,7 @@ class ProductShow extends React.Component {
                             <p className='product-name'>{name}</p>
                             <p className='product-price'>{price}</p>
 
-                            <CartSidebarContainer className='cart-sidebar-container'/>
+                            <CartSidebarContainer className='cart-sidebar-container' product={this.props.product}/>
                             
 
                             <div className='product-description-container'>

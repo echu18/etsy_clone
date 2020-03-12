@@ -9,14 +9,27 @@ class CartShow extends React.Component {
         }
     }
 
+    componentDidMount(){
+        this.props.fetchCartItems(this.props.match.params.userId)
+        
+    }
+
 
 
 
     render() {
-        return (
-           <div>
-               <h1>Cart</h1>
+        if (!this.props.cartItems) return null;
 
+        const cartItems = this.props.cartItems;
+        debugger
+        return (
+           <div className='cart-show-container'>
+               <h1>Cart</h1>
+                <ul>
+                    {this.props.cartItems.map(cartItem => {
+                        return <li>{cartItem}</li>
+                    })}
+                </ul>
            </div>
         )
     }

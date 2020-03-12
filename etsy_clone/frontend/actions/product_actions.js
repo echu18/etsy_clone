@@ -5,7 +5,7 @@ export const RECEIVE_PRODUCT = 'RECEIVE_PRODUCT';
 export const RECEIVE_ERRORS = 'RECEIVE_ERRORS';
 
 
-const receiveProducts = products => ({
+export const receiveProducts = products => ({
     type: RECEIVE_PRODUCTS,
     products
 })

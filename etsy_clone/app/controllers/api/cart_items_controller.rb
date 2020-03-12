@@ -1,24 +1,34 @@
 class Api::CartItemsController < ApplicationController
     
     def index
+        # debugger
+
         return nil if !current_user
         @cart_items = CartItem.all.select {|cart_item| cart_item.user_id == current_user.id && cart_item.fulfilled == false}
+        render :show
+    
     end
 
 
     def show
-        @cart_item = CartItem.find(params[:id])
+        # @cart_item = CartItem.find_by_user_id(params[:user_id])
+        # if @cart_item.user_id === current_user.id 
+        #     render: show
+        # end
+        debugger
+        return nil if !current_user
+        @cart_items = CartItem.all.select {|cart_item| cart_item.user_id == current_user.id && cart_item.fulfilled == false}
     end
 
 
 
     def create
         @cart_item = CartItem.new(cart_item_params)
-
+        # debugger
         if @cart_item.save!
             render :show
         else
-            render json: @product.errors.full_messages, status: 401
+            render json: @cart_item.errors.full_messages, status: 401
         end
     end
 

@@ -39,6 +39,11 @@ json.reviews do
 end
 
 
+# @product.each do |product|
+#     json.set! product.id do 
+#         json.partial! 'api/products/product', product: product
+#     end
+# end
 
 
 
