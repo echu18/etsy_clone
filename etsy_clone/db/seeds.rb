@@ -237,7 +237,7 @@ author_id: u4.id, product_id: p6.id, rating: 5)
 
 
 
-p7 = Product.create(name:'Gundam Head RX-78-2 Sticker | Mobile Suit Gundam Exceed Mech Robot Anime Planner Laptop Vinyl Sticker Gift', description: "Best Pokemon Gifts For The Pokemon Lover .", 
+p7 = Product.create(name:'Gundam Head RX-78-2 Sticker | Mobile Suit Gundam Exceed Mech Robot Anime Planner Laptop Vinyl Sticker Gift', description: "sieg zeon", 
     price: 2.5, seller_id: u17.id, category_id: 22)
 
 

@@ -5,21 +5,22 @@
 #  id          :bigint           not null, primary key
 #  name        :string
 #  description :text
-#  price       :decimal(, )
 #  seller_id   :integer
 #  category_id :integer
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
+#  price       :decimal(10, 2)
 #
 class Product < ApplicationRecord
     validates :name, :price, presence: true
     validates :price, presence: true
-    # format: { with: /\A\d+(?:\.\d{2})?\z/ }, numericality: { greater_than: 0, less_than: 1000000 }
 
 
     belongs_to :seller, foreign_key: :seller_id, class_name: :User
     has_many :reviews, foreign_key: :product_id, class_name: :Review
     has_many :authors, through: :reviews
+    has_many :cart_items, foreign_key: :product_id, class_name: :CartItem
+
     has_many_attached :photos
 
     after_initialize :avg_rating

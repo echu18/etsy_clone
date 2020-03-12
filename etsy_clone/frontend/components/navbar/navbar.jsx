@@ -32,10 +32,11 @@ class Navbar extends React.Component {
     }
    
     render() {
-        const { currentUser, signOut, signIn, clearErrors } = this.props;
+        const { currentUserId, signOut, signIn, clearErrors } = this.props;
+        // debugger
         const categories = ['Jewelry & Accessories', 'Clothing & Shoes', 'Home & Living', 'Wedding & Party', 'Toys & Entertainment', 'Art & Collectibles', 'Craft Supplies', 'Vintage'];
 
-        const display = currentUser ? (
+        const display = currentUserId ? (
             <div>
                 <p className="signin-signout" onClick={this.signOutAndClear}>Sign out</p>
             </div>
@@ -48,7 +49,7 @@ class Navbar extends React.Component {
                     <Popup
                         text='hello'
                         closePopup={this.togglePopup}
-                        currentUser={currentUser}
+                        currentUser={currentUserId}
                         clearErrors={clearErrors}
                     /> : null
                     }
@@ -77,9 +78,12 @@ class Navbar extends React.Component {
                     
                     { display }
 
-                    <div className="navbar-icon cart-icon">
-                        { cartIcon }
-                    </div>
+                    
+                        {!!this.props.currentUserId ? (
+                            // <Link to={`/users/${this.props.currentUser.id}/cart_items`}>
+                            <Link to={`/cart_items`}>
+                            <div className="navbar-icon cart-icon">{cartIcon}</div>
+                        </Link>) : <div className="navbar-icon cart-icon">{cartIcon}</div> }                   
                 </div>
 
                 <div className='categories-bar' >

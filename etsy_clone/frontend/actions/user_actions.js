@@ -14,7 +14,10 @@ const receiveUser = user => ({
 })
 
 export const fetchUsers = () => dispatch => getUsers()
-    .then(users => dispatch(receiveUsers(users)))
+    .then(users => dispatch(receiveUsers(users)),
+        error => dispatch(receiveErrors(error.responseJSON)))
 
 export const fetchUser = (id) => dispatch => getUser(id)
-    .then(user => dispatch(receiveUser(user)))
+    .then(user => dispatch(receiveUser(user)),
+        error => dispatch(receiveErrors(error.responseJSON)))
+

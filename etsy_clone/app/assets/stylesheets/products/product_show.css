@@ -10,7 +10,7 @@
 .product-sidebar {
     display: block;
     /* max-width: 22vw; */
-    min-width: 410px;
+    min-width: 430px;
     max-width: 410px;
     /* height: auto; */
     height: 2000px;
@@ -262,7 +262,7 @@
         min-width: 300px;
         max-width: 440px;
         margin-left: 10px;
-        border: 1px solid fuchsia;
+        /* border: 1px solid fuchsia; */
     }
 }
 

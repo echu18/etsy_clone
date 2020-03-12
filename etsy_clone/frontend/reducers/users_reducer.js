@@ -7,12 +7,12 @@ export default (state = {}, action) => {
     Object.freeze(state);
     switch (action.type) {
         case RECEIVE_CURRENT_USER:
-            const user = action.currentUser
-            return Object.assign({}, state, { [user.id]: user })
+            // const user = action.currentUser
+            // return Object.assign({}, state, { [user.id]: user })
+            return Object.assign({}, state, action.payload.users )
         case RECEIVE_REVIEW:
             return Object.assign({},state, action.payload.authors)
         case RECEIVE_PRODUCT:
-            // debugger
             return Object.assign({}, state, action.payload.users)
         default:
             return state;

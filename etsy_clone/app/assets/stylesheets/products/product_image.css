@@ -2,11 +2,12 @@
     display: flex;
     /* height: 500px; */
     height: 80vh;
+    /* width: 70%; */
     width: 70%;
     max-width: 61vw;
     min-width: 45vw;
     /* width: auto; */
-    position: relative;
+    /* position: relative; */
     /* border: 1px solid greenyellow */
 }
 
@@ -14,9 +15,12 @@
 .photos-small-panel {
     display: flex;
     flex-direction: column;
-    height: 100%;
-    min-width: 64px;
-    width: 64px;
+    /* height: 100%; */
+    height: auto;
+    min-width: 61px;
+    /* width: 64px; */
+    max-width: 64px;
+    margin-right: 5px;
     /* border: 1px solid red; */
 }
 
@@ -50,8 +54,12 @@
 .photo-large-container {
     /* position: relative; */
     display: flex;
-    justify-content: center;
+    position: relative;
+    /* justify-content: center; */
+    justify-content: flex-start;
+    max-width: 790px;
     width: 100%;
+    /* border: 1px solid red; */
   
 }
 
@@ -60,9 +68,11 @@
     justify-content: center;
     object-fit: cover;
     height: 100%;
-    max-width: 800px;
+    max-width: 900px;
     min-width: 300px;
-    margin-left: 10px;
+    width: 100%;
+    /* margin-left: 10px; */
+    margin-left: 0px;
     border-radius: 5px;
     /* border: 1px solid blue; */
     animation-name: fadeInOpacity;
@@ -107,12 +117,14 @@
     border-radius: 50%;
     box-shadow: 1px 1px 50px -12px gray;
     position: absolute;
-    left: 2%;
+    /* left: 9.5%; */
+    /* left: 1.2%; */
+    left: 10px;
     top: 50%;
 }
 
 .left-arrow-icon > svg {
-    transform: scale(0.5)
+    transform: scale(0.5);
 }
 
 .right-arrow-icon {
@@ -122,12 +134,13 @@
     border-radius: 50%;
     box-shadow: 1px 1px 50px -12px gray;
     position: absolute;
-    right: 1%;
+    /* right: 7%; */
+    right: 10px;
     top: 50%;
 }
 
 .right-arrow-icon > svg {
-    transform: scale(0.5)
+    transform: scale(0.5);
 }
 
 
@@ -206,7 +219,7 @@
         display: flex;
         justify-content: center;
         width: 100%;
-        border: 1px solid fuchsia;
+        /* border: 1px solid fuchsia; */
         overflow: none;
 
     } 
