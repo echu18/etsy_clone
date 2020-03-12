@@ -6,6 +6,7 @@ export const ADD_CART_ITEM = 'ADD_CART_ITEM';
 export const EDIT_CART_ITEM = 'EDIT_CART_ITEM';
 export const DELETE_CART_ITEM = 'DELETE_CART_ITEM';
 export const RECEIVE_ERRORS = 'RECEIVE_ERRORS';
+export const CLEAR_CART_ITEMS = 'CLEAR_CART_ITEMS';
 
 
 const receiveCartItems = payload => ({
@@ -23,10 +24,14 @@ const receiveErrors = errors => ({
     errors
 })
 
+const removeCartItems = () => ({
+    type: CLEAR_CART_ITEMS
+})
+
+
 export const fetchCartItems = () => dispatch => getCartItems()
     .then(cartItems => dispatch(receiveCartItems(cartItems)),
         error => dispatch(receiveErrors(error.responseJSON)))
-
 
 // export const fetchCartItem = (userId, cartItemId) => dispatch => getCartItem(userId, cartItemId)
 //     .then(cartItem => dispatch(receiveCartItem(cartItem)),
@@ -47,3 +52,4 @@ export const editCartItem = (userId, cartItemId) => dispatch => modifyCartItem(u
 export const deleteCartItem = (userId, cartItemId) => dispatch => destroyCartItem(userId, cartItemId)
         .then(cartItem => dispatch(receiveCartItem(cartItem)));
 
+export const clearCartItems = () => dispatch => dispatch(removeCartItems())

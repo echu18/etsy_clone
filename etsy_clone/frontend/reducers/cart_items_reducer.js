@@ -1,4 +1,4 @@
-import {RECEIVE_CART_ITEM, RECEIVE_CART_ITEMS} from '../actions/cart_item_actions';
+import {RECEIVE_CART_ITEM, RECEIVE_CART_ITEMS, CLEAR_CART_ITEMS} from '../actions/cart_item_actions';
 import {RECEIVE_CURRENT_USER} from '../actions/session_actions'
 
 
@@ -17,7 +17,10 @@ export default (state = {}, action) => {
             return Object.assign({}, state, action.cartItem)
             
         case RECEIVE_CURRENT_USER:
-            return Object.assign({}, state, action.currentUser)
+            // debugger
+            return Object.assign({}, state, action.payload.cartItems)
+        case CLEAR_CART_ITEMS:
+            return {}
         default:
             return state
     }

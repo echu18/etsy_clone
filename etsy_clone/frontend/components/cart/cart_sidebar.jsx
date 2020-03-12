@@ -5,7 +5,7 @@ class CartSidebar extends React.Component {
     constructor(props) {
         super(props);
         this.state={
-            user_id: this.props.currentUser.id,
+            user_id: this.props.currentUserId,
             product_id: this.props.product.id,
             quantity: 1,
             fulfilled: false
@@ -15,10 +15,9 @@ class CartSidebar extends React.Component {
     }
 
 
-
     handleSubmit(e) {
         e.preventDefault();
-        this.setState({ userId: this.props.currentUser.id })
+        this.setState({ userId: this.props.currentUserId})
         this.props.addCartItem(this.state)
     }
 
@@ -27,8 +26,9 @@ class CartSidebar extends React.Component {
     }
 
     render() {
-        if (this.props.currentUser.id === undefined) return null;
-        if (this.props.product.id === undefined) return null;
+        
+        // if (this.props.currentUser.id === undefined) return null;
+        // if (this.props.product.id === undefined) return null;
         return (
             <div className='cart-sidebar-container'>
                 <form onSubmit={this.handleSubmit}>

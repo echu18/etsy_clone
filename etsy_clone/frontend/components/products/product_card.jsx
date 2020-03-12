@@ -12,14 +12,18 @@ class ProductCard extends React.Component {
 
 
     render() {
-        const product = this.props.product;
-        const price = (new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(product.price));
+        if (!this.props.product) return null;
+        if (!this.props.product.price) return null;
+        if (!this.props.product.photoUrls) return null;
         
-        if (!product) return null;
+        const product = this.props.product;
+        const price = (new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(this.props.product.price));
+        
+        // if (!product) return null;
       
         return (
             <Link to={`/products/${product.id}`}>
-                <img className='product-card-image' src={Array.from(product.photoUrls)[0]}/>
+                <img className='product-card-image' src={this.props.product.photoUrls[0]}/>
                 <p className='product-card-price'> {price}</p>
             </Link >
         )
