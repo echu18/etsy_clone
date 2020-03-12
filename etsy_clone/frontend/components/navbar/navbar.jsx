@@ -79,7 +79,8 @@ class Navbar extends React.Component {
 
                     
                         {!!this.props.currentUser ? (
-                            <Link to={`/users/${this.props.currentUser.id}/cart_items`}>
+                            // <Link to={`/users/${this.props.currentUser.id}/cart_items`}>
+                            <Link to={`/cart_items`}>
                             <div className="navbar-icon cart-icon">{cartIcon}</div>
                         </Link>) : <div className="navbar-icon cart-icon">{cartIcon}</div> }                   
                 </div>

@@ -12,7 +12,6 @@ export default (state = {}, action) => {
         case RECEIVE_REVIEW:
             return Object.assign({},state, action.payload.authors)
         case RECEIVE_PRODUCT:
-            // debugger
             return Object.assign({}, state, action.payload.users)
         default:
             return state;

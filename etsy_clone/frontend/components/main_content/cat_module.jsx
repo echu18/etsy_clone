@@ -16,7 +16,6 @@ class CatModule extends React.Component {
         const category = this.props.category;
         // const numProduct = this.props.num;
         const products = this.props.products.slice(0,6);
-        // debugger
         if (!products) return null;
 
         return (

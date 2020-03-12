@@ -10,7 +10,7 @@ class CartShow extends React.Component {
     }
 
     componentDidMount(){
-        this.props.fetchCartItems(this.props.match.params.userId)
+        this.props.fetchCartItems()
         
     }
 
@@ -18,17 +18,19 @@ class CartShow extends React.Component {
 
 
     render() {
+        debugger
         if (!this.props.cartItems) return null;
-
+        if (!this.props.currentUser) return null;
         const cartItems = this.props.cartItems;
         debugger
         return (
            <div className='cart-show-container'>
+                <p>{!this.props.currentUser ? 'Please log in' : 'cart'}</p>
                <h1>Cart</h1>
                 <ul>
-                    {this.props.cartItems.map(cartItem => {
+                    {/* {this.props.cartItems.map(cartItem => {
                         return <li>{cartItem}</li>
-                    })}
+                    })} */}
                 </ul>
            </div>
         )

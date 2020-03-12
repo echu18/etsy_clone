@@ -1,10 +1,9 @@
 class Api::CartItemsController < ApplicationController
     
     def index
-        # debugger
 
         return nil if !current_user
-        @cart_items = CartItem.all.select {|cart_item| cart_item.user_id == current_user.id && cart_item.fulfilled == false}
+        @cart_items = CartItem.all.select {|cart_item| cart_item.user_id == current_user.id && cart_item.fulfilled == false}        
         render :show
     
     end
@@ -15,7 +14,6 @@ class Api::CartItemsController < ApplicationController
         # if @cart_item.user_id === current_user.id 
         #     render: show
         # end
-        debugger
         return nil if !current_user
         @cart_items = CartItem.all.select {|cart_item| cart_item.user_id == current_user.id && cart_item.fulfilled == false}
     end
@@ -24,11 +22,11 @@ class Api::CartItemsController < ApplicationController
 
     def create
         @cart_item = CartItem.new(cart_item_params)
-        # debugger
+        
         if @cart_item.save!
-            render :show
-        else
-            render json: @cart_item.errors.full_messages, status: 401
+        #     render :index
+        # else
+        #     render json: @cart_item.errors.full_messages, status: 401
         end
     end
 

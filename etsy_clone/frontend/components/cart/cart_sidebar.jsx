@@ -12,14 +12,12 @@ class CartSidebar extends React.Component {
         }
         this.handleSubmit = this.handleSubmit.bind(this);
         this.updateQuantity = this.updateQuantity.bind(this);
-        debugger
     }
 
 
 
     handleSubmit(e) {
         e.preventDefault();
-        debugger
         this.setState({ userId: this.props.currentUser.id })
         this.props.addCartItem(this.state)
     }
@@ -31,7 +29,6 @@ class CartSidebar extends React.Component {
     render() {
         if (this.props.currentUser.id === undefined) return null;
         if (this.props.product.id === undefined) return null;
-        debugger
         return (
             <div className='cart-sidebar-container'>
                 <form onSubmit={this.handleSubmit}>

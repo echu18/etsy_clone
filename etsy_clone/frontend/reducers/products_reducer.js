@@ -16,16 +16,13 @@ export default (state = {}, action) => {
             return Object.assign({}, state, action.payload.products)
             
         case RECEIVE_CART_ITEMS:
-            // const cartItems = {}
             debugger
-            // action.cartItems.forEach(cartItem => {
-            //     return cartItems[cartItem.id] = cartItem.product;
-            // });
-            // return cartItems;
-            // return Array.from(action.cartItems.products)
-            return Object.assign({}, state, action.payload.products)
-        // case RECEIVE_CART_ITEMS:
-        //     return Object.assign({}, state, action.cartItems)
+            const cartItems = {}
+            Array.from(action.payload.products).forEach(product => {
+                return cartUtems[product.id] = product;
+            });
+            return cartItems;
+            // return Object.assign({}, state, action.payload.products)
         default:
             return state
     }

@@ -5,16 +5,14 @@ import { connect } from 'react-redux';
 
 
 const mapStateToProps = (state, ownProps) => ({
-    product: state.entities.products[ownProps.match.params.productId],
-    reviews: state.entities.reviews,
-    users: state.entities.users,
+    products: state.entities.products,
+    cartItems: state.entities.cartItems,
     currentUser: state.session.currentUser
 })
 
 
 const mapDispatchToProps = (dispatch) => ({
-    fetchCartItems: (userId) => dispatch(fetchCartItems(userId)),
-    fetchCartItem: (userId, cartItemId) => dispatch(fetchCartItem(userId, cartItemId)),
+    fetchCartItems: () => dispatch(fetchCartItems()),
     addCartItem: (userId, productId, quantity) => dispatch(addCartItem(userId, productId, quantity)),
     editCartItem: (userId, cartItemId) => dispatch(editCartItem(userId, cartItemId)),
     deleteCartItem: (userId, cartItemId) => dispatch(deleteCartItem(userId, cartItemId)),

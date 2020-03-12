@@ -20,6 +20,5 @@ export default (state = {}, action) => {
             return Object.assign({}, state, action.currentUser)
         default:
             return state
-
     }
 }
