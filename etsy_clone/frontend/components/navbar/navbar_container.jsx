@@ -4,6 +4,7 @@ import { signUp, signIn, signOut, clearErrors } from '../../actions/session_acti
 import { connect } from 'react-redux';
 
 const mapStateToProps = (state, ownProps) => ({
+    products: state.entities.products,
     currentUser: state.session.currentUser
 })
 

@@ -17,12 +17,12 @@ export default (state = {}, action) => {
             
         case RECEIVE_CART_ITEMS:
             debugger
-            const cartItems = {}
-            Array.from(action.payload.products).forEach(product => {
-                return cartUtems[product.id] = product;
-            });
-            return cartItems;
-            // return Object.assign({}, state, action.payload.products)
+            // const cartItems = {}
+            // Array.from(action.payload.products).forEach(product => {
+            //     return cartItems[product.id] = product;
+            // });
+            // return cartItems;
+            return Object.assign({}, state, action.payload.products)
         default:
             return state
     }

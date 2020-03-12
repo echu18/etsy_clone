@@ -5,7 +5,7 @@ import CartSidebar from './cart_sidebar';
 
 
 const mapStateToProps = (state, ownProps) => ({
-    // product: state.entities.products[ownProps.match.params.productId],
+    products: state.entities.products,
     currentUser: state.session.currentUser
 })
 

@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 
 const mapStateToProps = (state, ownProps) => ({
     products: state.entities.products,
-    cartItems: state.entities.cartItems,
+    cartItems: Object.values(state.entities.cartItems),
     currentUser: state.session.currentUser
 })
 
