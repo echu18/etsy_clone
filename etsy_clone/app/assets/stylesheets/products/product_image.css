@@ -76,23 +76,11 @@
     border-radius: 5px;
     /* border: 1px solid blue; */
       position: absolute;
-    /* animation-name: fade;
-    animation-fill-mode: both;
-    animation-iteration-count: infinite;
-    animation-duration: 7s;
-    animation-direction: alternate;
+   
 }
 
 
 
-@keyframes fade{
-    0%,50% {
-      opacity: 0;
-}
-    100%{
-      opacity: 1;
-  }
-} */
 
 
 .arrow-icons{
