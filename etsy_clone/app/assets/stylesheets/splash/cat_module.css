@@ -11,6 +11,11 @@
 }
 
 
+.cat-title {
+    font-family: 'Helvetica', sans-serif;
+    font-weight: 500;
+}
+
 /* .cat-module {
     display: flex;
     justify-content: space-between;

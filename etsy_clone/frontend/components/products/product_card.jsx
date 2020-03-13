@@ -24,7 +24,7 @@ class ProductCard extends React.Component {
         return (
             <Link to={`/products/${product.id}`}>
                 <img className='product-card-image' src={this.props.product.photoUrls[0]}/>
-                <p className='product-card-price'> {price}</p>
+                <p className='product-card-price'> {price}</p> {parseInt(this.props.product.price) > 15.0 ? <p className='bestseller'>Best seller</p> : null}
             </Link >
         )
     }

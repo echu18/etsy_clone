@@ -75,21 +75,24 @@
     margin-left: 0px;
     border-radius: 5px;
     /* border: 1px solid blue; */
-    animation-name: fadeInOpacity;
-	animation-iteration-count: 1;
-	animation-timing-function: ease-in;
-	animation-duration: 0.1s;
+      position: absolute;
+    animation-name: fade;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-duration: 7s;
+    animation-direction: alternate;
 }
 
 
-@keyframes fadeInOpacity {
-	0% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
-} 
+
+@keyframes fade{
+    0%,50% {
+      opacity: 0;
+}
+    100%{
+      opacity: 1;
+  }
+}
 
 
 .arrow-icons{

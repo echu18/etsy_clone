@@ -23,15 +23,29 @@
     align-items: center;
     width: 100%;
 }
-
+/* 
 .etsyLogo > svg {
     box-sizing: border-box;
     width: 87px;
     height: 40px;
-    /* padding: 5px 15px 0 0; */
     margin: -4px 6px -1px -4px;
     fill: #F1651F;
-}
+} */
+
+   .memesy-logo {
+        box-sizing: border-box;
+        /* position: absolute; */
+        width: 170px;
+        height: auto;
+        margin-left: -5px;
+        margin-top: -10px;
+        /* padding: 5px 15px 0 0; */
+        /* margin: -4px 6px -1px -4px; */
+        /* margin: 0px 0px 40px 0px; */
+        fill: #F1651F;
+        /* border: 1px solid red; */
+        /* z-index: 5; */
+    }
 
 .etsyLogo:hover {
     cursor: pointer;
@@ -50,7 +64,9 @@
 }
 
 .searchbar-form input[type="text"] {
-    min-width: 56.7vw;
+    /* min-width: 56.7vw; */
+    min-width: 53.5vw;
+
     /* max-width: 56.9vw; */
     /* min-width: 50vw;
     max-width: 56.9vw; */
@@ -206,8 +222,11 @@
 
 @media only screen and (max-width: 1500px) {
   .searchbar-form input[type="text"] {
-        min-width: 76vw;
+        min-width: 72vw;
     }
+  /* .searchbar-form input[type="text"] {
+        min-width: 76vw;
+    } */
 }
 
 
@@ -239,23 +258,19 @@
     }
 
     .searchbar-form input[type="text"] {
-                min-width: 680px;
-
+        min-width: 680px;
         width: 75vw;
-
     }
 
-    .etsyLogo > svg {
+    /* .etsyLogo > svg {
         box-sizing: border-box;
         width: 87px;
         height: 40px;
-        /* padding: 5px 15px 0 0; */
-        /* margin: -4px 6px -1px -4px; */
         margin: 0px 0px 40px 0px;
         fill: #F1651F;
-    }
+    } */
 
-
+  
     .signin-signout {
         font-weight: 900;
         white-space: nowrap;

@@ -63,8 +63,8 @@ class Navbar extends React.Component {
             <div className="navbar">
                 <div className="navbar-inner" id='inner' >
                     <div className="etsyLogo" onClick={this.redirectToHome}>
-                        {/* {memesyLogo } */}
-                        {etsyLogo}
+                        <img className='memesy-logo' src="https://etsy-clone-dev.s3-us-west-1.amazonaws.com/splash-images/Memesy.png"/>
+                        {/* {etsyLogo} */}
                     </div>
 
                     <div className="searchbar">

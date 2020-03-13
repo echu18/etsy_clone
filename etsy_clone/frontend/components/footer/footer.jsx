@@ -13,8 +13,10 @@ class Footer extends React.Component {
         return(
             <div className='footer-container'>
                 <div className='mailing-list-container'>
-                    {ripTear1}
-                    <p>Yes! Send me exclusive offers, unique gift ideas, and personalized tips for shopping and selling on Etsy.</p>
+                    <div className='riptear-1'>
+                        {ripTear1}
+                    </div>
+                    <p>Yes! Send me exclusive offers, unique gift ideas, and personalized tips for shopping and selling on Memesy.</p>
                     
                     <div className='mailing-list-input'>
                         <input type="text" placeholder='Enter your email' />
@@ -23,18 +25,20 @@ class Footer extends React.Component {
                 </div>
 
                 <div className='footer-links-container'>
-                    {ripTear2}
+                    <div className='riptear-2'>
+                        {ripTear2}
+                    </div>
 
                     <div className='footer-blocks'>
                         <div className='footer-shop fblock'>
                             <h2>Shop</h2>
                                 <p>Gift cards</p>
-                                <p>Etsy blog</p>
+                                <p>Memesy blog</p>
                         </div>
 
                         <div className='footer-sell fblock'>
                             <h2>Sell</h2>
-                                <p>Sell on Etsy</p>
+                                <p>Sell on Memesy</p>
                                 <p>Teams</p>
                                 <p>Forums</p>
                                 <p>Affiliates</p>
@@ -42,7 +46,7 @@ class Footer extends React.Component {
 
                         <div className='footer-about fblock'>
                             <h2>About</h2>
-                                <p>Etsy, Inc.</p>
+                                <p>Memesy, Inc.</p>
                                 <p>Policies</p>
                                 <p>Investors</p>
                                 <p>Careers</p>
@@ -56,7 +60,8 @@ class Footer extends React.Component {
                                 <p>Privacy settings</p>
 
                             <div className='footer-icon-section'>
-                                <button className='download-app-btn'>{etsyIcon}Download the Etsy App</button>
+                                {/* <button className='download-app-btn'>{etsyIcon}Download the Memesy App</button> */}
+                                <button className='download-app-btn'><img src='https://etsy-clone-dev.s3-us-west-1.amazonaws.com/splash-images/micon-white.png'/> Download the Memesy App</button>
 
                                 <div className='footer-logo-container'>
                                     {githubIcon}  {linkedinIcon} {briefcaseIcon} {convoIcon} 
@@ -68,9 +73,17 @@ class Footer extends React.Component {
                 </div>
 
                 <div className='footer-end-container'>
+                    
+                    <div className='lang-currency'> 
                     <img src="https://etsy-clone-dev.s3-us-west-1.amazonaws.com/splash-images/usaIcon.png"/>
-                    <div className='lang-currency'> United States   |   English (US)   |   $ (USD)</div>
-                    <div className='terms-policies'></div>
+                    United States   |   English (US)   |   $ (USD)
+                    </div>
+                    <div className='terms-policies'>
+                        <p>© 2020 Memesy, Inc.</p>
+                        <p><u>Terms of Use</u></p>
+                        <p><u>Privacy</u></p>
+                        <p><u>Interest-based ads</u></p>
+                    </div>
                 </div>
 
             </div>

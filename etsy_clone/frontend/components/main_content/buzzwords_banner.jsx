@@ -21,7 +21,7 @@ const BuzzwordsBanner = (props) => (
         <div className='buzzwords-block'>
 
             <h2><div className='checkmark check-3'> {checkMark}</div>Secure shopping</h2>
-            <p>We use best-in-class technology to protect your transactions.</p>
+            <p>We use best-in-class technology to protect your transactions. (We prefer cash.)</p>
         </div>
     </section>
 )
