@@ -5,19 +5,22 @@ import ReviewContainer from '../reviews/review_container.jsx';
 import CartSidebarContainer from '../cart/cart_sidebar_container';
 import { starIcon, rightArrow } from '../../../app/assets/images/svgs/icons'
 
-
 class ProductShow extends React.Component {
     constructor(props) {
         super(props);
     }
 
     componentDidMount() {
+        
         this.props.clearReviews()
         this.props.fetchProduct(this.props.match.params.productId)
     }
  
     
     render() {
+        // window.scrollTo(0, 0);
+
+
         if (this.props.product === undefined) return null;
         if (this.props.product.seller_id === undefined) return null;
         if (this.props.users[this.props.product.seller_id] === undefined) return null;

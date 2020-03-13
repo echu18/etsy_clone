@@ -9,29 +9,32 @@ import CartShowContainer from '../components/cart/cart_show_container';
 import ProductShowContainer from './products/product_show_container';
 // import CartSidebarContainer from '../components/product/cart_sidebar_container';
 // import ReviewContainer from './reviews/review_container';
-
 import SplashContainer from './main_content/splash_container';
-
+import FooterContainer from './footer/footer_container';
+import AboutBanner from '../components/main_content/about_banner';
 
 const App = () => (
     <div id='app'>
         <span id='category-divider'></span>
         
-        <div id='main'>
-            <header className="header">
-                <NavbarContainer />
-            </header>
-            <Switch>
-                <Route exact path="/" component={SplashContainer} />
-                <Route exact path="/products/:productId" component={ProductShowContainer} />
-                <Route exact path="/cart_items" component={CartShowContainer} />
-                <Route exact path="/signin" component={LoginFormContainer} />
-                <Route exact path="/signup" component={SignupFormContainer} />
-                {/* <Route exact path="/products/:productId/reviews" component={ReviewContainer} /> */}
-            </Switch>
-            <footer className='footer'>
-            </footer>
-        </div>
+            <div id='main'>
+                <header className="header">
+                    <NavbarContainer />
+                </header>
+
+                <Switch>
+                    <Route exact path="/" component={SplashContainer} />
+                    <Route exact path="/" component={AboutBanner} />
+                    <Route exact path="/products/:productId" component={ProductShowContainer} />
+                    <Route exact path="/cart_items" component={CartShowContainer} />
+                    <Route exact path="/signin" component={LoginFormContainer} />
+                    <Route exact path="/signup" component={SignupFormContainer} />
+                    {/* <Route exact path="/products/:productId/reviews" component={ReviewContainer} /> */}
+                </Switch>
+            </div>
+            <AboutBanner />
+
+            <FooterContainer />
     </div>
 );
 

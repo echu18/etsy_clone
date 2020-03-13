@@ -32,6 +32,8 @@ class Navbar extends React.Component {
     }
    
     render() {
+        // window.scrollTo(0, 0);
+
         const { currentUserId, signOut, signIn, clearErrors } = this.props;
         // debugger
         const categories = ['Jewelry & Accessories', 'Clothing & Shoes', 'Home & Living', 'Wedding & Party', 'Toys & Entertainment', 'Art & Collectibles', 'Craft Supplies', 'Vintage'];

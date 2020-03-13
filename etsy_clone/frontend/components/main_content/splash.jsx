@@ -4,7 +4,6 @@ import { withRouter } from 'react-router';
 import HeroBanner from './hero_banner';
 import BuzzwordsBanner from './buzzwords_banner';
 import CatModuleContainer from './cat_module_container';
-import AboutBanner from './about_banner';
 
 
 class Splash extends React.Component{
@@ -74,11 +73,6 @@ class Splash extends React.Component{
                             {/* Header 3 (category title + see more) */}
                         </div>
                     </div>
-
-                <AboutBanner />
-
-
-
 
                 </div>
         
