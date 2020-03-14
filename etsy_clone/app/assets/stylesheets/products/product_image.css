@@ -108,8 +108,6 @@
     border-radius: 50%;
     box-shadow: 1px 1px 50px -12px gray;
     position: absolute;
-    /* left: 9.5%; */
-    /* left: 1.2%; */
     left: 10px;
     top: 50%;
     z-index: 3;

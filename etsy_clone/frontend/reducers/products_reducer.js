@@ -5,6 +5,7 @@ import { RECEIVE_CURRENT_USER } from '../actions/session_actions'
 
 export default (state = {}, action) => {
     Object.freeze(state);
+    debugger
     switch (action.type) {
         case RECEIVE_PRODUCTS:
             const products = {}
@@ -14,6 +15,7 @@ export default (state = {}, action) => {
             return products
             // return action.payload.products
         case RECEIVE_PRODUCT:
+            debugger
             return Object.assign({}, state, action.payload.products)
             
         case RECEIVE_CART_ITEMS:
