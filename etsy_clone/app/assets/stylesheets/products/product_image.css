@@ -76,8 +76,8 @@
     border-radius: 5px;
     /* border: 1px solid blue; */
       position: absolute;
-   
 }
+
 
 
 
@@ -112,6 +112,7 @@
     /* left: 1.2%; */
     left: 10px;
     top: 50%;
+    z-index: 3;
 }
 
 .left-arrow-icon > svg {
@@ -128,6 +129,7 @@
     /* right: 7%; */
     right: 10px;
     top: 50%;
+    z-index: 3;
 }
 
 .right-arrow-icon > svg {
