@@ -49,23 +49,17 @@ u29= User.create(username: 'Lucy', email: 'lucy@cc.com', password: '123456', sto
 u30= User.create(username: 'Alyssa', email: 'alyssa@cc.com', password: '123456', store_name: 'PinsPride')
 
 
-file200 = open('https://etsy-clone-seed.s3.amazonaws.com/profile-images/crying_cat.jpg')
-file201 = open('https://etsy-clone-seed.s3.amazonaws.com/profile-images/pizza_cat.png')
-file202 = open('https://etsy-clone-seed.s3.amazonaws.com/profile-images/smug_knife_cat.jpg')
-file203 = open('https://etsy-clone-seed.s3.amazonaws.com/profile-images/tired_cat.png')
-file204 = open('https://etsy-clone-seed.s3.amazonaws.com/profile-images/sitting_cat.png')
+file200 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/profile-images/crying_cat.jpg')
+file201 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/profile-images/pizza_cat.png')
+file202 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/profile-images/smug_knife_cat.jpg')
+file203 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/profile-images/tired_cat.png')
+file204 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/profile-images/sitting_cat.png')
 
-# file200 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/profile-images/crying_cat.jpg')
-# file201 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/profile-images/pizza_cat.png')
-# file202 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/profile-images/smug_knife_cat.jpg')
-# file203 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/profile-images/tired_cat.png')
-# file204 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/profile-images/sitting_cat.png')
-
-file205 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/profile-images/cat1.jpg')
-file206 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/profile-images/cat2.jpeg')
-file207 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/profile-images/cat3.jpg')
-file208 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/profile-images/cat4.jpg')
-file209 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/profile-images/cat5.jpg')
+file205 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/profile-images/cat1.jpg')
+file206 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/profile-images/cat2.jpeg')
+file207 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/profile-images/cat3.jpg')
+file208 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/profile-images/cat4.jpg')
+file209 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/profile-images/cat5.jpg')
 
 u1.photos.attach(io: file200, filename: 'crying_cat.jpg')
 u2.photos.attach(io: file201, filename: 'pizza_cat.png')
@@ -92,11 +86,11 @@ p1 = Product.create(name:'Cat Memes Sticker Pack', description: 'This sticker pa
     Cat on stairs (sixth image): 6 cm at longest measurement', 
     price: 9.47, seller_id: u1.id, category_id: 22)
 
-file100 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/catmeme1.jpg')
-file101 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/catmeme2.jpg')
-file102 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/catmeme3.jpg')
-file103 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/catmeme4.jpg')
-file104 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/catmeme5.jpg')
+file100 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/product-images/catmeme1.jpg')
+file101 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/product-images/catmeme2.jpg')
+file102 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/product-images/catmeme3.jpg')
+file103 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/product-images/catmeme4.jpg')
+file104 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/product-images/catmeme5.jpg')
 
 p1.photos.attach(io: file100, filename: 'catmeme1.jpg')
 p1.photos.attach(io: file101, filename: 'catmeme2.jpg')
@@ -114,11 +108,11 @@ This pin bears a rubber butterfly clutch which is more secure than its metal cou
 Please note: As an eco-friendly store I have opted to exclude the plastic packaging in which enamel pins are normally wrapped. Instead, your pin will come in a colourful paper bag.',
 price: 8.49, seller_id: u4.id, category_id: 22)
 
-file106 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/pikachu1.jpg')
-file107 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/pikachu2.jpg')
-file108 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/pikachu3.jpg')
-file109 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/pikachu4.jpg')
-file110 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/pikachu5.jpg')
+file106 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/product-images/pikachu1.jpg')
+file107 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/product-images/pikachu2.jpg')
+file108 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/product-images/pikachu3.jpg')
+file109 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/product-images/pikachu4.jpg')
+file110 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/product-images/pikachu5.jpg')
 
 p2.photos.attach(io: file106, filename: 'pikachu1.jpg')
 p2.photos.attach(io: file107, filename: 'pikachu2.jpg')
@@ -151,12 +145,12 @@ p3 = Product.create(name:'Doge meme poster Aristocrat Dog internet modern pop ar
     price: 12.00, seller_id: u13.id, category_id: 22)
 
 
-file111 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/doge_poster1.jpg')
-file112 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/doge_poster2.jpg')
-file113 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/doge_poster3.jpg')
-file114 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/doge_poster4.jpg')
-file115 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/doge_poster5.jpg')
-file116 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/doge_poster6.jpg')
+file111 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/product-images/doge_poster1.jpg')
+file112 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/product-images/doge_poster2.jpg')
+file113 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/product-images/doge_poster3.jpg')
+file114 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/product-images/doge_poster4.jpg')
+file115 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/product-images/doge_poster5.jpg')
+file116 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/product-images/doge_poster6.jpg')
 
 p3.photos.attach(io: file111, filename: 'doge_poster1.jpg')
 p3.photos.attach(io: file112, filename: 'doge_poster2.jpg')
@@ -182,9 +176,9 @@ p4 = Product.create(name:'Gundam RX-78-2 Enamel Pin', description: "The most pop
     price: 11.99, seller_id: u12.id, category_id: 22)
 
 
-file117 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/gundam11.jpg')
-file118 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/gundam12.jpg')
-file119 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/gundam13.jpg')
+file117 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/product-images/gundam11.jpg')
+file118 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/product-images/gundam12.jpg')
+file119 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/product-images/gundam13.jpg')
 
 p4.photos.attach(io: file117, filename: 'gundam11.jpg')
 p4.photos.attach(io: file118, filename: 'gundam11.jpg')
@@ -215,8 +209,8 @@ p5 = Product.create(name:'Kawaii Anime Magical Girl T-Shirt | Japanese Kanji Shi
     price: 21.00, seller_id: u7.id, category_id: 22)
 
 
-file120 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/shirt1.jpg')
-file121 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/shirt2.jpg')
+file120 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/product-images/shirt1.jpg')
+file121 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/product-images/shirt2.jpg')
 
 p5.photos.attach(io: file120, filename: 'shirt1.jpg')
 p5.photos.attach(io: file121, filename: 'shirt2.jpg')
@@ -236,11 +230,11 @@ p6 = Product.create(name:'Pokemon Terrarium Sleepy Charmander Terrarium Pokeball
     price: 28.70, seller_id: u8.id, category_id: 22)
 
 
-file122 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/pokeball1.jpg')
-file123 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/pokeball2.jpg')
-file124 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/pokeball3.jpg')
-file125 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/pokeball4.jpg')
-file126 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/pokeball5.jpg')
+file122 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/product-images/pokeball1.jpg')
+file123 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/product-images/pokeball2.jpg')
+file124 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/product-images/pokeball3.jpg')
+file125 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/product-images/pokeball4.jpg')
+file126 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/product-images/pokeball5.jpg')
 
 p6.photos.attach(io: file122, filename: 'pokeball1.jpg')
 p6.photos.attach(io: file123, filename: 'pokeball2.jpg')
@@ -262,8 +256,8 @@ p7 = Product.create(name:'Gundam Head RX-78-2 Sticker | Mobile Suit Gundam Excee
     price: 2.5, seller_id: u17.id, category_id: 22)
 
 
-file127 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/gundam1.jpg')
-file128 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/gundam2.jpg')
+file127 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/product-images/gundam1.jpg')
+file128 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/product-images/gundam2.jpg')
 
 p7.photos.attach(io: file127, filename: 'gundam1.jpg')
 p7.photos.attach(io: file128, filename: 'gundam2.jpg')
@@ -287,8 +281,8 @@ p8 = Product.create(name:'Instant Ramen (Shin) Cube | Aesthetic Anime Sticker | 
     price: 4.00, seller_id: u17.id, category_id: 22)
 
 
-file129 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/ramen1.jpg')
-file130 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/ramen2.jpg')
+file129 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/product-images/ramen1.jpg')
+file130 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/product-images/ramen2.jpg')
 
 p8.photos.attach(io: file129, filename: 'ramen1.jpg')
 p8.photos.attach(io: file130, filename: 'ramen2.jpg')
@@ -307,7 +301,7 @@ p9 = Product.create(name:'Overwatch Logo Coaster', description: "Collector coast
       price: 5.00, seller_id: u18.id, category_id: 22)
 
 
-file143 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/ow1.jpg')
+file143 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/product-images/ow1.jpg')
 
 p9.photos.attach(io: file143, filename: 'ow1.jpg')
 
@@ -318,9 +312,9 @@ p10 = Product.create(name:'Vinyl Waterproof Animal Crossing Sticker', descriptio
 ", price: 6.00, seller_id: u18.id, category_id: 22)
 
 
-file133 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/animalcrossing1.jpg')
-file134 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/animalcrossing2.jpg')
-file135 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/animalcrossing3.jpg')
+file133 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/product-images/animalcrossing1.jpg')
+file134 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/product-images/animalcrossing2.jpg')
+file135 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/product-images/animalcrossing3.jpg')
 
 p10.photos.attach(io: file133, filename: 'animalcrossing1.jpg')
 p10.photos.attach(io: file134, filename: 'animalcrossing2.jpg')
@@ -343,8 +337,8 @@ p11 = Product.create(name:'Pokemon Bulbasaur Ivysaur Venusaur Perler', descripti
     price: 12.89, seller_id: u4.id, category_id: 22)
 
 
-file152 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/pokeperler1.jpg')
-file153 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/pokeperler2.jpg')
+file152 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/product-images/pokeperler1.jpg')
+file153 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/product-images/pokeperler2.jpg')
 
 
 p11.photos.attach(io: file152, filename: 'pokeperler1.jpg')
@@ -359,9 +353,9 @@ p13 = Product.create(name:'Legend of Zelda Triforce Stud Earring Set - Gold Plat
     price: 19.89, seller_id: u26.id, category_id: 22)
 
 
-file140 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/triforce1.jpg')
-file141 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/triforce2.jpg')
-file142 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/triforce3.jpg')
+file140 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/product-images/triforce1.jpg')
+file141 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/product-images/triforce2.jpg')
+file142 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/product-images/triforce3.jpg')
 
 p13.photos.attach(io: file140, filename: 'triforce1.jpg')
 p13.photos.attach(io: file141, filename: 'triforce2.jpg')
@@ -378,9 +372,9 @@ p14 = Product.create(name:'My Hero Academia Froppy TSUYU Chan Large Hard Enamel 
 ★ Illustrated backing card included", price: 8.82, seller_id: u27.id, category_id: 22)
 
 
-file131 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/froggy1.jpg')
-file132 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/froggy2.jpg')
-file133 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/froggy2.jpg')
+file131 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/product-images/froggy1.jpg')
+file132 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/product-images/froggy2.jpg')
+file133 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/product-images/froggy2.jpg')
 
 p14.photos.attach(io: file131, filename: 'froggy1.jpg')
 p14.photos.attach(io: file132, filename: 'froggy2.jpg')
@@ -394,8 +388,8 @@ p15 = Product.create(name:'League of Legends - Dj Sona LED panel for Cosplay - c
     price: 182.61, seller_id: u18.id, category_id: 22)
 
 
-file160 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/sona1.jpg')
-file161 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/sona2.jpg')
+file160 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/product-images/sona1.jpg')
+file161 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/product-images/sona2.jpg')
 
 p15.photos.attach(io: file160, filename: 'sona1.jpg')
 p15.photos.attach(io: file161, filename: 'sona2.jpg')
@@ -407,9 +401,9 @@ p16 = Product.create(name:'Kirby X Sailor Moon Enamel Pin', description: "The pi
     price: 10.74, seller_id: u21.id, category_id: 22)
 
 
-file162 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/kirby1.jpg')
-file163 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/kirby2.jpg')
-file164 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/kirby3.jpg')
+file162 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/product-images/kirby1.jpg')
+file163 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/product-images/kirby2.jpg')
+file164 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/product-images/kirby3.jpg')
 
 p16.photos.attach(io: file162, filename: 'kirby1.jpg')
 p16.photos.attach(io: file163, filename: 'kirby2.jpg')
@@ -424,8 +418,8 @@ p17 = Product.create(name:'One Piece - Iron On Patch', description: "onepiecee",
     price: 5.00, seller_id: u7.id, category_id: 22)
 
 
-file150 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/onepiece1.jpg')
-file151 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/onepiece2.jpg')
+file150 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/product-images/onepiece1.jpg')
+file151 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/product-images/onepiece2.jpg')
 
 
 p17.photos.attach(io: file150, filename: 'onepiece1.jpg')
@@ -439,8 +433,8 @@ p18 = Product.create(name:'One Punch Man Mug, Anime, Anime Mug', description: "N
 But please contact me if you have any problems with your order.", price: 15.00, seller_id: u11.id, category_id: 22)
 
 
-file136 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/onepunch1.jpg')
-file137 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/onepunch2.jpg')
+file136 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/product-images/onepunch1.jpg')
+file137 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/product-images/onepunch2.jpg')
 
 p18.photos.attach(io: file136, filename: 'onepunch1.jpg')
 p18.photos.attach(io: file137, filename: 'onepunch2.jpg')
@@ -453,9 +447,9 @@ p19 = Product.create(name:'Cute Sleeping Corgi T-Shirt Corgi Shirt Gift For Dog 
     price:23.61, seller_id: u9.id, category_id: 22)
 
 
-file154 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/corgishirt1.jpg')
-file155 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/corgishirt2.jpg')
-file156 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/corgishirt3.jpg')
+file154 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/product-images/corgishirt1.jpg')
+file155 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/product-images/corgishirt2.jpg')
+file156 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/product-images/corgishirt3.jpg')
 
 
 p19.photos.attach(io: file154, filename: 'corgishirt1.jpg')
@@ -469,7 +463,7 @@ p20 = Product.create(name:'spongebob pin Patrick Star pin anime enamel pins enam
     price: 11.00, seller_id: u26.id, category_id: 22)
 
 
-file157 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/patrick1.jpg')
+file157 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/product-images/patrick1.jpg')
 
 
 p20.photos.attach(io: file157, filename: 'patrick1.jpg')
@@ -483,8 +477,8 @@ p21 = Product.create(name:'Cute UwU Mug', description: "Printed using direct to 
     price:23.61, seller_id: u8.id, category_id: 22)
 
 
-file158 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/uwu1.jpg')
-file159 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/uwu2.jpg')
+file158 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/product-images/uwu1.jpg')
+file159 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/product-images/uwu2.jpg')
 
 
 p21.photos.attach(io: file158, filename: 'uwu1.jpg')
@@ -496,9 +490,9 @@ p22 = Product.create(name:'Green Frog Meme, Meme pin, Sad Pepe Meme Pin Brooch',
     price: 7.61, seller_id: u28.id, category_id: 22)
 
 
-file144 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/pepe1.jpg')
-file145 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/pepe2.jpg')
-file146 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/pepe3.jpg')
+file144 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/product-images/pepe1.jpg')
+file145 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/product-images/pepe2.jpg')
+file146 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/product-images/pepe3.jpg')
 
 p22.photos.attach(io: file144, filename: 'pepe1.jpg')
 p22.photos.attach(io: file145, filename: 'pepe2.jpg')
@@ -512,8 +506,8 @@ p23 = Product.create(name:'This Is Fine Dog Meme Cross Stitch Pattern', descript
     price: 5.61, seller_id: u12.id, category_id: 22)
 
 
-file147 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/thisisfine1.jpg')
-file148 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/thisisfine2.jpg')
+file147 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/product-images/thisisfine1.jpg')
+file148 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/product-images/thisisfine2.jpg')
 
 p23.photos.attach(io: file147, filename: 'thisisfine1.jpg')
 p23.photos.attach(io: file148, filename: 'thisisfine2.jpg')
@@ -525,9 +519,9 @@ p24 = Product.create(name:'You\'re My National Treasure Mug - Nicolas Cage Meme 
     price: 15.72, seller_id: u29.id, category_id: 22)
 
 
-file165 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/cage1.jpg')
-file166 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/cage2.jpg')
-file167 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/cage3.jpg')
+file165 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/product-images/cage1.jpg')
+file166 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/product-images/cage2.jpg')
+file167 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/product-images/cage3.jpg')
 
 p24.photos.attach(io: file165, filename: 'cage1.jpg')
 p24.photos.attach(io: file166, filename: 'cage2.jpg')
@@ -541,8 +535,8 @@ p25 = Product.create(name:'Michael Scott Sequin Pillow | The Office TV Show | 16
     price: 18.00, seller_id: u13.id, category_id: 22)
 
 
-file168 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/office1.jpg')
-file169 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/office2.jpg')
+file168 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/product-images/office1.jpg')
+file169 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/product-images/office2.jpg')
 
 p25.photos.attach(io: file168, filename: 'office1.jpg')
 p25.photos.attach(io: file169, filename: 'office2.jpg')
@@ -558,8 +552,8 @@ p26 = Product.create(name:'Doodlebob Spongebob Embroidery Hoop', description: "M
     price: 15.00, seller_id: u17.id, category_id: 22)
 
 
-file170 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/mihoy1.jpg')
-file171 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/mihoy2.jpg')
+file170 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/product-images/mihoy1.jpg')
+file171 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/product-images/mihoy2.jpg')
 
 p26.photos.attach(io: file170, filename: 'mihoy1.jpg')
 p26.photos.attach(io: file171, filename: 'mihoy2.jpg')
@@ -575,7 +569,7 @@ p26.photos.attach(io: file171, filename: 'mihoy2.jpg')
 #     price: 7.86, seller_id: u22.id, category_id: 22)
 
 
-# file172 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/ghibli1.jpg')
+# file172 = open('https://etsy-clone-dev.s3-us-west-1.amazonaws.com/product-images/ghibli1.jpg')
 # file173 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/ghibli2.jpg')
 # file174 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/ghibli2.jpg')
 
