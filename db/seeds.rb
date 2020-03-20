@@ -49,11 +49,17 @@ u29= User.create(username: 'Lucy', email: 'lucy@cc.com', password: '123456', sto
 u30= User.create(username: 'Alyssa', email: 'alyssa@cc.com', password: '123456', store_name: 'PinsPride')
 
 
-file200 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/profile-images/crying_cat.jpg')
-file201 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/profile-images/pizza_cat.png')
-file202 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/profile-images/smug_knife_cat.jpg')
-file203 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/profile-images/tired_cat.png')
-file204 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/profile-images/sitting_cat.png')
+file200 = open('https://etsy-clone-seed.s3.amazonaws.com/profile-images/crying_cat.jpg')
+file201 = open('https://etsy-clone-seed.s3.amazonaws.com/profile-images/pizza_cat.png')
+file202 = open('https://etsy-clone-seed.s3.amazonaws.com/profile-images/smug_knife_cat.jpg')
+file203 = open('https://etsy-clone-seed.s3.amazonaws.com/profile-images/tired_cat.png')
+file204 = open('https://etsy-clone-seed.s3.amazonaws.com/profile-images/sitting_cat.png')
+
+# file200 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/profile-images/crying_cat.jpg')
+# file201 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/profile-images/pizza_cat.png')
+# file202 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/profile-images/smug_knife_cat.jpg')
+# file203 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/profile-images/tired_cat.png')
+# file204 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/profile-images/sitting_cat.png')
 
 file205 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/profile-images/cat1.jpg')
 file206 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/profile-images/cat2.jpeg')
