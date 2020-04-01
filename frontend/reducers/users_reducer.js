@@ -12,7 +12,7 @@ export default (state = {}, action) => {
             return Object.assign({}, state, action.payload.users )
         case RECEIVE_REVIEW:
             return Object.assign({},state, action.payload.authors)
-        case RECEIVE_PRODUCT:
+        case RECEIVE_PRODUCT: 
             debugger
             return Object.assign({}, state, action.payload.users)
         default:
