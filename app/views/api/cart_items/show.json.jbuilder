@@ -4,7 +4,7 @@ json.products do
         json.set! cart_item.product_id do 
         # json.set! cart_item.product.id do 
             json.partial! 'api/products/product', product: cart_item.product
-            # json.photoUrls @product.photos.map { |file| url_for(file) }
+            json.photoUrls cart_item.product.photos.map { |file| url_for(file) }
         # end
         end
     end

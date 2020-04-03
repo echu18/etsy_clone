@@ -19,8 +19,8 @@ class ProductShow extends React.Component {
  
     
     render() {
-        // window.scrollTo(0, 0);
-        debugger
+        window.scrollTo(0, 0);
+        // debugger
 
         if (this.props.product === undefined) return null;
         if (this.props.product.seller_id === undefined) return null;

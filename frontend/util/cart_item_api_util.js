@@ -23,20 +23,36 @@ export const createCartItem = (cart_item) => {
     })
 }
 
-export const modifyCartItem = (userId, data) => {
-    return $.ajax({
-        url: `/api/users/${userId}/cart_items`,
-        method: 'PATCH',
-        data: {data}
-    })
-}
+// export const modifyCartItem = (userId, data) => {
+//     return $.ajax({
+//         url: `/api/users/${userId}/cart_items`,
+//         method: 'PATCH',
+//         data: {data}
+//     })
+// }
+
+export const modifyCartItem = (cartItemId, data) => {
+  return $.ajax({
+    url: `/api/cart_items/${cartItemId}`,
+    method: "PATCH",
+    data: { data }
+  });
+};
 
 
 
-export const destroyCartItem = (userId, cartItemId) => {
-    return $.ajax({
-        url: `/api/users/${userId}/cart_items/${cartItemId}`,
-        method: 'DELETE',
-        data: {cartItemId}
-    })
-}
+
+// export const destroyCartItem = (userId, cartItemId) => {
+//     return $.ajax({
+//         url: `/api/users/${userId}/cart_items/${cartItemId}`,
+//         method: 'DELETE',
+//         data: {cartItemId}
+//     })
+// }
+
+    export const destroyCartItem = (cartItemId) => {
+        return $.ajax({
+        url: `/api/cart_items/${cartItemId}`,
+        method: "DELETE"
+        });
+    };
