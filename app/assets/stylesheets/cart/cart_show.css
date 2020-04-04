@@ -1,9 +1,27 @@
+.cart-outer-container {
+    min-height: 800px;
+    margin-bottom: 200px;
+}
+
 .cart-show-container {
+    font-family: 'Helvetica', sans-serif;
     display: flex;
     justify-content: center;
-    min-height: 800px;
+    /* min-height: 800px;
+    margin-bottom: 200px; */
     width: 69.6vw;
-    margin-bottom: 200px;
+}
+
+.cart-background {
+    display: block;
+    position: absolute;
+    left: 0;
+    height: 100em;
+    width: 100vw;
+    background-color: rgb(251,249,246);
+    z-index: -100;
+    margin-top: 5px;
+    /* background-color: blue; */
 }
 
 .cart-inner {
@@ -12,23 +30,39 @@
     display: flex;
     flex-direction: column;
     margin-top: 20px;
-    border: 1px solid red;
+    border-radius: 5px;
+    background-color: white;
+    /* border: 1px solid red; */
 }
 
-.cart-inner > section, .cart-item-bar > section {
+/* .cart-inner > section > h3 {
+    font-weight: 600;
+} */
+
+.cart-inner > section {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    background-color: rgb(251,249,246);
+    font-size: 28px;
+    padding: 20px 5px 20px 5px;
 }
 
-.cart-inner > section {
-    font-size: 28px;
-    margin: 20px 5px 20px 5px;
+
+.keep-shopping-btn {
+    box-sizing: border-box;
+    max-width: 110px;
+    min-height: 30px;;
+    /* padding: 10px; */
+    font-size: 13px;
+    background: white;
+    border-radius: 5px;
+    /* margin-bottom: 5px; */
 }
 
 .cart-items {
     position: relative;
-    border: 1px solid orange;
+    border: 0.5px solid gainsboro;
 }
 
 .keep-shopping-btn {
@@ -36,31 +70,6 @@
     width: 150px;
 }
 
-.cart-item-bar {
-    height: 400px;
-    width: 65%;
-    margin: 15px;
-    border: 1px solid purple;
-}
-
-.ci-image {
-    height: 150px;
-    width: 150px;
-}
-
-.ci-block-upper, .ci-block-lower {
-    display: flex;
-    
-    border: 1px solid blue;
-}
-
-
-
-.add-note {
-    width: 100px;
-    height: 50px;
-    background-color: white;
-}
 
 .cart-pay-container {
     position: absolute;
@@ -68,6 +77,8 @@
     right: 0;
     height: 300px;
     width: 30%;
+    border-radius: 15px;
+    margin: 0px 20px 0px 20px;
     border: 1px solid blue;
 }
 

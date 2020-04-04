@@ -7,16 +7,19 @@ json.products do
             json.photoUrls cart_item.product.photos.map { |file| url_for(file) }
         # end
         end
+
     end
 end
 
 
-# json.users do 
-#     json.set! @cart_item.user_id do
-#         json.partial! 'api/users/user', user: @cart_item.user
-#         json.photoUrls @cart_item.user.photos.map { |file| url_for(file) }
-#     end
-# end
+@cart_items.each do |cart_item|
+    json.users do 
+        json.set! cart_item.product.seller_id do
+            json.partial! 'api/users/user', user: cart_item.product.seller
+            json.photoUrls cart_item.product.seller.photos.map { |file| url_for(file) }
+        end
+    end
+end
 
 
 # json.products do 

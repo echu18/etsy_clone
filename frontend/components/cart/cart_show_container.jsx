@@ -8,7 +8,8 @@ import { connect } from 'react-redux';
 const mapStateToProps = (state, ownProps) => ({
     products: state.entities.products,
     cartItems: Object.values(state.entities.cartItems),
-    currentUserId: state.session.currentUserId
+    currentUserId: state.session.currentUserId,
+    users: state.entities.users
 })
 
 
@@ -16,8 +17,8 @@ const mapDispatchToProps = (dispatch) => ({
     fetchCartItems: () => dispatch(fetchCartItems()),
     clearCartItems: () => dispatch(clearCartItems()),
     addCartItem: (userId, productId, quantity) => dispatch(addCartItem(userId, productId, quantity)),
-    editCartItem: (userId, cartItemId) => dispatch(editCartItem(userId, cartItemId)),
-    deleteCartItem: (userId, cartItemId) => dispatch(deleteCartItem(userId, cartItemId)),
+    editCartItem: (cartItemId, data) => dispatch(editCartItem(cartItemId, data)),
+    deleteCartItem: (cartItemId) => dispatch(deleteCartItem(cartItemId)),
 })
 
 

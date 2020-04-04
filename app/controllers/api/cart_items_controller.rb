@@ -33,10 +33,12 @@ class Api::CartItemsController < ApplicationController
 
     def update
         @cart_item = CartItem.find_by(id: params[:id])
-        if @cart_item.update_attributes(cart_item_params)
-            render :show
-        else
-            render json: @product.errors.full_messages, status: 401
+        if @cart_item.user_id == current_user.id
+            if @cart_item.update_attributes(cart_item_params)
+                render :show
+            else
+                render json: @product.errors.full_messages, status: 401
+            end
         end
     end
 
