@@ -46,7 +46,8 @@
 .gift-icon {
     position: absolute;
     right: 3.5%;
-    top: 21.5%;
+    /* top: 21.5%; */
+    top: 13%;
     display: flex;
     height: auto;
     width: auto;

@@ -20,7 +20,7 @@ class CartItemBar extends React.Component {
     updatePrice(price){
         const updatedPrice = price * this.state.quantity
         const formatPrice = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(updatedPrice);
-        debugger
+        // debugger
         return formatPrice;
     }
 
@@ -32,7 +32,7 @@ class CartItemBar extends React.Component {
             <div className="cart-item-bar">
                 <section>
                     <img src={users[products[cartItem.product_id].seller_id].photoUrls[0]} />
-                    <p className='ci-store-name'>{users[products[cartItem.product_id].seller_id].store_name}</p>
+                    <p className='ci-store-name'>{users[products[cartItem.product_id].seller_id].store_name ? users[products[cartItem.product_id].seller_id].store_name : users[products[cartItem.product_id].seller_id].username}</p>
                     <p className='ci-contact-shop'>Contact shop</p>
                 </section>
 

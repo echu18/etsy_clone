@@ -64,7 +64,11 @@ class Footer extends React.Component {
                                 <button className='download-app-btn'><img src='https://etsy-clone-dev.s3-us-west-1.amazonaws.com/splash-images/micon-white.png'/> Download the Memesy App</button>
 
                                 <div className='footer-logo-container'>
-                                    {githubIcon}  {linkedinIcon} {briefcaseIcon} {convoIcon} 
+                                    <a href="https:/www.github.com/echu18" target="_blank">{githubIcon}</a>
+                                    <a href="">{linkedinIcon}</a>
+                                    <a href="">{briefcaseIcon}</a>
+                                    <a href="">{convoIcon}</a>
+                                    {/* {githubIcon}  {linkedinIcon} {briefcaseIcon} {convoIcon}  */}
                                 </div>
                             </div>
                         </div>

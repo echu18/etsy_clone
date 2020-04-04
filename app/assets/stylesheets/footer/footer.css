@@ -1,5 +1,19 @@
+
+.footer {
+    display: flex;
+    align-self: flex-end;
+    border: 1px solid red;
+}
+
 .footer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    justify-self: flex-end;
+    margin-top: 150px;
    width: 100vw;
+   /* height: 100em; */
+   border: 1px solid fuchsia;
 }
 
 .mailing-list-container > svg {
@@ -234,7 +248,7 @@
 }
 
 
-.footer-logo-container > svg {
+.footer-logo-container > a > svg {
     height: 25px;
     width: 25px;
     padding: 0px 5px 0px 3px;

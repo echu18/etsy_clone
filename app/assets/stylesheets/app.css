@@ -13,7 +13,7 @@
     /* min-width: 700px; */
     /* max-width: 69.6vw; */
     max-width: 69.6vw;
-    height: auto;
+    /* min-height: auto; */
     /* height: 2000px; */
     /* border: 1px solid turquoise; */
 }

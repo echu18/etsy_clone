@@ -1,5 +1,5 @@
 .cart-outer-container {
-    min-height: 800px;
+    min-height: 1000px;
     margin-bottom: 200px;
 }
 
@@ -7,20 +7,25 @@
     font-family: 'Helvetica', sans-serif;
     display: flex;
     justify-content: center;
-    /* min-height: 800px;
-    margin-bottom: 200px; */
-    width: 69.6vw;
+    min-height: 800px;
+    padding-bottom: 200px; 
+    min-width: 69.6vw;
+    z-index: 100;
+    /* border: 1px solid blue; */
 }
+
 
 .cart-background {
     display: block;
     position: absolute;
     left: 0;
-    height: 100em;
+    /* min-height: 100em; */
+    min-height: 130em;
     width: 100vw;
     background-color: rgb(251,249,246);
-    z-index: -100;
-    margin-top: 0px;
+    /* z-index: -100; */
+    margin-top: 1px;
+    padding-bottom: 200px;
     /* background-color: blue; */
 }
 
@@ -70,6 +75,7 @@
 .cart-items {
     position: relative;
     border: 0.5px solid gainsboro;
+    z-index: 5;
 }
 
 .keep-shopping-btn {
