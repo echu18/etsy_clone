@@ -38,7 +38,7 @@
         width: 170px;
         height: auto;
         margin-left: -5px;
-        margin-top: -10px;
+        margin-top: 0px;
         /* padding: 5px 15px 0 0; */
         /* margin: -4px 6px -1px -4px; */
         /* margin: 0px 0px 40px 0px; */
@@ -59,7 +59,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0px 0px 10px 0px;
+    padding: 13px 0px 10px 0px;
     margin: 0 3px 0 0;
 }
 
@@ -101,7 +101,8 @@
 
 /* padding for searchbar placeholder text */
 .searchbar-form input[type="text"]::placeholder {
-    font-size: 18px;
+    letter-spacing: 0.5px;
+    font-size: 16px;
 }
 
 

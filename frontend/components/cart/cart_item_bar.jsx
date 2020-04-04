@@ -74,7 +74,7 @@ class CartItemBar extends React.Component {
                 <div className="ci-block-lower">
                     <textarea
                         className="add-note"
-                        placeholder="Add a note to seller (optional)"
+                        placeholder={'Add a note to ' + `${users[products[cartItem.product_id].seller_id].store_name ? users[products[cartItem.product_id].seller_id].store_name : 'seller'}` + ' (optional)'}
                     />
                     <section>
                         <h3>Shipping: $3.99</h3>

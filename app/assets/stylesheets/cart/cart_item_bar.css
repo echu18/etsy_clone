@@ -3,7 +3,7 @@
     font-family: 'Helvetica', sans-serif;
     height: 400px;
     width: 63%;
-    margin: 20px 20px 80px 20px;
+    margin: 20px 20px 50px 20px;
     /* border: 1px solid purple; */
 }
 
@@ -13,11 +13,12 @@
     position: relative;
     justify-content: flex-start;
     align-items: center;
-    margin: 10px 0px 10px 0px;
+    margin: 20px 0px 20px 0px;
 }
 
 .cart-item-bar > section > img {
     display: block;
+    border-radius: 2px;
     height: 30px;
     width: 30px;
     margin-right: 10px;
@@ -72,6 +73,7 @@
 
 .ci-name > button:hover {
     cursor: pointer;
+    text-decoration: underline;
 }
 
 
@@ -130,12 +132,15 @@
     width: 300px;
     border-radius: 3px;
     border: 1px solid gainsboro;
+    outline:none;
 }
+
 
 .ci-block-lower > textarea::placeholder {
     color: gray;
-    padding: 5px;
+    padding: 3px 0px 5px 5px;
 }
+
 
 .ci-block-lower > section {
     display: flex;
@@ -163,7 +168,12 @@
     width: 100%;
     border: 1px solid gainsboro;
     margin-top: 10px;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
+}
+
+.checkout-shop-btn:hover {
+    background-color: rgb(245, 245, 245);
+    cursor: pointer;
 }
 
 

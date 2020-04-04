@@ -1,5 +1,6 @@
 import React from 'react';
 import CartItemBar from './cart_item_bar'
+import {paypalIcon, visaIcon, discoverIcon, amexIcon, mastercardIcon } from '../../../app/assets/images/svgs/icons';
 
 class CartShow extends React.Component {
     constructor(props) {
@@ -45,24 +46,52 @@ class CartShow extends React.Component {
                       );
                     })}
                     <div className="cart-pay-container">
-                      <h3>How you'll pay</h3>
-                      {/* <input type="radio" />
-                            <input type="radio" /> */}
-                      <div className="cart-pay-total">
-                        <p>Item(s) total</p>
-                        <p>$total price goes here</p>
-                        <p>Shipping</p>
-                        <p>$shipping price goes here</p>
-                        <p>Total ({cartItems.length} items)</p>
-                        <p>Total Price</p>
-                        <button>Proceed to checkout</button>
-                        <p>Additional duties and taxes may apply</p>
-                      </div>
+                      <div className='cart-pay-inner'>
+                        <h3>How you'll pay</h3>
+                        <label className='credit-payment'>
+                            <div className='large-radio-btn'>
+                              {/* <input type="radio" name='payment-radio'/> */}
+                            </div>
+
+                            <div className='payment-icons'>{mastercardIcon}{visaIcon}{amexIcon}{discoverIcon}</div>
+                        </label>
+                            
+                        <label className='credit-payment'>
+                          <div className='large-radio-btn'>
+                              {/* <input type="radio" name='payment-radio'/> */}
+                          </div>
+
+                          <div className='payment-icons'>{paypalIcon}</div>
+                        </label>
+                      
+
+                        <div className="cart-pay-total">
+                            <div className='ci-items-total'>
+                              <p>Item(s) total</p>
+                              <p>$total</p>
+                            </div>
+
+                            <div className='ci-shipping'>
+                              <p>Shipping</p>
+                              <p>$shipping</p>
+                            </div>
+
+                            <div className='cart-pay-divider'></div>
+
+                            <div className='ci-total'>
+                              <p>Total ({cartItems.length} items)</p>
+                              <p>Total Price</p>
+                            </div>
+                          <button className='checkout-btn'>Proceed to checkout</button>
+                        </div>
+
+                        </div>
                     </div>
                   </div>
                 </div>
               )}
             </div>
+            {/* <p>Memesy supports reducing carbon emissions on every delivery</p> */}
           </div>
         );
         
