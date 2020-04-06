@@ -9,14 +9,24 @@
     justify-content: center;
     min-height: 800px;
     padding-bottom: 200px; 
-    min-width: 69.6vw;
+    /* min-width: 69.6vw; */
+    width: 70%;
     z-index: 100;
     /* border: 1px solid blue; */
 }
 
+@media only screen and (max-width: 1900px) {
+    .cart-show-container {  
+        width: 93.5%;
+    }
+
+}
+
+
 
 .cart-background {
-    display: block;
+    display: flex;
+    justify-content: center;
     position: absolute;
     left: 0;
     /* min-height: 100em; */
@@ -24,7 +34,7 @@
     width: 100vw;
     background-color: rgb(251,249,246);
     /* z-index: -100; */
-    margin-top: 1px;
+    margin-top: 3px;
     padding-bottom: 200px;
     /* background-color: blue; */
 }

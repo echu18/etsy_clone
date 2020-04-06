@@ -60,6 +60,7 @@
     height: 20px;
     width: fit-content;
     padding: 3px 10px 3px 10px;
+    margin-left: 5px;
     border-radius: 15px;
     background-color: pink;
     font-family: 'Helvetica', sans serif;

@@ -13,7 +13,6 @@
     margin-top: 150px;
    width: 100vw;
    /* height: 100em; */
-   border: 1px solid fuchsia;
 }
 
 .mailing-list-container > svg {
@@ -208,6 +207,10 @@
     position: absolute;
     bottom: 65px;
     /* border: 1px solid turquoise; */
+}
+
+.footer-icon-section > a {
+    text-decoration: none;
 }
 
 .footer-logo-container {
