@@ -14,6 +14,7 @@ class Navbar extends React.Component {
         this.togglePopup = this.togglePopup.bind(this);
         this.signOutAndClear = this.signOutAndClear.bind(this);
         this.redirectToHome = this.redirectToHome.bind(this);
+        this.redirectToIndex = this.redirectToIndex.bind(this);
     }
     
    togglePopup() {
@@ -29,6 +30,10 @@ class Navbar extends React.Component {
 
     redirectToHome () {
         this.props.history.push('/')
+    }
+
+    redirectToIndex () {
+        this.props.history.push('/index')
     }
    
     render() {
@@ -72,7 +77,7 @@ class Navbar extends React.Component {
                             <form /*onSubmit={}*/>
                                 <input type="text" name="search" placeholder="Search for items or shops" autoComplete='off'/>      
                             </form>
-                            <div className="navbar-icon search-icon">
+                            <div className="navbar-icon search-icon" onClick={this.redirectToIndex}>
                                 {searchIcon}
                             </div>
                         </div>
