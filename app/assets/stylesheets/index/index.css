@@ -1,0 +1,13 @@
+.index-products {
+    display: flex;
+    height: 100vh;
+    width: auto;
+    border: 1px solid red;
+}
+
+
+.index-row {
+    display: flex;
+    width: 100%;
+    border: 1px solid blue;
+}

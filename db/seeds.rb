@@ -50,26 +50,26 @@ u28= User.create(username: 'Michelle', email: '@cc.com', password: '123456', sto
 u29= User.create(username: 'Lucy', email: 'lucy@cc.com', password: '123456', store_name: 'pinluminati')
 u30= User.create(username: 'Alyssa', email: 'alyssa@cc.com', password: '123456', store_name: 'PinsPride')
 
-u31= User.create(username: '', email: '@cc.com', password: '123456', store_name: '')
-u32= User.create(username: '', email: '@cc.com', password: '123456', store_name: '')
-u33= User.create(username: '', email: '@cc.com', password: '123456', store_name: '')
-u34= User.create(username: '', email: '@cc.com', password: '123456', store_name: '')
-u35= User.create(username: '', email: '@cc.com', password: '123456', store_name: '')
-u36= User.create(username: '', email: '@cc.com', password: '123456', store_name: '')
-u37= User.create(username: '', email: '@cc.com', password: '123456', store_name: '')
-u38= User.create(username: '', email: '@cc.com', password: '123456', store_name: '')
-u39= User.create(username: '', email: '@cc.com', password: '123456', store_name: '')
-u40= User.create(username: '', email: '@cc.com', password: '123456', store_name: '')
-u41= User.create(username: '', email: '@cc.com', password: '123456', store_name: '')
-u42= User.create(username: '', email: '@cc.com', password: '123456', store_name: '')
-u43= User.create(username: '', email: '@cc.com', password: '123456', store_name: '')
-u44= User.create(username: '', email: '@cc.com', password: '123456', store_name: '')
-u45= User.create(username: '', email: '@cc.com', password: '123456', store_name: '')
-u46= User.create(username: '', email: '@cc.com', password: '123456', store_name: '')
-u47= User.create(username: '', email: '@cc.com', password: '123456', store_name: '')
-u48= User.create(username: '', email: '@cc.com', password: '123456', store_name: '')
-u49= User.create(username: '', email: '@cc.com', password: '123456', store_name: '')
-u50= User.create(username: '', email: '@cc.com', password: '123456', store_name: '')
+u31= User.create(username: 'Eric', email: 'eric@cc.com', password: '123456', store_name: 'HighCaliberGraphix')
+u32= User.create(username: 'Erin', email: 'erin@cc.com', password: '123456', store_name: 'EncasingNature')
+u33= User.create(username: 'Melissa', email: 'melissa@cc.com', password: '123456', store_name: 'ArtByMelissa')
+u34= User.create(username: 'Theodore', email: 'theodore@cc.com', password: '123456', store_name: 'AncientOres')
+u35= User.create(username: 'Liam', email: 'liam@cc.com', password: '123456', store_name: 'CreativeVigilant')
+u36= User.create(username: 'Oliver', email: 'oliver@cc.com', password: '123456', store_name: 'ParisByNight')
+u37= User.create(username: 'Finn', email: 'finn@cc.com', password: '123456', store_name: 'Artsmith')
+u38= User.create(username: 'Ellie', email: 'ellie@cc.com', password: '123456', store_name: 'GoldDust')
+u39= User.create(username: 'Marina', email: 'marina@cc.com', password: '123456', store_name: 'RoboRobo')
+u40= User.create(username: 'Levi', email: 'levi@cc.com', password: '123456', store_name: 'Monogramme')
+u41= User.create(username: 'Lilly', email: 'lilly@cc.com', password: '123456', store_name: 'WarmThreads')
+u42= User.create(username: 'Naomi', email: 'naomi@cc.com', password: '123456', store_name: 'MemeCuisine')
+u43= User.create(username: 'Emily', email: 'emily@cc.com', password: '123456', store_name: 'BoldAndBrash')
+u44= User.create(username: 'Olivia', email: 'olivia@cc.com', password: '123456', store_name: 'uWuInc')
+u45= User.create(username: 'Ryan', email: 'ryan@cc.com', password: '123456', store_name: 'MadPaintingShop')
+u46= User.create(username: 'Victoria', email: 'victoria@cc.com', password: '123456', store_name: 'ZenOrigin')
+u47= User.create(username: 'David', email: 'david@cc.com', password: '123456', store_name: 'SparkyCard')
+u48= User.create(username: 'Carlos', email: 'carlos@cc.com', password: '123456', store_name: 'EkaliDesign')
+u49= User.create(username: 'Joe', email: 'joe@cc.com', password: '123456', store_name: 'QuiteCuteCrafts')
+u50= User.create(username: 'Tony', email: 'tony@cc.com', password: '123456', store_name: 'TheLaw')
 
 
 
@@ -676,7 +676,7 @@ r114 = Review.create(body: 'So cute and so perfect!',
 author_id: u29.id, product_id: p29.id, rating: 5)
 
 r115 = Review.create(body: 'These are so cute! They went right on my laptop. The rest I will use for resin crafts! Thanks!', 
-author_id: u346.id, product_id: p29.id, rating: 4)
+author_id: u34.id, product_id: p29.id, rating: 4)
 
 r116 = Review.create(body: 'Super cute and excellent quality!', 
 author_id: u16.id, product_id: p29.id, rating: 5)
@@ -836,9 +836,9 @@ file201 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-image
 file202 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/mikukey2.jpg')
 file203 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/mikukey3.jpg')
 
-p37.photos.attach(io: 201, filename: 'mikukey1.jpg')
-p37.photos.attach(io: 202, filename: 'mikukey2.jpg')
-p37.photos.attach(io: 203, filename: 'mikukey3.jpg')
+p37.photos.attach(io: file201, filename: 'mikukey1.jpg')
+p37.photos.attach(io: file202, filename: 'mikukey2.jpg')
+p37.photos.attach(io: file203, filename: 'mikukey3.jpg')
 
 r132 = Review.create(body: 'So cute and detailed! Perfect addition to my keycap collection', 
 author_id: u17.id, product_id: p37.id, rating: 5)
@@ -853,9 +853,9 @@ file204 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-image
 file205 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/nofacekey2.jpg')
 file206 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/nofacekey3.jpg')
 
-p38.photos.attach(io: 204, filename: 'nofacekey1.jpg')
-p38.photos.attach(io: 205, filename: 'nofacekey2.jpg')
-p38.photos.attach(io: 206, filename: 'nofacekey3.jpg')
+p38.photos.attach(io: file204, filename: 'nofacekey1.jpg')
+p38.photos.attach(io: file205, filename: 'nofacekey2.jpg')
+p38.photos.attach(io: file206, filename: 'nofacekey3.jpg')
 
 r133 = Review.create(body: 'Gorgeous!!! This took a long time to ship, but it was definitely worth the wait. Nice packaging, incredible detail and quality.', 
 author_id: u37.id, product_id: p38.id, rating: 5)
@@ -876,8 +876,8 @@ This is a R4(keyboard area including ESC,F1-F12,etc) keycap that best performanc
 file207 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/evakey1.jpg')
 file208 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/evakey2.jpg')
 
-p39.photos.attach(io: 207, filename: 'evakey1.jpg')
-p39.photos.attach(io: 208, filename: 'evakey2.jpg')
+p39.photos.attach(io: file207, filename: 'evakey1.jpg')
+p39.photos.attach(io: file208, filename: 'evakey2.jpg')
 
 
 r135 = Review.create(body: 'Excellent quality! The packaging and the keycap itself is very good.', 
@@ -892,19 +892,19 @@ author_id: u2.id, product_id: p39.id, rating: 3)
 
 
 
-p40 = Product.create(name:'Neon Genesis Evangelion - Asuka and Rei 3" Acrylic Charm (Double Sided)', description: "Originally designed artwork of Asuka and Rei from the classic anime, "Neon Genesis Evangelion" by GAINAX.
+p40 = Product.create(name:'Neon Genesis Evangelion - Asuka and Rei 3" Acrylic Charm (Double Sided)', description: "Originally designed artwork of Asuka and Rei from the classic anime, \"Neon Genesis Evangelion\" by GAINAX.
 \nPrinted professionally on 3mm acrylic, each charm is 3 inches in height not including the metal keyring chain.", 
     price: 14.00, seller_id: u44.id, category_id: 22)
 
-file209 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/evakey1.jpg')
-file210 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/evakey2.jpg')
-file211 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/evakey3.jpg')
-file212 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/evakey4.jpg')
+file209 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/evacharm1.jpg')
+file210 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/evacharm2.jpg')
+file211 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/evacharm3.jpg')
+file212 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/evacharm4.jpg')
 
-p40.photos.attach(io: 209, filename: 'evakey1.jpg')
-p40.photos.attach(io: 210, filename: 'evakey2.jpg')
-p40.photos.attach(io: 211, filename: 'evakey3.jpg')
-p40.photos.attach(io: 212, filename: 'evakey4.jpg')
+p40.photos.attach(io: file209, filename: 'evacharm1.jpg')
+p40.photos.attach(io: file210, filename: 'evacharm2.jpg')
+p40.photos.attach(io: file211, filename: 'evacharm3.jpg')
+p40.photos.attach(io: file212, filename: 'evacharm4.jpg')
 
 
 r137 = Review.create(body: 'So obsessed with this charm!! Super cute love this anime so much', 
@@ -926,10 +926,10 @@ file214 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-image
 file215 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/altron3.jpg')
 file216 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/altron4.jpg')
 
-p41.photos.attach(io: 213, filename: 'altron1.jpg')
-p41.photos.attach(io: 214, filename: 'altron2.jpg')
-p41.photos.attach(io: 215, filename: 'altron3.jpg')
-p41.photos.attach(io: 216, filename: 'altron4.jpg')
+p41.photos.attach(io: file213, filename: 'altron1.jpg')
+p41.photos.attach(io: file214, filename: 'altron2.jpg')
+p41.photos.attach(io: file215, filename: 'altron3.jpg')
+p41.photos.attach(io: file216, filename: 'altron4.jpg')
 
 
 r139 = Review.create(body: 'Just simply amazing craftsmanship. Even better communication throughout the whole process. In awe of the paintwork and will definitely order again.', 
@@ -947,7 +947,7 @@ A3 -High Quality Production digital Press Print 350 GSM (*buisness card thicknes
 
 file217 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/yourname1.jpg')
 
-p42.photos.attach(io: 217, filename: 'yourname1.jpg')
+p42.photos.attach(io: file217, filename: 'yourname1.jpg')
 
 r141 = Review.create(body: 'Beauitful print.  The artwork is great and will definitely order again.', 
 author_id: u7.id, product_id: p42.id, rating: 5)
@@ -965,10 +965,10 @@ file219 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-image
 file220 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/finnjake3.jpg')
 file221 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/finnjake4.jpg')
 
-p43.photos.attach(io: 218, filename: 'finnjake1.jpg')
-p43.photos.attach(io: 219, filename: 'finnjake2.jpg')
-p43.photos.attach(io: 220, filename: 'finnjake3.jpg')
-p43.photos.attach(io: 221, filename: 'finnjake4.jpg')
+p43.photos.attach(io: file218, filename: 'finnjake1.jpg')
+p43.photos.attach(io: file219, filename: 'finnjake2.jpg')
+p43.photos.attach(io: file220, filename: 'finnjake3.jpg')
+p43.photos.attach(io: file221, filename: 'finnjake4.jpg')
 
 
 r142 = Review.create(body: 'Very well made! Impressive.', 
@@ -990,8 +990,8 @@ file222 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-image
 file223 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/bubbeline2.jpg')
 
 
-p44.photos.attach(io: 222, filename: 'bubbeline1.jpg')
-p44.photos.attach(io: 223, filename: 'bubbeline2.jpg')
+p44.photos.attach(io: file222, filename: 'bubbeline1.jpg')
+p44.photos.attach(io: file223, filename: 'bubbeline2.jpg')
 
 r144 = Review.create(body: 'came in the most beautiful packaging! the pin is perfect too ♡', 
 author_id: u9.id, product_id: p44.id, rating: 5)
@@ -1016,7 +1016,7 @@ Photographic Art Print:",
 file224 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/korrasami1.jpg')
 
 
-p45.photos.attach(io: 224, filename: 'korrasami1.jpg')
+p45.photos.attach(io: file224, filename: 'korrasami1.jpg')
 
 r147 = Review.create(body: 'Got this for a friend\'s birthday and she was thrilled! Very fast shipping too! :D', 
 author_id: u12.id, product_id: p45.id, rating: 5)
@@ -1041,9 +1041,9 @@ file226 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-image
 file227 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/lsp3.jpg')
 
 
-p46.photos.attach(io: 225, filename: 'lsp1.jpg')
-p46.photos.attach(io: 226, filename: 'lsp2.jpg')
-p46.photos.attach(io: 227, filename: 'lsp3.jpg')
+p46.photos.attach(io: file225, filename: 'lsp1.jpg')
+p46.photos.attach(io: file226, filename: 'lsp2.jpg')
+p46.photos.attach(io: file227, filename: 'lsp3.jpg')
 
 r150 = Review.create(body: 'Nice design but shipping was a bit slow.', 
 author_id: u15.id, product_id: p46.id, rating: 3)
@@ -1074,10 +1074,10 @@ file231 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-image
 
 
 
-p47.photos.attach(io: 228, filename: 'jojohoodie1.jpg')
-p47.photos.attach(io: 229, filename: 'jojohoodie2.jpg')
-p47.photos.attach(io: 230, filename: 'jojohoodie3.jpg')
-p47.photos.attach(io: 231, filename: 'jojohoodie4.jpg')
+p47.photos.attach(io: file228, filename: 'jojohoodie1.jpg')
+p47.photos.attach(io: file229, filename: 'jojohoodie2.jpg')
+p47.photos.attach(io: file230, filename: 'jojohoodie3.jpg')
+p47.photos.attach(io: file231, filename: 'jojohoodie4.jpg')
 
 r154 = Review.create(body: 'Size is a lot smaller than expected', 
 author_id: u19.id, product_id: p47.id, rating: 3)
@@ -1106,9 +1106,9 @@ file234 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-image
 
 
 
-p47.photos.attach(io: 232, filename: 'inuyasha1.jpg')
-p47.photos.attach(io: 233, filename: 'inuyasha2.jpg')
-p47.photos.attach(io: 234, filename: 'inuyasha3.jpg')
+p47.photos.attach(io: file232, filename: 'inuyasha1.jpg')
+p47.photos.attach(io: file233, filename: 'inuyasha2.jpg')
+p47.photos.attach(io: file234, filename: 'inuyasha3.jpg')
 
 r158 = Review.create(body: 'I\'m a big fan of Inuyasha x Kagome and of acrylic keychains, so I think this is a wonderful keychain! I love it. The double sided nature of the artwork is super cute and gives the charm a lot of personality and the longer chain plus simple silver clasp compliment it nicer than say, the shorter rose-gold clasps that you often see on acrylic charms. The artwork has a layer of epoxy covering it on the side it was printed onto, so it\'s protected from being scratched off if it\'s on a key ring. It arrived fast and my overall buying experience was great.', 
 author_id: u23.id, product_id: p47.id, rating: 5)
@@ -1131,7 +1131,7 @@ p48 = Product.create(name:'Aesthetic Cowboy Bebop || Anime Vinyl Sticker', descr
 
 file235 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/cowboybebop1.jpg')
 
-p48.photos.attach(io: 235, filename: 'cowboybebop1.jpg')
+p48.photos.attach(io: file235, filename: 'cowboybebop1.jpg')
 
 
 r161 = Review.create(body: 'Absolutely stunning! The sticker quality is fantastic and the design, flawless.',
@@ -1148,7 +1148,7 @@ p49 = Product.create(name:'Ryuko Kill la Kill Double Sided Acrylic Charms 1.5"',
 
 file236 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/klk1.jpg')
 
-p49.photos.attach(io: 236, filename: 'klk1.jpg')
+p49.photos.attach(io: file236, filename: 'klk1.jpg')
 
 r163 = Review.create(body: 'Came with the perfect sticker as a bonus! I love it !',
 author_id: u28.id, product_id: p49.id, rating: 4)
@@ -1162,8 +1162,8 @@ p50 = Product.create(name:'symphogear holographic sticker', description: "a desi
 file237 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/symphogear1.jpg')
 file238 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/symphogear2.jpg')
 
-p50.photos.attach(io: 237, filename: 'symphogear1.jpg')
-p50.photos.attach(io: 238, filename: 'symphogear2.jpg')
+p50.photos.attach(io: file237, filename: 'symphogear1.jpg')
+p50.photos.attach(io: file238, filename: 'symphogear2.jpg')
 
 r164 = Review.create(body: 'Cute! Boyfriend loved it',
 author_id: u29.id, product_id: p50.id, rating: 4)
@@ -1187,11 +1187,11 @@ file241 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-image
 file242 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/snk4.jpg')
 file243 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/snk5.jpg')
 
-p50.photos.attach(io: 239, filename: 'snk1.jpg')
-p50.photos.attach(io: 240, filename: 'snk2.jpg')
-p50.photos.attach(io: 241, filename: 'snk3.jpg')
-p50.photos.attach(io: 242, filename: 'snk4.jpg')
-p50.photos.attach(io: 243, filename: 'snk5.jpg')
+p50.photos.attach(io: file239, filename: 'snk1.jpg')
+p50.photos.attach(io: file240, filename: 'snk2.jpg')
+p50.photos.attach(io: file241, filename: 'snk3.jpg')
+p50.photos.attach(io: file242, filename: 'snk4.jpg')
+p50.photos.attach(io: file243, filename: 'snk5.jpg')
 
 r167 = Review.create(body: 'Amazing backpack! I love SNK!! YAAAAAAA',
 author_id: u32.id, product_id: p50.id, rating: 4)
@@ -1213,7 +1213,7 @@ p51 = Product.create(name:'Polymer Clay Umaru -Chan Chibi Figurine Keychain or B
 file244 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/umaru1.jpg')
 
 
-p51.photos.attach(io: 244, filename: 'umaru1.jpg')
+p51.photos.attach(io: file244, filename: 'umaru1.jpg')
 
 
 r170 = Review.create(body: 'Great attention to detail and a pleasure to work with!',
@@ -1232,9 +1232,9 @@ file246 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-image
 file247 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/yugioh3.jpg')
 
 
-p52.photos.attach(io: 245, filename: 'yugioh1.jpg')
-p52.photos.attach(io: 246, filename: 'yugioh2.jpg')
-p52.photos.attach(io: 247, filename: 'yugioh3.jpg')
+p52.photos.attach(io: file245, filename: 'yugioh1.jpg')
+p52.photos.attach(io: file246, filename: 'yugioh2.jpg')
+p52.photos.attach(io: file247, filename: 'yugioh3.jpg')
 
 
 r171 = Review.create(body: 'Omg. My boyfriend’s brother is gonna LOVE THIS. There was some literal technical difficulties, but things happen. I probably would have sent it in a box, but it was still nicely bubble-wrapped and item appeared perfectly fine. Definitely still worth the wait, and I’m super psyched to give to him today. 😁',
@@ -1257,10 +1257,10 @@ file251 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-image
 
 
 
-p53.photos.attach(io: 248, filename: 'applejack1.jpg')
-p53.photos.attach(io: 249, filename: 'applejack2.jpg')
-p53.photos.attach(io: 250, filename: 'applejack3.jpg')
-p53.photos.attach(io: 251, filename: 'applejack4.jpg')
+p53.photos.attach(io: file248, filename: 'applejack1.jpg')
+p53.photos.attach(io: file249, filename: 'applejack2.jpg')
+p53.photos.attach(io: file250, filename: 'applejack3.jpg')
+p53.photos.attach(io: file251, filename: 'applejack4.jpg')
 
 
 
@@ -1292,10 +1292,10 @@ file255 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-image
 
 
 
-p54.photos.attach(io: 252, filename: 'peachshirt1.jpg')
-p54.photos.attach(io: 253, filename: 'peachshirt2.jpg')
-p54.photos.attach(io: 254, filename: 'peachshirt3.jpg')
-p54.photos.attach(io: 255, filename: 'peachshirt4.jpg')
+p54.photos.attach(io: file252, filename: 'peachshirt1.jpg')
+p54.photos.attach(io: file253, filename: 'peachshirt2.jpg')
+p54.photos.attach(io: file254, filename: 'peachshirt3.jpg')
+p54.photos.attach(io: file255, filename: 'peachshirt4.jpg')
 
 
 
@@ -1320,9 +1320,9 @@ file256 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-image
 file257 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/switchsailormoon2.jpg')
 file258 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/switchsailormoon3.jpg')
 
-p55.photos.attach(io: 256, filename: 'switchsailormoon1.jpg')
-p55.photos.attach(io: 257, filename: 'switchsailormoon2.jpg')
-p55.photos.attach(io: 258, filename: 'switchsailormoon3.jpg')
+p55.photos.attach(io: file256, filename: 'switchsailormoon1.jpg')
+p55.photos.attach(io: file257, filename: 'switchsailormoon2.jpg')
+p55.photos.attach(io: file258, filename: 'switchsailormoon3.jpg')
 
 r180 = Review.create(body: 'These are soooo pretty!! ',
 author_id: u38.id, product_id: p55.id, rating: 5)
@@ -1335,13 +1335,13 @@ author_id: u38.id, product_id: p55.id, rating: 5)
 p56 = Product.create(name:'Shiba Inu Earrings - Hand Painted Wooden Dog Studs with Hypoallergenic Posts', description: "A pair of cute shiba inu earrings engraved from 3mm Cherry wood and hand painted with white detail. These earrings are attached to stainless steel hypoallergenic posts for comfortable wearing and are coated in a satin clear coat to minimise paint scratching.",
     price: 16.63, seller_id: u36.id, category_id: 22)
 
-file259 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/shibaearring1.jpg')
-file260 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/shibaearring2.jpg')
-file261 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/shibaearring3.jpg')
+file259 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/shibeearring1.jpg')
+file260 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/shibeearring2.jpg')
+file261 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/shibeearring3.jpg')
 
-p56.photos.attach(io: 259, filename: 'shibaearring1.jpg')
-p56.photos.attach(io: 260, filename: 'shibaearring2.jpg')
-p56.photos.attach(io: 261, filename: 'shibaearring3.jpg')
+p56.photos.attach(io: file259, filename: 'shibeearring1.jpg')
+p56.photos.attach(io: file260, filename: 'shibeearring2.jpg')
+p56.photos.attach(io: file261, filename: 'shibeearring3.jpg')
 
 r181 = Review.create(body: 'These are the cutest earrings that I\'ve ever seen! I love even the small details. Thank you so much! Highly recommended.',
 author_id: u37.id, product_id: p56.id, rating: 5)
@@ -1361,8 +1361,8 @@ file262 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-image
 file263 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/koikey2.jpg')
 
 
-p57.photos.attach(io: 262, filename: 'koikey1.jpg')
-p57.photos.attach(io: 263, filename: 'koikey2.jpg')
+p57.photos.attach(io: file262, filename: 'koikey1.jpg')
+p57.photos.attach(io: file263, filename: 'koikey2.jpg')
 
 r184 = Review.create(body: 'This is a beautiful key! It fits well and is well crafted. The seller packed it extremely well - no chance of damage. Shipping was relatively fast given it was international. Really great transaction! Thank you!',
 author_id: u34.id, product_id: p57.id, rating: 5)
@@ -1381,9 +1381,9 @@ file265 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-image
 file266 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/fruitkey3.jpg')
 
 
-p58.photos.attach(io: 264, filename: 'fruitkey1.jpg')
-p58.photos.attach(io: 265, filename: 'fruitkey2.jpg')
-p58.photos.attach(io: 266, filename: 'fruitkey3.jpg')
+p58.photos.attach(io: file264, filename: 'fruitkey1.jpg')
+p58.photos.attach(io: file265, filename: 'fruitkey2.jpg')
+p58.photos.attach(io: file266, filename: 'fruitkey3.jpg')
 
 r186 = Review.create(body: 'Beautiful keycaps, great communication with seller.',
 author_id: u32.id, product_id: p58.id, rating: 5)
@@ -1407,10 +1407,10 @@ file269 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-image
 file270 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/jellykey4.jpg')
 
 
-p59.photos.attach(io: 267, filename: 'jellykey1.jpg')
-p59.photos.attach(io: 268, filename: 'jellykey2.jpg')
-p59.photos.attach(io: 269, filename: 'jellykey3.jpg')
-p59.photos.attach(io: 270, filename: 'jellykey4.jpg')
+p59.photos.attach(io: file267, filename: 'jellykey1.jpg')
+p59.photos.attach(io: file268, filename: 'jellykey2.jpg')
+p59.photos.attach(io: file269, filename: 'jellykey3.jpg')
+p59.photos.attach(io: file270, filename: 'jellykey4.jpg')
 
 r188 = Review.create(body: 'Love it .. just beautiful looks just like picture money well spent',
 author_id: u32.id, product_id: p59.id, rating: 5)
@@ -1436,9 +1436,9 @@ file272 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-image
 file273 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/pokekey3.jpg')
 
 
-p60.photos.attach(io: 271, filename: 'pokekey1.jpg')
-p60.photos.attach(io: 272, filename: 'pokekey2.jpg')
-p60.photos.attach(io: 273, filename: 'pokekey3.jpg')
+p60.photos.attach(io: file271, filename: 'pokekey1.jpg')
+p60.photos.attach(io: file272, filename: 'pokekey2.jpg')
+p60.photos.attach(io: file273, filename: 'pokekey3.jpg')
 
 r190 = Review.create(body: 'My son loves it. Thanks!!!
 Shipping was a bit slow but seller communicated the delays well.',
@@ -1463,9 +1463,9 @@ file275 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-image
 file276 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/cherrykey3.jpg')
 
 
-p61.photos.attach(io: 274, filename: 'cherrykey1.jpg')
-p61.photos.attach(io: 275, filename: 'cherrykey2.jpg')
-p61.photos.attach(io: 276, filename: 'cherrykey3.jpg')
+p61.photos.attach(io: file274, filename: 'cherrykey1.jpg')
+p61.photos.attach(io: file275, filename: 'cherrykey2.jpg')
+p61.photos.attach(io: file276, filename: 'cherrykey3.jpg')
 
 r193 = Review.create(body: 'Very nicely made keycaps! They fit well on the keyboard',
 author_id: u27.id, product_id: p61.id, rating: 5)
@@ -1476,7 +1476,7 @@ author_id: u26.id, product_id: p61.id, rating: 4)
 r195 = Review.create(body: "Absolutely gorgeous keycaps! Definitely recommend these. I received a set that was too small to fit on my keyboard, which the seller stated had shrunk too much during the curing process. They let me keep the defective set and gladly sent out a replacement via expedited shipping which fit perfectly now.
 \n
 P.S. The caps do take a bit of extra force to push into the switch correctly, so be careful when you push them down so as to not damage the switch.",
-author_id: u225.id, product_id: p61.id, rating: 5)
+author_id: u25.id, product_id: p61.id, rating: 5)
 
 
 
@@ -1491,8 +1491,8 @@ file277 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-image
 file278 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/crystalkey2.jpg')
 
 
-p62.photos.attach(io: 277, filename: 'crystalkey1.jpg')
-p62.photos.attach(io: 278, filename: 'crystalkey2.jpg')
+p62.photos.attach(io: file277, filename: 'crystalkey1.jpg')
+p62.photos.attach(io: file278, filename: 'crystalkey2.jpg')
 
 r196 = Review.create(body: 'Looks really cool lit up on my keyboard',
 author_id: u24.id, product_id: p62.id, rating: 4)
@@ -1509,9 +1509,9 @@ file280 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-image
 file281 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/hp13.jpg')
 
 
-p63.photos.attach(io: 279, filename: 'hp11.jpg')
-p63.photos.attach(io: 280, filename: 'hp12.jpg')
-p63.photos.attach(io: 281, filename: 'hp13.jpg')
+p63.photos.attach(io: file279, filename: 'hp11.jpg')
+p63.photos.attach(io: file280, filename: 'hp12.jpg')
+p63.photos.attach(io: file281, filename: 'hp13.jpg')
 
 r197 = Review.create(body: 'I love it! It arrived so quickly and the quality is better than I expected, and it’s really sturdy. The chain is on the more fragile side because I think it’s heavy plastic and not some sort of metal, but that’s easily replaced if you wanted to. It’s a great replica and I’m thrilled. Thank you!!',
 author_id: u24.id, product_id: p63.id, rating: 5)
@@ -1535,7 +1535,7 @@ p64 = Product.create(name: 'Elven ears (a pair). Earcuffs, Elf ears, cosplay fan
 
 file282 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/earcuff1.jpg')
 
-p64.photos.attach(io: 282, filename: 'earcuff1.jpg')
+p64.photos.attach(io: file282, filename: 'earcuff1.jpg')
 
 r201 = Review.create(body: 'I love love love this item so much!! Came pretty quick even though I’m from the US and the packaging was protective and neat. Will definitely be purchasing from this shop again!! Thank you!',
 author_id: u24.id, product_id: p64.id, rating: 5)
@@ -1559,8 +1559,8 @@ p65 = Product.create(name: 'Gudetama Just Chillin Enamel Pin // Gudetama Pins //
 file283 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/gudetama1.jpg')
 file284 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/gudetama2.jpg')
 
-p65.photos.attach(io: 283, filename: 'gudetama1.jpg')
-p65.photos.attach(io: 284, filename: 'gudetama2.jpg')
+p65.photos.attach(io: file283, filename: 'gudetama1.jpg')
+p65.photos.attach(io: file284, filename: 'gudetama2.jpg')
 
 r204 = Review.create(body: 'the cutest pin ever thank you!!
 ',
@@ -1579,9 +1579,9 @@ file285 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-image
 file286 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/zeldawallet2.jpg')
 file287 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/zeldawallet3.jpg')
 
-p66.photos.attach(io: 285, filename: 'zeldawallet1.jpg')
-p66.photos.attach(io: 286, filename: 'zeldawallet2.jpg')
-p66.photos.attach(io: 287, filename: 'zeldawallet3.jpg')
+p66.photos.attach(io: file285, filename: 'zeldawallet1.jpg')
+p66.photos.attach(io: file286, filename: 'zeldawallet2.jpg')
+p66.photos.attach(io: file287, filename: 'zeldawallet3.jpg')
 
 r206 = Review.create(body: 'I bought this wallet as a Christmas gift for my partner, and it arrived quickly and was well worth the money! He is really enjoying the wallet, too. I was also very happy with how it was packaged with so much care. Definitely 5/5 stars!',
 author_id: u19.id, product_id: p66.id, rating: 5)
@@ -1602,9 +1602,9 @@ file288 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-image
 file289 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/acshirt2.jpg')
 file290 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/acshirt3.jpg')
 
-p67.photos.attach(io: 288, filename: 'acshirt1.jpg')
-p67.photos.attach(io: 289, filename: 'acshirt2.jpg')
-p67.photos.attach(io: 290, filename: 'acshirt3.jpg')
+p67.photos.attach(io: file288, filename: 'acshirt1.jpg')
+p67.photos.attach(io: file289, filename: 'acshirt2.jpg')
+p67.photos.attach(io: file290, filename: 'acshirt3.jpg')
 
 r208 = Review.create(body: 'It arrived just as advertised and is such a soft shirt!',
 author_id: u19.id, product_id: p67.id, rating: 5)
@@ -1625,10 +1625,10 @@ file292 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-image
 file293 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/aclamp3.jpg')
 file294 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/aclamp4.jpg')
 
-p68.photos.attach(io: 291, filename: 'aclamp1.jpg')
-p68.photos.attach(io: 292, filename: 'aclamp2.jpg')
-p68.photos.attach(io: 293, filename: 'aclamp3.jpg')
-p68.photos.attach(io: 294, filename: 'aclamp4.jpg')
+p68.photos.attach(io: file291, filename: 'aclamp1.jpg')
+p68.photos.attach(io: file292, filename: 'aclamp2.jpg')
+p68.photos.attach(io: file293, filename: 'aclamp3.jpg')
+p68.photos.attach(io: file294, filename: 'aclamp4.jpg')
 
 r210 = Review.create(body: 'AHHHHH, this was amazing!! First, this came is SO fast. Second, the quality is top notch. I have nothing to say but kudos. Wonderfully made, and it looks so cute. I can\'t wait to add this above my desk area. If you were thinking of getting this, know it was worth every penny.',
 author_id: u16.id, product_id: p68.id, rating: 5)
@@ -1653,9 +1653,9 @@ file295 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-image
 file296 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/acpin2.jpg')
 file297 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/acpin3.jpg')
 
-p69.photos.attach(io: 295, filename: 'acpin1.jpg')
-p69.photos.attach(io: 296, filename: 'acpin2.jpg')
-p69.photos.attach(io: 297, filename: 'acpin3.jpg')
+p69.photos.attach(io: file295, filename: 'acpin1.jpg')
+p69.photos.attach(io: file296, filename: 'acpin2.jpg')
+p69.photos.attach(io: file297, filename: 'acpin3.jpg')
 
 r212 = Review.create(body: 'So adorable! I put them both on my purse 😍',
 author_id: u13.id, product_id: p69.id, rating: 5)
@@ -1680,9 +1680,9 @@ file298 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-image
 file299 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/poro2.jpg')
 file300 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/poro3.jpg')
 
-p70.photos.attach(io: 298, filename: 'poro1.jpg')
-p70.photos.attach(io: 299, filename: 'poro2.jpg')
-p70.photos.attach(io: 300, filename: 'poro3.jpg')
+p70.photos.attach(io: file298, filename: 'poro1.jpg')
+p70.photos.attach(io: file299, filename: 'poro2.jpg')
+p70.photos.attach(io: file300, filename: 'poro3.jpg')
 
 r215 = Review.create(body: 'Not much else to say. Obviously I would buy again. Great quality. Only if there was a Leona and a Graves, I think I would have the entire collection of all my mains over the years at that point XD Send help.',
 author_id: u10.id, product_id: p70.id, rating: 5)
@@ -1699,8 +1699,8 @@ p71 = Product.create(name: 'Gengar Pokemon Keycap || For Mechanical Cherry MX sw
 file301 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/gengarkey1.jpg')
 file302 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/gengarkey2.jpg')
 
-p71.photos.attach(io: 301, filename: 'gengarkey1.jpg')
-p71.photos.attach(io: 302, filename: 'gengarkey2.jpg')
+p71.photos.attach(io: file301, filename: 'gengarkey1.jpg')
+p71.photos.attach(io: file302, filename: 'gengarkey2.jpg')
 
 r217 = Review.create(body: 'After taking time to use the keycap for a considerable about of time, it’s very well done for what it is. Thanks.',
 author_id: u7.id, product_id: p71.id, rating: 5)
@@ -1720,8 +1720,8 @@ p72 = Product.create(name: 'Crochet Chocobo from Final Fantasy Amigurumi/ Plushi
 file303 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/ff11.jpg')
 file304 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/ff12.jpg')
 
-p72.photos.attach(io: 303, filename: 'ff11.jpg')
-p72.photos.attach(io: 304, filename: 'ff12.jpg')
+p72.photos.attach(io: file303, filename: 'ff11.jpg')
+p72.photos.attach(io: file304, filename: 'ff12.jpg')
 
 r219 = Review.create(body: 'This little guy is so adorable and I can\'t wait to get another one! ❤️',
 author_id: u7.id, product_id: p72.id, rating: 5)
@@ -1741,9 +1741,9 @@ file305 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-image
 file306 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/ff2.jpg')
 file307 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/ff3.jpg')
 
-p73.photos.attach(io: 305, filename: 'ff1.jpg')
-p73.photos.attach(io: 306, filename: 'ff2.jpg')
-p73.photos.attach(io: 307, filename: 'ff3.jpg')
+p73.photos.attach(io: file305, filename: 'ff1.jpg')
+p73.photos.attach(io: file306, filename: 'ff2.jpg')
+p73.photos.attach(io: file307, filename: 'ff3.jpg')
 
 r220 = Review.create(body: 'The moogle is absolutely adorable! Very nicely made and the size is perfect. The seller was very helpful and had great communication. I will be purchasing again in the future!',
 author_id: u7.id, product_id: p73.id, rating: 5)
@@ -1764,7 +1764,7 @@ Prints are shipped via a 2\" diameter tube. We know that some buyers prefer thei
 
 file308 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/cordelia1.jpg')
 
-p74.photos.attach(io: 308, filename: 'cordelia1.jpg')
+p74.photos.attach(io: file308, filename: 'cordelia1.jpg')
 
 r223 = Review.create(body: 'Was a birthday present for a very good friend who was overjoyed! Thank you for the fast shipping!',
 author_id: u6.id, product_id: p74.id, rating: 5)
@@ -1777,7 +1777,7 @@ p75 = Product.create(name: 'Cuphead Gaming Dictionary Art', description: "Cuphea
 
 file309 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/cuphead1.jpg')
 
-p75.photos.attach(io: 309, filename: 'cuphead1.jpg')
+p75.photos.attach(io: file309, filename: 'cuphead1.jpg')
 
 r224 = Review.create(body: 'Very cute and super creative!',
 author_id: u5.id, product_id: p75.id, rating: 5)
@@ -1796,8 +1796,8 @@ Comes with shield and belt",
 file310 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/zeldashield1.jpg')
 file311 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/zeldashield2.jpg')
 
-p76.photos.attach(io: 310, filename: 'zeldashield1.jpg')
-p76.photos.attach(io: 311, filename: 'zeldashield2.jpg')
+p76.photos.attach(io: file310, filename: 'zeldashield1.jpg')
+p76.photos.attach(io: file311, filename: 'zeldashield2.jpg')
 
 r225 = Review.create(body: 'This was a present for my best friend. He said in 36 years he has never gotten anything as cool. His favorite gift Ever!',
 author_id: u4.id, product_id: p76.id, rating: 5)
@@ -1818,8 +1818,8 @@ This item is 3D printed at 20% infill, very sturdy. Printed in black PLA plastic
 file312 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/destiny1.jpg')
 file313 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/destiny2.jpg')
 
-p77.photos.attach(io: 312, filename: 'destiny1.jpg')
-p77.photos.attach(io: 313, filename: 'destiny2.jpg')
+p77.photos.attach(io: file312, filename: 'destiny1.jpg')
+p77.photos.attach(io: file313, filename: 'destiny2.jpg')
 
 r227 = Review.create(body: 'Really good quality and fast shipping. Also many options for customization without extra cost.',
 author_id: u2.id, product_id: p77.id, rating: 5)
@@ -1839,8 +1839,8 @@ It comes with 22 inches long silver plated chain.",
 file314 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/kh1.jpg')
 file315 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/kh2.jpg')
 
-p78.photos.attach(io: 314, filename: 'kh1.jpg')
-p78.photos.attach(io: 315, filename: 'kh2.jpg')
+p78.photos.attach(io: file314, filename: 'kh1.jpg')
+p78.photos.attach(io: file315, filename: 'kh2.jpg')
 
 r229 = Review.create(body: 'Absolutely beautiful! Bought this as a surprise for my boyfriend and he absolutely loves it! He wears it everyday! It hangs perfectly and is just the right size to wear it’s subtle and looks like it does on Sora. I did a lot of research to try to find a good quality version of this and this was the best I found, the quality and craftsmanship is worth the price! Thank you!',
 author_id: u8.id, product_id: p78.id, rating: 5)
@@ -1859,7 +1859,7 @@ Comes in an organza gift bag but many people have asked for them to be gift wrap
 
 file316 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/kh11.jpg')
 
-p79.photos.attach(io: 316, filename: 'kh11.jpg')
+p79.photos.attach(io: file316, filename: 'kh11.jpg')
 
 r231 = Review.create(body: 'This necklace exceeded my expectations by a long shot! I can\'t believe how beautiful it is and it\'s the perfect size and weight. People that don\'t even know what Kingdom Hearts is are complimenting the necklace. Great purchase!',
 author_id: u8.id, product_id: p79.id, rating: 5)
@@ -1882,10 +1882,10 @@ file318 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-image
 file319 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/hearthstone3.jpg')
 file320 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/hearthstone4.jpg')
 
-p80.photos.attach(io: 317, filename: 'hearthstone1.jpg')
-p80.photos.attach(io: 318, filename: 'hearthstone2.jpg')
-p80.photos.attach(io: 319, filename: 'hearthstone3.jpg')
-p80.photos.attach(io: 320, filename: 'hearthstone4.jpg')
+p80.photos.attach(io: file317, filename: 'hearthstone1.jpg')
+p80.photos.attach(io: file318, filename: 'hearthstone2.jpg')
+p80.photos.attach(io: file319, filename: 'hearthstone3.jpg')
+p80.photos.attach(io: file320, filename: 'hearthstone4.jpg')
 
 r233 = Review.create(body: 'Absolutely perfect! They were lightweight and just the right length. The glow takes a bit so I recommend putting under a good light for quite a bit before you go into a dark area.',
 author_id: u48.id, product_id: p80.id, rating: 5)
@@ -1906,10 +1906,10 @@ file322 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-image
 file323 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/wow3.jpg')
 file324 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/wow4.jpg')
 
-p81.photos.attach(io: 321, filename: 'wow1.jpg')
-p81.photos.attach(io: 322, filename: 'wow2.jpg')
-p81.photos.attach(io: 323, filename: 'wow3.jpg')
-p81.photos.attach(io: 324, filename: 'wow4.jpg')
+p81.photos.attach(io: file321, filename: 'wow1.jpg')
+p81.photos.attach(io: file322, filename: 'wow2.jpg')
+p81.photos.attach(io: file323, filename: 'wow3.jpg')
+p81.photos.attach(io: file324, filename: 'wow4.jpg')
 
 r235 = Review.create(body: "The pendant is perfect! The craftsmanship and attention to detail is amazing.\n
     Shipping was very fast and everything was packaged very well. Definitely will purchase from again. Thank you!",
@@ -1937,10 +1937,10 @@ file326 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-image
 file327 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/monsterhunter3.jpg')
 file328 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/monsterhunter4.jpg')
 
-p82.photos.attach(io: 325, filename: 'monsterhunter1.jpg')
-p82.photos.attach(io: 326, filename: 'monsterhunter2.jpg')
-p82.photos.attach(io: 327, filename: 'monsterhunter3.jpg')
-p82.photos.attach(io: 328, filename: 'monsterhunter4.jpg')
+p82.photos.attach(io: file325, filename: 'monsterhunter1.jpg')
+p82.photos.attach(io: file326, filename: 'monsterhunter2.jpg')
+p82.photos.attach(io: file327, filename: 'monsterhunter3.jpg')
+p82.photos.attach(io: file328, filename: 'monsterhunter4.jpg')
 
 r238 = Review.create(body: "I received a wonderful blue mask.
 it is amazing! !
@@ -1968,10 +1968,10 @@ file330 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-image
 file331 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/personaheadphone3.jpg')
 file332 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/personaheadphone4.jpg')
 
-p83.photos.attach(io: 329, filename: 'personaheadphone1.jpg')
-p83.photos.attach(io: 330, filename: 'personaheadphone2.jpg')
-p83.photos.attach(io: 331, filename: 'personaheadphone3.jpg')
-p83.photos.attach(io: 332, filename: 'personaheadphone4.jpg')
+p83.photos.attach(io: file329, filename: 'personaheadphone1.jpg')
+p83.photos.attach(io: file330, filename: 'personaheadphone2.jpg')
+p83.photos.attach(io: file331, filename: 'personaheadphone3.jpg')
+p83.photos.attach(io: file332, filename: 'personaheadphone4.jpg')
 
 r241 = Review.create(body: "Very impressed with the quality. It is beautiful and any persona fan would love it. In addition, it was sent with nails, a wall mount, and mounting tape. I was not concerned with the method of getting this mounted, but this made things even easier for me. Definitely recommend.
 ",
@@ -1995,10 +1995,10 @@ file334 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-image
 file335 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/playstation3.jpg')
 file336 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/playstation4.jpg')
 
-p84.photos.attach(io: 333, filename: 'playstation1.jpg')
-p84.photos.attach(io: 334, filename: 'playstation2.jpg')
-p84.photos.attach(io: 335, filename: 'playstation3.jpg')
-p84.photos.attach(io: 336, filename: 'playstation4.jpg')
+p84.photos.attach(io: file333, filename: 'playstation1.jpg')
+p84.photos.attach(io: file334, filename: 'playstation2.jpg')
+p84.photos.attach(io: file335, filename: 'playstation3.jpg')
+p84.photos.attach(io: file336, filename: 'playstation4.jpg')
 
 r244 = Review.create(body: "It's perfect! Such a cute little controller!",
 author_id: u40.id, product_id: p84.id, rating: 5)
@@ -2018,8 +2018,8 @@ file337 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-image
 file338 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/gtahat2.jpg')
 
 
-p85.photos.attach(io: 337, filename: 'gtahat1.jpg')
-p85.photos.attach(io: 338, filename: 'gtahat2.jpg')
+p85.photos.attach(io: file337, filename: 'gtahat1.jpg')
+p85.photos.attach(io: file338, filename: 'gtahat2.jpg')
 
 
 r247 = Review.create(body: "The seller was such a pleasure to work with! Fast communication, arrived very quickly, great quality product as well. My son loves his new hat. If you’re looking for a win win this is the shop for you 😊",
@@ -2052,8 +2052,8 @@ file339 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-image
 file340 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/maplestory2.jpg')
 
 
-p86.photos.attach(io: 339, filename: 'maplestory1.jpg')
-p86.photos.attach(io: 340, filename: 'maplestory2.jpg')
+p86.photos.attach(io: file339, filename: 'maplestory1.jpg')
+p86.photos.attach(io: file340, filename: 'maplestory2.jpg')
 
 
 r250 = Review.create(body: "Cute! I love it so much!",
@@ -2082,10 +2082,10 @@ file343 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-image
 file344 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/nier4.jpg')
 
 
-p87.photos.attach(io: 341, filename: 'nier1.jpg')
-p87.photos.attach(io: 342, filename: 'nier2.jpg')
-p87.photos.attach(io: 343, filename: 'nier3.jpg')
-p87.photos.attach(io: 344, filename: 'nier4.jpg')
+p87.photos.attach(io: file341, filename: 'nier1.jpg')
+p87.photos.attach(io: file342, filename: 'nier2.jpg')
+p87.photos.attach(io: file343, filename: 'nier3.jpg')
+p87.photos.attach(io: file344, filename: 'nier4.jpg')
 
 
 r253 = Review.create(body: "The prints are beautiful and the paper is top notch. Love them!!!",
@@ -2112,9 +2112,9 @@ file346 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-image
 file347 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/cardcaptor3.jpg')
 
 
-p88.photos.attach(io: 345, filename: 'cardcaptor1.jpg')
-p88.photos.attach(io: 346, filename: 'cardcaptor2.jpg')
-p88.photos.attach(io: 347, filename: 'cardcaptor3.jpg')
+p88.photos.attach(io: file345, filename: 'cardcaptor1.jpg')
+p88.photos.attach(io: file346, filename: 'cardcaptor2.jpg')
+p88.photos.attach(io: file347, filename: 'cardcaptor3.jpg')
 
 
 r257 = Review.create(body: "",
@@ -2138,10 +2138,10 @@ file350 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-image
 file351 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/thankunext4.jpg')
 
 
-p89.photos.attach(io: 348, filename: 'thankunext1.jpg')
-p89.photos.attach(io: 349, filename: 'thankunext2.jpg')
-p89.photos.attach(io: 350, filename: 'thankunext3.jpg')
-p89.photos.attach(io: 351, filename: 'thankunext4.jpg')
+p89.photos.attach(io: file348, filename: 'thankunext1.jpg')
+p89.photos.attach(io: file349, filename: 'thankunext2.jpg')
+p89.photos.attach(io: file350, filename: 'thankunext3.jpg')
+p89.photos.attach(io: file351, filename: 'thankunext4.jpg')
 
 
 r259 = Review.create(body: "",
@@ -2168,7 +2168,7 @@ Based off of the original meme itself, this goofy picture is worth it in every w
 
 file352 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/elmo1.jpg')
 
-p90.photos.attach(io: 352, filename: 'elmo1.jpg')
+p90.photos.attach(io: file352, filename: 'elmo1.jpg')
 
 r262 = Review.create(body: "",
 author_id: u29.id, product_id: p90.id, rating: 4)
@@ -2182,8 +2182,8 @@ p91 = Product.create(name: 'Spongebob Squidward meme painting (hand painted)', d
 file353 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/squidward1.jpg')
 file354 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/squidward2.jpg')
 
-p91.photos.attach(io: 353, filename: 'squidward1.jpg')
-p91.photos.attach(io: 354, filename: 'squidward2.jpg')
+p91.photos.attach(io: file353, filename: 'squidward1.jpg')
+p91.photos.attach(io: file354, filename: 'squidward2.jpg')
 
 r263 = Review.create(body: "",
 author_id: u28.id, product_id: p91.id, rating: 4)
@@ -2199,9 +2199,9 @@ file355 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-image
 file356 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/peaceduck2.jpg')
 file357 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/peaceduck3.jpg')
 
-p92.photos.attach(io: 355, filename: 'peaceduck1.jpg')
-p92.photos.attach(io: 356, filename: 'peaceduck2.jpg')
-p92.photos.attach(io: 357, filename: 'peaceduck3.jpg')
+p92.photos.attach(io: file355, filename: 'peaceduck1.jpg')
+p92.photos.attach(io: file356, filename: 'peaceduck2.jpg')
+p92.photos.attach(io: file357, filename: 'peaceduck3.jpg')
 
 r264 = Review.create(body: "Hilarious. My friend loved it",
 author_id: u26.id, product_id: p92.id, rating: 4)
@@ -2218,8 +2218,8 @@ SpongeBob Ight Imma Head Out Meme Embroidered Beanie. The beanie is 12\" long wh
 file358 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/spongebob1.jpg')
 file359 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/spongebob2.jpg')
 
-p93.photos.attach(io: 358, filename: 'spongebob1.jpg')
-p93.photos.attach(io: 359, filename: 'spongebob2.jpg')
+p93.photos.attach(io: file358, filename: 'spongebob1.jpg')
+p93.photos.attach(io: file359, filename: 'spongebob2.jpg')
 
 r265 = Review.create(body: "The hat is just as gorgeous & hilarious as it is in the picture I got sooo many compliments for it!",
 author_id: u24.id, product_id: p93.id, rating: 4)
@@ -2242,10 +2242,10 @@ file361 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-image
 file362 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/dogeastronaut3.jpg')
 file363 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/dogeastronaut4.jpg')
 
-p94.photos.attach(io: 360, filename: 'dogeastronaut1.jpg')
-p94.photos.attach(io: 361, filename: 'dogeastronaut2.jpg')
-p94.photos.attach(io: 362, filename: 'dogeastronaut3.jpg')
-p94.photos.attach(io: 363, filename: 'dogeastronaut4.jpg')
+p94.photos.attach(io: file360, filename: 'dogeastronaut1.jpg')
+p94.photos.attach(io: file361, filename: 'dogeastronaut2.jpg')
+p94.photos.attach(io: file362, filename: 'dogeastronaut3.jpg')
+p94.photos.attach(io: file363, filename: 'dogeastronaut4.jpg')
 
 r267 = Review.create(body: "I bought this for my son for Christmas and he loved it! Great quality, great size options.. super rad, thanks so much :)",
 author_id: u22.id, product_id: p94.id, rating: 4)
@@ -2264,8 +2264,8 @@ file364 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-image
 file365 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/youtried2.jpg')
 
 
-p95.photos.attach(io: 364, filename: 'youtried1.jpg')
-p95.photos.attach(io: 365, filename: 'youtried2.jpg')
+p95.photos.attach(io: file364, filename: 'youtried1.jpg')
+p95.photos.attach(io: file365, filename: 'youtried2.jpg')
 
 
 r269 = Review.create(body: "Such great quality. Love it",
@@ -2283,7 +2283,7 @@ p96 = Product.create(name: 'Owen Wilson "WOW" Meme Mouse Pad, Neoprene Mousepad'
 
 file366 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/owenwilson1.jpg')
 
-p96.photos.attach(io: 366, filename: 'owenwilson1.jpg')
+p96.photos.attach(io: file366, filename: 'owenwilson1.jpg')
 
 r71 = Review.create(body: "Good quality item. Item shipped quickly in time for Christmas.",
 author_id: u18.id, product_id: p96.id, rating: 4)
@@ -2301,8 +2301,8 @@ p97 = Product.create(name: 'Per My Last Email Funny Work Meme T-Shirt', descript
 file367 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/email1.jpg')
 file368 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/email2.jpg')
 
-p97.photos.attach(io: 367, filename: 'email1.jpg')
-p97.photos.attach(io: 368, filename: 'email2.jpg')
+p97.photos.attach(io: file367, filename: 'email1.jpg')
+p97.photos.attach(io: file368, filename: 'email2.jpg')
 
 
 
@@ -2313,8 +2313,8 @@ p98 = Product.create(name: 'BTS Jungkook "Jungshook" Meme T-Shirt', description:
 file369 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/bts1.jpg')
 file370 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/bts2.jpg')
 
-p98.photos.attach(io: 369, filename: 'bts1.jpg')
-p98.photos.attach(io: 370, filename: 'bts2.jpg')
+p98.photos.attach(io: file369, filename: 'bts1.jpg')
+p98.photos.attach(io: file370, filename: 'bts2.jpg')
 
 
 r273 = Review.create(body: "Love my shirt. Can't wait to wear it!",
@@ -2330,9 +2330,9 @@ file371 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-image
 file372 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/knuckles2.jpg')
 file373 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/knuckles3.jpg')
 
-p99.photos.attach(io: 371, filename: 'knuckles1.jpg')
-p99.photos.attach(io: 372, filename: 'knuckles2.jpg')
-p99.photos.attach(io: 373, filename: 'knuckles3.jpg')
+p99.photos.attach(io: file371, filename: 'knuckles1.jpg')
+p99.photos.attach(io: file372, filename: 'knuckles2.jpg')
+p99.photos.attach(io: file373, filename: 'knuckles3.jpg')
 
 
 r274 = Review.create(body: "A plush well designed, neat and very faithful to the original character. I am very grateful. Thank you very much !!! ^_^",
@@ -2346,7 +2346,7 @@ p100 = Product.create(name: 'Cardi B Birthday Card | Meme Birthday Card | Happy 
 
 file374 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/cardib1.jpg')
 
-p100.photos.attach(io: 374, filename: 'cardib1.jpg')
+p100.photos.attach(io: file374, filename: 'cardib1.jpg')
 
 r275 = Review.create(body: "very cute card for my die hard cardi friends birthday",
 author_id: u13.id, product_id: p100.id, rating: 4)
@@ -2362,8 +2362,8 @@ p101 = Product.create(name: 'Unacceptable!! - Lemongrab Adventure Time Painting'
 file375 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/lemongrab1.jpg')
 file376 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/lemongrab2.jpg')
 
-p101.photos.attach(io: 375, filename: 'lemongrab1.jpg')
-p101.photos.attach(io: 376, filename: 'lemongrab2.jpg')
+p101.photos.attach(io: file375, filename: 'lemongrab1.jpg')
+p101.photos.attach(io: file376, filename: 'lemongrab2.jpg')
 
 
 
@@ -2374,7 +2374,7 @@ p102 = Product.create(name: 'Bold and Brash - Squidward Painting', description: 
 
 file376 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/boldandbrash1.jpg')
 
-p102.photos.attach(io: 376, filename: 'boldandbrash1.jpg')
+p102.photos.attach(io: file376, filename: 'boldandbrash1.jpg')
 
 r276 = Review.create(body: "Absolutely hilarious and beautiful! I love this painting and can't wait to hang it!",
 author_id: u11.id, product_id: p100.id, rating: 5)

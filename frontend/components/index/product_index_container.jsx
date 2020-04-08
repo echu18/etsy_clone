@@ -1,17 +1,15 @@
 import React from "react";
 import { connect } from "react-redux";
-import {fetchAllEtsyProducts} from "../../actions/product_actions";
+import { fetchProducts } from '../../actions/product_actions';
 // import { clearReviews } from "../../actions/review_actions";
 import ProductIndex from "./product_index";
 
 const mapStateToProps = (state, ownProps) => ({
-  product: state.entities.products[ownProps.match.params.productId],
-  reviews: state.entities.reviews,
-  users: state.entities.users,
-  currentUserId: state.session.currentUserId,
+  products: Object.values(state.entities.products)
 });
 
 const mapDispatchToProps = (dispatch) => ({
+  fetchProducts: () => dispatch(fetchProducts())
   // fetchAllEtsyProducts: () => dispatch(fetchAllEtsyProducts())
 });
 
