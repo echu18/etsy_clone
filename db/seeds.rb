@@ -2364,3 +2364,17 @@ file376 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-image
 
 p101.photos.attach(io: 375, filename: 'lemongrab1.jpg')
 p101.photos.attach(io: 376, filename: 'lemongrab2.jpg')
+
+
+
+
+
+p102 = Product.create(name: 'Bold and Brash - Squidward Painting', description: "Bold and Brash (more like belongs in the trash) from spongebob! Every painting comes out slightly different and is made to order so please specify if you have a preference, such as more white, smoother, etc. I have more sizes available upon request.",
+    price: 23.00, seller_id: u42.id, category_id: 22)
+
+file376 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/boldandbrash1.jpg')
+
+p102.photos.attach(io: 376, filename: 'boldandbrash1.jpg')
+
+r276 = Review.create(body: "Absolutely hilarious and beautiful! I love this painting and can't wait to hang it!",
+author_id: u11.id, product_id: p100.id, rating: 5)
