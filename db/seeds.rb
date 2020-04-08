@@ -1927,27 +1927,440 @@ author_id: u44.id, product_id: p81.id, rating: 5)
 
 
 
-p82 = Product.create(name: 'Heart of Azeroth necklace | World of Warcraft', description: "Limited edition, only 5 products. The each product is equipped with a central insert.
-\n Сores were made individually for each product using the lampwork technique, differ in their tracery.
-\nMaterial: 925 silver, gilding, lampwork",
-    price: 209.00, seller_id: u15.id, category_id: 22)
+p82 = Product.create(name: 'Hunter\'s mask -Odogaron -Monster Hunter inspired', description: "Become the Apex Predator with this stylish resin mask, fashioned in the image of one of the most ravenous Monsters that prowls the New World.
+\n
+This resin kit includes a mask, as well as the four large fangs (already mounted).",
+    price: 147.49, seller_id: u14.id, category_id: 22)
 
-file321 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/wow1.jpg')
-file322 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/wow2.jpg')
-file323 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/wow3.jpg')
-file324 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/wow4.jpg')
+file325 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/monsterhunter1.jpg')
+file326 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/monsterhunter2.jpg')
+file327 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/monsterhunter3.jpg')
+file328 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/monsterhunter4.jpg')
 
-p82.photos.attach(io: 321, filename: 'wow1.jpg')
-p82.photos.attach(io: 322, filename: 'wow2.jpg')
-p82.photos.attach(io: 323, filename: 'wow3.jpg')
-p82.photos.attach(io: 324, filename: 'wow4.jpg')
+p82.photos.attach(io: 325, filename: 'monsterhunter1.jpg')
+p82.photos.attach(io: 326, filename: 'monsterhunter2.jpg')
+p82.photos.attach(io: 327, filename: 'monsterhunter3.jpg')
+p82.photos.attach(io: 328, filename: 'monsterhunter4.jpg')
 
-r235 = Review.create(body: "The pendant is perfect! The craftsmanship and attention to detail is amazing.\n
-    Shipping was very fast and everything was packaged very well. Definitely will purchase from again. Thank you!",
-author_id: u46.id, product_id: p82.id, rating: 5)
+r238 = Review.create(body: "I received a wonderful blue mask.
+it is amazing! !
+Thank you very much.",
+author_id: u43.id, product_id: p82.id, rating: 5)
 
-r236 = Review.create(body: 'Beautiful piece! And, for shipping from the middle of Russia, it arrived in no time! Can’t wait to release N’Zoth with this bad boy.',
-author_id: u45.id, product_id: p82.id, rating: 4)
+r239 = Review.create(body: 'Awesome work, shipped in time and especially great seller who is very friendly and helpful, he answered all of my questions thoroughly and in a timely manner ! Thank you !',
+author_id: u42.id, product_id: p82.id, rating: 4)
 
-r237 = Review.create(body: 'Simply beautiful!!! This is the 2nd item from this vendor that I\'ve purchased and I have never been disappointed. Great attention to deal!!!',
-author_id: u44.id, product_id: p82.id, rating: 5)
+r240 = Review.create(body: 'Awesome kit. Second order and I\'m always happy with what I get.',
+author_id: u41.id, product_id: p82.id, rating: 5)
+
+
+
+
+
+
+p83 = Product.create(name: 'Persona 5 Headphone Hanger - Joker phantom thieves logo holder wall mount for headphones', description: "Store your headphones in a safe place while you're out exploring the Metaverse!
+
+Reduce desk clutter with this Phantom Thieves-inspired headphone hook/hanger! Perfect for holding your headphones, wires, hats, or accessories while adding some gamer chic to your decor. This headphone stand makes an ideal gift for audiophiles, gamers, and Persona fans.",
+    price: 18.62, seller_id: u13.id, category_id: 22)
+
+file329 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/personaheadphone1.jpg')
+file330 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/personaheadphone2.jpg')
+file331 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/personaheadphone3.jpg')
+file332 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/personaheadphone4.jpg')
+
+p83.photos.attach(io: 329, filename: 'personaheadphone1.jpg')
+p83.photos.attach(io: 330, filename: 'personaheadphone2.jpg')
+p83.photos.attach(io: 331, filename: 'personaheadphone3.jpg')
+p83.photos.attach(io: 332, filename: 'personaheadphone4.jpg')
+
+r241 = Review.create(body: "Very impressed with the quality. It is beautiful and any persona fan would love it. In addition, it was sent with nails, a wall mount, and mounting tape. I was not concerned with the method of getting this mounted, but this made things even easier for me. Definitely recommend.
+",
+author_id: u43.id, product_id: p83.id, rating: 5)
+
+r242 = Review.create(body: 'Arrived safely, and I AM IN LOVE WITH IT! Probably the coolest thing I own right now!',
+author_id: u42.id, product_id: p83.id, rating: 4)
+
+r243 = Review.create(body: 'Looks just like the picture. Excellent prop. Would highly recommend this shop!',
+author_id: u41.id, product_id: p83.id, rating: 5)
+
+
+
+
+
+p84 = Product.create(name: 'PlayStation Controller Lapel Pin - PS2 Controller Enamel Pin - PS3 Controller Hard Enamel Lapel Pin', description: "1.25 inch hard enamel gold plated lapel pin. Secured by two pin posts with butterfly clasps and packaged on a backing card.",
+    price: 15.00, seller_id: u12.id, category_id: 22)
+
+file333 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/playstation1.jpg')
+file334 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/playstation2.jpg')
+file335 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/playstation3.jpg')
+file336 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/playstation4.jpg')
+
+p84.photos.attach(io: 333, filename: 'playstation1.jpg')
+p84.photos.attach(io: 334, filename: 'playstation2.jpg')
+p84.photos.attach(io: 335, filename: 'playstation3.jpg')
+p84.photos.attach(io: 336, filename: 'playstation4.jpg')
+
+r244 = Review.create(body: "It's perfect! Such a cute little controller!",
+author_id: u40.id, product_id: p84.id, rating: 5)
+
+r245 = Review.create(body: 'Arrived safely, and I AM IN LOVE WITH IT! Probably the coolest thing I own right now!',
+author_id: u39.id, product_id: p84.id, rating: 4)
+
+r246 = Review.create(body: '',
+author_id: u38.id, product_id: p84.id, rating: 5)
+
+
+
+p85 = Product.create(name: 'Grand Theft Auto Wasted Embroidered Dad hat', description: "Dad hats aren't just for dads. This one's got a low profile with an adjustable strap and curved visor.",
+    price: 23.50, seller_id: u11.id, category_id: 22)
+
+file337 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/gtahat1.jpg')
+file338 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/gtahat2.jpg')
+
+
+p85.photos.attach(io: 337, filename: 'gtahat1.jpg')
+p85.photos.attach(io: 338, filename: 'gtahat2.jpg')
+
+
+r247 = Review.create(body: "The seller was such a pleasure to work with! Fast communication, arrived very quickly, great quality product as well. My son loves his new hat. If you’re looking for a win win this is the shop for you 😊",
+author_id: u40.id, product_id: p85.id, rating: 5)
+
+r248 = Review.create(body: '',
+author_id: u37.id, product_id: p85.id, rating: 4)
+
+r249 = Review.create(body: '',
+author_id: u36.id, product_id: p85.id, rating: 4)
+
+
+
+
+p86 = Product.create(name: 'Maplestory Slime and Mushroom Enamel Pin
+', description: "Slime Pin:\n
+Item Specifications:\n
+- Approximately 4.5cm x 4.5cm\n
+- Gold plated finish\n
+- Comes with 2x regular pin fasteners
+\n
+Mushroom Pin\n
+Item Specifications:\n
+- Approximately 4.5cm x 4cm\n
+- Gold plated finish\n
+- Comes with 2x regular pin fasteners",
+    price: 10.96, seller_id: u10.id, category_id: 22)
+
+file339 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/maplestory1.jpg')
+file340 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/maplestory2.jpg')
+
+
+p86.photos.attach(io: 339, filename: 'maplestory1.jpg')
+p86.photos.attach(io: 340, filename: 'maplestory2.jpg')
+
+
+r250 = Review.create(body: "Cute! I love it so much!",
+author_id: u36.id, product_id: p86.id, rating: 5)
+
+r251 = Review.create(body: '',
+author_id: u35.id, product_id: p86.id, rating: 4)
+
+r252 = Review.create(body: '',
+author_id: u32.id, product_id: p86.id, rating: 4)
+
+
+
+
+
+
+
+p87 = Product.create(name: 'NieR: Automata Print', description: "2B print is approximately 8.5\"x13\" on cardstock.
+9S print is approximately 8\"x13\" on cardstock.
+A2 print is approximately 8.5\"x13\" on cardstock.",
+    price: 7.50, seller_id: u10.id, category_id: 22)
+
+file341 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/nier1.jpg')
+file342 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/nier2.jpg')
+file343 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/nier3.jpg')
+file344 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/nier4.jpg')
+
+
+p87.photos.attach(io: 341, filename: 'nier1.jpg')
+p87.photos.attach(io: 342, filename: 'nier2.jpg')
+p87.photos.attach(io: 343, filename: 'nier3.jpg')
+p87.photos.attach(io: 344, filename: 'nier4.jpg')
+
+
+r253 = Review.create(body: "The prints are beautiful and the paper is top notch. Love them!!!",
+author_id: u35.id, product_id: p87.id, rating: 5)
+
+r254 = Review.create(body: '',
+author_id: u34.id, product_id: p87.id, rating: 4)
+
+r255 = Review.create(body: 'The art is really nice!',
+author_id: u33.id, product_id: p87.id, rating: 4)
+
+r256 = Review.create(body: 'Love it, looks amazing!!! Best art print of 2B i can find!',
+author_id: u32.id, product_id: p87.id, rating: 4)
+
+
+
+
+
+p88 = Product.create(name: 'Cardcaptor Sakura Rug', description: "Pink Cardcaptor Sakura Rug, perfect for bedroom or game room!",
+    price: 18.00, seller_id: u9.id, category_id: 22)
+
+file345 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/cardcaptor1.jpg')
+file346 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/cardcaptor2.jpg')
+file347 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/cardcaptor3.jpg')
+
+
+p88.photos.attach(io: 345, filename: 'cardcaptor1.jpg')
+p88.photos.attach(io: 346, filename: 'cardcaptor2.jpg')
+p88.photos.attach(io: 347, filename: 'cardcaptor3.jpg')
+
+
+r257 = Review.create(body: "",
+author_id: u31.id, product_id: p88.id, rating: 5)
+
+r258 = Review.create(body: 'a bit bigger than expected, but still perfect for my desk! makes it so much easier to stay tidy ^w^ easy to clean, too! highly recommend.',
+author_id: u30.id, product_id: p88.id, rating: 4)
+
+
+
+
+
+
+p89 = Product.create(name: 'thank u next sticker set
+', description: "thank u next sticker set",
+    price: 10.78, seller_id: u8.id, category_id: 22)
+
+file348 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/thankunext1.jpg')
+file349 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/thankunext2.jpg')
+file350 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/thankunext3.jpg')
+file351 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/thankunext4.jpg')
+
+
+p89.photos.attach(io: 348, filename: 'thankunext1.jpg')
+p89.photos.attach(io: 349, filename: 'thankunext2.jpg')
+p89.photos.attach(io: 350, filename: 'thankunext3.jpg')
+p89.photos.attach(io: 351, filename: 'thankunext4.jpg')
+
+
+r259 = Review.create(body: "",
+author_id: u29.id, product_id: p89.id, rating: 4)
+
+r260 = Review.create(body: '',
+author_id: u28.id, product_id: p89.id, rating: 4)
+
+r261 = Review.create(body: '',
+author_id: u27.id, product_id: p89.id, rating: 4)
+
+
+
+
+
+
+
+
+
+p90 = Product.create(name: 'Demon Elmo - Original Meme Art', description: "Want a flaming Elmo, ready to sacrifice to the gods with you? This is the perfect piece of art for you.
+Fully coloured in copic marker and labelled on the back with the name of the piece, this sure is to give you a good laugh.
+Based off of the original meme itself, this goofy picture is worth it in every way.",
+    price: 11.76, seller_id: u7.id, category_id: 22)
+
+file352 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/elmo1.jpg')
+
+p90.photos.attach(io: 352, filename: 'elmo1.jpg')
+
+r262 = Review.create(body: "",
+author_id: u29.id, product_id: p90.id, rating: 4)
+
+
+
+
+p91 = Product.create(name: 'Spongebob Squidward meme painting (hand painted)', description: "This will be made just for you! Prep time varies. Contact the shop to find out when it will ship.",
+    price: 25.00, seller_id: u6.id, category_id: 22)
+
+file353 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/squidward1.jpg')
+file354 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/squidward2.jpg')
+
+p91.photos.attach(io: 353, filename: 'squidward1.jpg')
+p91.photos.attach(io: 354, filename: 'squidward2.jpg')
+
+r263 = Review.create(body: "",
+author_id: u28.id, product_id: p91.id, rating: 4)
+
+
+
+
+p92 = Product.create(name: 'Peace Was Never An Option Goose Meme - Meme Art - Funny - Embroidery Art', description: "Honk! This goose will look great in any home, it is definitely a conversation piece.
+These embroidery hoops are perfect for a contemporary piece of decor or as a gift. To display your hoop, either hang it or lean in it!",
+    price: 13.50, seller_id: u5.id, category_id: 22)
+
+file355 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/peaceduck1.jpg')
+file356 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/peaceduck2.jpg')
+file357 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/peaceduck3.jpg')
+
+p92.photos.attach(io: 355, filename: 'peaceduck1.jpg')
+p92.photos.attach(io: 356, filename: 'peaceduck2.jpg')
+p92.photos.attach(io: 357, filename: 'peaceduck3.jpg')
+
+r264 = Review.create(body: "Hilarious. My friend loved it",
+author_id: u26.id, product_id: p92.id, rating: 4)
+
+
+
+
+
+p93 = Product.create(name: 'SpongeBob Ight Imma Head Out Meme Embroidered Beanie', description: "It's 2pm on a Saturday and you're attending your in-law's birthday party for their one thousand year old dog. Also, they don't drink alcohol and the veggie plate has already ran out of ranch dipping sauce. Put this beanie on your head to signal to your wife that it's time to get out of dodge.
+\n
+SpongeBob Ight Imma Head Out Meme Embroidered Beanie. The beanie is 12\" long when uncuffed. This is considered an adult size 'long' style beanie.",
+    price: 19.99, seller_id: u4.id, category_id: 22)
+
+file358 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/spongebob1.jpg')
+file359 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/spongebob2.jpg')
+
+p93.photos.attach(io: 358, filename: 'spongebob1.jpg')
+p93.photos.attach(io: 359, filename: 'spongebob2.jpg')
+
+r265 = Review.create(body: "The hat is just as gorgeous & hilarious as it is in the picture I got sooo many compliments for it!",
+author_id: u24.id, product_id: p93.id, rating: 4)
+
+
+r266 = Review.create(body: "My girlfriend loved it, very punny! stitch work is exactly like the picture.",
+author_id: u23.id, product_id: p93.id, rating: 5)
+
+
+
+
+
+p94 = Product.create(name: 'Doge meme poster Astronaut Dog internet modern pop art design', description: "Humans on Mars… not yet, but this brave Astronaut Doge has been there already! seems like he had a fun time.\n
+Exclusive & creative designs with an excellent quality. \n
+Made with love and inspired by the Internet culture.",
+    price: 12.99, seller_id: u3.id, category_id: 22)
+
+file360 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/dogeastronaut1.jpg')
+file361 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/dogeastronaut2.jpg')
+file362 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/dogeastronaut3.jpg')
+file363 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/dogeastronaut4.jpg')
+
+p94.photos.attach(io: 360, filename: 'dogeastronaut1.jpg')
+p94.photos.attach(io: 361, filename: 'dogeastronaut2.jpg')
+p94.photos.attach(io: 362, filename: 'dogeastronaut3.jpg')
+p94.photos.attach(io: 363, filename: 'dogeastronaut4.jpg')
+
+r267 = Review.create(body: "I bought this for my son for Christmas and he loved it! Great quality, great size options.. super rad, thanks so much :)",
+author_id: u22.id, product_id: p94.id, rating: 4)
+
+r268 = Review.create(body: "",
+author_id: u21.id, product_id: p94.id, rating: 5)
+
+
+
+
+
+p95 = Product.create(name: 'MEME "YOU TRIED" Enamel Pin. Funny Joke Gift Gold Star Merit Badge Lapel Pin.', description: "Now you can proclaim the merits of effort, if not accomplishment, on your very person. Or just memes. Proclaim memery.",
+    price: 12.00, seller_id: u2.id, category_id: 22)
+
+file364 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/youtried1.jpg')
+file365 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/youtried2.jpg')
+
+
+p95.photos.attach(io: 364, filename: 'youtried1.jpg')
+p95.photos.attach(io: 365, filename: 'youtried2.jpg')
+
+
+r269 = Review.create(body: "Such great quality. Love it",
+author_id: u19.id, product_id: p95.id, rating: 4)
+
+r270 = Review.create(body: "Very nice! Fast shipping! My daughter will love it!",
+author_id: u21.id, product_id: p95.id, rating: 5)
+
+
+
+
+
+p96 = Product.create(name: 'Owen Wilson "WOW" Meme Mouse Pad, Neoprene Mousepad', description: 'Owen Wilson "WOW" Meme Mouse Pad, Neoprene Mousepad',
+    price: 9.99, seller_id: u50.id, category_id: 22)
+
+file366 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/owenwilson1.jpg')
+
+p96.photos.attach(io: 366, filename: 'owenwilson1.jpg')
+
+r71 = Review.create(body: "Good quality item. Item shipped quickly in time for Christmas.",
+author_id: u18.id, product_id: p96.id, rating: 4)
+
+r272 = Review.create(body: "Received in just a few days! Incredibly happy with it. It's gotten a few laughs around the office.",
+author_id: u17.id, product_id: p96.id, rating: 5)
+
+
+
+
+
+p97 = Product.create(name: 'Per My Last Email Funny Work Meme T-Shirt', description: "SEE OUR OTHER SHIRTS - 'LET'S CIRCLE BACK NEXT WEEK'",
+    price: 19.99, seller_id: u49.id, category_id: 22)
+
+file367 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/email1.jpg')
+file368 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/email2.jpg')
+
+p97.photos.attach(io: 367, filename: 'email1.jpg')
+p97.photos.attach(io: 368, filename: 'email2.jpg')
+
+
+
+
+p98 = Product.create(name: 'BTS Jungkook "Jungshook" Meme T-Shirt', description: "These premium cotton shirts offer a soft feel, easy stretch, and a comfortable classic t-shirt fit. Our tees are a well-loved favorite that fits great on both women and men alike. ",
+    price: 22.95, seller_id: u49.id, category_id: 22)
+
+file369 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/bts1.jpg')
+file370 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/bts2.jpg')
+
+p98.photos.attach(io: 369, filename: 'bts1.jpg')
+p98.photos.attach(io: 370, filename: 'bts2.jpg')
+
+
+r273 = Review.create(body: "Love my shirt. Can't wait to wear it!",
+author_id: u16.id, product_id: p98.id, rating: 5)
+
+
+
+p99 = Product.create(name: ' Knuckles | Warrior Meme Plush Toy | Handmade Toy Soft | Stuffed Toy | Made To Order', description: "Little red warrior from meme part of Uganda who totally knows de wey :)
+This is our own carefully designed pattern and a top notch handmade work overall.",
+    price: 140.00, seller_id: u48.id, category_id: 22)
+
+file371 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/knuckles1.jpg')
+file372 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/knuckles2.jpg')
+file373 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/knuckles3.jpg')
+
+p99.photos.attach(io: 371, filename: 'knuckles1.jpg')
+p99.photos.attach(io: 372, filename: 'knuckles2.jpg')
+p99.photos.attach(io: 373, filename: 'knuckles3.jpg')
+
+
+r274 = Review.create(body: "A plush well designed, neat and very faithful to the original character. I am very grateful. Thank you very much !!! ^_^",
+author_id: u13.id, product_id: p99.id, rating: 5)
+
+
+
+
+p100 = Product.create(name: 'Cardi B Birthday Card | Meme Birthday Card | Happy Birthday Okurrr', description: "A Cardi B Birthday card 'Happy Birthday Okurrr'",
+    price: 3.54, seller_id: u47.id, category_id: 22)
+
+file374 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/cardib1.jpg')
+
+p100.photos.attach(io: 374, filename: 'cardib1.jpg')
+
+r275 = Review.create(body: "very cute card for my die hard cardi friends birthday",
+author_id: u13.id, product_id: p100.id, rating: 4)
+
+
+
+
+
+
+p101 = Product.create(name: 'Unacceptable!! - Lemongrab Adventure Time Painting', description: "UNACCEPTABLE!!!!",
+    price: 75.00, seller_id: u44.id, category_id: 22)
+
+file375 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/lemongrab1.jpg')
+file376 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/lemongrab2.jpg')
+
+p101.photos.attach(io: 375, filename: 'lemongrab1.jpg')
+p101.photos.attach(io: 376, filename: 'lemongrab2.jpg')
