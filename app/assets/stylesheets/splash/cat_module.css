@@ -1,14 +1,23 @@
-.cat-module-container {
+#cat-module-container {
     display: flex;
-    justify-content: space-between;
     height: 190px;
     /* height: auto; */
-    width: 100%;
+    /* width: 100%; */
+    width: fit-content;
     margin-top: 10px;
     margin-bottom: 20px;
     /* border: 1px solid red; */
 
 }
+
+.centered{
+    justify-content: space-between;
+}
+
+.flex-start{
+    justify-content: flex-start;
+}
+
 
 
 .cat-title {

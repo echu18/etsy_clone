@@ -13,12 +13,16 @@ class Splash extends React.Component{
 
 
     componentDidMount() {
-        this.props.fetchProducts;
+        this.props.fetchProducts();
     }
 
    
 
     render() {
+        if (!this.props.products) return null;
+
+        // const {products} = this.props;
+        debugger
         return(
             <div id='splash-main' id='inner'>
                     <div className='main-headline-text' id='inner'>
@@ -40,7 +44,7 @@ class Splash extends React.Component{
                                 <a href="#">See more</a>
                             </div>
 
-                            <CatModuleContainer props={this.props} startnum={0} endnum={6}/>
+                            <CatModuleContainer row={this.props.products.slice(0,6)}/>
                             {/* Header 1 (category title + see more) */}
                         </div>
 
@@ -51,7 +55,7 @@ class Splash extends React.Component{
                                 <a href="#">See more</a>
                             </div>
 
-                            <CatModuleContainer props={this.props} startnum={6} endnum={12}/>
+                            <CatModuleContainer row={this.props.products.slice(6,12)} />
                             {/* Header 2 (category title + see more) */}
                         </div>
 
@@ -61,7 +65,7 @@ class Splash extends React.Component{
                                 <a href="#">See more</a>
                             </div>
 
-                            <CatModuleContainer props={this.props} startnum={12} endnum={18}/>
+                            <CatModuleContainer row={this.props.products.slice(12,18)}/>
                             {/* Header 3 (category title + see more) */}
                         </div>
 
@@ -71,7 +75,7 @@ class Splash extends React.Component{
                                 <a href="#">See more</a>
                             </div>
 
-                            <CatModuleContainer props={this.props} startnum={18} endnum={24}/>
+                            <CatModuleContainer row={this.props.products.slice(18, 24)} />
                             {/* Header 3 (category title + see more) */}
                         </div>
                     </div>

@@ -1,6 +1,7 @@
 .index-products {
     display: flex;
-    height: 100vh;
+    flex-direction: column;
+    height: 100%;
     width: auto;
     border: 1px solid red;
 }

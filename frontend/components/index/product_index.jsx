@@ -5,44 +5,123 @@ import CatModuleContainer from '../../components/main_content/cat_module_contain
 class ProductIndex extends React.Component {
     constructor(props){
         super(props);
-
+        this.state = {
+            currentPage: 0,
+            pages: null
+        }
+        this.handlePrevPage = this.handlePrevPage.bind(this);
+        this.handleNextPage = this.handleNextPage.bind(this);
     }
 
     componentDidMount() {
         this.props.fetchProducts();
     }
 
-    organizeProducts(products){
-        debugger
-        const organizedProducts = [];
-        let temp = [];
-        
-        for (let i = 0; i < products.length; i++){
-            if (temp.length === 6) {
-                organizedProducts.push(temp);
-                temp = [];
-            } else {
-                temp.push(products[i])
-            }
+    componentWillReceiveProps(nextProps){
+        if (!this.state.pages || this.props.products !== nextProps.products){
+            this.setState({pages: this.organizeProducts(nextProps.products)});
         }
         debugger
-        return organizedProducts;
+    }
+  
+
+    organizeProducts(products){
+        const productRows = [];
+        let tempRow = [];
+        
+            for (let i = 0; i < products.length; i++){
+                if (tempRow.length === 6) {
+                    productRows.push(tempRow);
+                    tempRow = [];
+                } else if (i === products.length - 1){
+                    tempRow.push(products[i])
+                    productRows.push(tempRow);
+                } else {
+                    tempRow.push(products[i])
+                }
+            }
+        debugger
+        const pages = []
+        let tempPage = []
+
+            for (let i = 0; i < productRows.length; i++) {
+                if (tempPage.length === 5) {
+                    pages.push(tempPage);
+                    tempPage = [];
+                } else if (i === productRows.length-1) {
+                    tempPage.push(productRows[i])
+                    pages.push(tempPage);
+                } else {
+                    tempPage.push(productRows[i])
+                }
+            }
+
+            debugger
+        return pages;
+    }
+
+
+
+    // catRows (productRow) {
+    //     // const productRow = this.organizeProducts(this.props.products);
+        
+    //     return (
+    //             {productRow.map((row, idx) => {
+    //                 debugger
+    //                 return (
+    //                     <div className='index-row'>
+    //                         {<CatModuleContainer row={row} />}
+    //                     </div>)
+    //             })}
+    //         </div>
+    //     )
+    // }
+
+    handleNextPage(e){
+        e.preventDefault();
+
+        const nextPage = this.state.currentPage + 1;
+        if (nextPage > this.state.pages.length-1) {
+            return null;
+        } else {
+            this.setState({currentPage: nextPage})
+        }
+    }
+
+    handlePrevPage(e){
+        e.preventDefault();
+
+        const prevPage = this.state.currentPage - 1;
+        if (prevPage < 0) {
+            return null;
+        } else {
+            this.setState({currentPage: prevPage});
+        }
     }
 
     
     render() {
-        if (!this.props.products) return null;
+        if (!this.props.products || !this.state.pages ) {
+            return null;
+        } 
 
-        const productRow = this.organizeProducts(this.props.products)
         debugger
         return (
             <div className='index-container'>
-                <div className='cat-mod'>
-                    {productRow.map((row, idx)=> {
-                        return <CatModuleContainer props={row} startnum={0} endnum={row.length}/>
+                <div className='index-products'>
+                    {this.state.pages[this.state.currentPage].map((row, idx)=>{
+                        return (
+                                <div className='index-row'>
+                                    <CatModuleContainer row={row} />
+                                </div>
+                                )
                     })}
                 </div>
+
+                <button onClick={this.handlePrevPage}>Previous Page</button>
+                <button onClick={this.handleNextPage}>Next Page</button>
             </div>
+
         )
     }
 }

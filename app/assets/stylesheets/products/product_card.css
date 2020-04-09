@@ -8,6 +8,9 @@
     /* border: 1px solid pink; */
 }
 
+.flex-start > .product-card-container {
+    margin-right: 10px;
+}
 
 /* .product-card-container:not(:first-of-type) {
     margin: 0px 0px 0px 10px;

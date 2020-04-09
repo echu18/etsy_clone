@@ -5,7 +5,7 @@ import CatModule from './cat_module';
 
 
 const mapStateToProps = (state, ownProps) => ({
-    products: Object.values(state.entities.products)
+    // products: Object.values(state.entities.products)
 })
 
 const mapDispatchToProps = dispatch => ({

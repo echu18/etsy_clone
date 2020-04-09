@@ -39,7 +39,9 @@ const App = () => (
             {/* <AboutBanner /> */}
         <Route exact path="/" component={AboutBanner} />
 
+        {/* <Route path="/" except="/cart_items" component={FooterContainer} /> */}
         <Route exact path="/" except="/cart_items" component={FooterContainer} />
+        <Route exact path="/index" except="/cart_items" component={FooterContainer} />
 
         {/* <div className='footer'>
             <FooterContainer />
