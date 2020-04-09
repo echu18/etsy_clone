@@ -1,7 +1,7 @@
 import React from 'react';
 import Splash from './splash';
 import { connect } from 'react-redux';
-import {fetchProducts} from '../../actions/product_actions';
+import {fetchProducts, fetchSplashProducts} from '../../actions/product_actions';
 
 
 const mapStateToProps = (state, ownProps) => ({
@@ -9,8 +9,8 @@ const mapStateToProps = (state, ownProps) => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-    fetchProducts: () => dispatch(fetchProducts())
-    // fetchProduct: id => dispatch(fetchProduct(id))
+    fetchProducts: () => dispatch(fetchProducts()),
+    fetchSplashProducts: () => dispatch(fetchSplashProducts())
 })
 
 

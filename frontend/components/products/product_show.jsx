@@ -11,17 +11,14 @@ class ProductShow extends React.Component {
     }
 
     componentDidMount() {
-        debugger
         this.props.clearReviews()
         this.props.fetchProduct(this.props.match.params.productId)
-        debugger
     }
  
     
     render() {
         window.scrollTo(0, 0);
-        // debugger
-
+        
         if (this.props.product === undefined) return null;
         if (this.props.product.seller_id === undefined) return null;
         if (this.props.users[this.props.product.seller_id] === undefined) return null;

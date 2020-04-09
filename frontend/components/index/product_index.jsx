@@ -21,7 +21,6 @@ class ProductIndex extends React.Component {
         if (!this.state.pages || this.props.products !== nextProps.products){
             this.setState({pages: this.organizeProducts(nextProps.products)});
         }
-        debugger
     }
   
 
@@ -40,7 +39,6 @@ class ProductIndex extends React.Component {
                     tempRow.push(products[i])
                 }
             }
-        debugger
         const pages = []
         let tempPage = []
 

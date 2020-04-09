@@ -20,6 +20,7 @@ class CatModule extends React.Component {
         // const products = this.props.slice(startnum,endnum);
         const row = this.props.row
         return (
+            // <div id='cat-module-container' className={row.length === 6 ? 'centered' : 'flex-start'}>
             <div id='cat-module-container' className={row.length === 6 ? 'centered' : 'flex-start'}>
                 {row.map((prod, idx) => {
                     return <div className='product-card-container' key={idx}>

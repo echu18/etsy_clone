@@ -1,12 +1,18 @@
 import { getProducts, getProduct } from '../util/product_api_util';
 
 export const RECEIVE_PRODUCTS = 'RECEIVE_PRODUCTS';
+export const RECEIVE_SPLASH_PRODUCTS = 'RECEIVE_SPLASH_PRODUCTS';
 export const RECEIVE_PRODUCT = 'RECEIVE_PRODUCT';
 export const RECEIVE_ERRORS = 'RECEIVE_ERRORS';
 
 
 export const receiveProducts = products => ({
     type: RECEIVE_PRODUCTS,
+    products
+})
+
+export const receiveSplashProducts = products => ({
+    type: RECEIVE_SPLASH_PRODUCTS,
     products
 })
 
@@ -30,6 +36,11 @@ const receiveErrors = errors => ({
 
 export const fetchProducts = () => dispatch => getProducts()
     .then(products => dispatch(receiveProducts(products)),
+        error => dispatch(receiveErrors(error.responseJSON)))
+
+
+export const fetchSplashProducts = () => dispatch => getProducts()
+    .then(products => dispatch(receiveSplashProducts(products)),
         error => dispatch(receiveErrors(error.responseJSON)))
 
 
