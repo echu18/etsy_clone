@@ -1,4 +1,4 @@
-import { getProducts, getProduct } from '../util/product_api_util';
+import { getProducts, getProduct, queryProducts } from '../util/product_api_util';
 
 export const RECEIVE_PRODUCTS = 'RECEIVE_PRODUCTS';
 export const RECEIVE_SPLASH_PRODUCTS = 'RECEIVE_SPLASH_PRODUCTS';
@@ -35,6 +35,10 @@ const receiveErrors = errors => ({
 
 
 export const fetchProducts = () => dispatch => getProducts()
+    .then(products => dispatch(receiveProducts(products)),
+        error => dispatch(receiveErrors(error.responseJSON)))
+
+export const searchProducts = (query) => dispatch => queryProducts(query)
     .then(products => dispatch(receiveProducts(products)),
         error => dispatch(receiveErrors(error.responseJSON)))
 

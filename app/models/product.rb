@@ -24,7 +24,7 @@ class Product < ApplicationRecord
     has_many_attached :photos
 
     after_initialize :avg_rating
-    attr_reader :avg_rating
+    attr_reader :avg_rating, :search
     # belongs_to :category, foreign_key: :category_id, class_name: :Category   - category table not created yet
     # has_many :cart_items, foreign_key: :product_id, class_name: :CartItem - cart table not created yet
 
@@ -49,6 +49,22 @@ class Product < ApplicationRecord
     #     @avg_rating = (total/product.reviews.count)
     # end
 
+
+    # def self.search(query)
+
+    #     if query
+    #         result = self.where("name LIKE ? OR description LIKE ?", "%#{query}%", "%#{query}%")
+    #         if result
+    #             result
+    #         else
+    #             @products = Product.all
+
+    #         end
+    #     else
+    #         @products = Product.all
+    #     end
+    #     where("name LIKE ? OR description LIKE ?", "%#{query}%", "%#{query}%")
+    # end
 
 
 end

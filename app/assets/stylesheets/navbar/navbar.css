@@ -22,7 +22,7 @@
     /* padding: 12px 0px 7px 0px; */
     padding: 1px 0px 0px 0px;
     /* padding: 12px 0px 15px 0px; */
-    align-items: center;
+    align-items: flex-end;
     width: 100%;
 }
 /* 
@@ -95,6 +95,7 @@
 .searchbar-form input[type="text"], textarea{
     background-image: linear-gradient(#EEEEEE,#EFEFEF, #EEEEEE);
 }
+
 
 
 /* searchbar-form clicked state, add below: */

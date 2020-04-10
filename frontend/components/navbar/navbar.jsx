@@ -8,13 +8,16 @@ import {cartIcon, searchIcon, etsyLogo, giftIcon} from '../../../app/assets/imag
 class Navbar extends React.Component {
     constructor(props) {
         super(props);
+        this.state ={
+            query: "",
+            showPopup: false
+        }
 
-        
-        this.state = {showPopup: false};
         this.togglePopup = this.togglePopup.bind(this);
         this.signOutAndClear = this.signOutAndClear.bind(this);
         this.redirectToHome = this.redirectToHome.bind(this);
-        this.redirectToIndex = this.redirectToIndex.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleChange = this.handleChange.bind(this);
     }
     
    togglePopup() {
@@ -32,10 +35,23 @@ class Navbar extends React.Component {
         this.props.history.push('/')
     }
 
-    redirectToIndex () {
-        this.props.history.push('/index')
+
+    handleSubmit(e) {
+        e.preventDefault();
+        debugger
+        this.props.history.push('/search')
+        this.props.searchProducts(this.state.query)
+    }
+
+
+    handleChange(e) {
+        this.setState({ query: e.target.value });
     }
    
+
+
+
+    
     render() {
         // window.scrollTo(0, 0);
 
@@ -65,6 +81,19 @@ class Navbar extends React.Component {
         );
 
 
+
+
+        var input = document.getElementById("search-bar");
+
+        input.addEventListener("keyup", function (event) {
+            if (event.keyCode === 13) {
+                // Cancel the default action, if needed
+                event.preventDefault();
+                // Trigger the button element with a click
+                document.getElementsByClassName("search-icon").click();
+            }
+        });
+
         return(
             <div className="navbar">
                 <div className="navbar-inner" id='inner' >
@@ -76,13 +105,20 @@ class Navbar extends React.Component {
                     <div className="searchbar">
                         <div className="searchbar-form" >
                             <form /*onSubmit={}*/>
-                                <input type="text" name="search" placeholder="Search for items or shops" autoComplete='off'/>      
+                                <input type="text" id='search-bar' onChange={this.handleChange} name="query" placeholder="Search for items or shops" autoComplete='off'/>      
+                            <div className='search-suggestion-box'>
+                                <p>my hero academia</p>
+                                <p>one punch man</p>
+                                <p>sailor mooon</p>
+                                <p>gekkan shoujo</p>
+                            </div>
                             </form>
-                            <div className="navbar-icon search-icon" onClick={this.redirectToIndex}>
+                            <div className="navbar-icon search-icon" onClick={this.handleSubmit}>
                                 {searchIcon}
                             </div>
                         </div>
                     </div>
+
                     
                     { display }
 
@@ -99,17 +135,13 @@ class Navbar extends React.Component {
                         return <CategoryDropdownContainer header={cat} key={idx} />
                     })}
 
-                    {/* <div className='gift-icon'>{giftIcon} */}
-                    {/* {giftIcon} */}
-                    <CategoryDropdownContainer header={'   Gifts'}  />
-                    {/* </div> */}
+                    <CategoryDropdownContainer header={'   Gifts'} />
                 </div>
             </div>
         )
     }
 }
 
-// export default Navbar;
 export default withRouter(Navbar);
 
 
