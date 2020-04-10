@@ -5,7 +5,7 @@ import CategoryDropdownContainer from './category_dropdown_container'
 
 
 // Links to each category
-const categories = ['Jewelry & Clothing', 'Tech Accessories', 'Toys & Collectibles', 'Art & Stickers', 'Anime & Gaming', 'Cosplay'];
+// const categories = ['Jewelry & Clothing', 'Tech Accessories', 'Art & Collectibles', 'Anime & Gaming', 'Memes', 'Cosplay'];
 
 const CategoriesBar = props => (
     <ul>

@@ -41,7 +41,8 @@ class Navbar extends React.Component {
 
         const { currentUserId, signOut, signIn, clearErrors } = this.props;
         // debugger
-        const categories = ['Jewelry & Accessories', 'Clothing & Shoes', 'Home & Living', 'Wedding & Party', 'Toys & Entertainment', 'Art & Collectibles', 'Craft Supplies', 'Vintage'];
+        // const categories = ['Jewelry & Accessories', 'Clothing & Shoes', 'Home & Living', 'Wedding & Party', 'Toys & Entertainment', 'Art & Collectibles', 'Craft Supplies', 'Vintage'];
+        const categories = ['Jewelry & Clothing', 'Home & Living', 'Tech & Accessories', 'Art & Collectibles', 'Pins & Stickers', 'Anime & Gaming', 'Memes', 'Cosplay'];
 
         const display = currentUserId ? (
             <div>
@@ -97,8 +98,11 @@ class Navbar extends React.Component {
                     {categories.map((cat, idx) => {
                         return <CategoryDropdownContainer header={cat} key={idx} />
                     })}
-                    <div className='gift-icon'>{giftIcon}</div>
-                     <CategoryDropdownContainer header={'Gifts'}  />
+
+                    {/* <div className='gift-icon'>{giftIcon} */}
+                    {/* {giftIcon} */}
+                    <CategoryDropdownContainer header={'   Gifts'}  />
+                    {/* </div> */}
                 </div>
             </div>
         )

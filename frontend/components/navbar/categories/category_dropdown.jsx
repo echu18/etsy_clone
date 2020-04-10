@@ -1,4 +1,5 @@
 import React from 'react';
+import { giftIcon } from '../../../../app/assets/images/svgs/icons'
 
 class CategoryDropdown extends React.Component {
     constructor(props) {
@@ -11,6 +12,7 @@ class CategoryDropdown extends React.Component {
     render() {
         return (
             <div className='navbar-cat-header'>
+                {this.props.header === '   Gifts' ? <div>{giftIcon}</div> : null}
                 <p>{this.props.header}</p>
             </div>
         )

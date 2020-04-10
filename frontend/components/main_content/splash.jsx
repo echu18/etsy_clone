@@ -37,7 +37,7 @@ class Splash extends React.Component{
 
                    <BuzzwordsBanner />
 
-                    <div className='cat-modules'>
+                    <div className='cat-modules cat-mod'>
                         <div className='cat-module-1'>
                             <div className='cat-module-header'>
                                 <p className='cat-title'>Our picks for you</p> 
@@ -49,7 +49,7 @@ class Splash extends React.Component{
                         </div>
 
 
-                        <div className='cat-module-2'>
+                        <div className='cat-module-2 cat-mod'>
                             <div className='cat-module-header'>
                                 <p className='cat-title'>Popular in gaming</p> 
                                 <a href="#">See more</a>
@@ -59,7 +59,7 @@ class Splash extends React.Component{
                             {/* Header 2 (category title + see more) */}
                         </div>
 
-                        <div className='cat-module-3'>
+                        <div className='cat-module-3 cat-mod'>
                             <div className='cat-module-header'>
                                 <p className='cat-title'>Here ya go, you weeb</p> 
                                 <a href="#">See more</a>
@@ -69,7 +69,7 @@ class Splash extends React.Component{
                             {/* Header 3 (category title + see more) */}
                         </div>
 
-                        <div className='cat-module-4'>
+                        <div className='cat-module-4 cat-mod'>
                             <div className='cat-module-header'>
                                 <p className='cat-title'>For Memelords™ only</p> 
                                 <a href="#">See more</a>

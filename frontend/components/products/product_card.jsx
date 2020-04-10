@@ -10,6 +10,9 @@ class ProductCard extends React.Component {
         // this.handleClick = this.handleClick.bind(this);
     }
 
+    getName(name){
+        return name.length <= 25 ? name : (name.slice(0,25) +'...')
+    }
 
     render() {
         if (!this.props.product) return null;
@@ -24,7 +27,9 @@ class ProductCard extends React.Component {
         return (
             <Link to={`/products/${product.id}`}>
                 <img className='product-card-image' src={this.props.product.photoUrls[0]}/>
-                <p className='product-card-price'> {price}</p> {parseInt(this.props.product.price) > 15.0 ? <p className='bestseller'>Best seller</p> : null}
+                <p>{this.getName(this.props.product.name)}</p>
+                <p className='product-card-price'> {price} {parseInt(this.props.product.price) > 15.0 ? <span className='bestseller'>Best seller</span> : null}</p> 
+                {/* {parseInt(this.props.product.price) > 15.0 ? <p className='bestseller'>Best seller</p> : null} */}
             </Link >
         )
     }
