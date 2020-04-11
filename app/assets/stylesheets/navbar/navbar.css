@@ -92,11 +92,16 @@
     background: transparent;
 }
 
-.searchbar-form input[type="text"], textarea{
-    background-image: linear-gradient(#EEEEEE,#EFEFEF, #EEEEEE);
+
+.searchbar-form input[type="text"]:focus {
+    
 }
 
 
+
+.searchbar-form input[type="text"], textarea{
+    background-image: linear-gradient(#EEEEEE,#EFEFEF, #EEEEEE);
+}
 
 /* searchbar-form clicked state, add below: */
 
@@ -107,6 +112,8 @@
     letter-spacing: 0.5px;
     font-size: 16px;
 }
+
+
 
 
 

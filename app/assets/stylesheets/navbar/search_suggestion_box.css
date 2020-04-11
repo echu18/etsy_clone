@@ -1,18 +1,49 @@
 .search-suggestion-box {
+    font-family: 'Helvetica', sans-serif;
+    font-size: 16px;
     display: none;
     position: absolute;
-    top: 100%;
+    top: 70%;
     font-size: 16px;
     width: 53.5vw;
-    height: 500px;
+    /* height: 500px; */
+    height: fit-content;
     border: 1px solid black;
+    border-radius: 10px;
+    padding: 15px 0px 10px 0px;
     z-index: 500;
-    
+    border: 1px solid gainsboro;
+    background-color: white;
+    box-shadow: 0px 0px  7px 1px rgb(212, 212, 212);
+    transition: height 1s, width 1s, opacity 0s 1s;
 }
 
 
 
 .searchbar-form input[type="text"]:focus + .search-suggestion-box {
     display: block;
-    border: 1px solid blue;
+    width: 53.5vw;
+    height: fit-content;
+    opacity: 1;
+    transition: height 1s, width 1s, opacity 0s;
+}   
+
+
+.search-suggestion-box > h3 {
+    font-family: sans-serif;
+    text-indent: 15px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.search-suggestion-box > p {
+    text-indent: 15px;
+    padding: 8px 0px 8px 0px;
+    /* border: 1px solid red; */
+}
+
+
+.search-suggestion-box > p:hover {
+    cursor: pointer;
+    background-color: gainsboro;
 }

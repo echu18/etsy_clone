@@ -18,7 +18,7 @@ class Navbar extends React.Component {
         this.redirectToHome = this.redirectToHome.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleChange = this.handleChange.bind(this);
-        this.resetForm = this.resetForm.bind(this);
+        // this.resetForm = this.resetForm.bind(this);
     }
     
    togglePopup() {
@@ -40,9 +40,9 @@ class Navbar extends React.Component {
         this.props.history.push('/')
     }
 
-    resetForm() {
-        document.forms['sb-form'].reset();
-    }
+    // resetForm() {
+    //     document.forms['sb-form'].reset();
+    // }
 
     handleSubmit(e) {
         // e.preventDefault();
@@ -129,10 +129,13 @@ class Navbar extends React.Component {
                                 {/* onKeyUp={e => this.handleSubmit(e)} */}
                                 
                                 <div className='search-suggestion-box'>
+                                    <h3>Popular right now</h3>
                                     <p>my hero academia</p>
+                                    <p>gaming</p>
                                     <p>one punch man</p>
-                                    <p>sailor mooon</p>
-                                    <p>gekkan shoujo</p>
+                                    <p>sailor moon</p>
+                                    <p>pins</p>
+                                    <p>meme gifts</p>
                                 </div>
                             </form>
                             <div className="navbar-icon search-icon" onClick={this.handleSubmit}>
