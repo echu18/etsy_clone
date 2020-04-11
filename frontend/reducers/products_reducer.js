@@ -1,11 +1,10 @@
-import { RECEIVE_PRODUCTS, RECEIVE_PRODUCT, RECEIVE_SPLASH_PRODUCTS } from '../actions/product_actions';
+import { RECEIVE_PRODUCTS, RECEIVE_PRODUCT, RECEIVE_SPLASH_PRODUCTS, CLEAR_PRODUCTS } from '../actions/product_actions';
 import { RECEIVE_CART_ITEM, RECEIVE_CART_ITEMS } from '../actions/cart_item_actions'
 import { RECEIVE_CURRENT_USER } from '../actions/session_actions'
 
 
 export default (state = {}, action) => {
     Object.freeze(state);
-    
     switch (action.type) {
         case RECEIVE_PRODUCTS:
             const products = {}
@@ -26,6 +25,8 @@ export default (state = {}, action) => {
             // });
             return splashProducts;
             // return action.payload.products
+        case CLEAR_PRODUCTS:
+            return {}
         case RECEIVE_PRODUCT:
             return Object.assign({}, state, action.payload.products)
             

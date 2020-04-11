@@ -12,7 +12,7 @@ class CategoryDropdown extends React.Component {
     render() {
         return (
             <div className='navbar-cat-header'>
-                {this.props.header === '   Gifts' ? <div>{giftIcon}</div> : null}
+                {this.props.header === 'Gifts' ? <div className='gift-icon'>{giftIcon}</div> : null}
                 <p>{this.props.header}</p>
             </div>
         )

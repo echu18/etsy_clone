@@ -50,21 +50,20 @@ class Product < ApplicationRecord
     # end
 
 
-    # def self.search(query)
+    def self.search(query)
+        if query != nil
+            result = self.where("LOWER(name) LIKE ? OR LOWER(description) LIKE ?", "%#{query}%", "%#{query}%")
+            if result 
+                @products = result
+            else
+                @products = Product.all
 
-    #     if query
-    #         result = self.where("name LIKE ? OR description LIKE ?", "%#{query}%", "%#{query}%")
-    #         if result
-    #             result
-    #         else
-    #             @products = Product.all
-
-    #         end
-    #     else
-    #         @products = Product.all
-    #     end
-    #     where("name LIKE ? OR description LIKE ?", "%#{query}%", "%#{query}%")
-    # end
+            end
+        else
+            @products = Product.all
+        end
+        # where("name LIKE ? OR description LIKE ?", "%#{query}%", "%#{query}%")
+    end
 
 
 end

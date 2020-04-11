@@ -18,6 +18,7 @@ class Navbar extends React.Component {
         this.redirectToHome = this.redirectToHome.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleChange = this.handleChange.bind(this);
+        this.resetForm = this.resetForm.bind(this);
     }
     
    togglePopup() {
@@ -32,15 +33,30 @@ class Navbar extends React.Component {
     }
 
     redirectToHome () {
+        // this.props.fetchSplashProducts()
+        // this.clearSearchbar()
+        this.props.clearProducts()
+        // this.resetForm()
         this.props.history.push('/')
     }
 
+    resetForm() {
+        document.forms['sb-form'].reset();
+    }
 
     handleSubmit(e) {
-        e.preventDefault();
-        debugger
-        this.props.history.push('/search')
-        this.props.searchProducts(this.state.query)
+        // e.preventDefault();
+        if (e.type === 'keyup') {
+            e.preventDefault();
+            if ((e.keyCode === 13) && $(".searchbar-form input[type=text]").is(":focus")) {
+                this.props.searchProducts(this.state.query)
+                // this.props.history.push(`/search`)
+            this.props.history.push(`/search?query=${this.state.query}`)
+            }
+        } else if (e.type === 'click') {
+            this.props.searchProducts(this.state.query)
+            this.props.history.push(`/search?query=${this.state.query}`)
+        }
     }
 
 
@@ -49,6 +65,9 @@ class Navbar extends React.Component {
     }
    
 
+    // clearSearchbar(){
+    //     $('.searchbar-input').clearSearch();
+    // }
 
 
     
@@ -83,16 +102,17 @@ class Navbar extends React.Component {
 
 
 
-        var input = document.getElementById("search-bar");
 
-        input.addEventListener("keyup", function (event) {
-            if (event.keyCode === 13) {
-                // Cancel the default action, if needed
-                event.preventDefault();
-                // Trigger the button element with a click
-                document.getElementsByClassName("search-icon").click();
-            }
-        });
+        // document.addEventListener("keyup", e => this.handleSubmit(e))
+        
+        // function (e) {
+            // debugger
+            // e.preventDefault();
+            // if ((e.keyCode === 13) && $(".searchbar-form input[type=text]").is(":focus") && this.state.search) {
+            //             this.props.searchProducts(this.state.search)
+
+            // }
+        // });
 
         return(
             <div className="navbar">
@@ -104,14 +124,16 @@ class Navbar extends React.Component {
 
                     <div className="searchbar">
                         <div className="searchbar-form" >
-                            <form /*onSubmit={}*/>
-                                <input type="text" id='search-bar' onChange={this.handleChange} name="query" placeholder="Search for items or shops" autoComplete='off'/>      
-                            <div className='search-suggestion-box'>
-                                <p>my hero academia</p>
-                                <p>one punch man</p>
-                                <p>sailor mooon</p>
-                                <p>gekkan shoujo</p>
-                            </div>
+                            <form name='sb-form' onSubmit={e => e.preventDefault()}>
+                                <input type="text" className='searchbar-input' onChange={this.handleChange} onKeyUp={e => this.handleSubmit(e)} name="search" placeholder="Search for items or shops" autoComplete='off'/>      
+                                {/* onKeyUp={e => this.handleSubmit(e)} */}
+                                
+                                <div className='search-suggestion-box'>
+                                    <p>my hero academia</p>
+                                    <p>one punch man</p>
+                                    <p>sailor mooon</p>
+                                    <p>gekkan shoujo</p>
+                                </div>
                             </form>
                             <div className="navbar-icon search-icon" onClick={this.handleSubmit}>
                                 {searchIcon}
@@ -135,7 +157,7 @@ class Navbar extends React.Component {
                         return <CategoryDropdownContainer header={cat} key={idx} />
                     })}
 
-                    <CategoryDropdownContainer header={'   Gifts'} />
+                    <CategoryDropdownContainer header={'Gifts'} />
                 </div>
             </div>
         )

@@ -16,6 +16,14 @@ class Splash extends React.Component{
         this.props.fetchSplashProducts();
     }
 
+    // componentWillReceiveProps(nextProps) {
+    //     if (this.props.products !== nextProps.products) {
+    //         this.props.fetchSplashProducts();
+    //     }
+    // }
+  
+
+
    
 
     render() {

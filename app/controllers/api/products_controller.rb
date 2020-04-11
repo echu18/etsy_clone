@@ -2,8 +2,15 @@ class Api::ProductsController < ApplicationController
     include Rails.application.routes.url_helpers
     
     def index
-      debugger
       @products = Product.search(params[:search])
+      # debugger
+      # if @products.length == 0
+      #   # render json: `We couldn\'t find any results for #{params[:search]}`
+      #   # render json: @products.errors.full_messages, status: 401
+      #   # render json: { error: `We couldn\'t find any results for #{params[:search]}`}
+      # else
+      #   return @products
+      # end
       # debugger
       # if params[:search] == nil
       #   @products = Product.all
@@ -34,24 +41,25 @@ class Api::ProductsController < ApplicationController
     end
 
 
-    def search
-       debugger
-        # @products = Product.search(params[:search])
-        # return @products
-        @products = Product.all
-        
-        if params[:search] == ""
-          return @products
-        else
-          selected = @products.select {|product| product.name.split(" ").include?(params[:search])}
+    # def search
+    #    debugger
+    #     @products = Product.search(params[:search])
+    #     render :index
+        # @products = Product.all
+
+        # if params[:search] == ""
+        #   return @products
+        # else
+        #   selected = @products.select {|product| product.name.split(" ").map(&:downcase).include?(params[:search].map(&:downcase))}
           
-          if selected
-            return selected
-          else
-            render json: @product.errors.full_messages, status: 401
-          end
-        end
-    end
+        #   if selected
+        #     debugger
+        #     return selected
+        #   else
+        #     render json: @product.errors.full_messages, status: 401
+        #   end
+        # end
+    # end
 
     def create
     @product = Product.new(product_params)
@@ -80,7 +88,7 @@ class Api::ProductsController < ApplicationController
   
 
     def product_params
-        params.require(:product).permit(:name, :description, :price, :seller_id, :category_id, :search, photos: [])
+        params.require(:product).permit(:name, :description, :price, :seller_id, :category_id, photos: [], search: query)
     end
 
     

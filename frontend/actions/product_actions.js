@@ -4,6 +4,7 @@ export const RECEIVE_PRODUCTS = 'RECEIVE_PRODUCTS';
 export const RECEIVE_SPLASH_PRODUCTS = 'RECEIVE_SPLASH_PRODUCTS';
 export const RECEIVE_PRODUCT = 'RECEIVE_PRODUCT';
 export const RECEIVE_ERRORS = 'RECEIVE_ERRORS';
+export const CLEAR_PRODUCTS = 'CLEAR_PRODUCTS';
 
 
 export const receiveProducts = products => ({
@@ -32,6 +33,10 @@ const receiveErrors = errors => ({
 })
 
 
+const removeProducts = () => ({
+    type: CLEAR_PRODUCTS
+})
+
 
 
 export const fetchProducts = () => dispatch => getProducts()
@@ -53,3 +58,4 @@ export const fetchProduct = (id) => dispatch => getProduct(id)
         error => dispatch(receiveErrors(error.responseJSON)))
 
 
+export const clearProducts = () => dispatch => dispatch(removeProducts())

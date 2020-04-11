@@ -17,6 +17,10 @@ class ProductIndex extends React.Component {
         // this.props.fetchProducts();
     }
 
+    componentWillUnmount(){
+        this.props.clearProducts()
+    }
+
     componentWillReceiveProps(nextProps){
         if (!this.state.pages || this.props.products !== nextProps.products){
             this.setState({pages: this.organizeProducts(nextProps.products)});
@@ -54,7 +58,6 @@ class ProductIndex extends React.Component {
                 }
             }
 
-            debugger
         return pages;
     }
 
@@ -102,18 +105,21 @@ class ProductIndex extends React.Component {
         if (!this.props.products || !this.state.pages ) {
             return null;
         } 
-
-        debugger
+   
+        const noResults = "We couldn\'t find any results"
+        
         return (
             <div className='index-container'>
                 <div className='index-products'>
-                    {this.state.pages[this.state.currentPage].map((row, idx)=>{
+                    {this.props.products.length === 0 ? <p>{noResults}</p> : (
+                    
+                    this.state.pages[this.state.currentPage].map((row, idx)=>{
                         return (
                                 <div className='index-row'>
                                     <CatModuleContainer row={row} />
                                 </div>
                                 )
-                    })}
+                    }))}
                 </div>
 
                 <button onClick={this.handlePrevPage}>Previous Page</button>

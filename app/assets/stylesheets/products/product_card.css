@@ -42,8 +42,11 @@
 } */
 .product-card-image:hover  {
     cursor: pointer;
-    box-shadow: 0px 0px  10px 1px rgb(212, 212, 212);
+    /* box-shadow: 0px 0px  10px 1px rgb(212, 212, 212); */
+      /* transition: opacity 0.3s ease-in-out; */
 }
+
+
 
 .product-card-price {
     font-size: 16px;

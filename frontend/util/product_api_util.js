@@ -6,11 +6,15 @@ export const getProducts = () => {
 }
 
 export const queryProducts = (query) => {
-    debugger
     return $.ajax({
-        url: `/api/products/search/`,
+        url: `/api/search/`,
         method: 'GET',
-        search: query
+        data: {search: query},
+        success: function (data) {
+            if (data.errors){
+                res.send(data.errors)
+            }
+        }
     })
 }
 
