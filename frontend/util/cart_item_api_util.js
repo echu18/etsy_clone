@@ -31,11 +31,11 @@ export const createCartItem = (cart_item) => {
 //     })
 // }
 
-export const modifyCartItem = (cartItemId, data) => {
+export const modifyCartItem = (cartItemId, cart_item) => {
   return $.ajax({
     url: `/api/cart_items/${cartItemId}`,
     method: "PATCH",
-    data: { data }
+    data: { cart_item }
   });
 };
 
@@ -50,7 +50,7 @@ export const modifyCartItem = (cartItemId, data) => {
 //     })
 // }
 
-    export const destroyCartItem = (cartItemId) => {
+export const destroyCartItem = (cartItemId) => {
         return $.ajax({
         url: `/api/cart_items/${cartItemId}`,
         method: "DELETE"

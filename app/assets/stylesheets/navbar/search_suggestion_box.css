@@ -1,5 +1,4 @@
 .search-suggestion-box {
-    font-family: 'Helvetica', sans-serif;
     font-size: 16px;
     display: none;
     position: absolute;
@@ -30,9 +29,9 @@
 
 
 .search-suggestion-box > h3 {
-    font-family: sans-serif;
+    font-family: 'Arial', sans-serif;
     text-indent: 15px;
-    font-weight: 500;
+    font-weight:   510;
     margin-bottom: 8px;
 }
 

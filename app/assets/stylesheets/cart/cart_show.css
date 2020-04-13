@@ -11,7 +11,7 @@
     padding-bottom: 200px; 
     /* min-width: 69.6vw; */
     width: 70%;
-    z-index: 100;
+    z-index: 50;
     /* border: 1px solid blue; */
 }
 
@@ -47,7 +47,8 @@
     margin-top: 20px;
     border-radius: 5px;
     background-color: white;
-    /* border: 1px solid red; */
+    /* border: 0.5px solid gainsboro; */
+
 }
 
 /* .cart-inner > section > h3 {
@@ -76,22 +77,29 @@
     background: white;
     border-radius: 5px;
     /* margin-bottom: 5px; */
+    border: 1px solid gainsboro;
 }
 
 .keep-shopping-btn:hover {
     cursor: pointer;
+    background-color: rgb(243, 243, 243);
 }
 
+/* .keep-shopping-btn:active {
+    border: 0;
+} */
 .cart-items {
     position: relative;
+    height: 100%;
+    border-radius: 5px;
     border: 0.5px solid gainsboro;
     z-index: 5;
 }
 
-.keep-shopping-btn {
+/* .keep-shopping-btn {
     height: 20px;
     width: 150px;
-}
+} */
 
 
 .cart-pay-container {

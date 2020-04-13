@@ -32,9 +32,11 @@ class Api::CartItemsController < ApplicationController
 
 
     def update
+        
         @cart_item = CartItem.find_by(id: params[:id])
         if @cart_item.user_id == current_user.id
             if @cart_item.update_attributes(cart_item_params)
+                @cart_items = CartItem.all.select {|cart_item| cart_item.user_id == current_user.id && cart_item.fulfilled == false}        
                 render :show
             else
                 render json: @product.errors.full_messages, status: 401
@@ -46,12 +48,16 @@ class Api::CartItemsController < ApplicationController
 
     def destroy 
         @cart_item = CartItem.find(params[:id])
-
         if current_user && @cart_item && (@cart_item.user_id == current_user.id)
-            @cart_item.delete
+            if @cart_item.delete
+                @cart_items = CartItem.all.select {|cart_item| cart_item.user_id == current_user.id && cart_item.fulfilled == false}        
+                render :show
+            end
         else  
             render json: @cart_item.errors.full_messages, status: 401
         end
+
+        #    render :show
     end
 
 

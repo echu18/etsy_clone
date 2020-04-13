@@ -4,60 +4,107 @@ class CartItemBar extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            user_id: this.props.currentUserId,
+            // user_id: this.props.currentUserId,
             product_id: this.props.cartItem.id,
-            quantity: this.props.cartItem.quantity,
+            // quantity: this.props.cartItem.quantity,
+            totalPrice: 0,
             fulfilled: false
         }
         // this.handleSubmit = this.handleSubmit.bind(this);
         this.updateQuantity = this.updateQuantity.bind(this);
+        this.handleDelete = this.handleDelete.bind(this);
+    }
+
+    componentDidMount(){
+        // debugger
+       const price = this.props.products[this.props.cartItem.product_id].price;
+       const qty = this.props.cartItem.quantity;
+       const initialPrice = price * qty;
+        this.setState({ totalPrice: initialPrice, quantity: qty})
+    }
+
+    componentWillReceiveProps(nextProps){
+        const price = this.props.products[this.props.cartItem.product_id].price;
+        const qty = nextProps.cartItem.quantity;
+        const newPrice = price * qty;
+
+        if (this.props.cartItem.quantity != nextProps.cartItem.quantity) {
+            this.setState({ totalPrice: newPrice, quantity: qty })
+        }
     }
 
     updateQuantity(e) {
-        this.setState({ quantity: e.target.value })
+        // const updatePrice = this.updatePrice;
+        debugger
+
+        const cartItem = this.props.cartItem;
+        this.props.editCartItem( cartItem.id, {user_id: cartItem.user_id, product_id: cartItem.product_id, fulfiled: false, quantity: e.target.value })
+        // this.setState({ quantity: e.target.value }, updatePrice)
+
     }
 
-    updatePrice(price){
-        const updatedPrice = price * this.state.quantity
-        const formatPrice = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(updatedPrice);
-        // debugger
-        return formatPrice;
-    }
+    // updatePrice(){
+    //     const updatedPrice = this.props.products[this.props.cartItem.product_id].price * this.state.quantity
+    //     this.setState({totalPrice: updatedPrice})
+    //     // this.returnPrice()
+    //     debugger
+    //     // this.props.callbackFromParent(updatedPrice);
+    // }
 
+    formatPrice(price){
+        return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(price)
+    }
+    
+    // returnPrice() {
+    //     debugger
+    //     let returnPrice = this.state.totalPrice;
+    // }
+
+    handleDelete(e){
+        e.preventDefault()
+        debugger
+        this.props.deleteCartItem(this.props.cartItem.id)
+    }
     
     render() {
         const { cartItem, products, users} = this.props;
+        const product = products[cartItem.product_id]
+        // const price = products[cartItem.product_id].price * cartItem.quantity
+        const price = this.state.totalPrice;
         
         return (
             <div className="cart-item-bar">
                 <section>
-                    <img src={users[products[cartItem.product_id].seller_id].photoUrls[0]} />
-                    <p className='ci-store-name'>{users[products[cartItem.product_id].seller_id].store_name ? users[products[cartItem.product_id].seller_id].store_name : users[products[cartItem.product_id].seller_id].username}</p>
+                    <img src={users[product.seller_id].photoUrls[0]} />
+                    <p className='ci-store-name'>{users[product.seller_id].store_name ? users[product.seller_id].store_name : users[product.seller_id].username}</p>
                     <p className='ci-contact-shop'>Contact shop</p>
                 </section>
 
                 <div className="ci-block-upper">
                     <img
                         className="ci-image"
-                        src={products[cartItem.product_id].photoUrls[0]}
+                        src={product.photoUrls[0]}
                         alt=""
                     />
                     <div className="ci-name">
-                        <p>{products[cartItem.product_id].name}</p>
+                        <p>{product.name}</p>
                         <button>Save for later</button>
-                        <button>Remove</button>
+                        <button onClick={this.handleDelete}>Remove</button>
                     </div>
                     <select id='ci-qty-dropdown' onChange={this.updateQuantity} quantity={this.state.quantity}>
-                        <option value='1'>1</option>
-                        <option value='2'>2</option>
-                        <option value='3'>3</option>
-                        <option value='4'>4</option>
-                        <option value='5'>5</option>
-                        <option value='6'>6</option>
-                        <option value='7'>7</option>
+                        {/* <option value='1' {cartItem.quantity === 1 ? selected : "" }>1</option> */}
+                        <option value='1' selected={cartItem.quantity === 1 ? true : false}>1</option>
+                        <option value='2' selected={cartItem.quantity === 2 ? true : false}>2</option>
+                        <option value='3' selected={cartItem.quantity === 3 ? true : false}>3</option>
+                        <option value='4' selected={cartItem.quantity === 4 ? true : false}>4</option>
+                        <option value='5' selected={cartItem.quantity === 5 ? true : false}>5</option>
+                        <option value='6' selected={cartItem.quantity === 6 ? true : false}>6</option>
+                        <option value='7' selected={cartItem.quantity === 7 ? true : false}>7</option>
                     </select>
                     <p className="ci-price">
-                        {this.updatePrice(products[cartItem.product_id].price)}
+                        {/* {this.updatePrice(product.price)} */}
+                        {/* {this.state.totalPrice} */}
+                        {this.formatPrice(price)}
                     </p>
                 </div>
 
@@ -74,7 +121,7 @@ class CartItemBar extends React.Component {
                 <div className="ci-block-lower">
                     <textarea
                         className="add-note"
-                        placeholder={'Add a note to ' + `${users[products[cartItem.product_id].seller_id].store_name ? users[products[cartItem.product_id].seller_id].store_name : 'seller'}` + ' (optional)'}
+                        placeholder={'Add a note to ' + `${users[product.seller_id].store_name ? users[product.seller_id].store_name : 'seller'}` + ' (optional)'}
                     />
                     <section>
                         <h3>Shipping: $3.99</h3>

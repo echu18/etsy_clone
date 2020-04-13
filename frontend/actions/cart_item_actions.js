@@ -44,12 +44,12 @@ export const addCartItem = (data) => dispatch => createCartItem(data)
         error => dispatch(receiveErrors(error.responseJSON)))
 
 
-export const editCartItem = (userId, cartItemId) => dispatch => modifyCartItem(userId, cartItemId)
-    .then(cartItem => dispatch(receiveCartItem(cartItem)),
+export const editCartItem = (cartItemId, cart_item) => dispatch => modifyCartItem(cartItemId, cart_item)
+    .then(cartItems => dispatch(receiveCartItems(cartItems)),
         error => dispatch(receiveErrors(error.responseJSON)))
 
 
-export const deleteCartItem = (userId, cartItemId) => dispatch => destroyCartItem(userId, cartItemId)
-        .then(cartItem => dispatch(receiveCartItem(cartItem)));
+export const deleteCartItem = (cartItemId) => dispatch => destroyCartItem(cartItemId)
+        .then(cartItems => dispatch(receiveCartItems(cartItems)));
 
 export const clearCartItems = () => dispatch => dispatch(removeCartItems())
