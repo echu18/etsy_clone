@@ -84,7 +84,9 @@ hr:after {
   /* left: 50%; */
   left: 50%;
   position: absolute;
-    background: tomato;
+    /* background: tomato; */
+    background: black;
+  /* transition: width 0.3s ease 0s, left 0.3s ease 0s; */
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
   width: 0;
 }

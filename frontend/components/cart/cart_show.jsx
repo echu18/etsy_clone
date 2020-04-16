@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import CartItemBar from './cart_item_bar'
 import {paypalIcon, visaIcon, discoverIcon, amexIcon, mastercardIcon } from '../../../app/assets/images/svgs/icons';
 
@@ -58,8 +59,12 @@ class CartShow extends React.Component {
           <div className='cart-outer-container'>
               <div className='cart-background'>
               <div className="cart-show-container">
-                {!cartItems ? (
-                  <p className="empty-cart-msg">Your cart is empty.</p>
+                {cartItems.length === 0 ? (
+                  <div className="empty-cart-msg">
+                    <h3>Your cart is empty.</h3>
+                    <Link to={`/`}>Discover something unique to fill it up</Link>
+                  </div>
+                  
                 ) : (
                   <div className="cart-inner">
                     <section>
