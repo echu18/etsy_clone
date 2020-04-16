@@ -427,7 +427,7 @@ p14.photos.attach(io: file133, filename: 'froggy3.jpg')
 
 
 
-p15 = Product.create(name:'League of Legends - Dj Sona LED panel for Cosplay - costume prop video game gift', description: "Up for sale is a flexible led panel that is programmed to imitate Dj Sona's animation from league of legend", 
+p15 = Product.create(name:'League of Legends - DJ Sona LED panel for Cosplay - costume prop video game gift', description: "Up for sale is a flexible led panel that is programmed to imitate Dj Sona's animation from league of legend", 
     price: 182.61, seller_id: u18.id, category_id: 22)
 
 
@@ -738,7 +738,7 @@ author_id: u50.id, product_id: p31.id, rating: 4)
 
 
 
-p32 = Product.create(name:'SMOKU Fighting x Smoking Collab Custom Vinyl Sticker, Limited Edition Sticker, Stickers, Vinyl Stickers, Custom Stickers, Laptop Sticker', description: "- 1x Custom Vinyl Sticker\n
+p32 = Product.create(name:'SMOKU Fighting x Smoking Collab FUNNY Custom Vinyl Sticker, Limited Edition Sticker, Stickers, Vinyl Stickers, Custom Stickers, Laptop Sticker', description: "- 1x Custom Vinyl Sticker\n
 - Limited Edition Custom Design\n
 - Each Sticker measures roughly between 3-4 Inches\n
 - Highest Quality Possible", 
@@ -747,8 +747,8 @@ price: 1.99, seller_id: u21.id, category_id: 22)
 file192 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/goku1.jpg')
 file193 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/goku2.jpg')
 
-p32.photos.attach(io: file192, filename: 'goku1.jpg')
 p32.photos.attach(io: file193, filename: 'goku2.jpg')
+p32.photos.attach(io: file192, filename: 'goku1.jpg')
 
 r123 = Review.create(body: 'The stickers are hilarious and definitely worth the wait!', 
 author_id: u19.id, product_id: p32.id, rating: 4)
