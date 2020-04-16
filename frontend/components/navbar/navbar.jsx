@@ -162,6 +162,7 @@ class Navbar extends React.Component {
 
                     <CategoryDropdownContainer header={'Gifts'} />
                 </div>
+                {/* <hr/> */}
             </div>
         )
     }

@@ -28,6 +28,7 @@
 
 
 .navbar-cat-header{
+    position: relative;
     box-sizing: border-box;
     display: flex;
     align-items: center;
@@ -42,6 +43,7 @@
     /* padding: 10px 0px 10px 0px; */
     padding-top: 6px;
     margin-bottom: -3px;
+          /* transition: .3s ease-in-out; */
     /* border: 1px solid red; */
 }
 
@@ -62,11 +64,69 @@
     border-bottom: 1px solid black;
 } */
 
-
 .navbar-cat-header:hover {
     cursor: pointer;
-    border-bottom: 1.5px solid black;
 }
+
+.navbar-cat-header:hover > hr {
+    display: block;
+    /* border-bottom: 1.5px solid black; */
+    /* transition: .3s ease-in-out; */
+}
+
+
+hr:after {
+    background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: flex;
+  height: 2px;
+  /* left: 50%; */
+  left: 50%;
+  position: absolute;
+    background: tomato;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+.navbar-cat-header:hover > hr:after { 
+  width: 100%; 
+  left: 0; 
+}
+
+hr {
+    border: none;
+    /* display: flex;
+    position: absolute;
+    bottom: 0; */
+    /*bottom: 0;
+    height: 1.5px;
+    width: 100%;
+    margin: 0;
+    background: tomato;
+    border: none;
+    display: none; */
+    /* transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0; */
+}
+
+
+/* hr:after {    
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #fff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+} */
+
+
+
+
 
 
 

@@ -15,6 +15,7 @@ class CategoryDropdown extends React.Component {
                 {/* {this.props.header === 'Gifts' ? <div className='gift-icon'>{giftIcon}</div> : null} */}
                 {this.props.header === 'Gifts' ? <div>{giftIcon}</div> : null}
                 <p>{this.props.header}</p>
+                <hr/>
             </div>
         )
     }
