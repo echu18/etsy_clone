@@ -2377,4 +2377,838 @@ file376 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-image
 p102.photos.attach(io: file376, filename: 'boldandbrash1.jpg')
 
 r276 = Review.create(body: "Absolutely hilarious and beautiful! I love this painting and can't wait to hang it!",
-author_id: u11.id, product_id: p100.id, rating: 5)
+author_id: u11.id, product_id: p102.id, rating: 5)
+
+
+
+
+
+
+p103 = Product.create(name: 'Edelgard Cosplay Pattern - Edelgard Fire Emblem Three Houses - Edelgard costume - FE3H Cosplay - Fire Emblem Cosplay - Fire Emblem Pattern', description: "Edelgard Sewing Pattern - Fire Emblem Three Houses
+\n ♡♡♡
+\n This sewing pattern is based on Edelgard's Student Uniform from Fire Emblem Three Houses and my own personal build of the costume.",
+    price: 137.50, seller_id: u41.id, category_id: 22)
+
+file377 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/fecos1.jpg')
+file378 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/fecos2.jpg')
+file379 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/fecos3.jpg')
+
+p103.photos.attach(io: file377, filename: 'fecos1.jpg')
+p103.photos.attach(io: file378, filename: 'fecos2.jpg')
+p103.photos.attach(io: file379, filename: 'fecos3.jpg')
+
+r277 = Review.create(body: "Beautiful costume, so easy to work with. Thank you so much!",
+author_id: u12.id, product_id: p103.id, rating: 5)
+
+r278 = Review.create(body: "It\’s perfect and detailed, just an amazing costume and the care into making sure anyone could make it is unbelievable",
+author_id: u13.id, product_id: p103.id, rating: 5)
+
+
+
+
+p104 = Product.create(name: 'Screen Printed & Leather Deadpool Movie (Replica) Cosplay / Costume Suit', description: "Custom Screen Deadpool Printed Stretch Material & Leather Suit. With ilustrastudios shoulders included.",
+    price: 1200.00, seller_id: u40.id, category_id: 22)
+
+file340 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/deadpool1.jpg')
+file341 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/deadpool2.jpg')
+file342 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/deadpool3.jpg')
+
+p104.photos.attach(io: file340, filename: 'deadpool1.jpg')
+p104.photos.attach(io: file341, filename: 'deadpool2.jpg')
+p104.photos.attach(io: file342, filename: 'deadpool3.jpg')
+
+r279 = Review.create(body: "Great suit! Worth the money! Highly recommend!",
+author_id: u14.id, product_id: p104.id, rating: 5)
+
+r280 = Review.create(body: "This is the perfect deadpool suit! \n
+It\'s like a movie suit. \n
+I am very happy , Thank you!",
+author_id: u15.id, product_id: p104.id, rating: 5)
+
+
+
+
+
+
+p105 = Product.create(name: 'Stormtrooper Armor Personalized Star Wars Cosplay Costume', description: "Custom made Star Wars Stormtrooper costume armor",
+    price: 900.00, seller_id: u39.id, category_id: 22)
+
+file343 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/starwars1.jpg')
+file344 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/starwars2.jpg')
+file345 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/starwars3.jpg')
+
+p105.photos.attach(io: file343, filename: 'starwars1.jpg')
+p105.photos.attach(io: file344, filename: 'starwars2.jpg')
+p105.photos.attach(io: file345, filename: 'starwars3.jpg')
+
+r281 = Review.create(body: "great detail and great customization worth getting",
+author_id: u16.id, product_id: p105.id, rating: 5)
+
+r282 = Review.create(body: "Absolutely amazing communication!\n
+    Fast shipping!\n
+    Two thumbs up!\n
+    I will definitely do business again!👍",
+author_id: u17.id, product_id: p105.id, rating: 4)
+
+
+
+
+
+p106 = Product.create(name: 'Akali KDA/POPSTAR League of legends uv/ glow in the dark MASK', description: "Hip fashion accessory, as popularized by the hit music icon Akali from K/DA POP/STARS",
+    price: 26.00, seller_id: u38.id, category_id: 22)
+
+file346 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/kda1.jpg')
+file347 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/kda2.jpg')
+file348 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/kda3.jpg')
+
+p106.photos.attach(io: file346, filename: 'kda1.jpg')
+p106.photos.attach(io: file347, filename: 'kda2.jpg')
+p106.photos.attach(io: file348, filename: 'kda3.jpg')
+
+r283 = Review.create(body: "Good quality item very soft and flexible.",
+author_id: u18.id, product_id: p106.id, rating: 4)
+
+r284 = Review.create(body: "Packed extremely well, shipped quickly, as pictured, good material and graphic quality.",
+author_id: u19.id, product_id: p106.id, rating: 5)
+
+r285 = Review.create(body: "I love it!!! Just how I wanted it! And the quality is great!! Also thought the little baggie where it came from was super cute 😂❤️",
+author_id: u20.id, product_id: p106.id, rating: 5)
+
+
+
+
+
+p107 = Product.create(name: 'League of Legends: Jhin mask Inspired for cosplay', description: "Cosplay from League of Legend games • The mask is made of strong polyurethane plastic, further Reinforced throughout the area.",
+    price: 94.00, seller_id: u37.id, category_id: 22)
+
+file349 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/jhin1.jpg')
+file350 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/jhin2.jpg')
+file351 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/jhin3.jpg')
+
+p107.photos.attach(io: file349, filename: 'jhin1.jpg')
+p107.photos.attach(io: file350, filename: 'jhin2.jpg')
+p107.photos.attach(io: file351, filename: 'jhin3.jpg')
+
+r286 = Review.create(body: "Amazing quality! I love it !!",
+author_id: u21.id, product_id: p107.id, rating: 4)
+
+r287 = Review.create(body: "While it took a month to ship, the quality is amazing and very accurate. The size of it is very nice as well, not too small or anything. Very pleased and definitely worth the price for how nice it is.",
+author_id: u22.id, product_id: p107.id, rating: 5)
+
+r288 = Review.create(body: "The item was great quality and shipped quickly. The store was friendly and helpful. Overall great!",
+author_id: u23.id, product_id: p107.id, rating: 5)
+
+
+
+
+p108 = Product.create(name: 'Fallout Nuka Cola Thirst Zapper Blaster Prop', description: "Fallout 4 Quantum Nuka Cola Blaster Replica",
+    price: 114.17, seller_id: u36.id, category_id: 22)
+
+file352 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/nukacola1.jpg')
+file353 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/nukacola2.jpg')
+file354 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/nukacola3.jpg')
+
+p108.photos.attach(io: file352, filename: 'nukacola1.jpg')
+p108.photos.attach(io: file353, filename: 'nukacola2.jpg')
+p108.photos.attach(io: file354, filename: 'nukacola3.jpg')
+
+r289 = Review.create(body: "great item, arrived well packed, good comms .. would recommend",
+author_id: u24.id, product_id: p108.id, rating: 4)
+
+r290 = Review.create(body: "Awesome piece of work! Very accurate!",
+author_id: u25.id, product_id: p108.id, rating: 5)
+
+r291 = Review.create(body: "I love the finish! Just like in the game!!",
+author_id: u26.id, product_id: p108.id, rating: 5)
+
+
+
+
+p109 = Product.create(name: 'Zelda inspired battle damaged shield', description: "Shield is made out of foam.
+Dimensions are about 23x21.
+Sits on right hand. \n\n
+
+Comes with shield and belt",
+    price: 232.47, seller_id: u35.id, category_id: 22)
+
+file355 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/zeldashield1.jpg')
+file356 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/zeldashield2.jpg')
+
+p109.photos.attach(io: file355, filename: 'zeldashield1.jpg')
+p109.photos.attach(io: file356, filename: 'zeldashield2.jpg')
+
+r292 = Review.create(body: "Seller was a blast to communicate with. She loves what she does and it shows in her craftwomanship! She produced the shield exactly in the time frame she stated.",
+author_id: u27.id, product_id: p109.id, rating: 4)
+
+r293 = Review.create(body: "This was a present for my best friend. He said in 36 years he has never gotten anything as cool. His favorite gift Ever!",
+author_id: u28.id, product_id: p109.id, rating: 5)
+
+r294 = Review.create(body: "Got this as a Christmas gift for my boyfriend who is a big Zelda fan. I have slowly been getting him different weapons from the games and as soon aa i saw the quality of this shield and all the great reviews, i knew I had to get it. He absolutely loced it! It's already mounted on the wall and looks amazing with the other weapons. Would high my recommend this seller, the work on the shield is amazing!",
+author_id: u29.id, product_id: p109.id, rating: 5)
+
+
+
+
+
+p110 = Product.create(name: 'Floating fireball prop 2.0 (cosplay, convention, halloween)', description: "Floating fireball prop 2.0 (cosplay, convention, halloween)",
+    price: 74.99, seller_id: u34.id, category_id: 22)
+
+file357 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/fireball1.jpg')
+file358 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/fireball2.jpg')
+file359 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/fireball3.jpg')
+file360 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/fireball4.jpg')
+
+p110.photos.attach(io: file357, filename: 'fireball1.jpg')
+p110.photos.attach(io: file358, filename: 'fireball2.jpg')
+p110.photos.attach(io: file359, filename: 'fireball3.jpg')
+p110.photos.attach(io: file360, filename: 'fireball4.jpg')
+
+r295 = Review.create(body: "Fantastic product! Will definitely shop with again! I can finally cosplay the avatar yaaaa",
+author_id: u30.id, product_id: p110.id, rating: 4)
+
+r296 = Review.create(body: "Order arrived in perfect conditions, the quality is amazing. Definitely worth it",
+author_id: u31.id, product_id: p110.id, rating: 5)
+
+
+
+
+
+
+p111 = Product.create(name: 'Made to Order, Custom Fit Azula Cosplay- Avatar the Last Airbender', description: "You are able to order the breastplate, the red jumpsuit, the greaves/ shoe covers, the tiara/ belt or the entire costume. Please let me know if you would like either gold details or yellow details when messaging me. (See listing photos for gold or yellow options)",
+    price: 65.00, seller_id: u33.id, category_id: 22)
+
+file361 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/azula1.jpg')
+file362 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/azula2.jpg')
+file363 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/azula3.jpg')
+
+p111.photos.attach(io: file361, filename: 'azula1.jpg')
+p111.photos.attach(io: file362, filename: 'azula2.jpg')
+p111.photos.attach(io: file363, filename: 'azula3.jpg')
+
+r297 = Review.create(body: "I love this costume. I was highly impressed by the quality of the material and the detail put into items like the staff and the belts. If you are looking for a costume that is up to Fire Nation standards this is the one",
+author_id: u32.id, product_id: p111.id, rating: 5)
+
+r298 = Review.create(body: "The quality is amazing, it’s very comfortable, everything is a perfect fit... I can’t recommend this shop enough. Absolutely love it.",
+author_id: u33.id, product_id: p111.id, rating: 5)
+
+
+
+
+
+
+
+
+p112 = Product.create(name: 'Katara Cosplay', description: "Become a water bender with your very own Katara Cosplay!\n
+
+What’s included?\n
+- Fleece dress with fur trim on the bottom\n
+- White tie belt\n
+- Water Tribe Necklace with jump ring attached (ribbon not included)",
+    price: 72.99, seller_id: u32.id, category_id: 22)
+
+file364 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/katara1.jpg')
+file365 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/katara2.jpg')
+file366 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/katara3.jpg')
+
+p112.photos.attach(io: file364, filename: 'katara1.jpg')
+p112.photos.attach(io: file365, filename: 'katara2.jpg')
+p112.photos.attach(io: file366, filename: 'katara3.jpg')
+
+r299 = Review.create(body: "A great looking outfit! Very well made and fits perfect. My wife loves it and can’t wait to wear it to the next con!",
+author_id: u34.id, product_id: p112.id, rating: 4)
+
+r300 = Review.create(body: "Excellent delivery time and excellent quality outfit for my teenage daughter .",
+author_id: u35.id, product_id: p112.id, rating: 4)
+
+
+
+
+
+p113 = Product.create(name: 'Fire Emblem Awakening Avatar Mai Robin Cosplay Costume Full Set Custom Made', description: "Includes: Accessories, Belt, Coat, Pants, Shirt, Skirt, Vest",
+    price: 192.50, seller_id: u31.id, category_id: 22)
+
+file367 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/feacos1.jpg')
+file368 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/feacos2.jpg')
+file369 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/feacos3.jpg')
+file370 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/feacos4.jpg')
+file371 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/feacos5.jpg')
+
+p113.photos.attach(io: file367, filename: 'feacos1.jpg')
+p113.photos.attach(io: file368, filename: 'feacos2.jpg')
+p113.photos.attach(io: file369, filename: 'feacos3.jpg')
+p113.photos.attach(io: file370, filename: 'feacos4.jpg')
+p113.photos.attach(io: file371, filename: 'feacos5.jpg')
+
+r301 = Review.create(body: "Looks great, everyone at the con loved my Robin cosplay",
+author_id: u36.id, product_id: p113.id, rating: 5)
+
+
+
+
+
+
+p114 = Product.create(name: 'Avatar: The Last Airbender Inspired Blue Spirit Mask', description: "A replica of the mask worn by the mysterious Blue Spirit from Avatar: The Last Airbender.",
+    price: 144.50, seller_id: u30.id, category_id: 22)
+
+file372 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/bluespirit1.jpg')
+file373 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/bluespirit2.jpg')
+file374 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/bluespirit3.jpg')
+
+
+p114.photos.attach(io: file372, filename: 'bluespirit1.jpg')
+p114.photos.attach(io: file373, filename: 'bluespirit2.jpg')
+p114.photos.attach(io: file374, filename: 'bluespirit3.jpg')
+
+
+r302 = Review.create(body: "Blue Spirit is great! I love the 'wood' and it is better the just resin (Yes, it is still resin). I have two use Velcro and elastic stretching and it did the trick. As well, it looks good on the wall mount.",
+author_id: u37.id, product_id: p114.id, rating: 5)
+
+r303 = Review.create(body: "Best Blue Spirit mask on the market. Fantastic detail and extremely accurate. The wood grain effect is simply amazing. However, I do wish that some things could be changed for the price. Mine has a few lime green spots on it, probably from painting another mask close to it, one of the side pieces is loose, and it only came packed in packing peanuts and wasn't wrapped inside. It's quality, I did expect it to be more professional.",
+author_id: u38.id, product_id: p114.id, rating: 3)
+
+
+
+
+
+p115 = Product.create(name: 'Officer D.Va Overwatch Sew-On Patches Cosplay', description: "If you're cosplaying officer D.va or just love her - these patches are made for you!",
+    price: 10.50, seller_id: u29.id, category_id: 22)
+
+file375 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/dvapatch1.jpg')
+file376 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/dvapatch2.jpg')
+file377 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/dvapatch3.jpg')
+
+
+p115.photos.attach(io: file375, filename: 'dvapatch1.jpg')
+p115.photos.attach(io: file376, filename: 'dvapatch2.jpg')
+p115.photos.attach(io: file377, filename: 'dvapatch3.jpg')
+
+
+r304 = Review.create(body: "Over all a great pattern. I had to adjust the ears a little but he came out great",
+author_id: u39.id, product_id: p115.id, rating: 3)
+
+r305 = Review.create(body: "Cute patch for my Officer D.Va cosplay! Looks true to the game and was well made.",
+author_id: u40.id, product_id: p115.id, rating: 4)
+
+
+
+
+
+
+
+
+p116 = Product.create(name: 'KAWAII PINK REAPER from Overwatch', description: "In stock KAWAII PINK Reaper costume from the game OVERWATCH on my design\n
+_______________\n
+HAND MADE\n
+Before buying, read the details and measurements\n
+ALL QUESTIONS WRITE BEFORE BUYING!",
+    price: 700.00, seller_id: u28.id, category_id: 22)
+
+file378 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/kawaiireaper1.jpg')
+file379 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/kawaiireaper2.jpg')
+file380 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/kawaiireaper3.jpg')
+file381 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/kawaiireaper4.jpg')
+file382 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/kawaiireaper5.jpg')
+
+
+p116.photos.attach(io: file378, filename: 'kawaiireaper1.jpg')
+p116.photos.attach(io: file379, filename: 'kawaiireaper2.jpg')
+p116.photos.attach(io: file380, filename: 'kawaiireaper3.jpg')
+p116.photos.attach(io: file381, filename: 'kawaiireaper4.jpg')
+p116.photos.attach(io: file382, filename: 'kawaiireaper5.jpg')
+
+
+r306 = Review.create(body: "Wore this costume to a con and people LOVED IT. Got lots of photos and laughs.",
+author_id: u41.id, product_id: p116.id, rating: 4)
+
+
+
+
+
+
+p117 = Product.create(name: 'Cosplay Blackwatch Ana captain Amari Overwatch Blizzard', description: "Blackwatch Ana cosplay from Overwatch \n \nPLEASE WRITE TO ME BEFORE PURCHASING!!!!!!!! \n
+I don't know the exact price for shipping, it depends on your country. So please write to me first before purchasing, I have to check it first.",
+    price: 1500.00, seller_id: u27.id, category_id: 22)
+
+file383 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/ana1.jpg')
+file384 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/ana2.jpg')
+file385 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/ana3.jpg')
+file386 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/ana4.jpg')
+
+
+p117.photos.attach(io: file383, filename: 'ana1.jpg')
+p117.photos.attach(io: file384, filename: 'ana2.jpg')
+p117.photos.attach(io: file385, filename: 'ana3.jpg')
+p117.photos.attach(io: file386, filename: 'ana4.jpg')
+
+
+r307 = Review.create(body: "Thank you so much! It looks wonderful and was fully customized. 💖.",
+author_id: u42.id, product_id: p117.id, rating: 5)
+
+
+
+
+
+p118 = Product.create(name: 'Made to Order Genji Baihu LED Full Cosplay Costume Overwatch', description: "Full Genji Baihu cosplay \n Items are made by order of appointment, production time is discussed with each client individually",
+    price: 2600.00, seller_id: u26.id, category_id: 22)
+
+file387 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/genji1.jpg')
+file388 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/genji2.jpg')
+file389 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/genji3.jpg')
+file390 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/genji4.jpg')
+
+
+p118.photos.attach(io: file387, filename: 'genji1.jpg')
+p118.photos.attach(io: file388, filename: 'genji2.jpg')
+p118.photos.attach(io: file389, filename: 'genji3.jpg')
+p118.photos.attach(io: file390, filename: 'genji4.jpg')
+
+
+r308 = Review.create(body: "The armor pieces are incredible perfect fit for my build well packaged great seller thank you so much!!!",
+author_id: u43.id, product_id: p118.id, rating: 4)
+
+
+r309 = Review.create(body: "Absolutely perfect! Made to measurements and looks awesome! Definitely recommend to anyone looking for this item!",
+author_id: u42.id, product_id: p118.id, rating: 4)
+
+
+
+
+
+
+p119 = Product.create(name: 'Thor Hammer Metal, Upgraded Version Thor Mjolnir, Thor Cosplay 1/1 Scale Movie Prop Replica, Thors Mjolnir, Thors Hammer, Thor\'s Hammer', description: "In order to make the perfect film replica, this time I upgraded the Thor hammer, redesigned a set of molds, changed several parts of the hammer, and basically restored the hammer in the movie 100%:",
+    price: 279.00, seller_id: u25.id, category_id: 22)
+
+file391 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/thor1.jpg')
+file392 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/thor2.jpg')
+file393 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/thor3.jpg')
+file394 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/thor4.jpg')
+
+
+p119.photos.attach(io: file391, filename: 'thor1.jpg')
+p119.photos.attach(io: file392, filename: 'thor2.jpg')
+p119.photos.attach(io: file393, filename: 'thor3.jpg')
+p119.photos.attach(io: file394, filename: 'thor4.jpg')
+
+
+r310 = Review.create(body: "Was packaged very well, better then what I expected.",
+author_id: u41.id, product_id: p119.id, rating: 4)
+
+
+r311 = Review.create(body: "Very well constructed and great quality!",
+author_id: u40.id, product_id: p119.id, rating: 5)
+
+
+
+
+
+
+
+p119 = Product.create(name: 'AVATAR Korra cosplay', description: "Blue Korra's jacket From Book 1 or Book 2 \n\n
+
+Make any costume of Korra 'The Legend of Korra.' You can do just the individual parts of your choice.",
+    price: 185.00, seller_id: u24.id, category_id: 22)
+
+file395 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/korra1.jpg')
+file396 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/korra2.jpg')
+file397 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/korra3.jpg')
+
+
+p119.photos.attach(io: file395, filename: 'korra1.jpg')
+p119.photos.attach(io: file396, filename: 'korra2.jpg')
+p119.photos.attach(io: file397, filename: 'korra3.jpg')
+
+
+r312 = Review.create(body: "Outfit arrived sooner than expected, all items are just as they are in photos. Very happy with my purchase! :3",
+author_id: u44.id, product_id: p119.id, rating: 4)
+
+
+r313 = Review.create(body: "It fits just about right! Only a little tight around the chest area but that was expected after giving my measurements! Otherwise it all is so comfy and great!!!",
+author_id: u45.id, product_id: p119.id, rating: 5)
+
+
+
+
+
+
+
+p120 = Product.create(name: 'Crescent Rose RWBY Ruby Rose Cosplay Costume Weapons Prop', description: "Crescent Rose RWBY Ruby Rose Weapons Cosplay Costume Prop",
+    price: 110.90, seller_id: u23.id, category_id: 22)
+
+file398 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/rwby1.jpg')
+file399 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/rwby2.jpg')
+file400 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/rwby3.jpg')
+
+
+p120.photos.attach(io: file398, filename: 'rwby1.jpg')
+p120.photos.attach(io: file399, filename: 'rwby2.jpg')
+p120.photos.attach(io: file400, filename: 'rwby3.jpg')
+
+
+r314 = Review.create(body: "Really well made. Got lots of compliments on it!",
+author_id: u46.id, product_id: p120.id, rating: 4)
+
+
+
+
+
+p121 = Product.create(name: 'Fairy Tail Scarf (Natsu\'s Scarf)', description: "A scarf, based on Natsu from the anime Fairy Tail. The scarf is made from a soft, minky fleece material, great for cold weather. It can be used as a cosplay accessory, or just to wear on a cold day!",
+    price: 25.16, seller_id: u22.id, category_id: 22)
+
+file401 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/fairytale1.jpg')
+file402 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/fairytale2.jpg')
+file403 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/fairytale3.jpg')
+
+
+p121.photos.attach(io: file401, filename: 'fairytale1.jpg')
+p121.photos.attach(io: file402, filename: 'fairytale2.jpg')
+p121.photos.attach(io: file403, filename: 'fairytale3.jpg')
+
+
+r315 = Review.create(body: "Great item, it feels really soft and is something I am actually going to wear outside cosplay. Only reason it is 4 stars is the fact that the end bits are only printed in one side and that shipping is expensive, otherwise, amazing product, love it.",
+author_id: u47.id, product_id: p121.id, rating: 4)
+
+
+
+
+
+
+
+
+p122 = Product.create(name: 'Fullmetal Alchemist anime cosplay uniform costume Roy Mustang Olivia Armstrong Maes Hughes', description: "Fullmetal Alchemist anime cosplay uniform costume.
+You can choose different character's costume such as Roy Mustang, Maes Hughes, Olivia Armstrong or other.",
+    price: 350.00, seller_id: u21.id, category_id: 22)
+
+file404 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/fma1.jpg')
+file405 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/fma2.jpg')
+file406 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/fma3.jpg')
+
+
+p122.photos.attach(io: file404, filename: 'fma1.jpg')
+p122.photos.attach(io: file405, filename: 'fma2.jpg')
+p122.photos.attach(io: file406, filename: 'fma3.jpg')
+
+
+r316 = Review.create(body: "The costume is absolutely fantastic!! The craftsmanship is excellent, it fits perfectly and the communication with the seller was great. Would recommend!!",
+author_id: u48.id, product_id: p122.id, rating: 4)
+
+
+
+
+
+p123 = Product.create(name: 'Attack on Titan 3D Gear Sword Blade Life Size Cosplay', description: "The signature blade used in the Attack on Titan Series. Comes as a single or a pair. \n
+Size is around 3ft 1in from tip of the blade to end of the sword handle.\n
+Blade is around 2.5in wide.",
+    price: 49.00, seller_id: u20.id, category_id: 22)
+
+file407 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/snk11.jpg')
+file408 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/snk12.jpg')
+file409 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/snk13.jpg')
+
+
+p123.photos.attach(io: file407, filename: 'snk11.jpg')
+p123.photos.attach(io: file408, filename: 'snk12.jpg')
+p123.photos.attach(io: file409, filename: 'snk13.jpg')
+
+
+r317 = Review.create(body: "Extremely pleased with the quality of these! Can't wait to have the entire outfit finished. Seller was excellent to work with and extremely proactive in sorting out shipping issues in these uncertain time!",
+author_id: u2.id, product_id: p123.id, rating: 4)
+
+
+r318 = Review.create(body: "Was great for my daughter's Mikasa cosplay",
+author_id: u3.id, product_id: p123.id, rating: 5)
+
+
+
+
+
+p124 = Product.create(name: 'Gekkan Shoujo Nozaku Kun - Yuzuki Seo Cosplay Costume', description: "Yuzuki Seo from Gekkan Shoujo Nozaki-kun cosplay costume.
+Included - jacket, blouse, skirt, bow on the neck.",
+    price: 95.00, seller_id: u19.id, category_id: 22)
+
+file410 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/seo1.jpg')
+
+p124.photos.attach(io: file410, filename: 'seo1.jpg')
+
+
+r317 = Review.create(body: "Great costume, Seo is my favorite character.",
+author_id: u3.id, product_id: p124.id, rating: 4)
+
+
+
+p125 = Product.create(name: 'Wonder Woman print, Wonderwoman poster, Justice League wall art, DC comics print, Geekery wall art, Gaming decor', description: "PRINTS INFO:\n
+★ Frame(s) is not included\n
+★ Glossy or semigloss photo paper at 255 gms / 68 lbs.",
+    price: 95.00, seller_id: u19.id, category_id: 22)
+
+file411 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/wwprint1.jpg')
+
+p125.photos.attach(io: file411, filename: 'wwprint1.jpg')
+
+r318 = Review.create(body: "BEAUTIFUL print!!! EXTREME ULTRA EXTREME SPEEDY/SAFE Shipping!!! Packaged EXTRA professionally and safe!!!! Can order ALL different sizes!!!!",
+author_id: u4.id, product_id: p125.id, rating: 4)
+
+
+
+
+
+p126 = Product.create(name: 'Gold Katana, Handmade Real Katana Japanese Samurai Sword Battle Ready Sword', description: "
+* Katana, 1045 carbon steel, full tang, handmade, battle ready, blade polished, sharpened, 28 inches blade, 40.5 inches, hardwood scabbard \n
+* Exclusive process yields stunning gold blade color, hand sharpened, full tang, battle ready sword \n
+* Expertly hand forged by seasoned sword smiths using proven, centuries-old technique"
+    price: 149.00, seller_id: u18.id, category_id: 22)
+
+file412 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/katana1.jpg')
+file413 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/katana2.jpg')
+file414 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/katana3.jpg')
+file415 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/katana4.jpg')
+
+p126.photos.attach(io: file412, filename: 'katana1.jpg')
+p126.photos.attach(io: file413, filename: 'katana2.jpg')
+p126.photos.attach(io: file414, filename: 'katana3.jpg')
+p126.photos.attach(io: file415, filename: 'katana4.jpg')
+
+r319 = Review.create(body: "ABSOLUTELY AMAZING. Quality is WONDERFUL, item was exactly as described, and shipped safely! Could not be more satisfied with my experience, definitely recommend.",
+author_id: u5.id, product_id: p126.id, rating: 5)
+
+
+
+
+
+
+
+# MUSIC/RAVE ITEMS
+
+p127 = Product.create(name: 'Porter Robinson Worlds Inspired Glowing LED Art Piece Night Lamp EDM', description: "Light up your living space with this brilliant glowing LED Porter Robinson Worlds Inspired art piece / Night Light - perfect for you or that special Porter fan in your life!"
+    price: 39.99, seller_id: u17.id, category_id: 22)
+
+file416 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/porter1.jpg')
+file417 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/porter2.jpg')
+file418 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/porter3.jpg')
+
+p127.photos.attach(io: file416, filename: 'porter1.jpg')
+p127.photos.attach(io: file417, filename: 'porter2.jpg')
+p127.photos.attach(io: file418, filename: 'porter3.jpg')
+
+r320 = Review.create(body: "All around positive transaction for my favorite album ever - Worlds by Porter Robinson. Thank you!",
+author_id: u6.id, product_id: p127.id, rating: 5)
+
+r321 = Review.create(body: "Really good quality and perfect addition to any desk. Also, very fast shipping and love that it comes with everything. The colors are amazing!",
+author_id: u7.id, product_id: p127.id, rating: 5)
+
+
+
+
+p128 = Product.create(name: 'Odesza - Do you know the story of the Russian cosmonaut? EDM Fan', description: "This is a beautiful Odesza ‘A Moment Apart’ inspired Japanese fan for spreading the story of the Russian cosmonaut who fell in love with the sound."
+    price: 20.00, seller_id: u16.id, category_id: 22)
+
+file419 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/odesza1.jpg')
+file420 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/odesza2.jpg')
+file421 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/odesza3.jpg')
+
+p128.photos.attach(io: file419, filename: 'odesza1.jpg')
+p128.photos.attach(io: file420, filename: 'odesza2.jpg')
+p128.photos.attach(io: file421, filename: 'odesza3.jpg')
+
+r322 = Review.create(body: "So. Awesome. Seriously. You guys do great work!",
+author_id: u8.id, product_id: p128.id, rating: 5)
+
+r323 = Review.create(body: "It's pretty sturdy and well-made! I got it as a gift for a friend and he was surprised and loved it. Some people say they're a little small, but I'm not sure because this the first rave fan I've bought.",
+author_id: u9.id, product_id: p128.id, rating: 4)
+
+
+
+
+
+
+p129 = Product.create(name: 'Madeon and Porter Robinson EDM mashup perler', description: "Madeon and Porter Robinson mashup perler! Customizations available :)"
+    price: 13.00, seller_id: u15.id, category_id: 22)
+
+file422 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/porteon1.jpg')
+file423 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/porteon2.jpg')
+
+p129.photos.attach(io: file422, filename: 'porteon1.jpg')
+p129.photos.attach(io: file423, filename: 'porteon2.jpg')
+
+r324 = Review.create(body: "looks great, love it, thank you!",
+author_id: u10.id, product_id: p129.id, rating: 5)
+
+r325 = Review.create(body: "Super good size and looks just how it should!",
+author_id: u11.id, product_id: p129.id, rating: 4)
+
+
+
+
+
+
+
+p130 = Product.create(name: 'Seven Lions Galaxy Perler Necklace', description: "Show your love for SevenLions with this beautiful galaxy lion perler. I can also customize"
+    price: 19.00, seller_id: u14.id, category_id: 22)
+
+file424 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/sevenlions1.jpg')
+
+p130.photos.attach(io: file424, filename: 'sevenlions1.jpg')
+
+
+r326 = Review.create(body: "I purchased this for a friend that loves EDC. So very happy with it. Thanks so much!",
+author_id: u12.id, product_id: p130.id, rating: 5)
+
+r327 = Review.create(body: "Fast shipping and great customer service!",
+author_id: u13.id, product_id: p130.id, rating: 5)
+
+
+
+
+
+
+p131 = Product.create(name: 'DeadMau5 Smart LED helmet replica EDM', description: "New Smart LED helmet by LEDSTORM Studio!
+For DJ's, musicians and entertainers of all kind."
+    price: 799.00, seller_id: u13.id, category_id: 22)
+
+file425 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/maus11.jpg')
+file426 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/maus12.jpg')
+file427 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/maus13.jpg')
+file428 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/maus14.jpg')
+
+p131.photos.attach(io: file425, filename: 'maus11.jpg')
+p131.photos.attach(io: file426, filename: 'maus12.jpg')
+p131.photos.attach(io: file427, filename: 'maus13.jpg')
+p131.photos.attach(io: file428, filename: 'maus14.jpg')
+
+
+
+
+
+p132 = Product.create(name: 'Arcane LED Goggles - Inspired by Rezz EDM', description: "Our Arcane LED Goggles come pre-programmed with 20 different animations, 30 color options, 3 brightness settings and a built-in battery that will last all night."
+    price: 99.00, seller_id: u12.id, category_id: 22)
+
+file429 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/rezz1.jpg')
+file430 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/rezz2.jpg')
+file431 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/rezz3.jpg')
+file432 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/rezz4.jpg')
+
+p132.photos.attach(io: file429, filename: 'rezz1.jpg')
+p132.photos.attach(io: file430, filename: 'rezz2.jpg')
+p132.photos.attach(io: file431, filename: 'rezz3.jpg')
+p132.photos.attach(io: file432, filename: 'rezz4.jpg')
+
+
+
+r328 = Review.create(body: "Shipped on time, product was great, exactly as described. Girlfriend loved it! Thank you <3",
+author_id: u14.id, product_id: p132.id, rating: 5)
+
+r329 = Review.create(body: "Seller was quick to help me change address and the goggles arrived shortly after. Great quality, can't wait to take them out for a spin! Thanks",
+author_id: u15.id, product_id: p132.id, rating: 4)
+
+r330 = Review.create(body: "So great! Exactly what we wanted. Thank you!",
+author_id: u16.id, product_id: p132.id, rating: 5)
+
+
+
+
+
+p133 = Product.create(name: 'Holographic Illenium + Odesza-Inspired Sticker | Fan Art', description: "Say hello to our Holographic Illenium + Odesza-Inspired Sticker! We designed this sticker to celebrate two of our favorite artists! This is a 3 in holographic sticker, and has a holographic effect in the light. Indoor/outdoor, dishwasher safe holographic vinyl."
+    price: 2.44, seller_id: u11.id, category_id: 22)
+
+file432 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/illenium1.jpg')
+file433 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/illenium2.jpg')
+
+
+p133.photos.attach(io: file432, filename: 'illenium1.jpg')
+p133.photos.attach(io: file433, filename: 'illenium2.jpg')
+
+
+r331 = Review.create(body: "Beyond beautiful! Highly recommended. Can’t wait to order more. Made my day!",
+author_id: u17.id, product_id: p133.id, rating: 5)
+
+
+
+
+
+
+p134 = Product.create(name: 'Illenium x Seven Lions Kandi Cuff Bracelet, Mini Perler Bracelet, EDM Rave Kandi', description: "This colorful Illenium x Seven Lions perler cuff is the perfect finishing touch to your rave outfit or your rear-view mirror!"
+    price: 16.54, seller_id: u10.id, category_id: 22)
+
+file434 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/lionsillenium1.jpg')
+file435 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/lionsillenium2.jpg')
+
+
+p134.photos.attach(io: file434, filename: 'lionsillenium1.jpg')
+p134.photos.attach(io: file435, filename: 'lionsillenium2.jpg')
+
+
+r332 = Review.create(body: "Amazing. My two favourite artists.",
+author_id: u18.id, product_id: p134.id, rating: 5)
+
+
+
+
+
+
+
+p135 = Product.create(name: 'San Holo Perler Necklace EDM', description: "Perler and necklace are customizable"
+    price: 20.00, seller_id: u9.id, category_id: 22)
+
+file436 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/sanholo1.jpg')
+file437 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/sanholo2.jpg')
+
+
+p135.photos.attach(io: file436, filename: 'sanholo1.jpg')
+p135.photos.attach(io: file437, filename: 'sanholo2.jpg')
+
+
+r333 = Review.create(body: "Came just as described, little late on shipment but COMPLETELY made up for it. Will definitely be contacting again.",
+author_id: u19.id, product_id: p135.id, rating: 4)
+
+
+
+
+p136 = Product.create(name: 'EDM Rave Flag- Avicii. DJ Festival flag.', description: "AVICII Rave Festival Flag - Our flag is perfect to wave at festivals, hang at home, or in the garage!"
+    price: 30.00, seller_id: u9.id, category_id: 22)
+
+file438 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/avicii1.jpg')
+file439 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/avicii2.jpg')
+
+
+p136.photos.attach(io: file438, filename: 'avicii1.jpg')
+p136.photos.attach(io: file439, filename: 'avicii2.jpg')
+
+
+r334 = Review.create(body: "Great quality",
+author_id: u20.id, product_id: p136.id, rating: 4)
+
+
+
+
+p137 = Product.create(name: 'Martin Garrix Small or Large Perler Bead Art Kandi Necklace Rave EDM', description: "Martin Garrix kandi necklace made from Perler and Pony beads. Choose multi-color, blue/white, or custom colors in the options above. I can also add letter beads to the chain!"
+    price: 18.00, seller_id: u8.id, category_id: 22)
+
+file438 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/garrix1.jpg')
+file439 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/garrix2.jpg')
+file440 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/garrix3.jpg')
+
+
+p137.photos.attach(io: file438, filename: 'garrix1.jpg')
+p137.photos.attach(io: file439, filename: 'garrix2.jpg')
+p137.photos.attach(io: file440, filename: 'garrix3.jpg')
+
+
+r335 = Review.create(body: "This was a wonderful birthday gift for my brother, on short notice too. Lori stayed in communication with me throughout the process and even suggested some custom changes to make it look better and more unique. I definitely will be buying from her again!",
+author_id: u21.id, product_id: p137.id, rating: 4)
+
+
+
+
+
+p138 = Product.create(name: 'Kaskade Turn It Down Dripping Lips Beaded Kandi Perler Art Necklace Rave EDM', description: "Kaskade kandi necklace made from Perler and Pony beads. I can also add letter beads to the chain!"
+    price: 19.00, seller_id: u8.id, category_id: 22)
+
+file441 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/kaskade1.jpg')
+file442 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/kaskade2.jpg')
+
+
+p138.photos.attach(io: file441, filename: 'kaskade1.jpg')
+p138.photos.attach(io: file442, filename: 'kaskade2.jpg')
+
+
+r336 = Review.create(body: "Awesome perler and awesome price, will be purchasing again",
+author_id: u22.id, product_id: p138.id, rating: 4)
