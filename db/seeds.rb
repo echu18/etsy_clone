@@ -101,8 +101,79 @@ u10.photos.attach(io: file209, filename: 'cat5.jpg')
 
 
 
+# Main categories
+cat1 = Category.create(name: 'Jewelry')
+cat2 = Category.create(name: 'Clothing')
+cat3 = Category.create(name: 'Home')
+cat4 = Category.create(name: 'Tech Accessories')
+cat5 = Category.create(name: 'Art')
+cat6 = Category.create(name: 'Collectibles')
+cat7 = Category.create(name: 'Rave')
+cat8 = Category.create(name: 'Anime')
+cat9 = Category.create(name: 'Gaming')
+cat10 = Category.create(name: 'Memes')
+cat11 = Category.create(name: 'Cosplay')
 
 
+
+# Sub-categories
+cat12 = Category.create(name: 'Keycaps', main_cat_id: cat4.id)
+cat13 = Category.create(name: 'Prints', main_cat_id: cat5.id)
+cat14 = Category.create(name: 'Perler', main_cat_id: cat5.id)
+cat15 = Category.create(name: 'Pins', main_cat_id: cat5.id)
+cat16 = Category.create(name: 'Stickers', main_cat_id: cat5.id)
+cat17 = Category.create(name: 'Plushes', main_cat_id: cat6.id)
+cat18 = Category.create(name: 'Figurines', main_cat_id: cat6.id)
+
+
+# Sub-categories: Anime / Cartoon
+cat19 = Category.create(name: 'My Hero Academia', main_cat_id: cat8.id)
+cat20 = Category.create(name: 'Attack on Titan', main_cat_id: cat8.id)
+cat21 = Category.create(name: 'One Punch Man', main_cat_id: cat8.id)
+cat22 = Category.create(name: 'Gundam', main_cat_id: cat8.id)
+cat23 = Category.create(name: 'Sailor Moon', main_cat_id: cat8.id)
+cat24 = Category.create(name: 'One Piece', main_cat_id: cat8.id)
+cat25 = Category.create(name: 'My Neighbor Totoro', main_cat_id: cat8.id)
+cat26 = Category.create(name: 'Dragon Ball', main_cat_id: cat8.id)
+cat27 = Category.create(name: 'Mob Psycho', main_cat_id: cat8.id)
+cat28 = Category.create(name: 'Yugioh', main_cat_id: cat8.id)
+cat29 = Category.create(name: 'Adventure Time', main_cat_id: cat8.id)
+cat30 = Category.create(name: 'Avatar: The Last Airbender / Legend of Korra', main_cat_id: cat8.id)
+cat31 = Category.create(name: 'JoJo\'s Bizarre Adventure', main_cat_id: cat8.id)
+cat32 = Category.create(name: 'My Little Pony', main_cat_id: cat8.id)
+cat33 = Category.create(name: 'Inuyasha', main_cat_id: cat8.id)
+cat34 = Category.create(name: 'Symphogear', main_cat_id: cat8.id)
+cat35 = Category.create(name: 'Cardcaptor Sakura', main_cat_id: cat8.id)
+cat36 = Category.create(name: 'Cowboy Bebop', main_cat_id: cat8.id)
+
+
+
+
+# Sub-categories: Gaming
+cat37 = Category.create(name: 'Overwatch', main_cat_id: cat9.id)
+cat38 = Category.create(name: 'Pokemon', main_cat_id: cat9.id)
+cat39 = Category.create(name: 'Animal Crossing', main_cat_id: cat9.id)
+cat40 = Category.create(name: 'League of Legends', main_cat_id: cat9.id)
+cat41 = Category.create(name: 'Kirby', main_cat_id: cat9.id)
+cat42 = Category.create(name: 'Legend of Zelda', main_cat_id: cat9.id)
+cat43 = Category.create(name: 'Fire Emblem', main_cat_id: cat9.id)
+cat44 = Category.create(name: 'Cuphead', main_cat_id: cat9.id)
+cat45 = Category.create(name: 'GTA', main_cat_id: cat9.id)
+cat46 = Category.create(name: 'Nier Automata', main_cat_id: cat9.id)
+cat47 = Category.create(name: 'MapleStory', main_cat_id: cat9.id)
+cat48 = Category.create(name: 'Sonic', main_cat_id: cat9.id)
+
+
+# Sub-categories: Memes
+cat49 = Category.create(name: 'Spongebob', main_cat_id: cat10.id)
+cat50 = Category.create(name: 'Doge', main_cat_id: cat10.id)
+cat51 = Category.create(name: 'Cats', main_cat_id: cat10.id)
+
+
+# Sub-categories: Cosplay
+
+cat52 = Category.create(name: 'Costumes', main_cat_id: cat11.id)
+cat53 = Category.create(name: 'Props & Accessories', main_cat_id: cat11.id)
 
 
 
