@@ -109,12 +109,10 @@ cat4 = Category.create(name: 'Tech Accessories')
 cat5 = Category.create(name: 'Art')
 cat6 = Category.create(name: 'Collectibles')
 cat7 = Category.create(name: 'Rave')
-cat8 = Category.create(name: 'Anime')
+cat8 = Category.create(name: 'Anime & Cartoons')
 cat9 = Category.create(name: 'Gaming')
 cat10 = Category.create(name: 'Memes')
 cat11 = Category.create(name: 'Cosplay')
-
-
 
 # Sub-categories
 cat12 = Category.create(name: 'Keycaps', main_cat_id: cat4.id)
@@ -125,55 +123,43 @@ cat16 = Category.create(name: 'Stickers', main_cat_id: cat5.id)
 cat17 = Category.create(name: 'Plushes', main_cat_id: cat6.id)
 cat18 = Category.create(name: 'Figurines', main_cat_id: cat6.id)
 
+# # Sub-categories: Cosplay
+# cat49 = Category.create(name: 'Costumes', main_cat_id: cat11.id)
+# cat50 = Category.create(name: 'Props & Accessories', main_cat_id: cat11.id)
 
-# Sub-categories: Anime / Cartoon
-cat19 = Category.create(name: 'My Hero Academia', main_cat_id: cat8.id)
-cat20 = Category.create(name: 'Attack on Titan', main_cat_id: cat8.id)
-cat21 = Category.create(name: 'One Punch Man', main_cat_id: cat8.id)
-cat22 = Category.create(name: 'Gundam', main_cat_id: cat8.id)
-cat23 = Category.create(name: 'Sailor Moon', main_cat_id: cat8.id)
-cat24 = Category.create(name: 'One Piece', main_cat_id: cat8.id)
-cat25 = Category.create(name: 'My Neighbor Totoro', main_cat_id: cat8.id)
-cat26 = Category.create(name: 'Dragon Ball', main_cat_id: cat8.id)
-cat27 = Category.create(name: 'Mob Psycho', main_cat_id: cat8.id)
-cat28 = Category.create(name: 'Yugioh', main_cat_id: cat8.id)
-cat29 = Category.create(name: 'Adventure Time', main_cat_id: cat8.id)
-cat30 = Category.create(name: 'Avatar: The Last Airbender / Legend of Korra', main_cat_id: cat8.id)
-cat31 = Category.create(name: 'JoJo\'s Bizarre Adventure', main_cat_id: cat8.id)
-cat32 = Category.create(name: 'My Little Pony', main_cat_id: cat8.id)
-cat33 = Category.create(name: 'Inuyasha', main_cat_id: cat8.id)
-cat34 = Category.create(name: 'Symphogear', main_cat_id: cat8.id)
-cat35 = Category.create(name: 'Cardcaptor Sakura', main_cat_id: cat8.id)
-cat36 = Category.create(name: 'Cowboy Bebop', main_cat_id: cat8.id)
+# # Sub-categories: Anime / Cartoon
+# cat19 = Category.create(name: 'My Hero Academia', main_cat_id: cat8.id)
+# cat20 = Category.create(name: 'Attack on Titan', main_cat_id: cat8.id)
+# cat21 = Category.create(name: 'One Punch Man', main_cat_id: cat8.id)
+# cat22 = Category.create(name: 'Gundam', main_cat_id: cat8.id)
+# cat23 = Category.create(name: 'Sailor Moon', main_cat_id: cat8.id)
+# cat24 = Category.create(name: 'One Piece', main_cat_id: cat8.id)
+# cat25 = Category.create(name: 'My Neighbor Totoro', main_cat_id: cat8.id)
+# cat26 = Category.create(name: 'Dragon Ball', main_cat_id: cat8.id)
+# cat27 = Category.create(name: 'Mob Psycho', main_cat_id: cat8.id)
+# cat28 = Category.create(name: 'Yugioh', main_cat_id: cat8.id)
+# cat29 = Category.create(name: 'Adventure Time', main_cat_id: cat8.id)
+# cat30 = Category.create(name: 'Avatar: The Last Airbender / Legend of Korra', main_cat_id: cat8.id)
+# cat31 = Category.create(name: 'JoJo\'s Bizarre Adventure', main_cat_id: cat8.id)
+# cat32 = Category.create(name: 'My Little Pony', main_cat_id: cat8.id)
+# cat33 = Category.create(name: 'Inuyasha', main_cat_id: cat8.id)
+# cat34 = Category.create(name: 'Symphogear', main_cat_id: cat8.id)
+# cat35 = Category.create(name: 'Cardcaptor Sakura', main_cat_id: cat8.id)
+# cat36 = Category.create(name: 'Cowboy Bebop', main_cat_id: cat8.id)
 
-
-
-
-# Sub-categories: Gaming
-cat37 = Category.create(name: 'Overwatch', main_cat_id: cat9.id)
-cat38 = Category.create(name: 'Pokemon', main_cat_id: cat9.id)
-cat39 = Category.create(name: 'Animal Crossing', main_cat_id: cat9.id)
-cat40 = Category.create(name: 'League of Legends', main_cat_id: cat9.id)
-cat41 = Category.create(name: 'Kirby', main_cat_id: cat9.id)
-cat42 = Category.create(name: 'Legend of Zelda', main_cat_id: cat9.id)
-cat43 = Category.create(name: 'Fire Emblem', main_cat_id: cat9.id)
-cat44 = Category.create(name: 'Cuphead', main_cat_id: cat9.id)
-cat45 = Category.create(name: 'GTA', main_cat_id: cat9.id)
-cat46 = Category.create(name: 'Nier Automata', main_cat_id: cat9.id)
-cat47 = Category.create(name: 'MapleStory', main_cat_id: cat9.id)
-cat48 = Category.create(name: 'Sonic', main_cat_id: cat9.id)
-
-
-# Sub-categories: Memes
-cat49 = Category.create(name: 'Spongebob', main_cat_id: cat10.id)
-cat50 = Category.create(name: 'Doge', main_cat_id: cat10.id)
-cat51 = Category.create(name: 'Cats', main_cat_id: cat10.id)
-
-
-# Sub-categories: Cosplay
-
-cat52 = Category.create(name: 'Costumes', main_cat_id: cat11.id)
-cat53 = Category.create(name: 'Props & Accessories', main_cat_id: cat11.id)
+# # Sub-categories: Gaming
+# cat37 = Category.create(name: 'Overwatch', main_cat_id: cat9.id)
+# cat38 = Category.create(name: 'Pokemon', main_cat_id: cat9.id)
+# cat39 = Category.create(name: 'Animal Crossing', main_cat_id: cat9.id)
+# cat40 = Category.create(name: 'League of Legends', main_cat_id: cat9.id)
+# cat41 = Category.create(name: 'Kirby', main_cat_id: cat9.id)
+# cat42 = Category.create(name: 'Legend of Zelda', main_cat_id: cat9.id)
+# cat43 = Category.create(name: 'Fire Emblem', main_cat_id: cat9.id)
+# cat44 = Category.create(name: 'Cuphead', main_cat_id: cat9.id)
+# cat45 = Category.create(name: 'GTA', main_cat_id: cat9.id)
+# cat46 = Category.create(name: 'Nier Automata', main_cat_id: cat9.id)
+# cat47 = Category.create(name: 'MapleStory', main_cat_id: cat9.id)
+# cat48 = Category.create(name: 'Sonic', main_cat_id: cat9.id)
 
 
 
@@ -212,6 +198,11 @@ p1 = Product.create(name:'Cat Memes Sticker Pack', description: 'This sticker pa
     Cat on stairs (sixth image): 6 cm at longest measurement', 
     price: 9.47, seller_id: u1.id )
 
+tag1 = Tag.create(category_id: cat10.id , product_id: p1.id)
+tag2 = Tag.create(category_id: cat16.id , product_id: p1.id)
+
+
+
 file100 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/catmeme1.jpg')
 file101 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/catmeme2.jpg')
 file102 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/catmeme3.jpg')
@@ -233,6 +224,12 @@ p2 = Product.create(name:'Surprised Pikachu Enamel Pin - Pokemon Enamel Pin - Fu
 This pin bears a rubber butterfly clutch which is more secure than its metal cousin so you can worry less about it falling off! It comes with a backing card approximately 55 x 85mm in size.
 Please note: As an eco-friendly store I have opted to exclude the plastic packaging in which enamel pins are normally wrapped. Instead, your pin will come in a colourful paper bag.',
 price: 8.49, seller_id: u4.id )
+
+tag3 = Tag.create(category_id: cat10.id , product_id: p2.id)
+tag4 = Tag.create(category_id: cat15.id , product_id: p2.id)
+tag4_1 = Tag.create(category_id: cat6.id , product_id: p2.id)
+# Tag.create(category_id: cat38.id , product_id: p2.id)
+
 
 file106 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/pikachu1.jpg')
 file107 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/pikachu2.jpg')
@@ -270,6 +267,10 @@ r9 = Review.create(body: 'Just ok. GENGAR IS BEST MON', author_id: u1.id, produc
 p3 = Product.create(name:'Doge meme poster Aristocrat Dog internet modern pop art design', description: "Do you feel like you need a fancy touch in your living room? With this awesome Aristocrat Doge poster, you\’ll have all the luxury you need. The doge meme is a trend that has branched out into many offshoots and styles, so why not hang a depiction that is dignified and adorable on your wall? The colors are highly saturated into a matte, acid-free paper in multiple sizes, ready to be prepared for your office or living room. The print is easily delivered right to you, with multiple dimension choices available for you right away, so it will always be able to fit on your wall. Whether you are a fan of dogs or a fan of jokes on the internet, this translation of meme into art is now available and an easy purchase for a little extra color in your life, or for a friend that enjoys art for themselves. Let your love of fun and art collide with a purchase of this print!", 
     price: 12.00, seller_id: u13.id )
 
+tag5 = Tag.create(category_id: cat10.id , product_id: p3.id)
+tag6 = Tag.create(category_id: cat13.id , product_id: p3.id)
+
+
 
 file111 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/doge_poster1.jpg')
 file112 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/doge_poster2.jpg')
@@ -300,6 +301,10 @@ author_id: u1.id, product_id: p3.id, rating: 5)
 
 p4 = Product.create(name:'Gundam RX-78-2 Enamel Pin', description: "The most popular gundam, RX-78, is now available as a pin! This enamel pin is high quality and made to last.", 
     price: 11.99, seller_id: u12.id )
+
+tag7 = Tag.create(category_id: cat15.id , product_id: p4.id)
+tag7_1 = Tag.create(category_id: cat6.id , product_id: p4.id)
+# Tag.create(category_id: cat22.id , product_id: p4.id)
 
 
 file117 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/gundam11.jpg')
@@ -334,6 +339,8 @@ p5 = Product.create(name:'Kawaii Anime Magical Girl T-Shirt | Japanese Kanji Shi
 • available in unisex or womens close fit t-shirt styles", 
     price: 21.00, seller_id: u7.id )
 
+tag8 = Tag.create(category_id: cat2.id , product_id: p5.id)
+
 
 file120 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/shirt1.jpg')
 file121 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/shirt2.jpg')
@@ -354,6 +361,8 @@ author_id: u12.id, product_id: p5.id, rating: 4)
 
 p6 = Product.create(name:'Pokemon Terrarium Sleepy Charmander Terrarium Pokeball Charmander gifts Pokemon go Best Pokemon Gifts For Him/Her', description: "Best Pokemon Gifts For The Pokemon Lover .", 
     price: 28.70, seller_id: u8.id )
+
+tag9 = Tag.create(category_id: cat6.id , product_id: p6.id)
 
 
 file122 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/pokeball1.jpg')
@@ -381,6 +390,9 @@ author_id: u4.id, product_id: p6.id, rating: 5)
 p7 = Product.create(name:'Gundam Head RX-78-2 Sticker | Mobile Suit Gundam Exceed Mech Robot Anime Planner Laptop Vinyl Sticker Gift', description: "sieg zeon", 
     price: 2.5, seller_id: u17.id )
 
+tag10 = Tag.create(category_id: cat5.id , product_id: p7.id)
+tag11 = Tag.create(category_id: cat16.id , product_id: p7.id)
+
 
 file127 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/gundam1.jpg')
 file128 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/gundam2.jpg')
@@ -406,6 +418,11 @@ author_id: u16.id, product_id: p7.id, rating: 5)
 p8 = Product.create(name:'Instant Ramen (Shin) Cube | Aesthetic Anime Sticker | Water Resistant Sticker Great for Back to School for Laptop, Water Bottle, Locker!', description: "Shin Ramyun is a definatley the ramen brand of choice, while I do still have much love for Maruchan- but some times I'm feeling bougie and want a Shin brand ramyun ;)", 
     price: 4.00, seller_id: u17.id )
 
+    tag12 = Tag.create(category_id: cat5.id , product_id: p8.id)
+    tag13 = Tag.create(category_id: cat16.id , product_id: p8.id)
+
+
+
 
 file129 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/ramen1.jpg')
 file130 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/ramen2.jpg')
@@ -426,6 +443,9 @@ author_id: u22.id, product_id: p8.id, rating: 4)
 p9 = Product.create(name:'Overwatch Logo Coaster', description: "Collector coaster of the Overwatch Logo. Approximate size is 4.25 inch diameter. Machined on black polymer plastic with a white core and hand painted with enamel in orange.",
       price: 5.00, seller_id: u18.id )
 
+      tag14 = Tag.create(category_id: cat3.id , product_id: p9.id)
+      tag15 = Tag.create(category_id: cat9.id , product_id: p9.id)
+
 
 file143 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/ow1.jpg')
 
@@ -436,6 +456,9 @@ p9.photos.attach(io: file143, filename: 'ow1.jpg')
 
 p10 = Product.create(name:'Vinyl Waterproof Animal Crossing Sticker', description: "In anticipation for the new animal crossing game, I made this calming~ sticker based off my own town in acnl! Animal crossing is one of my favorite games and i want to share all the aspects I love to you guys <3
 ", price: 6.00, seller_id: u18.id )
+      tag16 = Tag.create(category_id: cat9.id , product_id: p10.id)
+      tag17 = Tag.create(category_id: cat16.id , product_id: p10.id)
+      tag18 = Tag.create(category_id: cat5.id , product_id: p10.id)
 
 
 file133 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/animalcrossing1.jpg')
@@ -462,6 +485,11 @@ author_id: u28.id, product_id: p10.id, rating: 5)
 p11 = Product.create(name:'Pokemon Bulbasaur Ivysaur Venusaur Perler', description: "Everything is glued and packed very carefully in a box so you don't have to do anything when you receive your plant. All you have to do is enjoy it :)", 
     price: 12.89, seller_id: u4.id )
 
+    
+    tag19 = Tag.create(category_id: cat9.id , product_id: p11.id)
+    tag20 = Tag.create(category_id: cat14.id , product_id: p11.id)
+    
+
 
 file152 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/pokeperler1.jpg')
 file153 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/pokeperler2.jpg')
@@ -477,6 +505,11 @@ p11.photos.attach(io: file153, filename: 'pokeperler2.jpg')
 
 p13 = Product.create(name:'Legend of Zelda Triforce Stud Earring Set - Gold Plated & Premium Steel', description: "Fancy the Power of the legendary Triforce? Well, that's exactly the opportunity you have before you with this beautiful steel Triforce earrings. Premium Stainless Steel 316L Triforce earrings, depicting the three triangles of power, giving you Wisdom, Power, and Courage!", 
     price: 19.89, seller_id: u26.id )
+
+    tag21 = Tag.create(category_id: cat1.id , product_id: p13.id)
+    tag22 = Tag.create(category_id: cat9.id , product_id: p13.id)
+
+
 
 
 file140 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/triforce1.jpg')
@@ -497,6 +530,12 @@ p14 = Product.create(name:'My Hero Academia Froppy TSUYU Chan Large Hard Enamel 
 ★ 2 rubber clutches
 ★ Illustrated backing card included", price: 8.82, seller_id: u27.id )
 
+    tag23 = Tag.create(category_id: cat6.id , product_id: p14.id)
+    tag24 = Tag.create(category_id: cat8.id , product_id: p14.id)
+    tag25 = Tag.create(category_id: cat15.id , product_id: p14.id)
+
+
+
 
 file131 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/froggy1.jpg')
 file132 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/froggy2.jpg')
@@ -513,6 +552,11 @@ p14.photos.attach(io: file133, filename: 'froggy3.jpg')
 p15 = Product.create(name:'League of Legends - DJ Sona LED panel for Cosplay - costume prop video game gift', description: "Up for sale is a flexible led panel that is programmed to imitate Dj Sona's animation from league of legend", 
     price: 182.61, seller_id: u18.id )
 
+    tag26 = Tag.create(category_id: cat9.id , product_id: p15.id)
+    tag27 = Tag.create(category_id: cat11.id , product_id: p15.id)
+
+
+
 
 file160 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/sona1.jpg')
 file161 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/sona2.jpg')
@@ -525,6 +569,11 @@ p15.photos.attach(io: file161, filename: 'sona2.jpg')
 
 p16 = Product.create(name:'Kirby X Sailor Moon Enamel Pin', description: "The pin will be lovingly packaged on a cute backing card and sealed to protect the pin during delivery.", 
     price: 10.74, seller_id: u21.id )
+
+        tag28 = Tag.create(category_id: cat6.id , product_id: p16.id)
+        tag29 = Tag.create(category_id: cat9.id , product_id: p16.id)
+        tag30 = Tag.create(category_id: cat15.id , product_id: p16.id)
+
 
 
 file162 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/kirby1.jpg')
@@ -540,8 +589,12 @@ p16.photos.attach(io: file164, filename: 'kirby3.jpg')
 
 
 
-p17 = Product.create(name:'One Piece - Iron On Patch', description: "onepiecee", 
+p17 = Product.create(name:'One Piece - Iron On Patch', description: "Can be used for daily wear or cosplay", 
     price: 5.00, seller_id: u7.id )
+
+
+    tag31 = Tag.create(category_id: cat2.id , product_id: p17.id)
+    tag32 = Tag.create(category_id: cat8.id , product_id: p17.id)
 
 
 file150 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/onepiece1.jpg')
@@ -557,6 +610,9 @@ p17.photos.attach(io: file151, filename: 'onepiece2.jpg')
 
 p18 = Product.create(name:'One Punch Man Mug, Anime, Anime Mug', description: "No returns or exchanges
 But please contact me if you have any problems with your order.", price: 15.00, seller_id: u11.id )
+    
+tag33 = Tag.create(category_id: cat3.id , product_id: p18.id)
+tag34 = Tag.create(category_id: cat8.id , product_id: p18.id)
 
 
 file136 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/onepunch1.jpg')
@@ -572,6 +628,8 @@ p18.photos.attach(io: file137, filename: 'onepunch2.jpg')
 p19 = Product.create(name:'Cute Sleeping Corgi T-Shirt Corgi Shirt Gift For Dog Lovers Soft Cotton Dog Owner Tee Top ', description: "Printed using direct to garment printing process, for enhanced quality and durability.", 
     price:23.61, seller_id: u9.id )
 
+    tag35 = Tag.create(category_id: cat2.id , product_id: p19.id)
+
 
 file154 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/corgishirt1.jpg')
 file155 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/corgishirt2.jpg')
@@ -585,8 +643,12 @@ p19.photos.attach(io: file156, filename: 'corgishirt3.jpg')
 
 
 
-p20 = Product.create(name:'spongebob pin Patrick Star pin anime enamel pins enamel pins enamel pin ', description: "If you are a fan of anime or culture around it this is a great silly mug for you, or a great gift for any of your friends that are interested in internet culture.", 
+p20 = Product.create(name:'Spongebob - Patrick Star Eamel pin', description: "Perfect for yourself or a friend! ", 
     price: 11.00, seller_id: u26.id )
+
+        tag46 = Tag.create(category_id: cat6.id , product_id: p20.id)
+        tag47 = Tag.create(category_id: cat10.id , product_id: p20.id)
+        tag48 = Tag.create(category_id: cat15.id , product_id: p20.id)
 
 
 file157 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/patrick1.jpg')
@@ -602,6 +664,9 @@ p20.photos.attach(io: file157, filename: 'patrick1.jpg')
 p21 = Product.create(name:'Cute UwU Mug', description: "Printed using direct to garment printing process, for enhanced quality and durability.", 
     price:23.61, seller_id: u8.id )
 
+        tag49 = Tag.create(category_id: cat3.id , product_id: p21.id)
+        tag50 = Tag.create(category_id: cat10.id , product_id: p21.id)
+
 
 file158 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/uwu1.jpg')
 file159 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/uwu2.jpg')
@@ -614,6 +679,10 @@ p21.photos.attach(io: file159, filename: 'uwu2.jpg')
 
 p22 = Product.create(name:'Green Frog Meme, Meme pin, Sad Pepe Meme Pin Brooch', description: "This Sad Pepe meme enamel pin ships world wide.", 
     price: 7.61, seller_id: u28.id )
+
+        tag51 = Tag.create(category_id: cat6.id , product_id: p22.id)
+        tag52 = Tag.create(category_id: cat10.id , product_id: p22.id)
+        tag53 = Tag.create(category_id: cat15.id , product_id: p22.id)
 
 
 file144 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/pepe1.jpg')
@@ -631,6 +700,10 @@ p22.photos.attach(io: file146, filename: 'pepe3.jpg')
 p23 = Product.create(name:'This Is Fine Dog Meme Cross Stitch Pattern', description: "If this dog can accept his fate and weather the storm, why can't you?!", 
     price: 5.61, seller_id: u12.id )
 
+        tag54 = Tag.create(category_id: cat2.id , product_id: p23.id)
+        tag55 = Tag.create(category_id: cat10.id , product_id: p23.id)
+
+
 
 file147 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/thisisfine1.jpg')
 file148 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/thisisfine2.jpg')
@@ -643,6 +716,9 @@ p23.photos.attach(io: file148, filename: 'thisisfine2.jpg')
 
 p24 = Product.create(name:'You\'re My National Treasure Mug - Nicolas Cage Meme Coffee Mug, Funny Nic Cage', description: "Best Seller! Original Nicolas Cage You\'re My National Treasure design printed on both sides. Makes the perfect Valentine's day gift for your meme-loving significant other.", 
     price: 15.72, seller_id: u29.id )
+
+        tag56 = Tag.create(category_id: cat3.id , product_id: p24.id)
+        tag57 = Tag.create(category_id: cat10.id , product_id: p24.id)
 
 
 file165 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/cage1.jpg')
@@ -659,6 +735,10 @@ p24.photos.attach(io: file167, filename: 'cage3.jpg')
 
 p25 = Product.create(name:'Michael Scott Sequin Pillow | The Office TV Show | 16 x 16 inches | Mermaid Pillow | Meme Gift', description: "Michael Scott Sequin Pillow. Free U.S. Shipping. U.S. delivery takes 2 - 5 days. Processing Time: 1 - 2 business days.", 
     price: 18.00, seller_id: u13.id )
+
+    tag58 = Tag.create(category_id: cat3.id , product_id: p25.id)
+    tag59 = Tag.create(category_id: cat10.id , product_id: p25.id)
+
 
 
 file168 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/office1.jpg')
@@ -678,6 +758,10 @@ p26 = Product.create(name:'Doodlebob Spongebob Embroidery Hoop', description: "M
     price: 15.00, seller_id: u17.id )
 
 
+    tag60 = Tag.create(category_id: cat3.id , product_id: p26.id)
+    tag61 = Tag.create(category_id: cat10.id , product_id: p26.id)
+
+
 file170 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/mihoy1.jpg')
 file171 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/mihoy2.jpg')
 
@@ -693,6 +777,10 @@ p26.photos.attach(io: file171, filename: 'mihoy2.jpg')
 p27 = Product.create(name:'Kawaii Watercolor Miyazaki Totoro Japanese Anime Ghibli Posters Prints', description: "Studio Ghibli", 
     price: 7.86, seller_id: u22.id )
 
+    tag62 = Tag.create(category_id: cat5.id , product_id: p27.id)
+    tag63 = Tag.create(category_id: cat8.id , product_id: p27.id)
+    tag64 = Tag.create(category_id: cat13.id , product_id: p27.id)
+
 
 file172 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/ghibli11.jpg')
 file173 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/ghibli12.jpg')
@@ -707,6 +795,10 @@ p27.photos.attach(io: file174, filename: 'ghibli13.jpg')
 
 p28 = Product.create(name:'NEW My Hero Academia Double-Sided Pillow Plush', description: "How cute are these chibi cat My Hero Academia characters? Made with extra soft and squishy material to meet all your cuddle time needs!", 
     price: 23.37, seller_id: u46.id )
+
+        tag65 = Tag.create(category_id: cat3.id , product_id: p28.id)
+        tag66 = Tag.create(category_id: cat8.id , product_id: p28.id)
+        tag67 = Tag.create(category_id: cat17.id , product_id: p28.id)
 
 
 file175 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/heropillow1.jpg')
@@ -738,6 +830,11 @@ author_id: u36.id, product_id: p28.id, rating: 5)
 
 p29 = Product.create(name:'Boku No Hero Academia X Animal Crossing (Deku Squad) Waterproof Vinyl Stickers', description: "Absolutely adorable Boku No Hero Academia X Animal Crossing crossover vinyl stickers featuring Deku Squad and All Might!", 
     price: 2.00, seller_id: u31.id )
+
+        tag68 = Tag.create(category_id: cat5.id , product_id: p29.id)
+        tag69 = Tag.create(category_id: cat9.id , product_id: p29.id)
+        tag70 = Tag.create(category_id: cat16.id , product_id: p29.id)
+
 
 file180 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/herosticker1.jpg')
 file181 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/herosticker2.jpg')
@@ -773,6 +870,10 @@ p30 = Product.create(name:'Large Magikarp Plush', description: "ミ☆ Magikarp 
 ✂️✨ This plush is machine-sewn, with hand-stitched details and made entirely of fleece and filled with polyester stuffing.", 
     price: 80.00, seller_id: u22.id )
 
+    tag71 = Tag.create(category_id: cat6.id , product_id: p30.id)
+    tag72 = Tag.create(category_id: cat9.id , product_id: p30.id)
+    tag73 = Tag.create(category_id: cat17.id , product_id: p30.id)
+
 
 file186 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/magikarp1.jpg')
 file187 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/magikarp2.jpg')
@@ -798,6 +899,10 @@ author_id: u18.id, product_id: p30.id, rating: 4)
 p31 = Product.create(name:'Pokemon/Pet Watercolour Commission with Simple Background ( CUSTOM ORDER )', description: "**Pokemon/Pet Watercolour Commission with Simple Background ( CUSTOM ORDER )**
 YOU and your beloved pet or pokemon cute anime style !", 
     price: 40.00, seller_id: u32.id )
+
+        tag74 = Tag.create(category_id: cat5.id , product_id: p31.id)
+        tag75 = Tag.create(category_id: cat9.id , product_id: p31.id)
+        tag76 = Tag.create(category_id: cat13.id , product_id: p31.id)
 
 
 file189 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/pokeillust1.jpg')
@@ -827,6 +932,10 @@ p32 = Product.create(name:'SMOKU Fighting x Smoking Collab FUNNY Custom Vinyl St
 - Highest Quality Possible", 
 price: 1.99, seller_id: u21.id )
 
+        tag77 = Tag.create(category_id: cat8.id , product_id: p32.id)
+        tag78 = Tag.create(category_id: cat16.id , product_id: p32.id)
+
+
 file192 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/goku1.jpg')
 file193 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/goku2.jpg')
 
@@ -845,6 +954,10 @@ author_id: u29.id, product_id: p32.id, rating: 5)
 
 p33 = Product.create(name:'Plus Ultra Hoodie, Manga My Hero Academia Shirt - BNHA, Unisex Anime Hoodie', description: "All of our items are made on-demand especially for you. Designs are vinyl printed onto high quality 100% cotton t-shirts.", 
     price: 28.14, seller_id: u11.id )
+
+            tag79 = Tag.create(category_id: cat2.id , product_id: p33.id)
+            tag80 = Tag.create(category_id: cat8.id , product_id: p33.id)
+
 
 file194 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/plusultra1.jpg')
 file195 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/plusultra2.jpg')
@@ -868,6 +981,11 @@ author_id: u33.id, product_id: p33.id, rating: 5)
 p34 = Product.create(name:'Mob Psycho 100 anime Psycho Helmet Cult Poster Unisex 2 colors | 100% cotton T-shirt', description: "T-shirt with the comic design of the Psycho Helmet Club 'Looking for god' poster from the famous anime Mob Psycho 100 in Japanese writing.", 
     price: 16.89, seller_id: u25.id )
 
+    tag81 = Tag.create(category_id: cat5.id , product_id: p34.id)
+    tag82 = Tag.create(category_id: cat8.id , product_id: p34.id)
+    tag83 = Tag.create(category_id: cat13.id , product_id: p34.id)
+
+
 file196 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/mobpsycho1.jpg')
 file197 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/mobpsycho2.jpg')
 
@@ -885,6 +1003,11 @@ p35 = Product.create(name:'Casual Weeb UwU Decal, Japan Inspired, Weeaboo Vinyl 
     price: 4.49, seller_id: u21.id )
 
 
+    tag84 = Tag.create(category_id: cat5.id , product_id: p35.id)
+    tag85 = Tag.create(category_id: cat10.id , product_id: p35.id)
+    tag86 = Tag.create(category_id: cat16.id , product_id: p35.id)
+
+
 file198 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/weebsticker1.jpg')
 p35.photos.attach(io: file198, filename: 'weebsticker1.jpg')
 
@@ -900,6 +1023,11 @@ author_id: u27.id, product_id: p35.id, rating: 5)
 p36 = Product.create(name:'Studio Ghibli No-Face Spirited Away Vinyl Sticker Decal, 2 Sizes, Waterproof & Weatherproof Durable Anime Sticker, FREE SHIPPING!', description: "Channel your inner No-Face with this adorable vinyl sticker illustrated by me!", 
     price: 3.49, seller_id: u50.id )
 
+    tag87 = Tag.create(category_id: cat5.id , product_id: p36.id)
+    tag88 = Tag.create(category_id: cat8.id , product_id: p36.id)
+    tag89 = Tag.create(category_id: cat16.id , product_id: p36.id)
+
+
 file199 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/noface11.jpg')
 file200 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/noface12.jpg')
 p36.photos.attach(io: file199, filename: 'noface11.jpg')
@@ -914,6 +1042,11 @@ author_id: u31.id, product_id: p36.id, rating: 5)
 
 p37 = Product.create(name:'Hatsune Miku keycaps - Clay and resin keycap Cherry MX Mechanical Gaming Keyboards', description: "Perfect gift for a Hatsune Miku fan!", 
     price: 14.99, seller_id: u11.id )
+
+        tag90 = Tag.create(category_id: cat4.id , product_id: p37.id)
+        tag91 = Tag.create(category_id: cat8.id , product_id: p37.id)
+        tag92 = Tag.create(category_id: cat12.id , product_id: p37.id)
+
 
 file201 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/mikukey1.jpg')
 file202 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/mikukey2.jpg')
@@ -931,6 +1064,12 @@ author_id: u17.id, product_id: p37.id, rating: 5)
 
 p38 = Product.create(name:'Noface Keycap', description: "When I was a child, I felt in love with the Little White Totoro character in My Neighbor Totoro, a Japanese animation movie. He is a cute and amazing figure that burns in to my mind. That is why I want to make Little White Totoro keycaps. I hope this keycap would bring lovely memory about that sweet animated film.", 
     price: 49.00, seller_id: u41.id )
+
+        tag93 = Tag.create(category_id: cat4.id , product_id: p38.id)
+        tag94 = Tag.create(category_id: cat8.id , product_id: p38.id)
+        tag95 = Tag.create(category_id: cat12.id , product_id: p38.id)
+
+    
 
 file204 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/nofacekey1.jpg')
 file205 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/nofacekey2.jpg')
@@ -956,6 +1095,11 @@ p39 = Product.create(name:'EVA(新世紀エヴァンゲリオン) NERV logo insp
 This is a R4(keyboard area including ESC,F1-F12,etc) keycap that best performance on cherry MX keyboards. Please note it cannot use on membrane keyboards.", 
     price: 18.00, seller_id: u33.id )
 
+        tag96 = Tag.create(category_id: cat4.id , product_id: p39.id)
+        tag97 = Tag.create(category_id: cat8.id , product_id: p39.id)
+        tag98 = Tag.create(category_id: cat12.id , product_id: p39.id)
+
+
 file207 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/evakey1.jpg')
 file208 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/evakey2.jpg')
 
@@ -978,6 +1122,11 @@ author_id: u2.id, product_id: p39.id, rating: 3)
 p40 = Product.create(name:'Neon Genesis Evangelion - Asuka and Rei 3" Acrylic Charm (Double Sided)', description: "Originally designed artwork of Asuka and Rei from the classic anime, \"Neon Genesis Evangelion\" by GAINAX.
 \nPrinted professionally on 3mm acrylic, each charm is 3 inches in height not including the metal keyring chain.", 
     price: 14.00, seller_id: u44.id )
+
+
+            tag99 = Tag.create(category_id: cat6.id , product_id: p40.id)
+            tag100 = Tag.create(category_id: cat8.id , product_id: p40.id)
+
 
 file209 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/evacharm1.jpg')
 file210 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/evacharm2.jpg')
@@ -1004,6 +1153,11 @@ p41 = Product.create(name:'Painted Premium (Limited Edition) Bandai MG 1/100 "Al
 The name of this kit: Premium (Limited Edition) Bandai MG 1/100 "Altron Gundam EW"', 
     price: 375.28, seller_id: u50.id )
 
+    tag101 = Tag.create(category_id: cat6.id , product_id: p41.id)
+    tag102 = Tag.create(category_id: cat8.id , product_id: p41.id)
+    tag103 = Tag.create(category_id: cat18.id , product_id: p41.id)
+
+
 file213 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/altron1.jpg')
 file214 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/altron2.jpg')
 file215 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/altron3.jpg')
@@ -1028,6 +1182,11 @@ p42 = Product.create(name:'Your Name - Kimi no Na wa Limited Edition Poster Prin
 A3 -High Quality Production digital Press Print 350 GSM (*buisness card thickness)", 
     price: 12.79, seller_id: u49.id )
 
+    tag104 = Tag.create(category_id: cat5.id , product_id: p42.id)
+    tag105 = Tag.create(category_id: cat8.id , product_id: p42.id)
+    tag106 = Tag.create(category_id: cat13.id , product_id: p42.id)
+
+
 file217 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/yourname1.jpg')
 
 p42.photos.attach(io: file217, filename: 'yourname1.jpg')
@@ -1042,6 +1201,12 @@ p43 = Product.create(name:'Finn the Human and Jake the Dog Adventure Time Plush'
 Finn and Jake are a must have for any fan of the show 'Adventure Time'!\n
 After watching the show I had to make one for myself. These guys are so soft and cuddly!", 
     price: 35.00, seller_id: u48.id )
+
+    tag107 = Tag.create(category_id: cat6.id , product_id: p43.id)
+    tag108 = Tag.create(category_id: cat8.id , product_id: p43.id)
+    tag109 = Tag.create(category_id: cat17.id , product_id: p43.id)
+
+
 
 file218 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/finnjake1.jpg')
 file219 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/finnjake2.jpg')
@@ -1068,6 +1233,13 @@ author_id: u9.id, product_id: p43.id, rating: 5)
 
 p44 = Product.create(name:'Bubbline | Hard Enamel Pin | Adventure Time Marceline Bubblegum lapel pin', description: "Hard enamel pin featuring Princess Bubblegum and Marceline the vampire queen from Adventure Time", 
     price: 12.38, seller_id: u47.id )
+
+
+        tag110 = Tag.create(category_id: cat6.id , product_id: p44.id)
+        tag111 = Tag.create(category_id: cat8.id , product_id: p44.id)
+        tag112 = Tag.create(category_id: cat15.id , product_id: p44.id)
+
+
 
 file222 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/bubbeline1.jpg')
 file223 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/bubbeline2.jpg')
@@ -1096,6 +1268,12 @@ p45 = Product.create(name:'Legend of Korra - Korra and Asami: "Celebrate" Print'
 Photographic Art Print:", 
     price: 15.00, seller_id: u46.id )
 
+
+    tag113 = Tag.create(category_id: cat5.id , product_id: p45.id)
+    tag114 = Tag.create(category_id: cat8.id , product_id: p45.id)
+    tag115 = Tag.create(category_id: cat13.id , product_id: p45.id)
+
+
 file224 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/korrasami1.jpg')
 
 
@@ -1118,6 +1296,11 @@ author_id: u14.id, product_id: p45.id, rating: 4)
 
 p46 = Product.create(name:'Adventure Time: Lumpy Space Princess Soft Enamel Pin', description: "Celebrate your favorite Adventure Time characters with our custom enamel pin perfect for your back pack, jacket, t-shirt, hat, or other apparel and accessories. Our high quality enamel pins are made with a black nickel backing with double needles. It comes with two rubber guards to keep your pin safely attached to your accessories.", 
     price: 9.59, seller_id: u45.id )
+
+    tag116 = Tag.create(category_id: cat6.id , product_id: p46.id)
+    tag117 = Tag.create(category_id: cat8.id , product_id: p46.id)
+    tag118 = Tag.create(category_id: cat15.id , product_id: p46.id)
+
 
 file225 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/lsp1.jpg')
 file226 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/lsp2.jpg')
@@ -1150,6 +1333,11 @@ The design has a wordplay on the word yare, wich is place on top another yare. T
 (づ｡◕‿‿◕｡)づ",
     price: 35.95, seller_id: u46.id )
 
+
+        tag119 = Tag.create(category_id: cat2.id , product_id: p47.id)
+        tag120 = Tag.create(category_id: cat8.id , product_id: p47.id)
+
+
 file228 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/jojohoodie1.jpg')
 file229 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/jojohoodie2.jpg')
 file230 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/jojohoodie3.jpg')
@@ -1180,8 +1368,12 @@ author_id: u22.id, product_id: p47.id, rating: 5)
 
 
 
-p47 = Product.create(name:'Double Sided Inuyasha Keychain', description: "A cute little dual sided acrylic keychain featuring my art.",
+p47_1 = Product.create(name:'Double Sided Inuyasha Keychain', description: "A cute little dual sided acrylic keychain featuring my art.",
     price: 35.95, seller_id: u45.id )
+
+    tag121 = Tag.create(category_id: cat6.id , product_id: p47_1.id)
+    tag122 = Tag.create(category_id: cat8.id , product_id: p47_1.id)
+
 
 file232 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/inuyasha1.jpg')
 file233 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/inuyasha2.jpg')
@@ -1189,18 +1381,18 @@ file234 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-image
 
 
 
-p47.photos.attach(io: file232, filename: 'inuyasha1.jpg')
-p47.photos.attach(io: file233, filename: 'inuyasha2.jpg')
-p47.photos.attach(io: file234, filename: 'inuyasha3.jpg')
+p47_1.photos.attach(io: file232, filename: 'inuyasha1.jpg')
+p47_1.photos.attach(io: file233, filename: 'inuyasha2.jpg')
+p47_1.photos.attach(io: file234, filename: 'inuyasha3.jpg')
 
 r158 = Review.create(body: 'I\'m a big fan of Inuyasha x Kagome and of acrylic keychains, so I think this is a wonderful keychain! I love it. The double sided nature of the artwork is super cute and gives the charm a lot of personality and the longer chain plus simple silver clasp compliment it nicer than say, the shorter rose-gold clasps that you often see on acrylic charms. The artwork has a layer of epoxy covering it on the side it was printed onto, so it\'s protected from being scratched off if it\'s on a key ring. It arrived fast and my overall buying experience was great.', 
-author_id: u23.id, product_id: p47.id, rating: 5)
+author_id: u23.id, product_id: p47_1.id, rating: 5)
 
 r159 = Review.create(body: 'Love love love!! Will use this store again!',
-author_id: u24.id, product_id: p47.id, rating: 5)
+author_id: u24.id, product_id: p47_1.id, rating: 5)
 
 r160 = Review.create(body: 'Just as expected! Love it!',
-author_id: u25.id, product_id: p47.id, rating: 4)
+author_id: u25.id, product_id: p47_1.id, rating: 4)
 
 
 
@@ -1211,6 +1403,11 @@ author_id: u25.id, product_id: p47.id, rating: 4)
 p48 = Product.create(name:'Aesthetic Cowboy Bebop || Anime Vinyl Sticker', description: "Aesthetic Graphic Design of Spike from Cowboy Bebop! \n
 • A great sticker for your laptop, phone, skateboard, hydroflask, car, etc.",
     price: 4.99, seller_id: u44.id )
+
+    tag123 = Tag.create(category_id: cat5.id , product_id: p48.id)
+    tag124 = Tag.create(category_id: cat8.id , product_id: p48.id)
+    tag125 = Tag.create(category_id: cat15.id , product_id: p48.id)
+
 
 file235 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/cowboybebop1.jpg')
 
@@ -1229,6 +1426,11 @@ author_id: u27.id, product_id: p48.id, rating: 4)
 p49 = Product.create(name:'Ryuko Kill la Kill Double Sided Acrylic Charms 1.5"', description: "Charms cut out of clear acrylic. Very durable, water resistant and sealed with gloss! All keychains includes a split ring with a choice of: star, heart or silver chain.",
     price: 12.00, seller_id: u43.id )
 
+        tag126 = Tag.create(category_id: cat5.id , product_id: p49.id)
+        tag127 = Tag.create(category_id: cat8.id , product_id: p49.id)
+        tag129 = Tag.create(category_id: cat15.id , product_id: p49.id)
+
+
 file236 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/klk1.jpg')
 
 p49.photos.attach(io: file236, filename: 'klk1.jpg')
@@ -1241,6 +1443,11 @@ author_id: u28.id, product_id: p49.id, rating: 4)
 
 p50 = Product.create(name:'symphogear holographic sticker', description: "a design based on s1e13 of senki zesshou symphogear 👊",
     price: 4.00, seller_id: u42.id )
+
+            tag130 = Tag.create(category_id: cat5.id , product_id: p50.id)
+            tag131 = Tag.create(category_id: cat8.id , product_id: p50.id)
+            tag132 = Tag.create(category_id: cat16.id , product_id: p50.id)
+
 
 file237 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/symphogear1.jpg')
 file238 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/symphogear2.jpg')
@@ -1261,8 +1468,11 @@ author_id: u31.id, product_id: p50.id, rating: 5)
 
 
 
-p50 = Product.create(name:'Attack on Titan Backpack', description: "The perfect backpack for any Attack on Titan fan! Made from premium quality material, this bag will help you carry your things in style.",
+p50_1 = Product.create(name:'Attack on Titan Backpack', description: "The perfect backpack for any Attack on Titan fan! Made from premium quality material, this bag will help you carry your things in style.",
     price: 24.00, seller_id: u41.id )
+
+    tag133 = Tag.create(category_id: cat8.id , product_id: p50_1.id)
+
 
 file239 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/snk1.jpg')
 file240 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/snk2.jpg')
@@ -1270,20 +1480,20 @@ file241 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-image
 file242 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/snk4.jpg')
 file243 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/snk5.jpg')
 
-p50.photos.attach(io: file239, filename: 'snk1.jpg')
-p50.photos.attach(io: file240, filename: 'snk2.jpg')
-p50.photos.attach(io: file241, filename: 'snk3.jpg')
-p50.photos.attach(io: file242, filename: 'snk4.jpg')
-p50.photos.attach(io: file243, filename: 'snk5.jpg')
+p50_1.photos.attach(io: file239, filename: 'snk1.jpg')
+p50_1.photos.attach(io: file240, filename: 'snk2.jpg')
+p50_1.photos.attach(io: file241, filename: 'snk3.jpg')
+p50_1.photos.attach(io: file242, filename: 'snk4.jpg')
+p50_1.photos.attach(io: file243, filename: 'snk5.jpg')
 
 r167 = Review.create(body: 'Amazing backpack! I love SNK!! YAAAAAAA',
-author_id: u32.id, product_id: p50.id, rating: 4)
+author_id: u32.id, product_id: p50_1.id, rating: 4)
 
 r168 = Review.create(body: 'MIKASA IS MY WAIFU',
-author_id: u33.id, product_id: p50.id, rating: 5)
+author_id: u33.id, product_id: p50_1.id, rating: 5)
 
 r169 = Review.create(body: 'Nice backpack, holds a lot of stuff',
-author_id: u34.id, product_id: p50.id, rating: 5)
+author_id: u34.id, product_id: p50_1.id, rating: 5)
 
 
 
@@ -1292,6 +1502,10 @@ author_id: u34.id, product_id: p50.id, rating: 5)
 
 p51 = Product.create(name:'Polymer Clay Umaru -Chan Chibi Figurine Keychain or Bagcharm. Anime chibi figurine. Polymer Clay chibi', description: "İt inspired Umaru-Chan who is a *character in anime Himouto",
     price: 35.00, seller_id: u40.id )
+
+    tag134 = Tag.create(category_id: cat6.id , product_id: p51.id)
+    tag135 = Tag.create(category_id: cat8.id , product_id: p51.id)
+
 
 file244 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/umaru1.jpg')
 
@@ -1309,6 +1523,9 @@ author_id: u32.id, product_id: p51.id, rating: 4)
 p52 = Product.create(name:'Millenium Puzzle: Yu-Gi-Oh', description: "Absolutely lovely prop for Y'all trading card fans!\n
 Can be used for some cosplay or just to have on your desk. It'll look fantastic anywhere.",
     price: 20.00, seller_id: u39.id )
+
+    tag136 = Tag.create(category_id: cat6.id , product_id: p52.id)
+    tag137 = Tag.create(category_id: cat8.id , product_id: p52.id)
 
 file245 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/yugioh1.jpg')
 file246 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/yugioh2.jpg')
@@ -1332,6 +1549,10 @@ author_id: u34.id, product_id: p52.id, rating: 4)
 
 p53 = Product.create(name:'MLP Applejack plush', description: "Adorable Applejack plushie from the show My Little Pony",
     price: 20.00, seller_id: u39.id )
+
+    tag138 = Tag.create(category_id: cat6.id , product_id: p53.id)
+    tag139 = Tag.create(category_id: cat8.id , product_id: p53.id)
+    tag140 = Tag.create(category_id: cat17.id , product_id: p53.id)
 
 file248 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/applejack1.jpg')
 file249 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/applejack2.jpg')
@@ -1368,6 +1589,8 @@ author_id: u38.id, product_id: p53.id, rating: 4)
 p54 = Product.create(name:'Japanese Peach Soft Drink - T-Shirt/Shirt/Top/Tee - Aesthetic T-Shirt,Japanese Shirt,Aesthetic,Aesthetic Clothing,Japanese t-shirt,Japan', description: "Japanese Peach Soft Drink T-Shirt which is made of premium quality ring spun cotton for a great quality soft feel, and comfortable retail fit.",
     price: 21.75, seller_id: u38.id )
 
+    tag141 = Tag.create(category_id: cat2.id , product_id: p54.id)
+
 file252 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/peachshirt1.jpg')
 file253 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/peachshirt2.jpg')
 file254 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/peachshirt3.jpg')
@@ -1399,6 +1622,9 @@ author_id: u37.id, product_id: p54.id, rating: 4)
 p55 = Product.create(name:'Sailor Moon Themed Nintendo Switch Joy Cons', description: "The joy cons feature a high fidelity, custom paint-job on many of the components. It comes with a set of wrist straps matching the overall design.",
     price: 185.74, seller_id: u37.id )
 
+    tag142 = Tag.create(category_id: cat4.id , product_id: p55.id)
+    tag143 = Tag.create(category_id: cat8.id , product_id: p55.id)
+
 file256 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/switchsailormoon1.jpg')
 file257 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/switchsailormoon2.jpg')
 file258 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/switchsailormoon3.jpg')
@@ -1417,6 +1643,9 @@ author_id: u38.id, product_id: p55.id, rating: 5)
 
 p56 = Product.create(name:'Shiba Inu Earrings - Hand Painted Wooden Dog Studs with Hypoallergenic Posts', description: "A pair of cute shiba inu earrings engraved from 3mm Cherry wood and hand painted with white detail. These earrings are attached to stainless steel hypoallergenic posts for comfortable wearing and are coated in a satin clear coat to minimise paint scratching.",
     price: 16.63, seller_id: u36.id )
+
+    tag144 = Tag.create(category_id: cat1.id , product_id: p56.id)
+
 
 file259 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/shibeearring1.jpg')
 file260 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/shibeearring2.jpg')
@@ -1437,8 +1666,11 @@ author_id: u35.id, product_id: p56.id, rating: 5)
 
 
 
-p57 = Product.create(name:'Pond cyprinoid keycaps artisan lucky key cap mechanical keyboard cherry mx keycap', description: "Resin keycap with a koi pond design, for cherry mx switches",
+p57 = Product.create(name:'Pond Koi Keycaps Artisan Mechanical Keyboard Cherry MX Keycap', description: "Resin keycap with a koi pond design, for cherry mx switches",
     price: 43.00, seller_id: u35.id )
+
+    tag145 = Tag.create(category_id: cat4.id , product_id: p57.id)
+    tag146 = Tag.create(category_id: cat12.id , product_id: p57.id)
 
 file262 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/koikey1.jpg')
 file263 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/koikey2.jpg')
@@ -1458,6 +1690,10 @@ author_id: u33.id, product_id: p57.id, rating: 5)
 
 p58 = Product.create(name:'Summer Fruit Keycap - Artisan Keycap - Handmade Keycap', description: "Resin keycap with summer fruit design, for cherry mx switches",
     price: 43.00, seller_id: u35.id )
+
+    tag147 = Tag.create(category_id: cat4.id , product_id: p58.id)
+    tag148 = Tag.create(category_id: cat12.id , product_id: p58.id)
+    
 
 file264 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/fruitkey1.jpg')
 file265 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/fruitkey2.jpg')
@@ -1483,6 +1719,9 @@ author_id: u31.id, product_id: p58.id, rating: 5)
 p59 = Product.create(name:'Deep Sea Jellyfish handmade resin artisan Cherry MX keycap', description: "Handmade Resin Keycap For Cherry MX Mechanical Keyboard.
 - SA Profile R4- Artisan Keycap",
     price: 39.88, seller_id: u34.id )
+
+     tag149 = Tag.create(category_id: cat4.id , product_id: p59.id)
+    tag150= Tag.create(category_id: cat12.id , product_id: p59.id)
 
 file267 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/jellykey1.jpg')
 file268 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/jellykey2.jpg')
@@ -1514,6 +1753,10 @@ Each mini charm comes with a strap to attach to bags, backpacks, wallets, phones
 Please handle these handmade charms with care~",
     price: 40.00, seller_id: u34.id )
 
+     tag151 = Tag.create(category_id: cat4.id , product_id: p60.id)
+    tag152 = Tag.create(category_id: cat12.id , product_id: p60.id)
+    tag153 = Tag.create(category_id: cat9.id , product_id: p60.id)
+
 file271 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/pokekey1.jpg')
 file272 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/pokekey2.jpg')
 file273 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/pokekey3.jpg')
@@ -1540,6 +1783,9 @@ author_id: u28.id, product_id: p60.id, rating: 5)
 
 p61 = Product.create(name: 'Cherry Blossom WASD Keycaps', description: "Take your mechanical keyboard to Hanamura with these handcrafted cherry blossom keycaps!",
     price: 50.00, seller_id: u33.id )
+
+    tag154 = Tag.create(category_id: cat4.id , product_id: p61.id)
+    tag155 = Tag.create(category_id: cat12.id , product_id: p61.id)  
 
 file274 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/cherrykey1.jpg')
 file275 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/cherrykey2.jpg')
@@ -1573,6 +1819,10 @@ p62 = Product.create(name: 'Starcraft Crystal Cherry MX Keycap', description: "C
 file277 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/crystalkey1.jpg')
 file278 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/crystalkey2.jpg')
 
+    tag156 = Tag.create(category_id: cat4.id , product_id: p62.id)
+    tag157 = Tag.create(category_id: cat12.id , product_id: p62.id)
+    tag158 = Tag.create(category_id: cat9.id , product_id: p62.id)
+
 
 p62.photos.attach(io: file277, filename: 'crystalkey1.jpg')
 p62.photos.attach(io: file278, filename: 'crystalkey2.jpg')
@@ -1586,6 +1836,8 @@ author_id: u24.id, product_id: p62.id, rating: 4)
 
 p63 = Product.create(name: 'GOLD PLATED Harry Potter Necklace Harry Potter Jewelry Harry Poter Necklace Gift potter Hourglass Necklace Harry Potter Time Turner Necklace', description: "The Pendant On This Harry Potter Necklace Has a REAL HOURGLASS That is Filled With REAL Sand, And it Rotates And Turns. The Following Words Are Engraved Onto The Harry Potter Necklace Pendant: 'I Mark The Hours, Every One, Nor Have I Yet Outrun The Sun. My Use And Value, Unto You, Are Gauged By What You Have To Do' (Just Like The Real Time Turner Necklace.) ",
     price: 15.86, seller_id: u32.id )
+
+    tag159 = Tag.create(category_id: cat1.id , product_id: p63.id)
 
 file279 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/hp11.jpg')
 file280 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/hp12.jpg')
@@ -1616,6 +1868,8 @@ author_id: u21.id, product_id: p63.id, rating: 5)
 p64 = Product.create(name: 'Elven ears (a pair). Earcuffs, Elf ears, cosplay fantasy decoration for ears elven ear ear cuff elvish earring elf ear', description: "These ear cuffs are made with copper core wire, you can choose the material with which the wire will be plated on, and it also beads from the semiprecious stone. They are sold as a pair and also you can buy one ear.",
     price: 23.00, seller_id: u32.id )
 
+    tag160 = Tag.create(category_id: cat1.id , product_id: p64.id)
+
 file282 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/earcuff1.jpg')
 
 p64.photos.attach(io: file282, filename: 'earcuff1.jpg')
@@ -1639,6 +1893,10 @@ author_id: u22.id, product_id: p64.id, rating: 5)
 p65 = Product.create(name: 'Gudetama Just Chillin Enamel Pin // Gudetama Pins // Sanrio Licensed Pins', description: "Um, so, Gudetama the grumpy egg is all of us chillin in our eggshells, right? This Gudetama Just Chillin enamel pin in hard enamel measures approx 30mm x 25mm. Lazy but cute. Fully Sanrio licensed.",
     price: 8.96, seller_id: u31.id )
 
+    tag161 = Tag.create(category_id: cat6.id , product_id: p65.id)
+    tag162 = Tag.create(category_id: cat15.id , product_id: p65.id)
+
+
 file283 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/gudetama1.jpg')
 file284 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/gudetama2.jpg')
 
@@ -1658,6 +1916,8 @@ p66 = Product.create(name: 'Zelda Inspired Hyrule Crest Mahogany Hand-Tooled Lea
 The black interior has two bill pockets, six upward facing card pockets, and two receipt pockets. Folded, this wallet measures approximately 4.5 by 3.5 inches (9cm x 11.5 cm).",
     price: 88.00, seller_id: u30.id )
 
+    tag163 = Tag.create(category_id: cat9.id , product_id: p66.id)
+
 file285 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/zeldawallet1.jpg')
 file286 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/zeldawallet2.jpg')
 file287 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/zeldawallet3.jpg')
@@ -1675,11 +1935,16 @@ author_id: u17.id, product_id: p66.id, rating: 4)
 
 
 
-p67 = Product.create(name: 'Welcome To Anti Social Animal Crossing New Horizon T Shirt', description: "Animal Crossing New Horizon Welcome to Anti-Social T Shirt
+p67 = Product.create(name: 'Welcome To Anti Social Animal Crossing New Horizon T Shirt', description: "Animal Crossing New Horizon Welcome to Anti-Social T Shirt \n
 *About Us And Our T-Shirts*\n
 
 We are a small business and love what we do and strive to see our customers smile with satisfaction. We create our designs and print them on super soft combed and ring-spun high quality 100% cotton t-shirt. Our shirts are preshrunk so after washing it might only shrink just a little bit. The best part is our t-shirt is unisex so one fits all. You can even share it with your family or friends! Better yet buy them one as well!",
     price: 20.00, seller_id: u29.id )
+
+
+    tag164 = Tag.create(category_id: cat2.id , product_id: p67.id)
+    tag165 = Tag.create(category_id: cat9.id , product_id: p67.id)
+
 
 file288 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/acshirt1.jpg')
 file289 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/acshirt2.jpg')
@@ -1702,6 +1967,9 @@ p68 = Product.create(name: 'Animal Crossing - town sign - wall mountable lamp', 
 
 Welcome all visitors to your town with a beautiful wall hanging lamp built with a sturdy birch frame and two colors of vibrant and durable acrylic. The lamp measures about 12\" across the base. Bulb included is a 40w incandescent bulb, candelabra base. Cord has a rotary style switch and measures 6-feet in length. On the back of the lamp there is a keyhole style hanging opening to allow for quick and easy mounting with any small nail. Each lamp will be assembled and shipped within 2 to 3 business days. We make them all to order with buckets of love and care.",
     price: 64.00, seller_id: u28.id )
+
+    tag166 = Tag.create(category_id: cat3.id , product_id: p68.id)
+    tag167 = Tag.create(category_id: cat9.id , product_id: p68.id)
 
 file291 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/aclamp1.jpg')
 file292 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/aclamp2.jpg')
@@ -1732,6 +2000,10 @@ Pick between KK Slider, Blathers, or grab both!\n
 Each pin is about 1.25\" and has one clutch on the back. Select the locking pin back option for an even more secure hold for your pins. If you plan to wear these on a backpack, I would strongly recommend the locking backs.",
     price: 12.00, seller_id: u27.id )
 
+    tag168 = Tag.create(category_id: cat6.id , product_id: p69.id)
+    tag169 = Tag.create(category_id: cat9.id , product_id: p69.id)
+    tag170 = Tag.create(category_id: cat15.id , product_id: p69.id)
+
 file295 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/acpin1.jpg')
 file296 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/acpin2.jpg')
 file297 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/acpin3.jpg')
@@ -1759,6 +2031,10 @@ It takes a lot of time to create just one.
 I hope you enjoy them as much as I enjoyed making them.",
     price: 50.00, seller_id: u26.id )
 
+    tag171 = Tag.create(category_id: cat6.id , product_id: p70.id)
+    tag172 = Tag.create(category_id: cat9.id , product_id: p70.id)
+    tag173 = Tag.create(category_id: cat18.id , product_id: p70.id)
+
 file298 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/poro1.jpg')
 file299 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/poro2.jpg')
 file300 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/poro3.jpg')
@@ -1778,6 +2054,11 @@ author_id: u9.id, product_id: p70.id, rating: 4)
 
 p71 = Product.create(name: 'Gengar Pokemon Keycap || For Mechanical Cherry MX switches ||', description: "You have a mechanical keyboard with Cherry MX-style switches? You like Pokemon? You ALSO want to a ridiculous keycap to replace one of your perfectly functional keys? Look no further! These unique Gengar keycaps will be sure to brighten up your keyboard and make you smile. These keycaps are made in white plastic so that lighting from RGB keyboards can shine through. They are also easy to customize and paint to your liking if desired.",
     price: 9.89, seller_id: u25.id )
+
+    tag174 = Tag.create(category_id: cat4.id , product_id: p71.id)     
+    tag175 = Tag.create(category_id: cat9.id , product_id: p71.id)     
+    tag176 = Tag.create(category_id: cat12.id , product_id: p71.id)     
+
 
 file301 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/gengarkey1.jpg')
 file302 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/gengarkey2.jpg')
@@ -1800,6 +2081,13 @@ author_id: u6.id, product_id: p71.id, rating: 3)
 p72 = Product.create(name: 'Crochet Chocobo from Final Fantasy Amigurumi/ Plushie Doll/ Bagcharm', description: "Detailed crocheted Chocobo from Final Fantasy, hope you enjoy!",
     price: 19.89, seller_id: u24.id )
 
+
+    tag177 = Tag.create(category_id: cat6.id , product_id: p72.id)  
+    tag178 = Tag.create(category_id: cat9.id , product_id: p72.id)  
+    tag179 = Tag.create(category_id: cat17.id , product_id: p72.id)  
+
+
+
 file303 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/ff11.jpg')
 file304 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/ff12.jpg')
 
@@ -1819,6 +2107,11 @@ p73 = Product.create(name: 'Cute amigurumi Moogle Moguri from final fantasy - as
 \n♥ Her measurements are: 7,5 cm high x 5 cm wide
 \n♥ All ships within working day and certificated form with tracking number",
     price: 9.23, seller_id: u23.id )
+
+    tag180 = Tag.create(category_id: cat6.id , product_id: p73.id)  
+    tag181 = Tag.create(category_id: cat9.id , product_id: p73.id)  
+    tag182 = Tag.create(category_id: cat17.id , product_id: p73.id)  
+
 
 file305 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/ff1.jpg')
 file306 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/ff2.jpg')
@@ -1845,6 +2138,11 @@ p74 = Product.create(name: 'Bride Cordelia Fire Emblem Heroes 11x17" Print', des
 Prints are shipped via a 2\" diameter tube. We know that some buyers prefer their prints shipped flat, but we are playing it safe since we know that thick card mailers can still get damaged and creased in the mail sometimes.",
     price: 22.23, seller_id: u22.id )
 
+    tag183 = Tag.create(category_id: cat5.id , product_id: p74.id) 
+    tag184 = Tag.create(category_id: cat9.id , product_id: p74.id) 
+    tag185 = Tag.create(category_id: cat13.id , product_id: p74.id) 
+
+
 file308 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/cordelia1.jpg')
 
 p74.photos.attach(io: file308, filename: 'cordelia1.jpg')
@@ -1855,8 +2153,15 @@ author_id: u6.id, product_id: p74.id, rating: 5)
 
 
 
+
 p75 = Product.create(name: 'Cuphead Gaming Dictionary Art', description: "Cuphead rules. It may have made me pull some of my hair out and even made my hair a little grey but I love it. Cuphead is based around art from the 1930s and placing such vintage design on a dictionary page feels like a great fit to me. This is Cuphead and Mugman on a vintage dictionary page that has been upcycled to be a one of a kind piece of decoration or a great gift!",
     price: 6.99, seller_id: u21.id )
+
+    tag186 = Tag.create(category_id: cat5.id , product_id: p75.id) 
+    tag187 = Tag.create(category_id: cat9.id , product_id: p75.id) 
+    tag188 = Tag.create(category_id: cat13.id , product_id: p75.id) 
+
+
 
 file309 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/cuphead1.jpg')
 
@@ -1869,24 +2174,27 @@ author_id: u5.id, product_id: p75.id, rating: 5)
 
 
 
-p76 = Product.create(name: 'Zelda inspired battle damaged shield', description: "Shield is made out of foam.
-Dimensions are about 23x21.
-Sits on right hand.\n
+# p76 = Product.create(name: 'Zelda inspired battle damaged shield', description: "Shield is made out of foam.
+# Dimensions are about 23x21.
+# Sits on right hand.\n
 
-Comes with shield and belt",
-    price: 180.00, seller_id: u20.id )
+# Comes with shield and belt",
+#     price: 180.00, seller_id: u20.id )
 
-file310 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/zeldashield1.jpg')
-file311 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/zeldashield2.jpg')
+#     tag189 = Tag.create(category_id: cat9.id , product_id: p76.id)
+#     tag190 = Tag.create(category_id: cat11.id , product_id: p76.id)
 
-p76.photos.attach(io: file310, filename: 'zeldashield1.jpg')
-p76.photos.attach(io: file311, filename: 'zeldashield2.jpg')
+# file310 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/zeldashield1.jpg')
+# file311 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/zeldashield2.jpg')
 
-r225 = Review.create(body: 'This was a present for my best friend. He said in 36 years he has never gotten anything as cool. His favorite gift Ever!',
-author_id: u4.id, product_id: p76.id, rating: 5)
+# p76.photos.attach(io: file310, filename: 'zeldashield1.jpg')
+# p76.photos.attach(io: file311, filename: 'zeldashield2.jpg')
 
-r226 = Review.create(body: 'Got this as a Christmas gift for my boyfriend who is a big Zelda fan. I have slowly been getting him different weapons from the games and as soon aa i saw the quality of this shield and all the great reviews, i knew I had to get it. He absolutely loced it! It\'s already mounted on the wall and looks amazing with the other weapons. Would high my recommend this seller, the work on the shield is amazing!',
-author_id: u3.id, product_id: p76.id, rating: 5)
+# r225 = Review.create(body: 'This was a present for my best friend. He said in 36 years he has never gotten anything as cool. His favorite gift Ever!',
+# author_id: u4.id, product_id: p76.id, rating: 5)
+
+# r226 = Review.create(body: 'Got this as a Christmas gift for my boyfriend who is a big Zelda fan. I have slowly been getting him different weapons from the games and as soon aa i saw the quality of this shield and all the great reviews, i knew I had to get it. He absolutely loced it! It\'s already mounted on the wall and looks amazing with the other weapons. Would high my recommend this seller, the work on the shield is amazing!',
+# author_id: u3.id, product_id: p76.id, rating: 5)
 
 
 
@@ -1897,6 +2205,12 @@ A Ghost is a levitating artificial intelligence used by Guardians.\n
 
 This item is 3D printed at 20% infill, very sturdy. Printed in black PLA plastic.",
     price: 27.00, seller_id: u19.id )
+
+
+
+    tag191 = Tag.create(category_id: cat6.id , product_id: p77.id)
+    tag192 = Tag.create(category_id: cat9.id , product_id: p77.id)
+    tag193 = Tag.create(category_id: cat18.id , product_id: p77.id)
 
 file312 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/destiny1.jpg')
 file313 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/destiny2.jpg')
@@ -1919,6 +2233,12 @@ p78 = Product.create(name: 'High Quality 925 Sterling Silver Kingdom Hearts Crow
 It comes with 22 inches long silver plated chain.",
     price: 44.00, seller_id: u18.id )
 
+    tag194 = Tag.create(category_id: cat1.id , product_id: p78.id)
+    tag195 = Tag.create(category_id: cat9.id , product_id: p78.id)
+
+
+
+
 file314 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/kh1.jpg')
 file315 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/kh2.jpg')
 
@@ -1940,6 +2260,11 @@ p79 = Product.create(name: 'Kingdom Hearts large keyblade necklace with mini cha
 Comes in an organza gift bag but many people have asked for them to be gift wrapped also so now we offer a gift wrap option. If you add gift wrap to your order, your item will come gift wrapped in wrapping paper",
     price: 20.00, seller_id: u17.id )
 
+
+    tag196 = Tag.create(category_id: cat1.id , product_id: p79.id)
+    tag197 = Tag.create(category_id: cat9.id , product_id: p79.id)
+
+
 file316 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/kh11.jpg')
 
 p79.photos.attach(io: file316, filename: 'kh11.jpg')
@@ -1959,6 +2284,10 @@ The keychain is made entirely by hand of polymer clay.
 It comes with a gift box.
 Also you can choose the color of the symbol.",
     price: 26.75, seller_id: u16.id )
+
+    tag198 = Tag.create(category_id: cat6.id , product_id: p80.id)
+    tag199 = Tag.create(category_id: cat9.id , product_id: p80.id)
+
 
 file317 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/hearthstone1.jpg')
 file318 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/hearthstone2.jpg')
@@ -1983,6 +2312,9 @@ p81 = Product.create(name: 'Heart of Azeroth necklace | World of Warcraft', desc
 \n Сores were made individually for each product using the lampwork technique, differ in their tracery.
 \nMaterial: 925 silver, gilding, lampwork",
     price: 209.00, seller_id: u15.id )
+
+    tag200 = Tag.create(category_id: cat1.id , product_id: p81.id)
+    tag201 = Tag.create(category_id: cat9.id , product_id: p81.id)
 
 file321 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/wow1.jpg')
 file322 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/wow2.jpg')
@@ -2015,6 +2347,10 @@ p82 = Product.create(name: 'Hunter\'s mask -Odogaron -Monster Hunter inspired', 
 This resin kit includes a mask, as well as the four large fangs (already mounted).",
     price: 147.49, seller_id: u14.id )
 
+    tag202 = Tag.create(category_id: cat6.id , product_id: p82.id)
+    tag203 = Tag.create(category_id: cat9.id , product_id: p82.id)
+    tag204 = Tag.create(category_id: cat11.id , product_id: p82.id)
+
 file325 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/monsterhunter1.jpg')
 file326 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/monsterhunter2.jpg')
 file327 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/monsterhunter3.jpg')
@@ -2046,6 +2382,10 @@ p83 = Product.create(name: 'Persona 5 Headphone Hanger - Joker phantom thieves l
 Reduce desk clutter with this Phantom Thieves-inspired headphone hook/hanger! Perfect for holding your headphones, wires, hats, or accessories while adding some gamer chic to your decor. This headphone stand makes an ideal gift for audiophiles, gamers, and Persona fans.",
     price: 18.62, seller_id: u13.id )
 
+
+    tag205 = Tag.create(category_id: cat4.id , product_id: p83.id)
+    tag206 = Tag.create(category_id: cat9.id , product_id: p83.id)
+
 file329 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/personaheadphone1.jpg')
 file330 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/personaheadphone2.jpg')
 file331 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/personaheadphone3.jpg')
@@ -2070,8 +2410,14 @@ author_id: u41.id, product_id: p83.id, rating: 5)
 
 
 
+
+
 p84 = Product.create(name: 'PlayStation Controller Lapel Pin - PS2 Controller Enamel Pin - PS3 Controller Hard Enamel Lapel Pin', description: "1.25 inch hard enamel gold plated lapel pin. Secured by two pin posts with butterfly clasps and packaged on a backing card.",
     price: 15.00, seller_id: u12.id )
+
+    tag207 = Tag.create(category_id: cat5.id , product_id: p84.id)
+    tag208 = Tag.create(category_id: cat9.id , product_id: p84.id)
+    tag209 = Tag.create(category_id: cat15.id , product_id: p84.id)
 
 file333 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/playstation1.jpg')
 file334 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/playstation2.jpg')
@@ -2096,6 +2442,9 @@ author_id: u38.id, product_id: p84.id, rating: 5)
 
 p85 = Product.create(name: 'Grand Theft Auto Wasted Embroidered Dad hat', description: "Dad hats aren't just for dads. This one's got a low profile with an adjustable strap and curved visor.",
     price: 23.50, seller_id: u11.id )
+
+    tag210 = Tag.create(category_id: cat2.id , product_id: p85.id)
+    tag211 = Tag.create(category_id: cat9.id , product_id: p85.id)
 
 file337 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/gtahat1.jpg')
 file338 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/gtahat2.jpg')
@@ -2131,6 +2480,10 @@ Item Specifications:\n
 - Comes with 2x regular pin fasteners",
     price: 10.96, seller_id: u10.id )
 
+    tag212 = Tag.create(category_id: cat5.id , product_id: p86.id)
+    tag213 = Tag.create(category_id: cat9.id , product_id: p86.id)
+    tag214 = Tag.create(category_id: cat15.id , product_id: p86.id)
+
 file339 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/maplestory1.jpg')
 file340 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/maplestory2.jpg')
 
@@ -2158,6 +2511,13 @@ p87 = Product.create(name: 'NieR: Automata Print', description: "2B print is app
 9S print is approximately 8\"x13\" on cardstock.
 A2 print is approximately 8.5\"x13\" on cardstock.",
     price: 7.50, seller_id: u10.id )
+
+
+    tag215 = Tag.create(category_id: cat5.id , product_id: p87.id)
+    tag216 = Tag.create(category_id: cat9.id , product_id: p87.id)
+    tag217 = Tag.create(category_id: cat13.id , product_id: p87.id)
+
+
 
 file341 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/nier1.jpg')
 file342 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/nier2.jpg')
@@ -2190,6 +2550,9 @@ author_id: u32.id, product_id: p87.id, rating: 4)
 p88 = Product.create(name: 'Cardcaptor Sakura Rug', description: "Pink Cardcaptor Sakura Rug, perfect for bedroom or game room!",
     price: 18.00, seller_id: u9.id )
 
+    tag218 = Tag.create(category_id: cat3.id , product_id: p88.id)
+    tag219 = Tag.create(category_id: cat9.id , product_id: p88.id)
+
 file345 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/cardcaptor1.jpg')
 file346 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/cardcaptor2.jpg')
 file347 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/cardcaptor3.jpg')
@@ -2214,6 +2577,9 @@ author_id: u30.id, product_id: p88.id, rating: 4)
 p89 = Product.create(name: 'thank u next sticker set
 ', description: "thank u next sticker set",
     price: 10.78, seller_id: u8.id )
+
+    tag220 = Tag.create(category_id: cat10.id , product_id: p89.id)
+    tag221 = Tag.create(category_id: cat16.id , product_id: p89.id)
 
 file348 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/thankunext1.jpg')
 file349 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/thankunext2.jpg')
@@ -2249,6 +2615,9 @@ Fully coloured in copic marker and labelled on the back with the name of the pie
 Based off of the original meme itself, this goofy picture is worth it in every way.",
     price: 11.76, seller_id: u7.id )
 
+     tag222 = Tag.create(category_id: cat10.id , product_id: p90.id)
+     tag223 = Tag.create(category_id: cat16.id , product_id: p90.id)
+
 file352 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/elmo1.jpg')
 
 p90.photos.attach(io: file352, filename: 'elmo1.jpg')
@@ -2261,6 +2630,11 @@ author_id: u29.id, product_id: p90.id, rating: 4)
 
 p91 = Product.create(name: 'Spongebob Squidward meme painting (hand painted)', description: "This will be made just for you! Prep time varies. Contact the shop to find out when it will ship.",
     price: 25.00, seller_id: u6.id )
+
+
+    tag224 = Tag.create(category_id: cat5.id , product_id: p91.id)
+    tag225 = Tag.create(category_id: cat10.id , product_id: p91.id)
+    tag226 = Tag.create(category_id: cat13.id , product_id: p91.id)
 
 file353 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/squidward1.jpg')
 file354 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/squidward2.jpg')
@@ -2277,6 +2651,10 @@ author_id: u28.id, product_id: p91.id, rating: 4)
 p92 = Product.create(name: 'Peace Was Never An Option Goose Meme - Meme Art - Funny - Embroidery Art', description: "Honk! This goose will look great in any home, it is definitely a conversation piece.
 These embroidery hoops are perfect for a contemporary piece of decor or as a gift. To display your hoop, either hang it or lean in it!",
     price: 13.50, seller_id: u5.id )
+
+    tag227 = Tag.create(category_id: cat3.id , product_id: p92.id)
+    tag228 = Tag.create(category_id: cat5.id , product_id: p92.id)
+    tag229 = Tag.create(category_id: cat10.id , product_id: p92.id)
 
 file355 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/peaceduck1.jpg')
 file356 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/peaceduck2.jpg')
@@ -2297,6 +2675,12 @@ p93 = Product.create(name: 'SpongeBob Ight Imma Head Out Meme Embroidered Beanie
 \n
 SpongeBob Ight Imma Head Out Meme Embroidered Beanie. The beanie is 12\" long when uncuffed. This is considered an adult size 'long' style beanie.",
     price: 19.99, seller_id: u4.id )
+
+
+    tag230 = Tag.create(category_id: cat2.id , product_id: p93.id)
+    tag231 = Tag.create(category_id: cat5.id , product_id: p93.id)
+    tag232 = Tag.create(category_id: cat10.id , product_id: p93.id)
+
 
 file358 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/spongebob1.jpg')
 file359 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/spongebob2.jpg')
@@ -2319,6 +2703,10 @@ p94 = Product.create(name: 'Doge meme poster Astronaut Dog internet modern pop a
 Exclusive & creative designs with an excellent quality. \n
 Made with love and inspired by the Internet culture.",
     price: 12.99, seller_id: u3.id )
+
+    tag233 = Tag.create(category_id: cat5.id , product_id: p94.id)
+    tag234 = Tag.create(category_id: cat10.id , product_id: p94.id)
+    tag235 = Tag.create(category_id: cat13.id , product_id: p94.id)
 
 file360 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/dogeastronaut1.jpg')
 file361 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/dogeastronaut2.jpg')
@@ -2343,6 +2731,10 @@ author_id: u21.id, product_id: p94.id, rating: 5)
 p95 = Product.create(name: 'MEME "YOU TRIED" Enamel Pin. Funny Joke Gift Gold Star Merit Badge Lapel Pin.', description: "Now you can proclaim the merits of effort, if not accomplishment, on your very person. Or just memes. Proclaim memery.",
     price: 12.00, seller_id: u2.id )
 
+
+    tag236 = Tag.create(category_id: cat6.id , product_id: p95.id)
+    tag237 = Tag.create(category_id: cat10.id , product_id: p95.id)
+
 file364 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/youtried1.jpg')
 file365 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/youtried2.jpg')
 
@@ -2364,6 +2756,10 @@ author_id: u21.id, product_id: p95.id, rating: 5)
 p96 = Product.create(name: 'Owen Wilson "WOW" Meme Mouse Pad, Neoprene Mousepad', description: 'Owen Wilson "WOW" Meme Mouse Pad, Neoprene Mousepad',
     price: 9.99, seller_id: u50.id )
 
+
+    tag238 = Tag.create(category_id: cat4.id , product_id: p96.id)
+    tag239 = Tag.create(category_id: cat10.id , product_id: p96.id)
+
 file366 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/owenwilson1.jpg')
 
 p96.photos.attach(io: file366, filename: 'owenwilson1.jpg')
@@ -2381,6 +2777,9 @@ author_id: u17.id, product_id: p96.id, rating: 5)
 p97 = Product.create(name: 'Per My Last Email Funny Work Meme T-Shirt', description: "SEE OUR OTHER SHIRTS - 'LET'S CIRCLE BACK NEXT WEEK'",
     price: 19.99, seller_id: u49.id )
 
+    tag240 = Tag.create(category_id: cat2.id , product_id: p97.id)
+    tag241 = Tag.create(category_id: cat10.id , product_id: p97.id)
+
 file367 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/email1.jpg')
 file368 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/email2.jpg')
 
@@ -2392,6 +2791,9 @@ p97.photos.attach(io: file368, filename: 'email2.jpg')
 
 p98 = Product.create(name: 'BTS Jungkook "Jungshook" Meme T-Shirt', description: "These premium cotton shirts offer a soft feel, easy stretch, and a comfortable classic t-shirt fit. Our tees are a well-loved favorite that fits great on both women and men alike. ",
     price: 22.95, seller_id: u49.id )
+
+    tag242 = Tag.create(category_id: cat2.id , product_id: p98.id)
+    tag243 = Tag.create(category_id: cat10.id , product_id: p98.id)
 
 file369 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/bts1.jpg')
 file370 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/bts2.jpg')
@@ -2408,6 +2810,9 @@ author_id: u16.id, product_id: p98.id, rating: 5)
 p99 = Product.create(name: ' Knuckles | Warrior Meme Plush Toy | Handmade Toy Soft | Stuffed Toy | Made To Order', description: "Little red warrior from meme part of Uganda who totally knows de wey :)
 This is our own carefully designed pattern and a top notch handmade work overall.",
     price: 140.00, seller_id: u48.id )
+
+    tag244 = Tag.create(category_id: cat17.id , product_id: p99.id)
+    tag245 = Tag.create(category_id: cat10.id , product_id: p99.id)
 
 file371 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/knuckles1.jpg')
 file372 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/knuckles2.jpg')
@@ -2427,6 +2832,9 @@ author_id: u13.id, product_id: p99.id, rating: 5)
 p100 = Product.create(name: 'Cardi B Birthday Card | Meme Birthday Card | Happy Birthday Okurrr', description: "A Cardi B Birthday card 'Happy Birthday Okurrr'",
     price: 3.54, seller_id: u47.id )
 
+
+    tag246 = Tag.create(category_id: cat10.id , product_id: p100.id)
+
 file374 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/cardib1.jpg')
 
 p100.photos.attach(io: file374, filename: 'cardib1.jpg')
@@ -2442,6 +2850,10 @@ author_id: u13.id, product_id: p100.id, rating: 4)
 p101 = Product.create(name: 'Unacceptable!! - Lemongrab Adventure Time Painting', description: "UNACCEPTABLE!!!!",
     price: 75.00, seller_id: u44.id )
 
+    tag247 = Tag.create(category_id: cat5.id , product_id: p101.id)
+    tag248 = Tag.create(category_id: cat8.id , product_id: p101.id)
+    tag249 = Tag.create(category_id: cat10.id , product_id: p101.id)
+
 file375 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/lemongrab1.jpg')
 file376 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/lemongrab2.jpg')
 
@@ -2454,6 +2866,10 @@ p101.photos.attach(io: file376, filename: 'lemongrab2.jpg')
 
 p102 = Product.create(name: 'Bold and Brash - Squidward Painting', description: "Bold and Brash (more like belongs in the trash) from spongebob! Every painting comes out slightly different and is made to order so please specify if you have a preference, such as more white, smoother, etc. I have more sizes available upon request.",
     price: 23.00, seller_id: u42.id )
+
+    tag250 = Tag.create(category_id: cat5.id , product_id: p102.id)
+    tag251 = Tag.create(category_id: cat8.id , product_id: p102.id)
+    tag252 = Tag.create(category_id: cat10.id , product_id: p102.id)
 
 file376 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/boldandbrash1.jpg')
 
@@ -2471,6 +2887,12 @@ p103 = Product.create(name: 'Edelgard Cosplay Pattern - Edelgard Fire Emblem Thr
 \n ♡♡♡
 \n This sewing pattern is based on Edelgard's Student Uniform from Fire Emblem Three Houses and my own personal build of the costume.",
     price: 137.50, seller_id: u41.id )
+
+
+    tag253 = Tag.create(category_id: cat9.id , product_id: p103.id)
+    tag254 = Tag.create(category_id: cat11.id , product_id: p103.id)
+
+
 
 file377 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/fecos1.jpg')
 file378 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/fecos2.jpg')
@@ -2491,6 +2913,8 @@ author_id: u13.id, product_id: p103.id, rating: 5)
 
 p104 = Product.create(name: 'Screen Printed & Leather Deadpool Movie (Replica) Cosplay / Costume Suit', description: "Custom Screen Deadpool Printed Stretch Material & Leather Suit. With ilustrastudios shoulders included.",
     price: 1200.00, seller_id: u40.id )
+
+    tag255 = Tag.create(category_id: cat11.id , product_id: p104.id)
 
 file340 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/deadpool1.jpg')
 file341 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/deadpool2.jpg')
@@ -2516,6 +2940,8 @@ author_id: u15.id, product_id: p104.id, rating: 5)
 p105 = Product.create(name: 'Stormtrooper Armor Personalized Star Wars Cosplay Costume', description: "Custom made Star Wars Stormtrooper costume armor",
     price: 900.00, seller_id: u39.id )
 
+    tag256 = Tag.create(category_id: cat11.id , product_id: p105.id)
+
 file343 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/starwars1.jpg')
 file344 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/starwars2.jpg')
 file345 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/starwars3.jpg')
@@ -2539,6 +2965,9 @@ author_id: u17.id, product_id: p105.id, rating: 4)
 
 p106 = Product.create(name: 'Akali KDA/POPSTAR League of legends uv/ glow in the dark MASK', description: "Hip fashion accessory, as popularized by the hit music icon Akali from K/DA POP/STARS",
     price: 26.00, seller_id: u38.id )
+
+    tag257 = Tag.create(category_id: cat9.id , product_id: p106.id)
+    tag258 = Tag.create(category_id: cat11.id , product_id: p106.id)
 
 file346 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/kda1.jpg')
 file347 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/kda2.jpg')
@@ -2564,6 +2993,10 @@ author_id: u20.id, product_id: p106.id, rating: 5)
 p107 = Product.create(name: 'League of Legends: Jhin mask Inspired for cosplay', description: "Cosplay from League of Legend games • The mask is made of strong polyurethane plastic, further Reinforced throughout the area.",
     price: 94.00, seller_id: u37.id )
 
+     tag259 = Tag.create(category_id: cat9.id , product_id: p107.id)
+    tag260 = Tag.create(category_id: cat11.id , product_id: p107.id)
+    
+
 file349 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/jhin1.jpg')
 file350 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/jhin2.jpg')
 file351 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/jhin3.jpg')
@@ -2586,6 +3019,11 @@ author_id: u23.id, product_id: p107.id, rating: 5)
 
 p108 = Product.create(name: 'Fallout Nuka Cola Thirst Zapper Blaster Prop', description: "Fallout 4 Quantum Nuka Cola Blaster Replica",
     price: 114.17, seller_id: u36.id )
+
+    tag261 = Tag.create(category_id: cat9.id , product_id: p108.id)
+    tag262 = Tag.create(category_id: cat11.id , product_id: p108.id)
+
+
 
 file352 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/nukacola1.jpg')
 file353 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/nukacola2.jpg')
@@ -2614,6 +3052,10 @@ Sits on right hand. \n\n
 Comes with shield and belt",
     price: 232.47, seller_id: u35.id )
 
+
+    tag263 = Tag.create(category_id: cat9.id , product_id: p109.id)
+    tag264 = Tag.create(category_id: cat11.id , product_id: p109.id)
+
 file355 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/zeldashield1.jpg')
 file356 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/zeldashield2.jpg')
 
@@ -2635,6 +3077,8 @@ author_id: u29.id, product_id: p109.id, rating: 5)
 
 p110 = Product.create(name: 'Floating fireball prop 2.0 (cosplay, convention, halloween)', description: "Floating fireball prop 2.0 (cosplay, convention, halloween)",
     price: 74.99, seller_id: u34.id )
+
+    tag265 = Tag.create(category_id: cat11.id , product_id: p110.id)
 
 file357 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/fireball1.jpg')
 file358 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/fireball2.jpg')
@@ -2659,6 +3103,10 @@ author_id: u31.id, product_id: p110.id, rating: 5)
 
 p111 = Product.create(name: 'Made to Order, Custom Fit Azula Cosplay- Avatar the Last Airbender', description: "You are able to order the breastplate, the red jumpsuit, the greaves/ shoe covers, the tiara/ belt or the entire costume. Please let me know if you would like either gold details or yellow details when messaging me. (See listing photos for gold or yellow options)",
     price: 65.00, seller_id: u33.id )
+
+        tag266 = Tag.create(category_id: cat8.id , product_id: p111.id)
+        tag267 = Tag.create(category_id: cat11.id , product_id: p111.id)
+
 
 file361 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/azula1.jpg')
 file362 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/azula2.jpg')
@@ -2689,6 +3137,11 @@ What’s included?\n
 - Water Tribe Necklace with jump ring attached (ribbon not included)",
     price: 72.99, seller_id: u32.id )
 
+
+    tag268 = Tag.create(category_id: cat8.id , product_id: p112.id)
+    tag269 = Tag.create(category_id: cat11.id , product_id: p112.id)
+
+
 file364 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/katara1.jpg')
 file365 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/katara2.jpg')
 file366 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/katara3.jpg')
@@ -2709,6 +3162,9 @@ author_id: u35.id, product_id: p112.id, rating: 4)
 
 p113 = Product.create(name: 'Fire Emblem Awakening Avatar Mai Robin Cosplay Costume Full Set Custom Made', description: "Includes: Accessories, Belt, Coat, Pants, Shirt, Skirt, Vest",
     price: 192.50, seller_id: u31.id )
+
+    tag270 = Tag.create(category_id: cat9.id , product_id: p113.id)
+    tag271 = Tag.create(category_id: cat11.id , product_id: p113.id)
 
 file367 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/feacos1.jpg')
 file368 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/feacos2.jpg')
@@ -2733,6 +3189,9 @@ author_id: u36.id, product_id: p113.id, rating: 5)
 p114 = Product.create(name: 'Avatar: The Last Airbender Inspired Blue Spirit Mask', description: "A replica of the mask worn by the mysterious Blue Spirit from Avatar: The Last Airbender.",
     price: 144.50, seller_id: u30.id )
 
+    tag272 = Tag.create(category_id: cat8.id , product_id: p114.id)
+    tag273 = Tag.create(category_id: cat11.id , product_id: p114.id)
+
 file372 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/bluespirit1.jpg')
 file373 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/bluespirit2.jpg')
 file374 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/bluespirit3.jpg')
@@ -2755,6 +3214,9 @@ author_id: u38.id, product_id: p114.id, rating: 3)
 
 p115 = Product.create(name: 'Officer D.Va Overwatch Sew-On Patches Cosplay', description: "If you're cosplaying officer D.va or just love her - these patches are made for you!",
     price: 10.50, seller_id: u29.id )
+
+    tag274 = Tag.create(category_id: cat9.id , product_id: p115.id)
+    tag275 = Tag.create(category_id: cat11.id , product_id: p115.id)
 
 file375 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/dvapatch1.jpg')
 file376 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/dvapatch2.jpg')
@@ -2786,6 +3248,10 @@ Before buying, read the details and measurements\n
 ALL QUESTIONS WRITE BEFORE BUYING!",
     price: 700.00, seller_id: u28.id )
 
+
+      tag276 = Tag.create(category_id: cat9.id , product_id: p116.id)
+    tag277 = Tag.create(category_id: cat11.id , product_id: p116.id)
+
 file378 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/kawaiireaper1.jpg')
 file379 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/kawaiireaper2.jpg')
 file380 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/kawaiireaper3.jpg')
@@ -2812,6 +3278,9 @@ p117 = Product.create(name: 'Cosplay Blackwatch Ana captain Amari Overwatch Bliz
 I don't know the exact price for shipping, it depends on your country. So please write to me first before purchasing, I have to check it first.",
     price: 1500.00, seller_id: u27.id )
 
+      tag278 = Tag.create(category_id: cat9.id , product_id: p117.id)
+    tag279 = Tag.create(category_id: cat11.id , product_id: p117.id)
+
 file383 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/ana1.jpg')
 file384 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/ana2.jpg')
 file385 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/ana3.jpg')
@@ -2833,6 +3302,9 @@ author_id: u42.id, product_id: p117.id, rating: 5)
 
 p118 = Product.create(name: 'Made to Order Genji Baihu LED Full Cosplay Costume Overwatch', description: "Full Genji Baihu cosplay \n Items are made by order of appointment, production time is discussed with each client individually",
     price: 2600.00, seller_id: u26.id )
+
+    tag280 = Tag.create(category_id: cat9.id , product_id: p118.id)
+    tag281 = Tag.create(category_id: cat11.id , product_id: p118.id)
 
 file387 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/genji1.jpg')
 file388 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/genji2.jpg')
@@ -2861,6 +3333,9 @@ author_id: u42.id, product_id: p118.id, rating: 4)
 p119 = Product.create(name: 'Thor Hammer Metal, Upgraded Version Thor Mjolnir, Thor Cosplay 1/1 Scale Movie Prop Replica, Thors Mjolnir, Thors Hammer, Thor\'s Hammer', description: "In order to make the perfect film replica, this time I upgraded the Thor hammer, redesigned a set of molds, changed several parts of the hammer, and basically restored the hammer in the movie 100%:",
     price: 279.00, seller_id: u25.id )
 
+    tag282 = Tag.create(category_id: cat11.id , product_id: p119.id)
+
+
 file391 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/thor1.jpg')
 file392 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/thor2.jpg')
 file393 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/thor3.jpg')
@@ -2886,27 +3361,32 @@ author_id: u40.id, product_id: p119.id, rating: 5)
 
 
 
-p119 = Product.create(name: 'AVATAR Korra cosplay', description: "Blue Korra's jacket From Book 1 or Book 2 \n\n
+p119_1 = Product.create(name: 'AVATAR Korra cosplay', description: "Blue Korra's jacket From Book 1 or Book 2 \n\n
 
 Make any costume of Korra 'The Legend of Korra.' You can do just the individual parts of your choice.",
     price: 185.00, seller_id: u24.id )
+
+
+    tag283 = Tag.create(category_id: cat8.id , product_id: p119_1.id)
+    tag284 = Tag.create(category_id: cat11.id , product_id: p119_1.id)
+
 
 file395 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/korra1.jpg')
 file396 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/korra2.jpg')
 file397 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/korra3.jpg')
 
 
-p119.photos.attach(io: file395, filename: 'korra1.jpg')
-p119.photos.attach(io: file396, filename: 'korra2.jpg')
-p119.photos.attach(io: file397, filename: 'korra3.jpg')
+p119_1.photos.attach(io: file395, filename: 'korra1.jpg')
+p119_1.photos.attach(io: file396, filename: 'korra2.jpg')
+p119_1.photos.attach(io: file397, filename: 'korra3.jpg')
 
 
 r312 = Review.create(body: "Outfit arrived sooner than expected, all items are just as they are in photos. Very happy with my purchase! :3",
-author_id: u44.id, product_id: p119.id, rating: 4)
+author_id: u44.id, product_id: p119_1.id, rating: 4)
 
 
 r313 = Review.create(body: "It fits just about right! Only a little tight around the chest area but that was expected after giving my measurements! Otherwise it all is so comfy and great!!!",
-author_id: u45.id, product_id: p119.id, rating: 5)
+author_id: u45.id, product_id: p119_1.id, rating: 5)
 
 
 
@@ -2920,6 +3400,9 @@ p120 = Product.create(name: 'Crescent Rose RWBY Ruby Rose Cosplay Costume Weapon
 file398 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/rwby1.jpg')
 file399 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/rwby2.jpg')
 file400 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/rwby3.jpg')
+
+    tag285 = Tag.create(category_id: cat8.id , product_id: p120.id)
+    tag286 = Tag.create(category_id: cat11.id , product_id: p120.id)
 
 
 p120.photos.attach(io: file398, filename: 'rwby1.jpg')
@@ -2936,6 +3419,10 @@ author_id: u46.id, product_id: p120.id, rating: 4)
 
 p121 = Product.create(name: 'Fairy Tail Scarf (Natsu\'s Scarf)', description: "A scarf, based on Natsu from the anime Fairy Tail. The scarf is made from a soft, minky fleece material, great for cold weather. It can be used as a cosplay accessory, or just to wear on a cold day!",
     price: 25.16, seller_id: u22.id )
+
+
+    tag287 = Tag.create(category_id: cat8.id , product_id: p121.id)
+    tag288 = Tag.create(category_id: cat11.id , product_id: p121.id)
 
 file401 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/fairytale1.jpg')
 file402 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/fairytale2.jpg')
@@ -2961,6 +3448,9 @@ p122 = Product.create(name: 'Fullmetal Alchemist anime cosplay uniform costume R
 You can choose different character's costume such as Roy Mustang, Maes Hughes, Olivia Armstrong or other.",
     price: 350.00, seller_id: u21.id )
 
+    tag289 = Tag.create(category_id: cat8.id , product_id: p122.id)
+    tag290 = Tag.create(category_id: cat11.id , product_id: p122.id)
+
 file404 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/fma1.jpg')
 file405 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/fma2.jpg')
 file406 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/fma3.jpg')
@@ -2982,6 +3472,9 @@ p123 = Product.create(name: 'Attack on Titan 3D Gear Sword Blade Life Size Cospl
 Size is around 3ft 1in from tip of the blade to end of the sword handle.\n
 Blade is around 2.5in wide.",
     price: 49.00, seller_id: u20.id )
+
+    tag291 = Tag.create(category_id: cat8.id , product_id: p123.id)
+    tag292 = Tag.create(category_id: cat11.id , product_id: p123.id)
 
 file407 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/snk11.jpg')
 file408 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/snk12.jpg')
@@ -3007,6 +3500,10 @@ author_id: u3.id, product_id: p123.id, rating: 5)
 p124 = Product.create(name: 'Gekkan Shoujo Nozaku Kun - Yuzuki Seo Cosplay Costume', description: "Yuzuki Seo from Gekkan Shoujo Nozaki-kun cosplay costume.
 Included - jacket, blouse, skirt, bow on the neck.",
     price: 95.00, seller_id: u19.id )
+    
+    tag293 = Tag.create(category_id: cat8.id , product_id: p124.id)
+    tag294 = Tag.create(category_id: cat11.id , product_id: p124.id)
+
 
 file410 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/seo1.jpg')
 
@@ -3023,6 +3520,11 @@ p125 = Product.create(name: 'Wonder Woman print, Wonderwoman poster, Justice Lea
 ★ Glossy or semigloss photo paper at 255 gms / 68 lbs.",
     price: 95.00, seller_id: u19.id )
 
+
+    tag295 = Tag.create(category_id: cat5.id , product_id: p125.id)
+    tag296 = Tag.create(category_id: cat13.id , product_id: p125.id)
+
+
 file411 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/wwprint1.jpg')
 
 p125.photos.attach(io: file411, filename: 'wwprint1.jpg')
@@ -3037,8 +3539,13 @@ author_id: u4.id, product_id: p125.id, rating: 4)
 p126 = Product.create(name: 'Gold Katana, Handmade Real Katana Japanese Samurai Sword Battle Ready Sword', description: "
 * Katana, 1045 carbon steel, full tang, handmade, battle ready, blade polished, sharpened, 28 inches blade, 40.5 inches, hardwood scabbard \n
 * Exclusive process yields stunning gold blade color, hand sharpened, full tang, battle ready sword \n
-* Expertly hand forged by seasoned sword smiths using proven, centuries-old technique"
+* Expertly hand forged by seasoned sword smiths using proven, centuries-old technique",
     price: 149.00, seller_id: u18.id )
+
+
+    tag297 = Tag.create(category_id: cat6.id , product_id: p126.id)
+    tag298 = Tag.create(category_id: cat11.id , product_id: p126.id)
+
 
 file412 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/katana1.jpg')
 file413 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/katana2.jpg')
@@ -3061,8 +3568,11 @@ author_id: u5.id, product_id: p126.id, rating: 5)
 
 
 
-p127 = Product.create(name: 'Porter Robinson Worlds Inspired Glowing LED Art Piece Night Lamp EDM', description: "Light up your living space with this brilliant glowing LED Porter Robinson Worlds Inspired art piece / Night Light - perfect for you or that special Porter fan in your life!"
+p127 = Product.create(name: 'Porter Robinson Worlds Inspired Glowing LED Art Piece Night Lamp EDM', description: "Light up your living space with this brilliant glowing LED Porter Robinson Worlds Inspired art piece / Night Light - perfect for you or that special Porter fan in your life!",
     price: 39.99, seller_id: u17.id )
+
+    tag299 = Tag.create(category_id: cat3.id , product_id: p127.id)
+    tag300 = Tag.create(category_id: cat7.id , product_id: p127.id)
 
 file416 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/porter1.jpg')
 file417 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/porter2.jpg')
@@ -3081,8 +3591,11 @@ author_id: u7.id, product_id: p127.id, rating: 5)
 
 
 
-p128 = Product.create(name: 'Odesza - Do you know the story of the Russian cosmonaut? EDM Fan', description: "This is a beautiful Odesza ‘A Moment Apart’ inspired Japanese fan for spreading the story of the Russian cosmonaut who fell in love with the sound."
+p128 = Product.create(name: 'Odesza - Do you know the story of the Russian cosmonaut? EDM Fan', description: "This is a beautiful Odesza ‘A Moment Apart’ inspired Japanese fan for spreading the story of the Russian cosmonaut who fell in love with the sound.",
     price: 20.00, seller_id: u16.id )
+
+    tag301 = Tag.create(category_id: cat7.id , product_id: p128.id)
+
 
 file419 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/odesza1.jpg')
 file420 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/odesza2.jpg')
@@ -3103,8 +3616,13 @@ author_id: u9.id, product_id: p128.id, rating: 4)
 
 
 
-p129 = Product.create(name: 'Madeon and Porter Robinson EDM mashup perler', description: "Madeon and Porter Robinson mashup perler! Customizations available :)"
+p129 = Product.create(name: 'Madeon and Porter Robinson EDM mashup perler', description: "Madeon and Porter Robinson mashup perler! Customizations available :)",
     price: 13.00, seller_id: u15.id )
+
+    tag302 = Tag.create(category_id: cat5.id , product_id: p129.id)
+    tag303 = Tag.create(category_id: cat7.id , product_id: p129.id)
+    tag304 = Tag.create(category_id: cat14.id , product_id: p129.id)
+
 
 file422 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/porteon1.jpg')
 file423 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/porteon2.jpg')
@@ -3124,8 +3642,12 @@ author_id: u11.id, product_id: p129.id, rating: 4)
 
 
 
-p130 = Product.create(name: 'Seven Lions Galaxy Perler Necklace', description: "Show your love for SevenLions with this beautiful galaxy lion perler. I can also customize"
+p130 = Product.create(name: 'Seven Lions Galaxy Perler Necklace', description: "Show your love for SevenLions with this beautiful galaxy lion perler. I can also customize",
     price: 19.00, seller_id: u14.id )
+
+        tag305 = Tag.create(category_id: cat5.id , product_id: p130.id)
+    tag306 = Tag.create(category_id: cat7.id , product_id: p130.id)
+    tag307 = Tag.create(category_id: cat14.id , product_id: p130.id)
 
 file424 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/sevenlions1.jpg')
 
@@ -3144,8 +3666,12 @@ author_id: u13.id, product_id: p130.id, rating: 5)
 
 
 p131 = Product.create(name: 'DeadMau5 Smart LED helmet replica EDM', description: "New Smart LED helmet by LEDSTORM Studio!
-For DJ's, musicians and entertainers of all kind."
+For DJ's, musicians and entertainers of all kind.",
     price: 799.00, seller_id: u13.id )
+
+     tag308 = Tag.create(category_id: cat6.id , product_id: p131.id)
+     tag309 = Tag.create(category_id: cat7.id , product_id: p131.id)
+     tag310 = Tag.create(category_id: cat11.id , product_id: p131.id)
 
 file425 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/maus11.jpg')
 file426 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/maus12.jpg')
@@ -3161,8 +3687,11 @@ p131.photos.attach(io: file428, filename: 'maus14.jpg')
 
 
 
-p132 = Product.create(name: 'Arcane LED Goggles - Inspired by Rezz EDM', description: "Our Arcane LED Goggles come pre-programmed with 20 different animations, 30 color options, 3 brightness settings and a built-in battery that will last all night."
+p132 = Product.create(name: 'Arcane LED Goggles - Inspired by Rezz EDM', description: "Our Arcane LED Goggles come pre-programmed with 20 different animations, 30 color options, 3 brightness settings and a built-in battery that will last all night.",
     price: 99.00, seller_id: u12.id )
+
+    tag311 = Tag.create(category_id: cat7.id , product_id: p132.id)
+     tag312 = Tag.create(category_id: cat11.id , product_id: p132.id)
 
 file429 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/rezz1.jpg')
 file430 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/rezz2.jpg')
@@ -3189,8 +3718,13 @@ author_id: u16.id, product_id: p132.id, rating: 5)
 
 
 
-p133 = Product.create(name: 'Holographic Illenium + Odesza-Inspired Sticker | Fan Art', description: "Say hello to our Holographic Illenium + Odesza-Inspired Sticker! We designed this sticker to celebrate two of our favorite artists! This is a 3 in holographic sticker, and has a holographic effect in the light. Indoor/outdoor, dishwasher safe holographic vinyl."
+p133 = Product.create(name: 'Holographic Illenium + Odesza-Inspired Sticker | Fan Art', description: "Say hello to our Holographic Illenium + Odesza-Inspired Sticker! We designed this sticker to celebrate two of our favorite artists! This is a 3 in holographic sticker, and has a holographic effect in the light. Indoor/outdoor, dishwasher safe holographic vinyl.",
     price: 2.44, seller_id: u11.id )
+
+         tag313 = Tag.create(category_id: cat5.id , product_id: p133.id)
+         tag314 = Tag.create(category_id: cat7.id , product_id: p133.id)
+         tag315 = Tag.create(category_id: cat16.id , product_id: p133.id)
+
 
 file432 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/illenium1.jpg')
 file433 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/illenium2.jpg')
@@ -3208,8 +3742,12 @@ author_id: u17.id, product_id: p133.id, rating: 5)
 
 
 
-p134 = Product.create(name: 'Illenium x Seven Lions Kandi Cuff Bracelet, Mini Perler Bracelet, EDM Rave Kandi', description: "This colorful Illenium x Seven Lions perler cuff is the perfect finishing touch to your rave outfit or your rear-view mirror!"
+p134 = Product.create(name: 'Illenium x Seven Lions Kandi Cuff Bracelet, Mini Perler Bracelet, EDM Rave Kandi', description: "This colorful Illenium x Seven Lions perler cuff is the perfect finishing touch to your rave outfit or your rear-view mirror!",
     price: 16.54, seller_id: u10.id )
+
+    tag316 = Tag.create(category_id: cat5.id , product_id: p134.id)
+    tag317 = Tag.create(category_id: cat7.id , product_id: p134.id)
+    tag318 = Tag.create(category_id: cat14.id , product_id: p134.id)
 
 file434 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/lionsillenium1.jpg')
 file435 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/lionsillenium2.jpg')
@@ -3228,8 +3766,12 @@ author_id: u18.id, product_id: p134.id, rating: 5)
 
 
 
-p135 = Product.create(name: 'San Holo Perler Necklace EDM', description: "Perler and necklace are customizable"
+p135 = Product.create(name: 'San Holo Perler Necklace EDM', description: "Perler and necklace are customizable",
     price: 20.00, seller_id: u9.id )
+
+    tag319 = Tag.create(category_id: cat5.id , product_id: p135.id)
+    tag320 = Tag.create(category_id: cat7.id , product_id: p135.id)
+    tag321 = Tag.create(category_id: cat14.id , product_id: p135.id)
 
 file436 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/sanholo1.jpg')
 file437 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/sanholo2.jpg')
@@ -3245,8 +3787,10 @@ author_id: u19.id, product_id: p135.id, rating: 4)
 
 
 
-p136 = Product.create(name: 'EDM Rave Flag- Avicii. DJ Festival flag.', description: "AVICII Rave Festival Flag - Our flag is perfect to wave at festivals, hang at home, or in the garage!"
+p136 = Product.create(name: 'EDM Rave Flag- Avicii. DJ Festival flag.', description: "AVICII Rave Festival Flag - Our flag is perfect to wave at festivals, hang at home, or in the garage!",
     price: 30.00, seller_id: u9.id )
+
+    tag322 = Tag.create(category_id: cat7.id , product_id: p136.id)
 
 file438 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/avicii1.jpg')
 file439 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/avicii2.jpg')
@@ -3262,8 +3806,12 @@ author_id: u20.id, product_id: p136.id, rating: 4)
 
 
 
-p137 = Product.create(name: 'Martin Garrix Small or Large Perler Bead Art Kandi Necklace Rave EDM', description: "Martin Garrix kandi necklace made from Perler and Pony beads. Choose multi-color, blue/white, or custom colors in the options above. I can also add letter beads to the chain!"
+p137 = Product.create(name: 'Martin Garrix Small or Large Perler Bead Art Kandi Necklace Rave EDM', description: "Martin Garrix kandi necklace made from Perler and Pony beads. Choose multi-color, blue/white, or custom colors in the options above. I can also add letter beads to the chain!",
     price: 18.00, seller_id: u8.id )
+
+    tag323 = Tag.create(category_id: cat5.id , product_id: p137.id)
+    tag324 = Tag.create(category_id: cat7.id , product_id: p137.id)
+    tag325 = Tag.create(category_id: cat14.id , product_id: p137.id)
 
 file438 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/garrix1.jpg')
 file439 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/garrix2.jpg')
@@ -3282,8 +3830,12 @@ author_id: u21.id, product_id: p137.id, rating: 4)
 
 
 
-p138 = Product.create(name: 'Kaskade Turn It Down Dripping Lips Beaded Kandi Perler Art Necklace Rave EDM', description: "Kaskade kandi necklace made from Perler and Pony beads. I can also add letter beads to the chain!"
+p138 = Product.create(name: 'Kaskade Turn It Down Dripping Lips Beaded Kandi Perler Art Necklace Rave EDM', description: "Kaskade kandi necklace made from Perler and Pony beads. I can also add letter beads to the chain!",
     price: 19.00, seller_id: u8.id )
+
+    tag326 = Tag.create(category_id: cat5.id , product_id: p138.id)
+    tag327 = Tag.create(category_id: cat7.id , product_id: p138.id)
+    tag328 = Tag.create(category_id: cat14.id , product_id: p138.id)
 
 file441 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/kaskade1.jpg')
 file442 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/kaskade2.jpg')

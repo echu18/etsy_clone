@@ -20,8 +20,3 @@ class Api::TagsController < ApplicationController
 
 
 end
-
-
-
-
-end

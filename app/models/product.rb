@@ -20,6 +20,8 @@ class Product < ApplicationRecord
     has_many :reviews, foreign_key: :product_id, class_name: :Review
     has_many :authors, through: :reviews
     has_many :cart_items, foreign_key: :product_id, class_name: :CartItem
+    has_many :tags, foreign_key: :product_id, class_name: :Tag
+    has_many :categories, through: :tags 
 
     has_many_attached :photos
 
