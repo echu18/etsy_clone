@@ -20,6 +20,20 @@ class Navbar extends React.Component {
         this.handleChange = this.handleChange.bind(this);
         // this.resetForm = this.resetForm.bind(this);
     }
+
+    componentDidMount(){
+        if (!!this.props.location.search) {
+            let params = this.props.location.search
+            this.props.searchProducts(params)
+        }
+    }
+
+    componentDidUpdate(prevProps){
+        if (this.props.location.search != prevProps.location.search) {
+            let params = this.props.location.search
+            this.props.searchProducts(params)
+        }
+    }
     
    togglePopup() {
        this.setState({

@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class TagsControllerTest < ActionDispatch::IntegrationTest
+class Api::TagsControllerTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
   # end

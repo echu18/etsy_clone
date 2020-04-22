@@ -12,6 +12,8 @@ require 'open-uri'
 User.destroy_all
 Product.destroy_all
 Review.destroy_all
+Tag.destroy_all
+Category.destroy_all
 
 # Seed users
 

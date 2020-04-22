@@ -32,8 +32,12 @@
 
 }
 
-.product-card-image + p {
+.product-card-image ~ p {
     font-size: 14px;
+    width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 

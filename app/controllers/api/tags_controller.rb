@@ -1,6 +1,5 @@
 class Api::TagsController < ApplicationController
-
-    def create
+       def create
         @tag = Tag.new(tag_params)
         
         if @tag.save!
@@ -17,6 +16,4 @@ class Api::TagsController < ApplicationController
     def tag_params
         params.require(:tag).permit(:category_id, :product_id)
     end
-
-
 end

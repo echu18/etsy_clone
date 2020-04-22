@@ -20,6 +20,8 @@ class Product < ApplicationRecord
     has_many :reviews, foreign_key: :product_id, class_name: :Review
     has_many :authors, through: :reviews
     has_many :cart_items, foreign_key: :product_id, class_name: :CartItem
+    
+    
     has_many :tags, foreign_key: :product_id, class_name: :Tag
     has_many :categories, through: :tags 
 
@@ -53,6 +55,11 @@ class Product < ApplicationRecord
 
 
     def self.search(query)
+        if query.include?("?query=")
+            query = query[7..-1].split("%20").join(" ")
+        end
+
+
         if query != nil
             result = self.where("LOWER(name) LIKE ? OR LOWER(description) LIKE ?", "%#{query}%", "%#{query}%")
             if result 
@@ -64,7 +71,6 @@ class Product < ApplicationRecord
         else
             @products = Product.all
         end
-        # where("name LIKE ? OR description LIKE ?", "%#{query}%", "%#{query}%")
     end
 
 

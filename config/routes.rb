@@ -11,9 +11,11 @@ Rails.application.routes.draw do
     resources :reviews, only: [:index, :show, :create, :destroy]
 
     resources :products, only: [:index, :show, :create]
+    resources :categories, only: [:create]
+    resources :tags, only: [:create]
     
     get '/search' => 'products#index', :as => 'search_page'
-
+    
     # resources :users do 
     #   # resources :reviews, only: [:create, :destroy]
     # end
