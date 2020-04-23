@@ -29,6 +29,7 @@ class Navbar extends React.Component {
     }
 
     componentDidUpdate(prevProps){
+        debugger
         if (this.props.location.search != prevProps.location.search) {
             let params = this.props.location.search
             this.props.searchProducts(params)
@@ -83,6 +84,11 @@ class Navbar extends React.Component {
     //     $('.searchbar-input').clearSearch();
     // }
 
+    // handleSearchClick(e, type, searchTerm) {
+    //     e.preventDefault()
+    //     this.props.searchProducts({query: searchTerm})
+    //     this.props.history.push(`/search?${type}=${searchTerm}`)
+    // }
 
     
     render() {
@@ -144,12 +150,24 @@ class Navbar extends React.Component {
                                 
                                 <div className='search-suggestion-box'>
                                     <h3>Popular right now</h3>
-                                    <p>my hero academia</p>
+                                    <Link to={`/search?query=my%20hero%20academia`}>my hero academia</Link>
                                     <p>gaming</p>
+                                    <p>keycaps</p>
                                     <p>one punch man</p>
                                     <p>sailor moon</p>
                                     <p>pins</p>
-                                    <p>meme gifts</p>
+                                    <p>overwatch</p>
+                                    <p>memes</p>
+
+                                    
+                                    {/* <p onClick={e=>this.handleSearchClick( 'query', 'my hero academia')}>my hero academia</p>
+                                    <p onClick={e=>this.handleSearchClick('category', 'gaming')}>gaming</p>
+                                    <p onClick={e=>this.handleSearchClick('category', 'keycaps')}>keycaps</p>
+                                    <p onClick={e=>this.handleSearchClick('query', 'one punch man')}>one punch man</p>
+                                    <p onClick={e=>this.handleSearchClick('query', 'sailor moon')}>sailor moon</p>
+                                    <p onClick={e=>this.handleSearchClick('category', 'pins')}>pins</p>
+                                    <p onClick={e=>this.handleSearchClick('query', 'overwatch')}>overwatch</p>
+                                    <p onClick={e=>this.handleSearchClick('category', 'memes')}>memes</p> */}
                                 </div>
                             </form>
                             <div className="navbar-icon search-icon" onClick={this.handleSubmit}>

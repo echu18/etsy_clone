@@ -21,7 +21,7 @@ class Product < ApplicationRecord
     has_many :authors, through: :reviews
     has_many :cart_items, foreign_key: :product_id, class_name: :CartItem
     
-    
+    has_one :store_name, through: :seller
     has_many :tags, foreign_key: :product_id, class_name: :Tag
     has_many :categories, through: :tags 
 
@@ -55,18 +55,33 @@ class Product < ApplicationRecord
 
 
     def self.search(query)
-        if query.include?("?query=")
-            query = query[7..-1].split("%20").join(" ")
-        end
-
-
         if query != nil
-            result = self.where("LOWER(name) LIKE ? OR LOWER(description) LIKE ?", "%#{query}%", "%#{query}%")
-            if result 
-                @products = result
-            else
-                @products = Product.all
+            if query.include?("?query=")
+                query = query[7..-1].split("%20").join(" ")
+                
+                result = self.where("LOWER(name) LIKE ? OR LOWER(description) LIKE ?", "%#{query}%", "%#{query}%")
+                if result 
+                    @products = result
+                else
+                    @products = Product.all
+                end
+            elsif query.include?("?category=")
+                
+                query = query[10..-1].split("%20")
+                query.reject! {|term| term == '&'}
+                
+                
 
+            #     result = self.where("LOWER(categories) LIKE ?", "%#{query}%")
+            #    if result 
+            #         @products = result
+            #     else
+            #         @products = Product.all
+            #     end
+                @products = Product.all.select do |product| 
+                    # 
+                    query.any? {|query_term| product.categories.any? {|category| category.name.downcase.split.include?(query_term.downcase)} }
+                end
             end
         else
             @products = Product.all

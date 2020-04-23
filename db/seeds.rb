@@ -198,7 +198,7 @@ p1 = Product.create(name:'Cat Memes Sticker Pack', description: 'This sticker pa
     Polite cat (fourth image): 4.9 cm at longest measurement
     Crying cat (fifth image): 8 cm at longest measurement
     Cat on stairs (sixth image): 6 cm at longest measurement', 
-    price: 9.47, seller_id: u1.id )
+    price: 9.47, seller_id: u46.id )
 
 tag1 = Tag.create(category_id: cat10.id , product_id: p1.id)
 tag2 = Tag.create(category_id: cat16.id , product_id: p1.id)
@@ -664,7 +664,7 @@ p20.photos.attach(io: file157, filename: 'patrick1.jpg')
 
 
 p21 = Product.create(name:'Cute UwU Mug', description: "Printed using direct to garment printing process, for enhanced quality and durability.", 
-    price:23.61, seller_id: u8.id )
+    price:23.61, seller_id: u44.id )
 
         tag49 = Tag.create(category_id: cat3.id , product_id: p21.id)
         tag50 = Tag.create(category_id: cat10.id , product_id: p21.id)
@@ -983,9 +983,9 @@ author_id: u33.id, product_id: p33.id, rating: 5)
 p34 = Product.create(name:'Mob Psycho 100 anime Psycho Helmet Cult Poster Unisex 2 colors | 100% cotton T-shirt', description: "T-shirt with the comic design of the Psycho Helmet Club 'Looking for god' poster from the famous anime Mob Psycho 100 in Japanese writing.", 
     price: 16.89, seller_id: u25.id )
 
-    tag81 = Tag.create(category_id: cat5.id , product_id: p34.id)
+    tag81 = Tag.create(category_id: cat2.id , product_id: p34.id)
     tag82 = Tag.create(category_id: cat8.id , product_id: p34.id)
-    tag83 = Tag.create(category_id: cat13.id , product_id: p34.id)
+    # tag83 = Tag.create(category_id: cat13.id , product_id: p34.id)
 
 
 file196 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/mobpsycho1.jpg')
@@ -1002,7 +1002,7 @@ author_id: u39.id, product_id: p34.id, rating: 5)
 
 
 p35 = Product.create(name:'Casual Weeb UwU Decal, Japan Inspired, Weeaboo Vinyl Decal, Laptop Sticker, Car Decal.', description: "I watch a lot of anime, it's no big deal..... You know.... We have a matching tee.... just sayin' (´・ω・`)", 
-    price: 4.49, seller_id: u21.id )
+    price: 4.49, seller_id: u44.id )
 
 
     tag84 = Tag.create(category_id: cat5.id , product_id: p35.id)
@@ -2617,8 +2617,8 @@ Fully coloured in copic marker and labelled on the back with the name of the pie
 Based off of the original meme itself, this goofy picture is worth it in every way.",
     price: 11.76, seller_id: u7.id )
 
-     tag222 = Tag.create(category_id: cat10.id , product_id: p90.id)
-     tag223 = Tag.create(category_id: cat16.id , product_id: p90.id)
+     tag222 = Tag.create(category_id: cat5.id , product_id: p90.id)
+     tag223 = Tag.create(category_id: cat10.id , product_id: p90.id)
 
 file352 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/elmo1.jpg')
 

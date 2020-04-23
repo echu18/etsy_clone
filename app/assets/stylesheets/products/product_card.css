@@ -22,7 +22,10 @@
 
 .product-card-image {
     display: flex;
+    align-items: flex-end;
     object-fit: cover;
+    /* object-position: top; */
+    /* object-position: 50% 20%; */
     /* max-height: 150px; */
     height: 163px;
     width: 100%;
@@ -38,6 +41,8 @@
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
+    height: 15px;
+    /* margin: 10px 0px 10px 0px; */
 }
 
 
@@ -56,11 +61,20 @@
 
 
 .product-card-price {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    /* font-size: 16px; */
     font-size: 16px;
+    font-weight: bolder;
     margin: 6px 0px 6px 0px;
+    /* margin: 10px 0px 10px 0px; */
+
 }
 
-
+.product-card-store {
+    color: gainsboro;
+}
 /* .product-card-img {
     width: 100%;
     height: 100%;
@@ -82,12 +96,13 @@
     left: 28%; */
     display: flex;
     align-items: center;
-    height: 20px;
+    height: 15px;
     width: fit-content;
-    padding: 3px 10px 3px 10px;
+    padding: 5px 10px 5px 10px;
     margin-left: 5px;
     border-radius: 15px;
     background-color: pink;
     font-family: 'Helvetica', sans serif;
-    font-size: 14px;
+    font-size: 12px;
+    font-weight: normal;
 }
