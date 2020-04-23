@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, withRouter, Redirect } from 'react-router-dom';
 import Popup from '../signin_signup/popup';
 import CategoryDropdownContainer from './categories/category_dropdown_container'
+// import SearchSuggestionBox from './search_suggestion_box';
 import {cartIcon, searchIcon, etsyLogo, giftIcon} from '../../../app/assets/images/svgs/icons'
 
 
@@ -10,7 +11,9 @@ class Navbar extends React.Component {
         super(props);
         this.state ={
             query: "",
-            showPopup: false
+            showPopup: false,
+            searchSuggestion: false,
+            showOverlay: 'hide-suggestion-overlay'
         }
 
         this.togglePopup = this.togglePopup.bind(this);
@@ -18,6 +21,8 @@ class Navbar extends React.Component {
         this.redirectToHome = this.redirectToHome.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleChange = this.handleChange.bind(this);
+        this.handleSearchClick = this.handleSearchClick.bind(this);
+        this.toggleSuggestionBox = this.toggleSuggestionBox.bind(this);
         // this.resetForm = this.resetForm.bind(this);
     }
 
@@ -29,7 +34,7 @@ class Navbar extends React.Component {
     }
 
     componentDidUpdate(prevProps){
-        debugger
+        
         if (this.props.location.search != prevProps.location.search) {
             let params = this.props.location.search
             this.props.searchProducts(params)
@@ -41,6 +46,35 @@ class Navbar extends React.Component {
            showPopup: !this.state.showPopup
        });
    }
+
+    toggleSuggestionBox(e) {
+        // debugger
+        e.preventDefault()
+        let suggestionBox = document.getElementsByClassName('search-suggestion-box')[0];
+
+        if (this.state.searchSuggestion === false) {
+            suggestionBox.classList.remove('suggestion-hidden')
+            suggestionBox.classList.add('suggestion-visible')
+            this.setState({ searchSuggestion: true, showOverlay: "show-suggestion-overlay"})
+        } else {
+            suggestionBox.classList.remove('suggestion-visible')
+            suggestionBox.classList.add('suggestion-hidden')
+            this.setState({ searchSuggestion: false, showOverlay: "hide-suggestion-overlay"})
+        }
+    }
+
+
+    // toggleOverlay() {
+    //     (this.state.showOverlay === "show-suggestion-overlay") ?
+    //         (this.setState({
+    //             showOverlay: "hide-suggestion-overlay"
+    //         })) : (
+    //             (this.setState({
+    //                 showOverlay: "show-suggestion-overlay"
+    //             }))
+    //         )
+    // }
+
 
     signOutAndClear () {
         this.props.signOut();
@@ -72,6 +106,10 @@ class Navbar extends React.Component {
             this.props.searchProducts(this.state.query)
             this.props.history.push(`/search?query=${this.state.query}`)
         }
+
+        if (this.state.searchSuggestion === true) {
+            this.toggleSuggestionBox();
+        }
     }
 
 
@@ -84,11 +122,14 @@ class Navbar extends React.Component {
     //     $('.searchbar-input').clearSearch();
     // }
 
-    // handleSearchClick(e, type, searchTerm) {
-    //     e.preventDefault()
-    //     this.props.searchProducts({query: searchTerm})
-    //     this.props.history.push(`/search?${type}=${searchTerm}`)
-    // }
+    
+
+    handleSearchClick(e, type, searchTerm) {
+        e.preventDefault()
+        this.props.searchProducts({query: searchTerm})
+        this.props.history.push(`/search?${type}=${searchTerm}`)
+        this.toggleSuggestionBox(e)
+    }
 
     
     render() {
@@ -110,7 +151,7 @@ class Navbar extends React.Component {
                     {this.state.showPopup ?
 
                     <Popup
-                        text='hello'
+                        // text='hello'
                         closePopup={this.togglePopup}
                         currentUser={currentUserId}
                         clearErrors={clearErrors}
@@ -119,8 +160,7 @@ class Navbar extends React.Component {
             </div>
         );
 
-
-
+    
 
 
         // document.addEventListener("keyup", e => this.handleSubmit(e))
@@ -141,34 +181,38 @@ class Navbar extends React.Component {
                         <img className='memesy-logo' src="https://etsy-clone-dev.s3-us-west-1.amazonaws.com/splash-images/Memesy.png"/>
                         {/* {etsyLogo} */}
                     </div>
-
+                    
                     <div className="searchbar">
                         <div className="searchbar-form" >
                             <form name='sb-form' onSubmit={e => e.preventDefault()}>
-                                <input type="text" className='searchbar-input' onChange={this.handleChange} onKeyUp={e => this.handleSubmit(e)} name="search" placeholder="Search for items or shops" autoComplete='off'/>      
+                                <input type="text" onClick={this.toggleSuggestionBox} className='searchbar-input' onChange={this.handleChange} onKeyUp={e => this.handleSubmit(e)} name="search" placeholder="Search for items or shops" autoComplete='off'/>      
                                 {/* onKeyUp={e => this.handleSubmit(e)} */}
                                 
-                                <div className='search-suggestion-box'>
-                                    <h3>Popular right now</h3>
-                                    <Link to={`/search?query=my%20hero%20academia`}>my hero academia</Link>
-                                    <p>gaming</p>
-                                    <p>keycaps</p>
-                                    <p>one punch man</p>
-                                    <p>sailor moon</p>
-                                    <p>pins</p>
-                                    <p>overwatch</p>
-                                    <p>memes</p>
+                                {/* <SearchSuggestionBox /> */}
 
+
+                                    <div className={this.state.showOverlay} onClick={this.toggleSuggestionBox}></div>
+                                    <div className='search-suggestion-box suggestion-hidden'>
                                     
-                                    {/* <p onClick={e=>this.handleSearchClick( 'query', 'my hero academia')}>my hero academia</p>
-                                    <p onClick={e=>this.handleSearchClick('category', 'gaming')}>gaming</p>
-                                    <p onClick={e=>this.handleSearchClick('category', 'keycaps')}>keycaps</p>
-                                    <p onClick={e=>this.handleSearchClick('query', 'one punch man')}>one punch man</p>
-                                    <p onClick={e=>this.handleSearchClick('query', 'sailor moon')}>sailor moon</p>
-                                    <p onClick={e=>this.handleSearchClick('category', 'pins')}>pins</p>
-                                    <p onClick={e=>this.handleSearchClick('query', 'overwatch')}>overwatch</p>
-                                    <p onClick={e=>this.handleSearchClick('category', 'memes')}>memes</p> */}
+                                        <p className='search-suggestion' onClick={e=>this.handleSearchClick(e,  'query', 'my hero academia')}>my hero academia</p>
+                                        <p className='search-suggestion' onClick={e=>this.handleSearchClick(e, 'category', 'gaming')}>gaming</p>
+                                        <p className='search-suggestion' onClick={e=>this.handleSearchClick(e, 'category', 'keycaps')}>keycaps</p>
+                                        <p className='search-suggestion' onClick={e=>this.handleSearchClick(e, 'query', 'one punch man')}>one punch man</p>
+                                        <p className='search-suggestion' onClick={e=>this.handleSearchClick(e, 'query', 'sailor moon')}>sailor moon</p>
+                                        <p className='search-suggestion' onClick={e=>this.handleSearchClick(e, 'category', 'pins')}>pins</p>
+                                        <p className='search-suggestion' onClick={e=>this.handleSearchClick(e, 'query', 'overwatch')}>overwatch</p>
+                                        <p className='search-suggestion' onClick={e=>this.handleSearchClick(e, 'category', 'memes')}>memes</p>
+                                        {/* <p onClick={e=>this.handleSearchClick(e,  'query', 'my hero academia')}>my hero academia</p>
+                                        <p onClick={e=>this.handleSearchClick(e, 'category', 'gaming')}>gaming</p>
+                                        <p onClick={e=>this.handleSearchClick(e, 'category', 'keycaps')}>keycaps</p>
+                                        <p onClick={e=>this.handleSearchClick(e, 'query', 'one punch man')}>one punch man</p>
+                                        <p onClick={e=>this.handleSearchClick(e, 'query', 'sailor moon')}>sailor moon</p>
+                                        <p onClick={e=>this.handleSearchClick(e, 'category', 'pins')}>pins</p>
+                                        <p onClick={e=>this.handleSearchClick(e, 'query', 'overwatch')}>overwatch</p>
+                                        <p onClick={e=>this.handleSearchClick(e, 'category', 'memes')}>memes</p> */}
                                 </div>
+                               
+
                             </form>
                             <div className="navbar-icon search-icon" onClick={this.handleSubmit}>
                                 {searchIcon}

@@ -1,8 +1,19 @@
+.index-container { 
+    position: relative;
+    display: flex;
+    /* flex-direction: column; */
+    /* justify-content: flex-end;  */
+} 
+
+
 .index-products {
     display: flex;
     flex-direction: column;
+    align-self: flex-end;
     height: 100%;
-    width: auto;
+    width: fit-content;
+    width: 70%;
+    margin-top: 120px;
     border: 1px solid red;
 }
 
@@ -10,5 +21,65 @@
 .index-row {
     display: flex;
     width: 100%;
+    justify-content: flex-end;
+    /* border: 1px solid blue; */
+}
+
+
+.index-btn-container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    bottom: -70px;
+    left: 50%;
+    /* background-color: gainsboro; */
+}
+
+.index-btn {
+    /* position: absolute; */
+    border-style: none;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color:  rgb(235, 235, 235);
+    color: black;
+    margin: 0px 3px 0px 3px;
+}
+
+.index-btn:hover {
+    cursor: pointer;
+    background-color: rgb(216, 216, 216);
+}
+
+.active-page {
+    background-color: rgb(187, 187, 187);
+}
+
+/* .active-page > svg{
+
+} */
+
+.grayed-btn > svg{
+    fill: rgb(117, 117, 117);
+}
+
+.index-filter-sidebar {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    height: fit-content;
     border: 1px solid blue;
+}
+.price-filter-btn {
+    text-align: left;
+    text-indent: 10px;
+    height: 20px;
+    border-style: none;
+    border: 1px solid turquoise;
+}
+
+
+.price-filter-btn:hover {
+    cursor: pointer;
+    background-color: thistle;
 }

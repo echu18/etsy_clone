@@ -1,6 +1,7 @@
 .search-suggestion-box {
     font-size: 16px;
-    display: none;
+    display: hidden;
+    /* visibility: hidden; */
     position: absolute;
     top: 70%;
     font-size: 16px;
@@ -20,12 +21,38 @@
 
 
 .searchbar-form input[type="text"]:focus + .search-suggestion-box {
-    display: block;
+    /* display: hidden; */
+    /* visibility: hidden; */
     width: 53.5vw;
     height: fit-content;
     opacity: 1;
     transition: height 1s, width 1s, opacity 0s;
 }   
+
+/* .searchbar-form input[type="text"]:active + .search-suggestion-box{
+    visibility: visible;
+} */
+
+.suggestion-visible {
+    visibility: visible;
+}
+.suggestion-hidden {
+    visibility: hidden;
+}
+
+
+.show-suggestion-overlay {
+    display: block;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    /* background-color: rgba(0,0,0,0.5); */
+    z-index: 100;
+}
 
 
 .search-suggestion-box > h3 {

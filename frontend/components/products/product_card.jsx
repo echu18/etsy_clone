@@ -28,9 +28,9 @@ class ProductCard extends React.Component {
       
         return (
             <Link to={`/products/${product.id}`}>
-                <img className='product-card-image' src={this.props.product.photoUrls[0]}/><span className='box-shadow'></span>
+                <img className={`product-card-image ${this.props.product.categories.some((cat => cat.name === 'Cosplay')) ? `adjusted-img` : `reg-img`}`} src={this.props.product.photoUrls[0]}/><span className='box-shadow'></span>
                 {/* <p>{this.getName(this.props.product.name)}</p> */}
-                <p>{this.props.product.name}</p>
+                <p className='product-card-name'>{this.props.product.name}</p>
                 <p className='product-card-price'> {price} {parseInt(this.props.product.price) > 15.0 ? <span className='bestseller'>Bestseller</span> : null}</p> 
                 {/* {parseInt(this.props.product.price) > 15.0 ? <p className='bestseller'>Best seller</p> : null} */}
             </Link >

@@ -19,7 +19,7 @@ class Popup extends React.Component {
     }
 
     toggleOverlay() {
-        (this.state.show === "show-popup-overlay") ?
+        (this.state.showOverlay === "show-popup-overlay") ?
             (this.setState({
                 showOverlay: "hide-popup-overlay"
             })) : (

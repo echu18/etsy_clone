@@ -70,6 +70,19 @@ import React from 'react';
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8,21a1,1,0,0,1-.664-1.747L15.5,12,7.336,4.747A1,1,0,0,1,8.664,3.253L18.5,12,8.664,20.747A0.994,0.994,0,0,1,8,21Z" /></svg>
     )
 
+    export const leftPageArrow = (
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M6.7 11.3L6 12l.7.7 4 4c.4.4 1 .4 1.4 0 .4-.4.4-1 0-1.4L9.8 13H17c.6 0 1-.4 1-1s-.4-1-1-1H9.8l2.3-2.3c.2-.2.3-.4.3-.7 0-.6-.4-1-1-1-.3 0-.5.1-.7.3l-4 4z" />
+        </svg>
+    )
+    
+    export const rightPageArrow = (
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M17.3 12.7l.7-.7-.7-.7-4-4c-.4-.4-1-.4-1.4 0s-.4 1 0 1.4l2.3 2.3H7c-.6 0-1 .4-1 1s.4 1 1 1h7.2l-2.3 2.3c-.2.2-.3.4-.3.7 0 .6.4 1 1 1 .3 0 .5-.1.7-.3l4-4z" />
+        </svg>
+    )
+
+
     export const resizeImage = (
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M15,3c-0.553,0-1,0.447-1,1s0.447,1,1,1h2.586l-4.293,4.293c-0.391,0.391-0.391,1.023,0,1.414 C13.488,10.902,13.744,11,14,11s0.512-0.098,0.707-0.293L19,6.414V9c0,0.553,0.447,1,1,1s1-0.447,1-1V3H15z" /> <path d="M9.293,13.293L5,17.586V15c0-0.553-0.447-1-1-1s-1,0.447-1,1v6h6c0.553,0,1-0.447,1-1s-0.447-1-1-1H6.414l4.293-4.293 c0.391-0.391,0.391-1.023,0-1.414S9.684,12.902,9.293,13.293z" /></svg>
     )

@@ -1,16 +1,20 @@
 import React from 'react'
 import CatModuleContainer from '../../components/main_content/cat_module_container'
-
+import {leftPageArrow, rightPageArrow} from '../../../app/assets/images/svgs/icons'
 
 class ProductIndex extends React.Component {
     constructor(props){
         super(props);
         this.state = {
             currentPage: 0,
-            pages: null
+            pages: null,
+            rerender: false
         }
         this.handlePrevPage = this.handlePrevPage.bind(this);
         this.handleNextPage = this.handleNextPage.bind(this);
+        this.handlePageClick = this.handlePageClick.bind(this);
+        this.organizeProducts = this.organizeProducts.bind(this);
+        this.filterProducts = this.filterProducts.bind(this);
     }
 
     componentDidMount() {
@@ -26,14 +30,56 @@ class ProductIndex extends React.Component {
             this.setState({pages: this.organizeProducts(nextProps.products)});
         }
     }
-  
+
+    componentDidUpdate(prevState) {
+        if (prevState.pages !== this.state.pages) {
+            this.setState({rerender: true})
+        }
+    }
+   
+
+    
+    filterProducts(e, filterType, filterValue){
+        e.preventDefault()
+        // debugger
+        
+        let products = this.props.products;
+
+        switch (filterType) {
+            case 'category':
+
+
+            case 'price':
+                switch (filterValue) {
+                    case 'any':
+                    // products = this.props.products;
+                    case 'under 25':
+                    products = products.filter((product => parseInt(product.price )< 25))
+                    case '25 to 250':
+                    products = products.filter((product => parseInt(product.price )>= 25 && parseInt(product.price )<= 250))
+                    case '250 to 500':
+                        products = products.filter((product => parseInt(product.price )>= 250 && parseInt(product.price )<= 500))
+                    case 'over 500':
+                    products = products.filter((product => parseInt(product.price )> 500))
+            
+                }
+
+        }
+        // debugger
+        this.setState({ pages: this.organizeProducts(products)});
+    }
+
+
+
 
     organizeProducts(products){
         const productRows = [];
         let tempRow = [];
         
-            for (let i = 0; i < products.length; i++){
-                if (tempRow.length === 6) {
+            for (let i = 0; i <= products.length; i++){
+                
+                if (tempRow.length === 3) {
+                    tempRow.push(products[i])
                     productRows.push(tempRow);
                     tempRow = [];
                 } else if (i === products.length - 1){
@@ -47,7 +93,7 @@ class ProductIndex extends React.Component {
         let tempPage = []
 
             for (let i = 0; i < productRows.length; i++) {
-                if (tempPage.length === 5) {
+                if (tempPage.length === 3) {
                     pages.push(tempPage);
                     tempPage = [];
                 } else if (i === productRows.length-1) {
@@ -100,9 +146,14 @@ class ProductIndex extends React.Component {
         }
     }
 
+    handlePageClick(e, pageIdx) {
+        e.preventDefault();
+        this.setState({ currentPage: pageIdx });
+    }
+
     
     render() {
-        if (!this.props.products || !this.state.pages ) {
+        if (!this.props.products || this.state.pages === null || !this.state.pages[this.state.currentPage]) {
             return null;
         } 
    
@@ -110,8 +161,21 @@ class ProductIndex extends React.Component {
         
         return (
             <div className='index-container'>
+
+                <div className='index-filter-sidebar'>
+                    <button className='price-filter-btn' onClick={e => this.filterProducts(e, 'price', 'any')} >Any Price</button>
+                    <button className='price-filter-btn' onClick={e => this.filterProducts(e, 'price', 'under 25')} >Under $25</button>
+                    <button className='price-filter-btn' onClick={e => this.filterProducts(e, 'price', '25 to 250')} >$25 to $250</button>
+                    <button className='price-filter-btn' onClick={e => this.filterProducts(e, 'price', '250 to 500')} >$250 to $500</button>
+                    <button className='price-filter-btn' onClick={e => this.filterProducts(e, 'price', 'over 500')} >Over $500</button>
+
+
+                </div>
+
+
+
                 <div className='index-products'>
-                    {this.props.products.length === 0 ? <p>{noResults}</p> : (
+                    {this.state.pages[0].length === 0 ? <p>{noResults}</p> : (
                     
                     this.state.pages[this.state.currentPage].map((row, idx)=>{
                         return (
@@ -121,9 +185,12 @@ class ProductIndex extends React.Component {
                                 )
                     }))}
                 </div>
-
-                <button onClick={this.handlePrevPage}>Previous Page</button>
-                <button onClick={this.handleNextPage}>Next Page</button>
+                
+                <div className='index-btn-container'>
+                    <button className={`index-btn ${this.state.currentPage === 0 ? 'grayed-btn' : null}`} onClick={this.handlePrevPage}>{leftPageArrow}</button>
+                {this.state.pages.map((page, idx) => <button onClick={e => this.handlePageClick(e, idx)}className={`index-btn ${this.state.currentPage === idx ? 'active-page' : null}`}>{idx + 1}</button>)}
+                    <button className={`index-btn ${this.state.currentPage === this.state.pages.length-1 ? 'grayed-btn' : null}`} onClick={this.handleNextPage}>{rightPageArrow}</button>
+                </div>
             </div>
 
         )
