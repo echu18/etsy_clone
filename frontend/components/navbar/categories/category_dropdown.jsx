@@ -16,8 +16,7 @@ class CategoryDropdown extends React.Component {
 
     handleClick(e, header){
         e.preventDefault();
-        debugger
-        this.props.searchProducts(header)
+        // this.props.searchProducts(header)
         this.props.history.push(`/search?category=${header}`)
     }
 

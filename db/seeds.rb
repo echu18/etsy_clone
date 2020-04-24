@@ -702,7 +702,7 @@ p22.photos.attach(io: file146, filename: 'pepe3.jpg')
 p23 = Product.create(name:'This Is Fine Dog Meme Cross Stitch Pattern', description: "If this dog can accept his fate and weather the storm, why can't you?!", 
     price: 5.61, seller_id: u12.id )
 
-        tag54 = Tag.create(category_id: cat2.id , product_id: p23.id)
+        tag54 = Tag.create(category_id: cat3.id , product_id: p23.id)
         tag55 = Tag.create(category_id: cat10.id , product_id: p23.id)
 
 

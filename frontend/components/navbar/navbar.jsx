@@ -35,7 +35,7 @@ class Navbar extends React.Component {
 
     componentDidUpdate(prevProps){
         
-        if (this.props.location.search != prevProps.location.search) {
+        if ( (this.props.location.search != prevProps.location.search) || !this.props.products) {
             let params = this.props.location.search
             this.props.searchProducts(params)
         }
@@ -126,7 +126,7 @@ class Navbar extends React.Component {
 
     handleSearchClick(e, type, searchTerm) {
         e.preventDefault()
-        this.props.searchProducts({query: searchTerm})
+        // this.props.searchProducts({query: searchTerm})
         this.props.history.push(`/search?${type}=${searchTerm}`)
         this.toggleSuggestionBox(e)
     }

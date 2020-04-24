@@ -23,7 +23,7 @@ class CatModule extends React.Component {
             // <div id='cat-module-container' className={row.length === 6 ? 'centered' : 'flex-start'}>
             <div id='cat-module-container' className={row.length === 4 ? 'centered' : 'flex-start'}>
                 {row.map((prod, idx) => {
-                    return <div className='product-card-container' key={idx}>
+                    return <div className={`product-card-container ${row.length <= 4 ? "large-card" : "regular-card"}`} key={idx}>
                         <ProductCard product={prod}/>
                     </div>
                 })}

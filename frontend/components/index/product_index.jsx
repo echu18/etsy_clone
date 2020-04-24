@@ -1,6 +1,9 @@
 import React from 'react'
+import {withRouter} from 'react-router'
 import CatModuleContainer from '../../components/main_content/cat_module_container'
 import {leftPageArrow, rightPageArrow} from '../../../app/assets/images/svgs/icons'
+
+
 
 class ProductIndex extends React.Component {
     constructor(props){
@@ -8,11 +11,13 @@ class ProductIndex extends React.Component {
         this.state = {
             currentPage: 0,
             pages: null,
-            rerender: false
+            results: false
         }
+
         this.handlePrevPage = this.handlePrevPage.bind(this);
         this.handleNextPage = this.handleNextPage.bind(this);
         this.handlePageClick = this.handlePageClick.bind(this);
+        this.handleBackBtn = this.handleBackBtn.bind(this);
         this.organizeProducts = this.organizeProducts.bind(this);
         this.filterProducts = this.filterProducts.bind(this);
     }
@@ -27,21 +32,23 @@ class ProductIndex extends React.Component {
 
     componentWillReceiveProps(nextProps){
         if (!this.state.pages || this.props.products !== nextProps.products){
-            this.setState({pages: this.organizeProducts(nextProps.products)});
+            this.setState({pages: this.organizeProducts(nextProps.products), currentPage: 0});
         }
     }
 
-    componentDidUpdate(prevState) {
-        if (prevState.pages !== this.state.pages) {
-            this.setState({rerender: true})
-        }
-    }
+    // componentDidUpdate(prevState) {
+    //     if (this.state.pages != prevState.pages) {
+
+    //     }
+    // }
+
+    
    
 
     
     filterProducts(e, filterType, filterValue){
         e.preventDefault()
-        // debugger
+        debugger
         
         let products = this.props.products;
 
@@ -52,27 +59,38 @@ class ProductIndex extends React.Component {
             case 'price':
                 switch (filterValue) {
                     case 'any':
-                    // products = this.props.products;
+                        debugger
+                        break;
                     case 'under 25':
-                    products = products.filter((product => parseInt(product.price )< 25))
+                        products = products.filter(function(product) {return parseFloat(product.price) < 25})
+                        break;
                     case '25 to 250':
-                    products = products.filter((product => parseInt(product.price )>= 25 && parseInt(product.price )<= 250))
+                        products = products.filter(function (product) {return parseFloat(product.price)>= 25 && parseFloat(product.price)<= 250})
+                        break;
                     case '250 to 500':
-                        products = products.filter((product => parseInt(product.price )>= 250 && parseInt(product.price )<= 500))
+                        products = products.filter(function (product) {return parseFloat(product.price)>= 250 && parseFloat(product.price)<= 500})
+                        break;
                     case 'over 500':
-                    products = products.filter((product => parseInt(product.price )> 500))
-            
+                        products = products.filter(function (product) {return parseFloat(product.price)> 500})
+                        break;
                 }
 
         }
-        // debugger
-        this.setState({ pages: this.organizeProducts(products)});
+            
+        debugger
+        if (products.length === 0) {
+            this.setState({results: false})
+        } else {
+            this.setState({ pages: this.organizeProducts(products)});
+        }
     }
 
 
 
 
     organizeProducts(products){
+        // if (products.length === 0) return [];
+
         const productRows = [];
         let tempRow = [];
         
@@ -85,6 +103,7 @@ class ProductIndex extends React.Component {
                 } else if (i === products.length - 1){
                     tempRow.push(products[i])
                     productRows.push(tempRow);
+                    tempRow = [];
                 } else {
                     tempRow.push(products[i])
                 }
@@ -103,6 +122,10 @@ class ProductIndex extends React.Component {
                     tempPage.push(productRows[i])
                 }
             }
+
+        if (!!pages) {
+            this.setState({ results: true })
+        }
 
         return pages;
     }
@@ -151,13 +174,33 @@ class ProductIndex extends React.Component {
         this.setState({ currentPage: pageIdx });
     }
 
+    handleBackBtn(e) {
+        e.preventDefault()
+        window.location.reload()
+        // this.props.history.go(-1)
+    }
     
     render() {
-        if (!this.props.products || this.state.pages === null || !this.state.pages[this.state.currentPage]) {
+        window.scrollTo(0, 0);
+        
+        const noResults = "We couldn\'t find any results"
+
+
+        if (this.state.results === false){
+            return (
+                <div>   
+                    <p>{noResults}</p>
+                    <button onClick={e => this.handleBackBtn(e)}>Go back</button>
+                </div>
+            )
+        } else if (!this.props.products || !this.state.pages[0])  {
             return null;
         } 
+
+        // || !this.state.pages[0])
+
+        // || !this.state.pages[this.state.currentPage]
    
-        const noResults = "We couldn\'t find any results"
         
         return (
             <div className='index-container'>
@@ -175,7 +218,7 @@ class ProductIndex extends React.Component {
 
 
                 <div className='index-products'>
-                    {this.state.pages[0].length === 0 ? <p>{noResults}</p> : (
+                    {this.state.pages[0].length === 0 || this.state.pages === 0 || !this.state.pages[this.state.currentPage] ? <p>{noResults}</p> : (
                     
                     this.state.pages[this.state.currentPage].map((row, idx)=>{
                         return (
@@ -187,6 +230,7 @@ class ProductIndex extends React.Component {
                 </div>
                 
                 <div className='index-btn-container'>
+                    {this.state.pages.length > 1 ? <p>There's so much more for you to discover</p> : null}
                     <button className={`index-btn ${this.state.currentPage === 0 ? 'grayed-btn' : null}`} onClick={this.handlePrevPage}>{leftPageArrow}</button>
                 {this.state.pages.map((page, idx) => <button onClick={e => this.handlePageClick(e, idx)}className={`index-btn ${this.state.currentPage === idx ? 'active-page' : null}`}>{idx + 1}</button>)}
                     <button className={`index-btn ${this.state.currentPage === this.state.pages.length-1 ? 'grayed-btn' : null}`} onClick={this.handleNextPage}>{rightPageArrow}</button>
@@ -197,4 +241,4 @@ class ProductIndex extends React.Component {
     }
 }
 
-export default ProductIndex;
+export default withRouter(ProductIndex);

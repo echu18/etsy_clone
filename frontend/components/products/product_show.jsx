@@ -36,6 +36,7 @@ class ProductShow extends React.Component {
 
         return (
             <div className='product-listing-container'>
+                {/* <button> Back to search results</button> */}
                 <div className='image-and-sidebar'>
                     <ProductImage urls={urls} product={this.props.product} {...this.props} />
 
@@ -66,7 +67,7 @@ class ProductShow extends React.Component {
                             <div className='seller-info-container'>
                                 <h3>Meet your seller</h3>
 
-                                <div className='seller-photo-text-container'>
+                               <div className='seller-photo-text-container'>
 
                                     { !sellerPhotoUrl ? <img src='https://etsy-clone-seed.s3-us-west-1.amazonaws.com/profile-images/anon.png' /> : <img src={sellerPhotoUrl} />}
 
