@@ -206,13 +206,11 @@ class ProductIndex extends React.Component {
             <div className='index-container'>
 
                 <div className='index-filter-sidebar'>
-                    <button className='price-filter-btn' onClick={e => this.filterProducts(e, 'price', 'any')} >Any Price</button>
-                    <button className='price-filter-btn' onClick={e => this.filterProducts(e, 'price', 'under 25')} >Under $25</button>
-                    <button className='price-filter-btn' onClick={e => this.filterProducts(e, 'price', '25 to 250')} >$25 to $250</button>
-                    <button className='price-filter-btn' onClick={e => this.filterProducts(e, 'price', '250 to 500')} >$250 to $500</button>
-                    <button className='price-filter-btn' onClick={e => this.filterProducts(e, 'price', 'over 500')} >Over $500</button>
-
-
+                    <input type='radio' name='price-filter'bclassName='price-filter-btn' onClick={e => this.filterProducts(e, 'price', 'any')} >Any Price</input>
+                    <input type='radio' name='price-filter'bclassName='price-filter-btn' onClick={e => this.filterProducts(e, 'price', 'under 25')} >Under $25</input>
+                    <input type='radio' name='price-filter'bclassName='price-filter-btn' onClick={e => this.filterProducts(e, 'price', '25 to 250')} >$25 to $250</input>
+                    <input type='radio' name='price-filter'bclassName='price-filter-btn' onClick={e => this.filterProducts(e, 'price', '250 to 500')} >$250 to $500</input>
+                    <input type='radio' name='price-filter'bclassName='price-filter-btn' onClick={e => this.filterProducts(e, 'price', 'over 500')} >Over $500</input>
                 </div>
 
 
@@ -230,10 +228,13 @@ class ProductIndex extends React.Component {
                 </div>
                 
                 <div className='index-btn-container'>
-                    {this.state.pages.length > 1 ? <p>There's so much more for you to discover</p> : null}
-                    <button className={`index-btn ${this.state.currentPage === 0 ? 'grayed-btn' : null}`} onClick={this.handlePrevPage}>{leftPageArrow}</button>
-                {this.state.pages.map((page, idx) => <button onClick={e => this.handlePageClick(e, idx)}className={`index-btn ${this.state.currentPage === idx ? 'active-page' : null}`}>{idx + 1}</button>)}
-                    <button className={`index-btn ${this.state.currentPage === this.state.pages.length-1 ? 'grayed-btn' : null}`} onClick={this.handleNextPage}>{rightPageArrow}</button>
+                    {this.state.pages.length > 1 ? <p className='index-btn-text'>There's so much more for you to discover</p> : null}
+
+                    <div className='index-btns-group'>
+                        <button className={`index-btn ${this.state.currentPage === 0 ? 'grayed-btn' : null}`} onClick={this.handlePrevPage}>{leftPageArrow}</button>
+                        {this.state.pages.map((page, idx) => <button onClick={e => this.handlePageClick(e, idx)}className={`index-btn ${this.state.currentPage === idx ? 'active-page' : null}`}>{idx + 1}</button>)}
+                        <button className={`index-btn ${this.state.currentPage === this.state.pages.length-1 ? 'grayed-btn' : null}`} onClick={this.handleNextPage}>{rightPageArrow}</button>
+                    </div>
                 </div>
             </div>
 
