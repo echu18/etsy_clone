@@ -18,6 +18,8 @@ class CartItemBar extends React.Component {
 
     componentDidMount(){
         // debugger
+        if (!this.props.products || !this.props.cartItem) return null;
+
        const price = this.props.products[this.props.cartItem.product_id].price;
        const qty = this.props.cartItem.quantity;
        const initialPrice = price * qty;
@@ -66,6 +68,7 @@ class CartItemBar extends React.Component {
 
     handleDelete(e){
         e.preventDefault()
+        debugger
         this.props.deleteCartItem(this.props.cartItem.id)
     }
 
@@ -88,6 +91,8 @@ class CartItemBar extends React.Component {
         // const price = products[cartItem.product_id].price * cartItem.quantity
         const price = this.state.totalPrice;
         
+        if (!product || !price) return null;
+
         return (
             <div className="cart-item-bar">
                 <section>

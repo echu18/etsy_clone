@@ -144,13 +144,14 @@
     width: 300px;
     border-radius: 3px;
     border: 1px solid gainsboro;
+        padding: 5px 0px 5px 5px;
     outline:none;
 }
 
 
 .ci-block-lower > textarea::placeholder {
     color: gray;
-    padding: 3px 0px 5px 5px;
+    /* padding: 3px 0px 5px 5px; */
 }
 
 

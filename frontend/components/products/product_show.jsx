@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from 'react-router'
 // import ProductImageContainer from './product_image_container';
 import ProductImage from './product_image';
 import ReviewContainer from '../reviews/review_container.jsx';
@@ -8,6 +9,9 @@ import { starIcon, rightArrow } from '../../../app/assets/images/svgs/icons'
 class ProductShow extends React.Component {
     constructor(props) {
         super(props);
+
+
+        this.handleBackBtn = this.handleBackBtn.bind(this);
     }
 
     componentDidMount() {
@@ -15,7 +19,12 @@ class ProductShow extends React.Component {
         this.props.fetchProduct(this.props.match.params.productId)
     }
  
-    
+    handleBackBtn(e) {
+        e.preventDefault()
+        // window.location.reload()
+        this.props.history.go(-1)
+    }
+
     render() {
         window.scrollTo(0, 0);
         
@@ -36,7 +45,7 @@ class ProductShow extends React.Component {
 
         return (
             <div className='product-listing-container'>
-                {/* <button> Back to search results</button> */}
+                <button onClick={e=>this.handleBackBtn(e)}> Back to search results</button>
                 <div className='image-and-sidebar'>
                     <ProductImage urls={urls} product={this.props.product} {...this.props} />
 
@@ -100,4 +109,4 @@ class ProductShow extends React.Component {
     }
 }
 
-export default ProductShow;
+export default withRouter(ProductShow);

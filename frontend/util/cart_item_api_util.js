@@ -17,7 +17,7 @@ export const getCartItems = () => {
 
 
 export const createCartItem = (cart_item) => {
-    debugger
+    
     return $.ajax({
         url: `/api/cart_items`,
         method: 'POST',

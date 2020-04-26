@@ -8,6 +8,8 @@ class CartShow extends React.Component {
         super(props);
         this.state = {
           cartTotal: 0,
+          shippingTotal: 0,
+          grandTotal: 0,
           paymentMethod: 'credit',
           render: false
         }
@@ -28,6 +30,7 @@ class CartShow extends React.Component {
       }
 
     componentWillUpdate(nextProps) {
+      debugger
       if (this.props.cartItems !== nextProps.cartItems) {
         this.setState({ render: true })
       }
@@ -46,8 +49,10 @@ class CartShow extends React.Component {
         sum += cartItem.quantity * this.props.products[cartItem.product_id].price
       })
 
+      let shippingTotal = this.props.cartItems.length * 3.99;
+      let grandTotal = shippingTotal + sum;
       
-      this.setState({cartTotal: sum})
+      this.setState({cartTotal: sum, shippingTotal: shippingTotal, grandTotal: grandTotal})
     }
 
 
@@ -63,7 +68,6 @@ class CartShow extends React.Component {
     }
 
     redirectToHome() {
-      this.props.clearProducts()
       this.props.history.push('/')
     }
 
@@ -124,14 +128,14 @@ class CartShow extends React.Component {
 
                               <div className='ci-shipping'>
                                 <p>Shipping</p>
-                                <p>$shipping</p>
+                                <p>{this.formatPrice(this.state.shippingTotal)}</p>
                               </div>
 
                               <div className='cart-pay-divider'></div>
 
                               <div className='ci-total'>
-                                <p>Total ({cartItems.length} items)</p>
-                                <p>Total Price</p>
+                                <p>Total ({cartItems.length} item{cartItems.length === 0 || cartItems.length > 1 ? `s` : null})</p>
+                                <p>{this.formatPrice(this.state.grandTotal)}</p>
                                 {/* {this.curriedAdd(this.childCallback())} */}
                                 {/* {this.store(this.childCallback())} */}
 

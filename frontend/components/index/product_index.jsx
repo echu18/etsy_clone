@@ -28,7 +28,7 @@ class ProductIndex extends React.Component {
     }
 
     componentWillUnmount(){
-        this.props.clearProducts()
+        // this.props.clearProducts()
     }
 
     componentWillReceiveProps(nextProps){

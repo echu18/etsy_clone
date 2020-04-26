@@ -140,7 +140,7 @@
     opacity: 0.9;
     color: #F1651F;
     border: 1.5px solid #F1651F;
-
+    /* transition: box-shadow, background-color 0.3s ease; */
     transform: scale(1.02);
     cursor: pointer;
 }

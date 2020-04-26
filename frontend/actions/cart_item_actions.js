@@ -1,16 +1,23 @@
 import { getCartItem, getCartItems, createCartItem, modifyCartItem, destroyCartItem } from '../util/cart_item_api_util';
 
 export const RECEIVE_CART_ITEMS = 'RECEIVE_CART_ITEMS';
+export const UPDATE_CART_ITEMS = 'UPDATE_CART_ITEMS';
 export const RECEIVE_CART_ITEM = 'RECEIVE_CART_ITEM';
 export const ADD_CART_ITEM = 'ADD_CART_ITEM';
 export const EDIT_CART_ITEM = 'EDIT_CART_ITEM';
 export const DELETE_CART_ITEM = 'DELETE_CART_ITEM';
 export const RECEIVE_ERRORS = 'RECEIVE_ERRORS';
 export const CLEAR_CART_ITEMS = 'CLEAR_CART_ITEMS';
+export const CLEAR_CART_ITEM = 'CLEAR_CART_ITEM';
 
 
 const receiveCartItems = payload => ({
     type: RECEIVE_CART_ITEMS,
+    payload
+});
+
+const updateCartItems = payload => ({
+    type: UPDATE_CART_ITEMS,
     payload
 });
 
@@ -23,6 +30,11 @@ const receiveErrors = errors => ({
     type: RECEIVE_ERRORS,
     errors
 })
+
+// const removeCartItem = (cartItem) => ({
+//     type: CLEAR_CART_ITEM,
+//     cartItem
+// })
 
 const removeCartItems = () => ({
     type: CLEAR_CART_ITEMS

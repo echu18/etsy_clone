@@ -57,9 +57,14 @@ class Api::CartItemsController < ApplicationController
 
     def destroy 
         @cart_item = CartItem.find(params[:id])
+        # @cart_item_reference = @cart_item.dup
+
         if current_user && @cart_item && (@cart_item.user_id == current_user.id)
             if @cart_item.delete
                 @cart_items = CartItem.all.select {|cart_item| cart_item.user_id == current_user.id && cart_item.fulfilled == false}        
+
+                # debugger
+                # @cart_items = CartItem.all.select {|cart_item| cart_item.user_id == current_user.id && cart_item.fulfilled == false}        
                 render :show
             end
         else  

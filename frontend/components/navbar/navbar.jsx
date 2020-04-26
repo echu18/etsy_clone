@@ -13,7 +13,8 @@ class Navbar extends React.Component {
             query: "",
             showPopup: false,
             searchSuggestion: false,
-            showOverlay: 'hide-overlay'
+            showOverlay: 'hide-overlay',
+            cartQty: 0
         }
 
         this.togglePopup = this.togglePopup.bind(this);
@@ -23,6 +24,7 @@ class Navbar extends React.Component {
         this.handleChange = this.handleChange.bind(this);
         this.handleSearchClick = this.handleSearchClick.bind(this);
         this.toggleSuggestionBox = this.toggleSuggestionBox.bind(this);
+        this.cartItemLength = this.cartItemLength.bind(this);
         // this.resetForm = this.resetForm.bind(this);
     }
 
@@ -31,13 +33,19 @@ class Navbar extends React.Component {
             let params = this.props.location.search
             this.props.searchProducts(params)
         }
+        
+        this.props.fetchCartItems().then(this.setState({ cartQty: this.cartItemLength()}))
     }
 
     componentDidUpdate(prevProps){
         
-        if ( (this.props.location.search != prevProps.location.search)) {
+        if (this.props.location.search != prevProps.location.search) {
             let params = this.props.location.search
             this.props.searchProducts(params)
+        }
+
+        if (this.props.cartItems != prevProps.cartItems) {
+            this.setState({ cartQty: this.cartItemLength()})
         }
     }
     
@@ -48,7 +56,6 @@ class Navbar extends React.Component {
    }
 
     toggleSuggestionBox(e) {
-        // debugger
         e.preventDefault()
         let suggestionBox = document.getElementsByClassName('search-suggestion-box')[0];
 
@@ -131,10 +138,20 @@ class Navbar extends React.Component {
         this.toggleSuggestionBox(e)
     }
 
+    cartItemLength(){
+        let count = 0;
+        let cartItems = Object.values(this.props.cartItems);
+        
+        for (let i=0; i< cartItems.length; i++) {
+            count += cartItems[i].quantity;
+        }
+        
+        return count;
+    }
     
     render() {
         // window.scrollTo(0, 0);
-
+        
         const { currentUserId, signOut, signIn, clearErrors } = this.props;
         // debugger
         // const categories = ['Jewelry & Accessories', 'Clothing & Shoes', 'Home & Living', 'Wedding & Party', 'Toys & Entertainment', 'Art & Collectibles', 'Craft Supplies', 'Vintage'];
@@ -227,8 +244,9 @@ class Navbar extends React.Component {
                         {!!this.props.currentUserId ? (
                             // <Link to={`/users/${this.props.currentUser.id}/cart_items`}>
                             <Link to={`/cart_items`}>
-                            <div className="navbar-icon cart-icon">{cartIcon}</div>
-                        </Link>) : <div className="navbar-icon cart-icon">{cartIcon}</div> }                   
+                            <div className="navbar-icon cart-icon">{cartIcon} {this.state.cartQty !== 0 ? <p className='cart-badge'>{this.state.cartQty}</p> : null }</div>
+                        {/* </Link>) : <div className="navbar-icon cart-icon">{cartIcon}<p className='cart-badge'>{this.props.cartItems ? this.props.cartItems.length : null} </p> </div> }             */}
+                        </Link>) : <div className="navbar-icon cart-icon">{cartIcon} </div> }            
                 </div>
 
                 <div className='categories-bar' >

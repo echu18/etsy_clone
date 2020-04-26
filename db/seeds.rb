@@ -830,7 +830,7 @@ author_id: u36.id, product_id: p28.id, rating: 5)
 
 
 
-p29 = Product.create(name:'Boku No Hero Academia X Animal Crossing (Deku Squad) Waterproof Vinyl Stickers', description: "Absolutely adorable Boku No Hero Academia X Animal Crossing crossover vinyl stickers featuring Deku Squad and All Might!", 
+p29 = Product.create(name:'Boku No Hero Academia (My Hero Academia) X Animal Crossing (Deku Squad) Waterproof Vinyl Stickers', description: "Absolutely adorable Boku No Hero Academia X Animal Crossing crossover vinyl stickers featuring Deku Squad and All Might!", 
     price: 2.00, seller_id: u31.id )
 
         tag68 = Tag.create(category_id: cat5.id , product_id: p29.id)

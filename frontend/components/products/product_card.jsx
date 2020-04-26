@@ -27,7 +27,7 @@ class ProductCard extends React.Component {
         // if (!product) return null;
         
         return (
-            <Link to={`/products/${product.id}`}>
+            <Link to={`/products/${product.id}`} target="_blank">
                 <img className={`product-card-image ${this.props.product.categories.some((cat => cat.name === 'Cosplay')) ? `adjusted-img` : `reg-img`}`} src={this.props.product.photoUrls[0]}/><span className='box-shadow'></span>
                 {/* <p>{this.getName(this.props.product.name)}</p> */}
                 <p className='product-card-name'>{this.props.product.name}</p>
