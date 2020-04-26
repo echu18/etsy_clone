@@ -13,6 +13,7 @@ class CartItemBar extends React.Component {
         // this.handleSubmit = this.handleSubmit.bind(this);
         this.updateQuantity = this.updateQuantity.bind(this);
         this.handleDelete = this.handleDelete.bind(this);
+        this.redirectToProductPage = this.redirectToProductPage.bind(this)
     }
 
     componentDidMount(){
@@ -35,7 +36,7 @@ class CartItemBar extends React.Component {
 
     updateQuantity(e) {
         // const updatePrice = this.updatePrice;
-        debugger
+        
 
         const cartItem = this.props.cartItem;
         this.props.editCartItem( cartItem.id, {user_id: cartItem.user_id, product_id: cartItem.product_id, fulfiled: false, quantity: e.target.value })
@@ -55,18 +56,33 @@ class CartItemBar extends React.Component {
         return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(price)
     }
     
-    // returnPrice() {
-    //     debugger
-    //     let returnPrice = this.state.totalPrice;
-    // }
+    shippingDate() {
+        let date = (new Date(Date.now())).getDate()
+        let month = (new Date(Date.now())).getMonth()
+        let year = (new Date(Date.now())).getFullYear()
+        let arrivalDate = new Date(year, month, date + 5)
+        return arrivalDate.toDateString().split(" ").slice(1, -1).join(" ")
+    }
 
     handleDelete(e){
         e.preventDefault()
-        debugger
         this.props.deleteCartItem(this.props.cartItem.id)
+    }
+
+    redirectToProductPage(e, productId){
+        e.preventDefault()
+        this.props.history.push(`/products/${productId}`)
     }
     
     render() {
+        window.scrollTo(0, 0);
+
+       
+       
+
+
+        if (!this.props.cartItem || !this.props.products) return null; 
+
         const { cartItem, products, users} = this.props;
         const product = products[cartItem.product_id]
         // const price = products[cartItem.product_id].price * cartItem.quantity
@@ -84,10 +100,11 @@ class CartItemBar extends React.Component {
                     <img
                         className="ci-image"
                         src={product.photoUrls[0]}
-                        alt=""
+                        alt={`Product photo: ${product.name}`}
+                        onClick={e => this.redirectToProductPage(e, product.id)}
                     />
                     <div className="ci-name">
-                        <p>{product.name}</p>
+                        <p onClick={e => this.redirectToProductPage(e, product.id)}>{product.name}</p>
                         <button>Save for later</button>
                         <button onClick={this.handleDelete}>Remove</button>
                     </div>
@@ -125,7 +142,7 @@ class CartItemBar extends React.Component {
                     />
                     <section>
                         <h3>Shipping: $3.99</h3>
-                        <p>Estimated delivery: April 10 from United States</p>
+                        <p>Estimated delivery: {this.shippingDate()} from United States</p>
                     </section>
                 </div>
                 <button className="checkout-shop-btn">

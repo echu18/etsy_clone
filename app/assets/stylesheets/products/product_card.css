@@ -1,10 +1,13 @@
 .product-card-container {
     /* height: 190px; */
-    width: 207px;
+    min-width: 207px;
     font-family: 'Arial', sans-serif; 
     font-size: 15px;
     font-weight: normal;
     /* border: 1px solid pink; */
+     /* border-radius: 2px;
+    margin-bottom: 5px;
+    transition: box-shadow 0.3s ease; */
 }
 
 .large-card {
@@ -40,14 +43,15 @@
     width: 100%;
     /* width: 207px; */
 
-    border-radius: 2px;
+    /* border-radius: 2px;
     margin-bottom: 5px;
-    transition: box-shadow 0.3s ease;
+    transition: box-shadow 0.3s ease; */
 }
 
 .adjusted-img {
     object-fit: cover;
     object-position: 35% 15%;
+    margin-bottom: 5px;
     /* width: 207px; */
     /* border: 1px solid fuchsia; */
 
@@ -56,6 +60,7 @@
 .reg-img {
     object-fit: cover;
     object-position: center;
+    margin-bottom: 5px;
 }
 
 .product-card-name {

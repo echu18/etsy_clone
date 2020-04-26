@@ -17,7 +17,13 @@ class CategoryDropdown extends React.Component {
     handleClick(e, header){
         e.preventDefault();
         // this.props.searchProducts(header)
-        this.props.history.push(`/search?category=${header}`)
+
+        if (this.props.location.search.includes(`category=${header.split(" ").join("%20").slice(0, -1)}`)) {
+            window.location.reload()
+
+        } else { 
+            this.props.history.push(`/search?category=${header}`)
+        }
     }
 
 

@@ -7,19 +7,29 @@ class CartShow extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-          cartTotal: 0
+          cartTotal: 0,
+          paymentMethod: 'credit',
+          render: false
         }
-        // this.curriedAdd = this.curriedAdd.bind(this)
+      this.redirectToHome = this.redirectToHome.bind(this);
+      this.updatePaymentMethod = this.updatePaymentMethod.bind(this);
     }
 
     componentDidMount(){
         this.props.clearCartItems()
         this.props.fetchCartItems()
-    }
+      }
+      
+      componentDidUpdate(prevProps){
+        if (this.props.cartItems !== prevProps.cartItems) {
+          this.updateTotal()
+          // this.setState({render: true})
+          }
+      }
 
-    componentDidUpdate(prevProps){
-      if (this.props.cartItems !== prevProps.cartItems) {
-        this.updateTotal()
+    componentWillUpdate(nextProps) {
+      if (this.props.cartItems !== nextProps.cartItems) {
+        this.setState({ render: true })
       }
     }
 
@@ -30,13 +40,13 @@ class CartShow extends React.Component {
     }
     
     updateTotal() {
-      debugger
+      
       let sum = 0;
       this.props.cartItems.forEach(cartItem => {
         sum += cartItem.quantity * this.props.products[cartItem.product_id].price
       })
 
-      debugger
+      
       this.setState({cartTotal: sum})
     }
 
@@ -45,15 +55,27 @@ class CartShow extends React.Component {
       return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(price)
     }
 
+
+    updatePaymentMethod(e, paymentType){
+      e.preventDefault()
+
+      this.setState({paymentMethod: paymentType})
+    }
+
+    redirectToHome() {
+      this.props.clearProducts()
+      this.props.history.push('/')
+    }
+
     render() {
       
-        // if (!this.props.cartItems) return null;
+        if (!this.props.cartItems) return null;
         // if (!this.props.currentUserId) return null;
-        // if (!this.props.products) return null;
+        if (!this.props.products) return null;
         // const cartItems = Array.from(this.props.cartItems);
         const {products, cartItems, users} = this.props
 
-        debugger
+        
 
         return (
           <div className='cart-outer-container'>
@@ -69,32 +91,26 @@ class CartShow extends React.Component {
                   <div className="cart-inner">
                     <section>
                         <h3>{cartItems.length === 1 ? "1 item" : cartItems.length + " items"} in your cart</h3>
-                      <button className="keep-shopping-btn">Keep shopping</button>
+                      <button className="keep-shopping-btn" onClick={this.redirectToHome}>Keep shopping</button>
                     </section>
 
                     <div className="cart-items">
                       {cartItems.map((cartItem, idx) => {
                         return (
-                          <CartItemBar idx={idx} cartItem={cartItem} {...this.props} callbackFromParent={this.childCallback}/>
+                          <CartItemBar idx={idx} cartItem={cartItem} products={products} {...this.props} callbackFromParent={this.childCallback}/>
                         );
                       })}
                       <div className="cart-pay-container">
                         <div className='cart-pay-inner'>
                           <h3>How you'll pay</h3>
                           <label className='credit-payment'>
-                              <div className='large-radio-btn'>
-                                {/* <input type="radio" name='payment-radio'/> */}
-                              </div>
-
+                              <button className={`payment-btn ${this.state.paymentMethod === 'credit' ? 'payment-btn-checked' : null}`} onClick={e => this.updatePaymentMethod(e, 'credit')} />
+                      
                               <div className='payment-icons'>{mastercardIcon}{visaIcon}{amexIcon}{discoverIcon}</div>
                           </label>
                               
                           <label className='credit-payment'>
-                            <div className='large-radio-btn'>
-                                {/* <input tyf
-                                pe="radio" name='payment-radio'/> */}
-                            </div>
-
+                              <button className={`payment-btn ${this.state.paymentMethod === 'paypal' ? 'payment-btn-checked' : null}`} onClick={e => this.updatePaymentMethod(e, 'paypal')}/>
                             <div className='payment-icons'>{paypalIcon}</div>
                           </label>
                         

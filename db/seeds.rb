@@ -969,12 +969,12 @@ p33.photos.attach(io: file195, filename: 'plusultra2.jpg')
 
 
 r125 = Review.create(body: 'Did not ship on time but looks amazing, my boyfriend loved it', 
-author_id: u39.id, product_id: p33.id, rating: 5)
+author_id: u39.id, product_id: p33.id, rating: 4)
 
 r126 = Review.create(body: 'Shipment came in ahead of schedule. Excellent quality. Hoodie is very very soft.', 
-author_id: u13.id, product_id: p33.id, rating: 4)
+author_id: u13.id, product_id: p33.id, rating: 5)
 
-r127 = Review.create(body: 'Shipment came in ahead of schedule. Excellent quality. Hoodie is very very soft.', 
+r127 = Review.create(body: 'Great quality, I wear it every single day :)))', 
 author_id: u33.id, product_id: p33.id, rating: 5)
 
 
@@ -1749,7 +1749,7 @@ author_id: u30.id, product_id: p59.id, rating: 5)
 
 
 
-p60 = Product.create(name:'Pokemon starter kit: Mechanical keyboard key caps!', description: "Choooooose your pokemon! Keycap color may vary in size and color. But quality will be the very best that no one ever was.
+p60 = Product.create(name:'Pokemon Starter Kit: Mechanical keyboard key caps!', description: "Choooooose your pokemon! Keycap color may vary in size and color. But quality will be the very best that no one ever was.
 \n
 Each mini charm comes with a strap to attach to bags, backpacks, wallets, phones, and more!
 Please handle these handmade charms with care~",

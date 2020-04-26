@@ -75,7 +75,7 @@
     margin-top: 20px;
     border-radius: 5px;
     background-color: white;
-    border: 0.5px solid gainsboro;
+    /* border: 0.5px solid gainsboro; */
 
 }
 
@@ -178,18 +178,6 @@
 }
 
 
-.large-radio-btn {
-    height: 30px;
-    width: 30px;
-    background-color: white;
-    border-radius: 50%;
-    border: 2px solid rgb(175, 175, 175);
-}
-
-.large-radio-btn:focus {
-    background-color: black;
-}
-
 .cart-pay-divider {
     display: block;
     border: 0.5px solid gainsboro;
@@ -229,11 +217,67 @@
 }
 
 
-
-
 /* Mastercard SVG CSS */
 .a{opacity:0;}
 .b{fill:#fff;}
 .c{fill:#ff5f00;}
 .d{fill:#eb001b;}
 .e{fill:#f79e1b;}
+
+
+
+
+
+
+/* .large-radio-btn {
+    height: 30px;
+    width: 30px;
+    background-color: white;
+    border-radius: 50%;
+    border: 2px solid rgb(175, 175, 175);
+}
+
+.large-radio-btn:focus {
+    background-color: black;
+} */
+
+/* Radio buttons */
+.payment-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fbfbfa;
+    border: 1px solid gainsboro;
+    height: 30px;
+    width: 30px;
+    margin: 3px 10px 3px 0px;
+    border-radius: 100%;
+}
+
+.payment-btn:hover {
+    cursor: pointer;
+    /* background-color: thistle; */
+}
+
+
+.payment-btn-checked {
+    position: relative;
+    background-color: rgb(54, 54, 54);
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.payment-btn-checked::after {
+    position: absolute;
+    top: 21%;
+    background-color: whitesmoke;
+    content: '';
+    display: flex;
+    /* transform: scale(0.5); */
+    border-radius: 100%;
+    padding: 8px;
+    transition: opacity 0.3s ease-in-out;
+}

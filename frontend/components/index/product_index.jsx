@@ -11,7 +11,8 @@ class ProductIndex extends React.Component {
         this.state = {
             currentPage: 0,
             pages: null,
-            results: false
+            results: false,
+            checked: null
         }
 
         this.handlePrevPage = this.handlePrevPage.bind(this);
@@ -32,23 +33,17 @@ class ProductIndex extends React.Component {
 
     componentWillReceiveProps(nextProps){
         if (!this.state.pages || this.props.products !== nextProps.products){
-            this.setState({pages: this.organizeProducts(nextProps.products), currentPage: 0});
+            this.setState({pages: this.organizeProducts(nextProps.products), currentPage: 0, checked: 'any' });
         }
     }
 
-    // componentDidUpdate(prevState) {
-    //     if (this.state.pages != prevState.pages) {
-
-    //     }
-    // }
-
+  
     
-   
+
 
     
     filterProducts(e, filterType, filterValue){
         e.preventDefault()
-        debugger
         
         let products = this.props.products;
 
@@ -59,7 +54,7 @@ class ProductIndex extends React.Component {
             case 'price':
                 switch (filterValue) {
                     case 'any':
-                        debugger
+                        
                         break;
                     case 'under 25':
                         products = products.filter(function(product) {return parseFloat(product.price) < 25})
@@ -77,11 +72,10 @@ class ProductIndex extends React.Component {
 
         }
             
-        debugger
         if (products.length === 0) {
-            this.setState({results: false})
+            this.setState({results: false, checked: filterValue})
         } else {
-            this.setState({ pages: this.organizeProducts(products)});
+            this.setState({ pages: this.organizeProducts(products), checked: filterValue, currentPage: 0});
         }
     }
 
@@ -112,7 +106,7 @@ class ProductIndex extends React.Component {
         let tempPage = []
 
             for (let i = 0; i < productRows.length; i++) {
-                if (tempPage.length === 3) {
+                if (tempPage.length === 5) {
                     pages.push(tempPage);
                     tempPage = [];
                 } else if (i === productRows.length-1) {
@@ -176,7 +170,7 @@ class ProductIndex extends React.Component {
 
     handleBackBtn(e) {
         e.preventDefault()
-        window.location.reload()
+        // window.location.reload()
         // this.props.history.go(-1)
     }
     
@@ -190,7 +184,8 @@ class ProductIndex extends React.Component {
             return (
                 <div>   
                     <p>{noResults}</p>
-                    <button onClick={e => this.handleBackBtn(e)}>Go back</button>
+                    {/* <button onClick={e => this.handleBackBtn(e)}>Go back</button> */}
+                    <button onClick={e => this.filterProducts(e, 'price', 'any')}>Go back</button>
                 </div>
             )
         } else if (!this.props.products || !this.state.pages[0])  {
@@ -206,11 +201,26 @@ class ProductIndex extends React.Component {
             <div className='index-container'>
 
                 <div className='index-filter-sidebar'>
-                    <input type='radio' name='price-filter'bclassName='price-filter-btn' onClick={e => this.filterProducts(e, 'price', 'any')} >Any Price</input>
-                    <input type='radio' name='price-filter'bclassName='price-filter-btn' onClick={e => this.filterProducts(e, 'price', 'under 25')} >Under $25</input>
-                    <input type='radio' name='price-filter'bclassName='price-filter-btn' onClick={e => this.filterProducts(e, 'price', '25 to 250')} >$25 to $250</input>
-                    <input type='radio' name='price-filter'bclassName='price-filter-btn' onClick={e => this.filterProducts(e, 'price', '250 to 500')} >$250 to $500</input>
-                    <input type='radio' name='price-filter'bclassName='price-filter-btn' onClick={e => this.filterProducts(e, 'price', 'over 500')} >Over $500</input>
+
+
+
+                    <div className='price-filter'>
+                        <p>Price ($)</p>
+                        <label>
+                            <button className={`price-filter-btn ${this.state.checked === 'any' ? 'price-filter-btn-checked' : null}`} onClick={e => this.filterProducts(e, 'price', 'any')} ></button>Any Price</label>
+
+                        <label>
+                            <button className={`price-filter-btn ${this.state.checked === 'under 25' ? 'price-filter-btn-checked' : null}`} onClick={e => this.filterProducts(e, 'price', 'under 25')} ></button>Under $25</label>
+
+                        <label>
+                            <button className={`price-filter-btn ${this.state.checked === '25 to 250' ? 'price-filter-btn-checked' : null}`} onClick={e => this.filterProducts(e, 'price', '25 to 250')} ></button>$25 to $250</label>
+
+                        <label>
+                            <button className={`price-filter-btn ${this.state.checked === '250 to 500' ? 'price-filter-btn-checked' : null}`} onClick={e => this.filterProducts(e, 'price', '250 to 500')} ></button>$250 to $500</label>
+
+                        <label>
+                            <button className={`price-filter-btn ${this.state.checked === 'over 500' ? 'price-filter-btn-checked' : null}`} onClick={e => this.filterProducts(e, 'price', 'over 500')} ></button>Over $500</label>
+                    </div>
                 </div>
 
 

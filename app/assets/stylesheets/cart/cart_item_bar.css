@@ -51,6 +51,10 @@
     border: 0.5px solid gainsboro;
 }
 
+.ci-image:hover {
+    cursor: pointer;
+}
+
 .ci-name {
     font-size: 14px;
     display: flex;
@@ -60,9 +64,16 @@
     margin: 0px 20px 0px 20px;
 }
 
+
+
 .ci-name > p {
     width: 100%;
     margin-bottom: 20px;
+}
+
+.ci-name > p:hover {
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 .ci-name > button {
@@ -109,6 +120,7 @@
 .gift-label > section > aside {
     color: rgb(94, 94, 94);
     font-size: 12px;
+    margin-top: 2px;
 }
 
 

@@ -25,6 +25,8 @@
 }
 
 .photo-small {
+    object-fit: cover;
+    object-position: 50% 20%;
     box-sizing: border-box;
     display: flex;
     border-radius: 5px;
@@ -134,7 +136,9 @@
     transform: scale(0.5);
 }
 
-
+.left-arrow-icon:hover, .right-arrow-icon:hover {
+    cursor: pointer
+}
 
 /* Media Query Breakpoints */
 

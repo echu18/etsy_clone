@@ -13,7 +13,7 @@ class Navbar extends React.Component {
             query: "",
             showPopup: false,
             searchSuggestion: false,
-            showOverlay: 'hide-suggestion-overlay'
+            showOverlay: 'hide-overlay'
         }
 
         this.togglePopup = this.togglePopup.bind(this);
@@ -35,7 +35,7 @@ class Navbar extends React.Component {
 
     componentDidUpdate(prevProps){
         
-        if ( (this.props.location.search != prevProps.location.search) || !this.props.products) {
+        if ( (this.props.location.search != prevProps.location.search)) {
             let params = this.props.location.search
             this.props.searchProducts(params)
         }
@@ -55,22 +55,22 @@ class Navbar extends React.Component {
         if (this.state.searchSuggestion === false) {
             suggestionBox.classList.remove('suggestion-hidden')
             suggestionBox.classList.add('suggestion-visible')
-            this.setState({ searchSuggestion: true, showOverlay: "show-suggestion-overlay"})
+            this.setState({ searchSuggestion: true, showOverlay: "show-overlay"})
         } else {
             suggestionBox.classList.remove('suggestion-visible')
             suggestionBox.classList.add('suggestion-hidden')
-            this.setState({ searchSuggestion: false, showOverlay: "hide-suggestion-overlay"})
+            this.setState({ searchSuggestion: false, showOverlay: "hide-overlay"})
         }
     }
 
 
     // toggleOverlay() {
-    //     (this.state.showOverlay === "show-suggestion-overlay") ?
+    //     (this.state.showOverlay === "show-overlay") ?
     //         (this.setState({
-    //             showOverlay: "hide-suggestion-overlay"
+    //             showOverlay: "hide-overlay"
     //         })) : (
     //             (this.setState({
-    //                 showOverlay: "show-suggestion-overlay"
+    //                 showOverlay: "show-overlay"
     //             }))
     //         )
     // }

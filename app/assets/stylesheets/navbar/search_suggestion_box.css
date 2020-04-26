@@ -40,8 +40,11 @@
     visibility: hidden;
 }
 
+.hide-overlay {
+    display: none;
+}
 
-.show-suggestion-overlay {
+.show-overlay {
     display: block;
     position: fixed;
     height: 100vh;

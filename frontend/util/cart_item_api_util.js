@@ -1,3 +1,5 @@
+import CartSidebarContainer from '../components/cart/cart_sidebar_container';
+
 
 // export const getCartItem = (userId, cartItemId) => {
 //     return $.ajax({
@@ -15,12 +17,13 @@ export const getCartItems = () => {
 
 
 export const createCartItem = (cart_item) => {
-    
+    debugger
     return $.ajax({
         url: `/api/cart_items`,
         method: 'POST',
         data: { cart_item }
     })
+
 }
 
 // export const modifyCartItem = (userId, data) => {
