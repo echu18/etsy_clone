@@ -217,9 +217,9 @@
     right: -4px;
     color: black;
     font-size: 11px;
-    /* height: 20px;
-    width: 20px; */
-    padding: 4px;
+    height: 20px;
+    width: 20px;
+    padding: 3px;
     border-radius: 100%;
     background-color: rgb(250, 177, 94);
     border: 1.5px solid whitesmoke;

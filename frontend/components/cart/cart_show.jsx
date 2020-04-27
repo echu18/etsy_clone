@@ -10,6 +10,7 @@ class CartShow extends React.Component {
           cartTotal: 0,
           shippingTotal: 0,
           grandTotal: 0,
+          totalQty: 0,
           paymentMethod: 'credit',
           render: false
         }
@@ -24,13 +25,14 @@ class CartShow extends React.Component {
       
       componentDidUpdate(prevProps){
         if (this.props.cartItems !== prevProps.cartItems) {
-          this.updateTotal()
+          this.updateTotalPrice()
+          this.updateTotalQty()
           // this.setState({render: true})
           }
       }
 
     componentWillUpdate(nextProps) {
-      debugger
+      // debugger
       if (this.props.cartItems !== nextProps.cartItems) {
         this.setState({ render: true })
       }
@@ -38,11 +40,11 @@ class CartShow extends React.Component {
 
     componentWillReceiveProps(nextProps){ 
       if (this.props.cartItems !== nextProps.cartItems){
-        this.updateTotal()
+        this.updateTotalPrice()
       }
     }
     
-    updateTotal() {
+    updateTotalPrice() {
       
       let sum = 0;
       this.props.cartItems.forEach(cartItem => {
@@ -55,6 +57,16 @@ class CartShow extends React.Component {
       this.setState({cartTotal: sum, shippingTotal: shippingTotal, grandTotal: grandTotal})
     }
 
+
+    updateTotalQty(){
+      let sum = 0;
+
+      this.props.cartItems.forEach(cartItem => {
+        sum += cartItem.quantity
+      })
+
+      this.setState({totalQty: sum})
+    }
 
     formatPrice(price) {
       return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(price)
@@ -94,7 +106,7 @@ class CartShow extends React.Component {
                 ) : (
                   <div className="cart-inner">
                     <section>
-                        <h3>{cartItems.length === 1 ? "1 item" : cartItems.length + " items"} in your cart</h3>
+                        <h3>{this.state.totalQty === 1 ? "1 item" : this.state.totalQty + " items"} in your cart</h3>
                       <button className="keep-shopping-btn" onClick={this.redirectToHome}>Keep shopping</button>
                     </section>
 

@@ -4,27 +4,29 @@ import { withRouter } from 'react-router';
 import HeroBanner from './hero_banner';
 import BuzzwordsBanner from './buzzwords_banner';
 import CatModuleContainer from './cat_module_container';
+import LoadingPage from '../loading_page';
+import { receiveSplashProducts} from '../../actions/product_actions';
 
 
 class Splash extends React.Component{
     constructor(props){
-        super(props)
+        super(props);
+        this.state = {
+            rendered: false
+        }
     }
 
 
     componentDidMount() {
-        this.props.fetchSplashProducts();
+        this.props.fetchSplashProducts()
+        .then(products => receiveSplashProducts(products))
+            .done(() => this.setState({ rendered: true })) 
     }
+    
 
-    // componentWillReceiveProps(nextProps) {
-    //     if (this.props.products !== nextProps.products) {
-    //         this.props.fetchSplashProducts();
-    //     }
-    // }
-  
-
-
-   
+    componentWillUnmount() {
+        this.props.clearProducts()
+    }
 
     render() {
         window.scrollTo(0, 0);
@@ -33,6 +35,10 @@ class Splash extends React.Component{
 
         // const {products} = this.props;
         
+        if (!this.state.rendered) {
+            return <LoadingPage />
+        } else {
+
         return(
             <div id='splash-main' id='inner'>
                     <div className='main-headline-text' id='inner'>
@@ -92,7 +98,8 @@ class Splash extends React.Component{
 
                 </div>
             </div>
-        )
+            )
+        }
     }
 }
 

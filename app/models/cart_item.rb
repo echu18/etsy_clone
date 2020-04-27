@@ -12,6 +12,7 @@
 #
 class CartItem < ApplicationRecord
     validates :user_id, :product_id, :quantity, presence: true
+    validate :validate_quantity
     validates :fulfilled, inclusion: { in: [true, false]}
 
     belongs_to :user, foreign_key: :user_id, class_name: :User
@@ -19,5 +20,8 @@ class CartItem < ApplicationRecord
     
 
  
+    def validate_quantity
+        errors.add(:quantity, "Max quantity: 50") if quantity.size > 50
+    end
 
 end
