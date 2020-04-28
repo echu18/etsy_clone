@@ -36,7 +36,15 @@ class Splash extends React.Component{
         // const {products} = this.props;
         
         if (!this.state.rendered) {
-            return <LoadingPage />
+            return (
+              <div id="splash-main" id="inner">
+                <div className="splash-loading">
+                  <LoadingPage />
+                </div>
+
+                <span className='splash-anchor'></span>
+              </div>
+            );
         } else {
 
         return(

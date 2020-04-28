@@ -3,7 +3,30 @@
     /* flex-wrap: wrap; */
     justify-content: center;
 }
+/* 
+.splash-loading {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    height: 10px;
+    width: 100%;
+} */
 
+.splash-loading {
+    /* top: 0; */
+    display: block;
+    position: relative;
+    height: 10px;
+    width: 100%;
+}
+
+.splash-anchor {
+    display: block;
+    visibility: hidden;
+    height: 110vh;
+    width: 100%;
+    /* border: 1px solid blue; */
+}
 
 .splash-inner {
     display: flex;

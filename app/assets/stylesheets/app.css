@@ -28,7 +28,12 @@
 }
 
 
-
+#content-placeholder {
+    display: block;
+    visibility: hidden;
+    height: 1000px;
+    width: 100%;
+}
 
 @media only screen and (max-width: 1500px) {
     #main {

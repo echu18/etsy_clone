@@ -41,7 +41,7 @@ const App = () => (
             </div>
             {/* <AboutBanner /> */}
         <Route exact path="/" component={AboutBanner} />
-
+        {/* <span id='content-placeholder'></span> */}
         {/* <Route path="/" except="/cart_items" component={FooterContainer} /> */}
         <Route exact path="/" except="/cart_items" component={FooterContainer} />
         <Route exact path="/search" except="/cart_items" component={FooterContainer} />

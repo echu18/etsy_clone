@@ -2,8 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { orangeIcon1 } from '../../../app/assets/images/svgs/backgrounds';
 
-const AboutBanner
- = (props) => (
+const AboutBanner = (props) => (
      <section className='about-banner'>
          {/* <img className='about-banner-bg' src='https://etsy-clone-dev.s3-us-west-1.amazonaws.com/splash-images/porter_background.jpg'/> */}
          <img className='about-banner-bg' src='https://thebitcoinpub-91d3.kxcdn.com/uploads/default/original/2X/3/32a6d325b043b106b6eb05ad15fde357741e9b0f.jpg'/>
@@ -37,8 +36,7 @@ const AboutBanner
      </section>
 )
 
-export default AboutBanner
-;
+export default AboutBanner;
 
 
 

@@ -33,7 +33,7 @@ class Navbar extends React.Component {
   }
 
     componentDidMount() {
-        debugger
+        // debugger
         if (!!this.props.location.search) {
         let params = this.props.location.search;
         this.props.searchProducts(params)

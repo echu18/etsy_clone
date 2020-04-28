@@ -10,8 +10,9 @@
     flex-direction: column;
     justify-content: flex-end;
     justify-self: flex-end;
+    /* margin-top: 150px; */
     margin-top: 150px;
-   width: 100vw;
+    width: 100vw;
    /* height: 100em; */
 }
 

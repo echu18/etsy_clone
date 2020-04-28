@@ -24,6 +24,9 @@ class CartShow extends React.Component {
       }
       
       componentDidUpdate(prevProps){
+        if (this.props.cartItems || this.props.products) return null;
+
+
         if (this.props.cartItems !== prevProps.cartItems) {
           this.updateTotalPrice()
           this.updateTotalQty()
