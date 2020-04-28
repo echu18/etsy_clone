@@ -13,6 +13,7 @@
     padding-right: 0px;
     margin-top: -1px;
     /* border: 1px solid blue; */
+    z-index: 1000;
 }
 
 .navbar-inner {
@@ -184,7 +185,7 @@
 }
 
 .cart-icon {
-    position: absolute;
+    position: relative;
     right: 0%;
     bottom: 43%;
     /* display: block;  */
@@ -199,6 +200,7 @@
     padding: 5px;
     /* padding: 2px 0px 0px 0px; */
     /* margin: 0px 0px 0px 0.5%; */
+    /* border: 1px solid red; */
 }
 
 

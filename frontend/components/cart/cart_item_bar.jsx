@@ -18,12 +18,12 @@ class CartItemBar extends React.Component {
 
     componentDidMount(){
         // debugger
-        if (!this.props.products || !this.props.cartItem ) return null;
+    //     if (!this.props.products || !this.props.cartItem ) return null;
 
-       const price = this.props.products[this.props.cartItem.product_id].price;
-       const qty = this.props.cartItem.quantity;
-       const initialPrice = price * qty;
-        this.setState({ totalPrice: initialPrice, quantity: qty})
+    //    const price = this.props.products[this.props.cartItem.product_id].price;
+    //    const qty = this.props.cartItem.quantity;
+    //    const initialPrice = price * qty;
+    //     this.setState({ totalPrice: initialPrice, quantity: qty})
     }
 
     componentWillReceiveProps(nextProps){
@@ -33,6 +33,15 @@ class CartItemBar extends React.Component {
 
         if (this.props.cartItem.quantity != nextProps.cartItem.quantity) {
             this.setState({ totalPrice: newPrice, quantity: qty })
+        }
+    }
+
+    componentDidUpdate(prevProps) {
+        if (prevProps.products !== this.props.products) {
+            const price = this.props.products[this.props.cartItem.product_id].price;
+            const qty = this.props.cartItem.quantity;
+            const initialPrice = price * qty;
+            this.setState({ totalPrice: initialPrice, quantity: qty})
         }
     }
 

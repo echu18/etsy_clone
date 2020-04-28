@@ -18,12 +18,14 @@ class CategoryDropdown extends React.Component {
         e.preventDefault();
         // this.props.searchProducts(header)
 
-        if (this.props.location.search.includes(`category=${header.split(" ").join("%20").slice(0, -1)}`)) {
-            window.location.reload()
 
-        } else { 
-            this.props.history.push(`/search?category=${header}`)
-        }
+    if (header === 'Gifts') {
+        this.props.history.push(`/gifts`)
+    } else if (this.props.location.search.includes(`category=${header.split(" ").join("%20").slice(0, -1)}`)) {
+            window.location.reload()
+    } else { 
+        this.props.history.push(`/search?category=${header}`)
+    }
     }
 
 

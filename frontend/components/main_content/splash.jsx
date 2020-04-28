@@ -24,9 +24,9 @@ class Splash extends React.Component{
     }
     
 
-    componentWillUnmount() {
-        this.props.clearProducts()
-    }
+    // componentWillUnmount() {
+    //     this.props.clearProducts()
+    // }
 
     render() {
         window.scrollTo(0, 0);

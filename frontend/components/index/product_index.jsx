@@ -13,8 +13,7 @@ class ProductIndex extends React.Component {
             pages: null,
             results: false,
             checked: null, 
-            rendered: false,
-            receiveProducts: 0
+            rendered: false
         }
 
         this.handlePrevPage = this.handlePrevPage.bind(this);
@@ -39,12 +38,6 @@ class ProductIndex extends React.Component {
             // if (!this.props.products) {
             //  this.setState({ rendered: true }); 
             // }
-
-            // Promise.all(this.props.receiveProducts).done(() => this.setState({ rendered: true }))
-            // this.props
-            //   .clearProducts()
-            //   .then((products) => receiveProducts(products))
-            //   .done(() => this.setState({ rendered: true }))
     }
 
     componentWillUnmount(){
@@ -52,58 +45,21 @@ class ProductIndex extends React.Component {
     }
 
     componentWillReceiveProps(nextProps, nextState){
-        debugger
-        if (
-          !this.state.pages ||
-          this.props.products !== nextProps.products ||
-          this.state.currentPage !== nextState.currentPage ||
-          this.state.receiveProducts === 0
-        ) {
-          this.setState({
-            pages: this.organizeProducts(nextProps.products),
-            currentPage: 0,
-            checked: "any",
-            rendered: false,
-          });
+        if (!this.state.pages || this.props.products !== nextProps.products || this.state.currentPage !== nextState.currentPage) {
+            this.setState({pages: this.organizeProducts(nextProps.products), currentPage: 0, checked: 'any', rendered: true});
         }
-
-        //  && this.state.receiveProducts === 0
-
-
-        // if ((this.props.products !== nextProps.products) && this.state.receiveProducts === 1) {
-        //   this.setState({ receiveProducts: 0 });
-        // }
     }
 
   
-    componentDidUpdate(prevProps, prevState) {
-        debugger
-
-       if ((this.props.products !== prevProps.products && prevProps.products.length !== 0)) {
-             this.setState({ receiveProducts: 1, rendered: true})
-        } 
-        
-
-        // else if (this.props.products !== prevProps.products) {
-        //     this.setState({receiveProducts: 1, rendered: true})
-        // }
-
-
-        //  && this.state.receiveProducts === 0
-        // else if (this.props.products !== prevProps.products)
-        // else if ((this.props.products !== prevProps.products ) && this.state.receiveProducts === 1) {
-        //     this.setState({ rendered: true, receiveProducts: 0 })
-        // }
-    //    if ((this.state.currentPage !== prevState.currentPage || this.props.products !== prevProps.products ) && this.state.receiveProducts === 0) {
-    //          this.setState({ receiveProducts: 1 }); 
-    //     } else if ((this.state.currentPage !== prevState.currentPage || this.props.products !== prevProps.products ) && this.state.receiveProducts === 1) {
-    //         this.setState({ rendered: true, receiveProducts: 0 })
+    // componentDidUpdate(prevProps, prevState) {
+    //    if (this.state.currentPage !== prevState.currentPage || this.props.products !== prevProps.products ) {
+    //          this.setState({ rendered: true }); 
     //     }
-    //    if (this.state.currentPage !== prevState.currentPage ) {
-    //         (products) => receiveSplashProducts(products)
-    //         .done(() => this.setState({ rendered: true })); 
-    //     }
-    }
+    // //    if (this.state.currentPage !== prevState.currentPage ) {
+    // //         (products) => receiveSplashProducts(products)
+    // //         .done(() => this.setState({ rendered: true })); 
+    // //     }
+    // }
     
 
 

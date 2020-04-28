@@ -14,6 +14,7 @@ import SplashContainer from './main_content/splash_container';
 import FooterContainer from './footer/footer_container';
 import AboutBanner from '../components/main_content/about_banner';
 import NotFoundPage from '../components/not_found_page';
+import GiftsPage from "../components/gifts_page";
 
 const App = () => (
     <div id='app'>
@@ -33,6 +34,7 @@ const App = () => (
                     <Route exact path="/search" component={ProductIndexContainer} />
                     <Route exact path="/signin" component={LoginFormContainer} />
                     <Route exact path="/signup" component={SignupFormContainer} />
+                    <Route exact path="/gifts" component={GiftsPage} />
                     {/* <Route exact path="/products/:productId/reviews" component={ReviewContainer} /> */}
                     <Route path="*" component={NotFoundPage} />
                 </Switch>
