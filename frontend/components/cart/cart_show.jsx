@@ -19,12 +19,12 @@ class CartShow extends React.Component {
     }
 
     componentDidMount(){
-        this.props.clearCartItems()
+        // this.props.clearCartItems()
         this.props.fetchCartItems()
       }
       
       componentDidUpdate(prevProps){
-        if (this.props.cartItems || this.props.products) return null;
+        // if (this.props.cartItems || this.props.products) return null;
 
 
         if (this.props.cartItems !== prevProps.cartItems) {
@@ -49,19 +49,36 @@ class CartShow extends React.Component {
     
     updateTotalPrice() {
       
-      let sum = 0;
-      this.props.cartItems.forEach(cartItem => {
-        sum += cartItem.quantity * this.props.products[cartItem.product_id].price
-      })
+      if (this.props.cartItems.length === 0) {
+              this.setState({
+                cartTotal: 0,
+                shippingTotal: 0,
+                grandTotal: 0,
+              });
 
-      let shippingTotal = this.props.cartItems.length * 3.99;
-      let grandTotal = shippingTotal + sum;
+      } else {
+
       
-      this.setState({cartTotal: sum, shippingTotal: shippingTotal, grandTotal: grandTotal})
+        let sum = 0;
+        debugger
+        (this.props.cartItems).forEach(cartItem => {
+          if (!!this.props.products[cartItem.product_id]) {
+            sum +=
+              cartItem.quantity *
+              this.props.products[cartItem.product_id].price;
+          }
+          })
+        
+        let shippingTotal = this.props.cartItems.length * 3.99;
+        let grandTotal = shippingTotal + sum;
+        
+        this.setState({cartTotal: sum, shippingTotal: shippingTotal, grandTotal: grandTotal})
+      }
     }
 
 
     updateTotalQty(){
+      
       let sum = 0;
 
       this.props.cartItems.forEach(cartItem => {
@@ -149,7 +166,7 @@ class CartShow extends React.Component {
                               <div className='cart-pay-divider'></div>
 
                               <div className='ci-total'>
-                                <p>Total ({cartItems.length} item{cartItems.length === 0 || cartItems.length > 1 ? `s` : null})</p>
+                                <p>Total ({this.state.totalQty} item{this.state.totalQty === 0 || this.state.totalQty > 1 ? `s` : null})</p>
                                 <p>{this.formatPrice(this.state.grandTotal)}</p>
                                 {/* {this.curriedAdd(this.childCallback())} */}
                                 {/* {this.store(this.childCallback())} */}

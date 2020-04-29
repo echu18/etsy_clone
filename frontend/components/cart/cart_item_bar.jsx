@@ -27,21 +27,27 @@ class CartItemBar extends React.Component {
     }
 
     componentWillReceiveProps(nextProps){
-        const price = this.props.products[this.props.cartItem.product_id].price;
-        const qty = nextProps.cartItem.quantity;
-        const newPrice = price * qty;
 
-        if (this.props.cartItem.quantity != nextProps.cartItem.quantity) {
-            this.setState({ totalPrice: newPrice, quantity: qty })
+        if (!!this.props.products[this.props.cartItem.product_id]){
+            debugger
+            const price = this.props.products[this.props.cartItem.product_id].price;
+            const qty = nextProps.cartItem.quantity;
+            const newPrice = price * qty;
+            
+            if (this.props.cartItem.quantity != nextProps.cartItem.quantity) {
+                this.setState({ totalPrice: newPrice, quantity: qty })
+            }
         }
     }
 
     componentDidUpdate(prevProps) {
-        if (prevProps.products !== this.props.products) {
-            const price = this.props.products[this.props.cartItem.product_id].price;
-            const qty = this.props.cartItem.quantity;
-            const initialPrice = price * qty;
-            this.setState({ totalPrice: initialPrice, quantity: qty})
+        if (!!this.props.products[this.props.cartItem.product_id]){
+            if (prevProps.products !== this.props.products) {
+                const price = this.props.products[this.props.cartItem.product_id].price;
+                const qty = this.props.cartItem.quantity;
+                const initialPrice = price * qty;
+                this.setState({ totalPrice: initialPrice, quantity: qty})
+            }
         }
     }
 
@@ -89,7 +95,7 @@ class CartItemBar extends React.Component {
     qtyDropdown() {
         let dropdown = []
 
-        for (let i = 1; i < 50; i++ ){
+        for (let i = 1; i < 25; i++ ){
             dropdown.push(<option value={i} selected={this.props.cartItem.quantity === i ? true : false}>{i}</option>)
         }
 
