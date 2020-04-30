@@ -178,6 +178,7 @@
 }
 
 .cart-icon > svg {
+    position: relative;
     box-sizing: border-box;
     width: 25px;
     height: 25px;
@@ -185,9 +186,9 @@
 }
 
 .cart-icon {
-    position: relative;
+    position: absolute;
     right: 0%;
-    bottom: 43%;
+    bottom: 41%;
     /* display: block;  */
     justify-content: center;
     align-items: center; 

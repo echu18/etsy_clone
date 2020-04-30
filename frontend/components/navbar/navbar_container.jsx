@@ -13,15 +13,16 @@ const mapStateToProps = (state, ownProps) => ({
 })
 
 
-const mapDispatchToProps = dispatch => ({
-    fetchCartItems: () => dispatch(fetchCartItems()),
-    searchProducts: query => dispatch(searchProducts(query)),
-    clearProducts: () => dispatch(clearProducts()),
-    fetchSplashProducts: () => dispatch(fetchSplashProducts()),
-    signUp: id => dispatch(signUp(id)),
-    signIn: id => dispatch(signIn(id)),
-    signOut: () => dispatch(signOut()),
-    clearErrors: () => dispatch(clearErrors())
-})
+const mapDispatchToProps = (dispatch) => ({
+  fetchCartItems: () => dispatch(fetchCartItems()),
+  clearCartItems: () => dispatch(clearCartItems()),
+  searchProducts: (query) => dispatch(searchProducts(query)),
+  clearProducts: () => dispatch(clearProducts()),
+  fetchSplashProducts: () => dispatch(fetchSplashProducts()),
+  signUp: (id) => dispatch(signUp(id)),
+  signIn: (id) => dispatch(signIn(id)),
+  signOut: () => dispatch(signOut()),
+  clearErrors: () => dispatch(clearErrors()),
+});
 
 export default connect(mapStateToProps, mapDispatchToProps)(Navbar);

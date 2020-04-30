@@ -140,8 +140,9 @@ class Navbar extends React.Component {
   // }
 
   signOutAndClear() {
-    this.props.signOut();
-    this.setState({ showPopup: false });
+    debugger
+    this.props.signOut().done(this.redirectToHome());
+    this.setState({ showPopup: false, receiveProducts: 1 })
   }
 
   redirectToHome() {
@@ -397,7 +398,9 @@ class Navbar extends React.Component {
           <CategoryDropdownContainer header={"Gifts"} />
         </div>
 
-        {this.state.receiveProducts !== 2 ? <LoadingPage /> : null}
+        {(this.state.receiveProducts !== 2) ? <LoadingPage /> : null}
+        {/* {(this.props.currentUserId && this.state.receiveProducts !== 2) ? <LoadingPage /> : null} */}
+        {/* {(!this.props.currentUserId && this.state.receiveProducts === 1) ? <LoadingPage /> : null} */}
       </div>
     );
   }
