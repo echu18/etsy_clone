@@ -86,7 +86,8 @@ class Popup extends React.Component {
                         {sessionFormHeader}
                         {toggleButton}
                     </div>
-
+                    
+                    <p className='popup-msg'>{this.props.message ? this.props.message : null} </p>
                     {display}
                     {/* <button onClick={closePopup} onClick={this.toggleOverlay}>Close</button> */}
                 </div>

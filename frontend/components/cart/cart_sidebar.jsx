@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Popup from "../signin_signup/popup";
 
 
 
@@ -11,37 +12,46 @@ class CartSidebar extends React.Component {
             product_id: this.props.product.id,
             quantity: 1,
             fulfilled: false,
-            showPopup: false
+            showCartPopup: false,
+            showSigninPopup: false
         }
         this.handleSubmit = this.handleSubmit.bind(this);
         // this.handleAddToCart = this.handleAddToCart.bind(this);
         this.updateQuantity = this.updateQuantity.bind(this);
-        this.togglePopup = this.togglePopup.bind(this);
+        this.toggleCartPopup = this.toggleCartPopup.bind(this);
+        this.toggleSigninPopup = this.toggleSigninPopup.bind(this);
 
     }
 
 
     handleSubmit(e) {
         e.preventDefault();
-        this.setState({ userId: this.props.currentUserId})
-
-        // if (this.props.addCartItem(this.state)) {
-        //     this.togglePopup()
-        // }
-
-        this.props.addCartItem(this.state).then(this.togglePopup)
+        debugger
+        if (this.props.currentUserId) {
+            this.setState({ userId: this.props.currentUserId})   
+            this.props.addCartItem(this.state).then(this.toggleCartPopup)
+        } else {
+            this.toggleSigninPopup()
+        }
     }
 
-    togglePopup() {
+    toggleCartPopup() {
         // e.preventDefault();
         this.setState({
-            showPopup: !this.state.showPopup
+            showCartPopup: !this.state.showCartPopup
+        });
+    }
+
+    toggleSigninPopup() {
+        // e.preventDefault();
+        this.setState({
+            showSigninPopup: !this.state.showSigninPopup
         });
     }
 
     // handleAddToCart(e) {
     //     e.preventDefault();
-    //     this.togglePopup()
+    //     this.toggleCartPopup()
     // }
 
     updateQuantity(e){
@@ -58,29 +68,41 @@ class CartSidebar extends React.Component {
             <div className='addtocart-confirm'>
                     <p>Added to your cart!</p>
                     <Link to={`/cart_items`}>Go to Cart</Link>
-                    <button onClick={this.togglePopup}>Close</button>
+                    <button onClick={this.toggleCartPopup}>Close</button>
             </div>
         )
 
 
         return (
             <div className='cart-sidebar-container'>
-                <div className={this.state.showPopup ? `show-popup-overlay` : `hide-popup-overlay`} onClick={this.togglePopup}></div>
+                <div className={this.state.showCartPopup ? `show-popup-overlay` : `hide-popup-overlay`} onClick={this.toggleCartPopup}></div>
+                <div id='add-cart-signin'>
+                    <p>Please<button onClick={this.toggleSigninPopup}>sign in</button>to add to cart.</p>
+                </div>
 
-                {this.state.showPopup ? addToCartPopup : null}
+                        {this.state.showSigninPopup ? (
+                            <Popup
+                                closePopup={this.toggleSigninPopup}
+                                message={"Please sign in to add to cart"}
+                                // currentUser={this.props.currentUser.id}
+                                clearErrors={this.props.clearErrors}
+                            />
+                        ) : null}
+
+                {this.state.showCartPopup ? addToCartPopup : null}
 
                 <form onSubmit={this.handleSubmit}>
-                <p className='sidebar-quantity'>Quantity  </p>
-                <select id='sidebar-quantity-dropdown' onChange={this.updateQuantity} quantity={this.state.quantity}>
-                    <option value='1'>1</option>
-                    <option value='2'>2</option>
-                    <option value='3'>3</option>
-                    <option value='4'>4</option>
-                    <option value='5'>5</option>
-                    <option value='6'>6</option>
-                    <option value='7'>7</option>
-                </select>
-                <input type="submit" className='addtocart-btn' value="Add to cart" />
+                    <p className='sidebar-quantity'>Quantity  </p>
+                    <select id='sidebar-quantity-dropdown' onChange={this.updateQuantity} quantity={this.state.quantity}>
+                        <option value='1'>1</option>
+                        <option value='2'>2</option>
+                        <option value='3'>3</option>
+                        <option value='4'>4</option>
+                        <option value='5'>5</option>
+                        <option value='6'>6</option>
+                        <option value='7'>7</option>
+                    </select>
+                    <input type="submit" className='addtocart-btn' value="Add to cart" />
                 </form>
             </div>
         )

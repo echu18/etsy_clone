@@ -50,6 +50,13 @@
     align-items: flex-end;
 }
 
+.popup-msg {
+    text-align: center;
+    margin: 10px 0px 30px 0px;
+    color: tomato;
+}
+
+
 .form-name-caption {
     text-decoration: none;
 }

@@ -45,7 +45,7 @@ class ProductShow extends React.Component {
 
         return (
             <div className='product-listing-container'>
-                <button onClick={e=>this.handleBackBtn(e)}> Back to search results</button>
+                {/* <button onClick={e=>this.handleBackBtn(e)}> Back to search results</button> */}
                 <div className='image-and-sidebar'>
                     <ProductImage urls={urls} product={this.props.product} {...this.props} />
 

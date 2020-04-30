@@ -78,3 +78,54 @@
     z-index: 105;
     padding: 20px;
 }
+
+
+
+
+
+/* Sign in to add to cart tooltip */
+
+#add-cart-signin {
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 14px;
+    height: 50px;
+    width: 230px;
+    background-color: whitesmoke;
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+}
+
+#add-cart-signin > p > button {
+    font-family: inherit;
+    font-size: inherit;
+    border-style: none;
+    text-decoration: underline;
+    background-color: transparent;
+}
+
+#add-cart-signin > p > button:hover {
+    cursor: pointer;
+    color: tomato;
+    transition: color 0.3s ease-in-out;
+} 
+
+.add-cart-signin {
+    visibility: visible;
+}
+
+
+/* 
+#add-cart-signin::after {
+  content: " ";
+  position: absolute;
+  top: 100%; 
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+} */

@@ -236,7 +236,6 @@ class Navbar extends React.Component {
 
         {this.state.showPopup ? (
           <Popup
-            // text='hello'
             closePopup={this.togglePopup}
             currentUser={currentUserId}
             clearErrors={clearErrors}
