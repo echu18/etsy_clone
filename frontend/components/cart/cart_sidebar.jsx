@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from "react-router-dom";
 import Popup from "../signin_signup/popup";
 
 
@@ -20,6 +20,7 @@ class CartSidebar extends React.Component {
         this.updateQuantity = this.updateQuantity.bind(this);
         this.toggleCartPopup = this.toggleCartPopup.bind(this);
         this.toggleSigninPopup = this.toggleSigninPopup.bind(this);
+        this.redirectToCart = this.redirectToCart.bind(this);
 
     }
 
@@ -58,6 +59,10 @@ class CartSidebar extends React.Component {
         this.setState({quantity: e.target.value})
     }
 
+    redirectToCart(){
+        this.props.history.push('/cart_items')
+    }
+
     render() {
         
         // if (this.props.currentUser.id === undefined) return null;
@@ -67,7 +72,8 @@ class CartSidebar extends React.Component {
         (
             <div className='addtocart-confirm'>
                     <p>Added to your cart!</p>
-                    <Link to={`/cart_items`}>Go to Cart</Link>
+                    {/* <Link to={`/cart_items`}>Go to Cart</Link> */}
+                    <button onClick={this.redirectToCart}>Go to Cart</button>
                     <button onClick={this.toggleCartPopup}>Close</button>
             </div>
         )
@@ -109,4 +115,4 @@ class CartSidebar extends React.Component {
     }
 }
 
-export default CartSidebar;
+export default withRouter(CartSidebar);

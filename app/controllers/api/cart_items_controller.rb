@@ -28,14 +28,18 @@ class Api::CartItemsController < ApplicationController
 
             if @cart_item.update_attributes({user_id: params[:cart_item][:user_id], product_id: params[:cart_item][:product_id], quantity: new_qty, fulfilled: false})
                 @cart_items = CartItem.all.select {|cart_item| cart_item.user_id == current_user.id && cart_item.fulfilled == false}        
-                    # render :show
+                
+                render :show
             else
                 render json: @product.errors.full_messages, status: 401
             end
         else
             @cart_item = CartItem.new(cart_item_params)
-            
-            return true if @cart_item.save!
+
+            if @cart_item.save!
+                @cart_items = CartItem.all.select {|cart_item| cart_item.user_id == current_user.id && cart_item.fulfilled == false}        
+                render :show
+            end
         end
     end
 

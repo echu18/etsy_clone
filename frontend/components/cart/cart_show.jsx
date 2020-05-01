@@ -20,32 +20,39 @@ class CartShow extends React.Component {
 
     componentDidMount(){
         // this.props.clearCartItems()
+        debugger
+        // Promise.all(this.props.fetchCartItems())
         this.props.fetchCartItems()
       }
       
       componentDidUpdate(prevProps){
         // if (this.props.cartItems || this.props.products) return null;
-
+        debugger
 
         if (this.props.cartItems !== prevProps.cartItems) {
           this.updateTotalPrice()
           this.updateTotalQty()
-          // this.setState({render: true})
-          }
+          if (!this.state.render) this.setState({ render: true });
+        }
+        
+        // if (!this.state.render) this.setState({ render: true });
       }
 
-    componentWillUpdate(nextProps) {
-      // debugger
-      if (this.props.cartItems !== nextProps.cartItems) {
-        this.setState({ render: true })
-      }
-    }
+    // componentWillUpdate(nextProps) {
+    //   // debugger
+    //   if (this.props.cartItems !== nextProps.cartItems) {
+    //     // this.setState({ render: true })
+    //   }
+    // }
 
-    componentWillReceiveProps(nextProps){ 
-      if (this.props.cartItems !== nextProps.cartItems){
-        this.updateTotalPrice()
-      }
-    }
+    // componentWillReceiveProps(nextProps){ 
+    //   debugger
+    //   if (this.props.cartItems !== nextProps.cartItems){
+    //     this.updateTotalPrice()
+    //     this.setState({ render: true })
+
+    //   }
+    // }
     
     updateTotalPrice() {
       
@@ -60,7 +67,6 @@ class CartShow extends React.Component {
 
       
         let sum = 0;
-        debugger
         (this.props.cartItems).forEach(cartItem => {
           if (!!this.props.products[cartItem.product_id]) {
             sum +=
@@ -105,7 +111,7 @@ class CartShow extends React.Component {
 
     render() {
       
-        if (!this.props.cartItems) return null;
+        // if (!this.props.cartItems) return null;
         // if (!this.props.currentUserId) return null;
         if (!this.props.products) return null;
         // const cartItems = Array.from(this.props.cartItems);

@@ -52,7 +52,7 @@ export const fetchCartItems = () => dispatch => getCartItems()
 
 
 export const addCartItem = (data) => dispatch => createCartItem(data)
-    .then(cartItem => dispatch(receiveCartItem(cartItem)),
+    .then(cartItems => dispatch(receiveCartItems(cartItems)),
         error => dispatch(receiveErrors(error.responseJSON)))
 
 

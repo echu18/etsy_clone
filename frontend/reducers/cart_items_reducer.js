@@ -6,7 +6,7 @@ export default (state = {}, action) => {
     Object.freeze(state);
     switch (action.type) {
         case RECEIVE_CART_ITEMS:
-            
+            debugger
             const cartItems = {}
 
             if (!action.payload.cartItems) {
@@ -20,6 +20,7 @@ export default (state = {}, action) => {
             // return Object.assign({}, state, action.payload.cartItems)
 
         case RECEIVE_CART_ITEM:
+            debugger
             return Object.assign({}, state, action.cartItem)
             
         case RECEIVE_CURRENT_USER:
