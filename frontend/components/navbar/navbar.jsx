@@ -34,15 +34,21 @@ class Navbar extends React.Component {
 
     componentDidMount() {
         // debugger
+        
+        //  if (this.props.history.location === this.props.location) {
+        //   this.setState({receiveProducts: 1, rendered: true})
+        // }
         if (!!this.props.location.search) {
         let params = this.props.location.search;
         this.props.searchProducts(params)
-        //   .then(this.setState({receiveProducts: 2}))
+          .then(this.setState({receiveProducts: 2}))
         }
 
         this.props
         .fetchCartItems()
         .then(this.setState({ cartQty: this.cartItemLength() }));
+
+       
     }
     
 
