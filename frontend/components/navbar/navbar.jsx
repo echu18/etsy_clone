@@ -147,7 +147,11 @@ class Navbar extends React.Component {
 
   signOutAndClear() {
     debugger
-    this.props.signOut().done(this.redirectToHome());
+    if (this.props.location.pathname === '/') {
+      this.props.signOut()
+    } else {
+      this.props.signOut().done(this.redirectToHome());
+    }
     this.setState({ showPopup: false, receiveProducts: 1 })
   }
 
