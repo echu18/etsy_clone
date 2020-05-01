@@ -398,8 +398,8 @@ class Navbar extends React.Component {
         </div>
 
         {(this.state.receiveProducts !== 2) ? <LoadingPage /> : null}
-        {/* {(this.props.currentUserId && this.state.receiveProducts !== 2) ? <LoadingPage /> : null} */}
-        {/* {(!this.props.currentUserId && this.state.receiveProducts === 1) ? <LoadingPage /> : null} */}
+        {/* {(this.props.currentUserId && this.state.receiveProducts !== 2) ?  null : <LoadingPage /> } */}
+        {/* {(!this.props.currentUserId && this.state.receiveProducts === 1) ? null : <LoadingPage /> } */}
       </div>
     );
   }

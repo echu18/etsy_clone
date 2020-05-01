@@ -29,8 +29,8 @@ class CartSidebar extends React.Component {
         e.preventDefault();
         debugger
         if (this.props.currentUserId) {
-            this.setState({ userId: this.props.currentUserId})   
-            this.props.addCartItem(this.state).then(this.toggleCartPopup)
+            this.setState({ userId: this.props.currentUserId}, () =>   
+            this.props.addCartItem(this.state).then(this.toggleCartPopup))
         } else {
             this.toggleSigninPopup()
         }
@@ -86,7 +86,7 @@ class CartSidebar extends React.Component {
                     <p>Please<button onClick={this.toggleSigninPopup}>sign in</button>to add to cart.</p>
                 </div>
 
-                        {this.state.showSigninPopup ? (
+                        {this.props.currentUserId ? null : this.state.showSigninPopup ? (
                             <Popup
                                 closePopup={this.toggleSigninPopup}
                                 message={"Please sign in to add to cart"}

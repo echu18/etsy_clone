@@ -174,9 +174,6 @@ class CartShow extends React.Component {
                               <div className='ci-total'>
                                 <p>Total ({this.state.totalQty} item{this.state.totalQty === 0 || this.state.totalQty > 1 ? `s` : null})</p>
                                 <p>{this.formatPrice(this.state.grandTotal)}</p>
-                                {/* {this.curriedAdd(this.childCallback())} */}
-                                {/* {this.store(this.childCallback())} */}
-
                               </div>
                             <button className='checkout-btn'>Proceed to checkout</button>
                           </div>

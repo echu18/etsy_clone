@@ -20,6 +20,7 @@ class Api::CartItemsController < ApplicationController
 
     # Creates from product show page - will add/subtract from existing quantities (if any)
     def create
+        # debugger
         if current_user && current_user.cart_items.any? {|cart_item| cart_item.product_id == params[:cart_item][:product_id].to_i}
             # @cart_item = CartItem.find_by(product_id: params[:cart_item][:product_id].to_i).select {|cart_item| cart_item.user_id == current_user.id}
             @cart_item = current_user.cart_items.find_by(product_id: params[:cart_item][:product_id].to_i)

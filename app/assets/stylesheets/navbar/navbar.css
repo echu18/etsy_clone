@@ -50,7 +50,7 @@
         /* z-index: 5; */
     }
 
-.etsyLogo:hover {
+.memesy-logo:hover {
     cursor: pointer;
 }
 
@@ -62,18 +62,18 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 13px 0px 0px 0px;
+    /* padding: 13px 0px 0px 0px; */
+    padding: 6px 0px 0px 0px;
     margin: 0 3px 0 0;
 }
 
 .searchbar-form input[type="text"] {
     /* min-width: 56.7vw; */
-    min-width: 53.5vw;
-
+    /* min-width: 53.5vw; */
+    width: 53vw;
     /* max-width: 56.9vw; */
-    /* min-width: 50vw;
-    max-width: 56.9vw; */
-    height: 43.5px;
+    /* height: 43.5px; */
+    height: 42.5px;
     border-radius: 25px;
     font-size: 16px;
     border-top: 0.3px solid rgba(34, 34, 34, 0.15);
@@ -94,9 +94,9 @@
 }
 
 
-.searchbar-form input[type="text"]:focus {
+/* .searchbar-form input[type="text"]:focus {
     
-}
+} */
 
 
 
@@ -150,18 +150,19 @@
 
 
 
-.search-icon:hover {
+/* .search-icon:hover {
     background-color: #e8e8e8;
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
     /* border-top: 0.3px solid black;
     border-right: 0.3px solid black;
     border-bottom: 0.3px solid black; */
-    /* animation: zoominoutsinglefeatured 15s forwards; */
-}
+    /* animation: zoominoutsinglefeatured 15s forwards; */ /*
+} */
 
 .signin-signout {
-    font-weight: 900;
+    font-family: 'Helvetica', sans-serif;
+    font-weight: 500;
     white-space: nowrap;
     display: flex;
     justify-content: center;
@@ -169,7 +170,7 @@
     padding: 10px; /* this is for the hover circle, do not remove */
     border-radius: 30px;
     box-sizing: border-box;
-    margin: 0px 15% 0 -40%;
+    margin: 0px 15% 5px -40%;
 }
 
 .signin-signout:hover {
@@ -187,8 +188,8 @@
 
 .cart-icon {
     position: absolute;
-    right: 0%;
-    bottom: 41%;
+    right: 10px;
+    bottom: 43%;
     /* display: block;  */
     justify-content: center;
     align-items: center; 
@@ -196,9 +197,8 @@
     height: 32px; */
     /* min-width: 40px;
     min-height: 40px; */
-    right: 0%;
     border-radius: 50%;
-    padding: 5px;
+    padding: 10px 8px 8px 8px;
     /* padding: 2px 0px 0px 0px; */
     /* margin: 0px 0px 0px 0.5%; */
     /* border: 1px solid red; */
@@ -212,17 +212,19 @@
 
 
 .cart-badge {
+    font-family: "Helvetica", sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: -6px;
-    right: -4px;
+    top: -1px;
+    right: -1px;
     color: black;
     font-size: 11px;
+    font-weight: 400;
     height: 20px;
     width: 20px;
-    padding: 3px;
+    padding: 4px 3px 3px 3px;
     border-radius: 100%;
     background-color: rgb(250, 177, 94);
     border: 1.5px solid whitesmoke;
