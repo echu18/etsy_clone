@@ -38,8 +38,8 @@ class Product < ApplicationRecord
         total = 0 
         
         self.reviews.each {|review| total += review.rating}
-        @avg_rating = (total == 0)  ? 0 : ((total/self.reviews.count) * 1.0)
-
+        @avg_rating = (total == 0)  ? 0 : (total/(self.reviews.count * 1.0))
+        
         @avg_rating
     end
     # def self.avg_rating(product_id)
@@ -70,14 +70,6 @@ class Product < ApplicationRecord
                 query = query[10..-1].split("%20")
                 query.reject! {|term| term == '&'}
                 
-                
-
-            #     result = self.where("LOWER(categories) LIKE ?", "%#{query}%")
-            #    if result 
-            #         @products = result
-            #     else
-            #         @products = Product.all
-            #     end
                 @products = Product.all.select do |product| 
                     # 
                     query.any? {|query_term| product.categories.any? {|category| category.name.downcase.split.include?(query_term.downcase)} }

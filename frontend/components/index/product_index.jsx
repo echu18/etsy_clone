@@ -193,7 +193,7 @@ class ProductIndex extends React.Component {
     handleBackBtn(e) {
         e.preventDefault()
         // window.location.reload()
-        // this.props.history.go(-1)
+        this.props.history.go(-1), () => window.location.reload()
     }
     
     render() {
@@ -212,7 +212,15 @@ class ProductIndex extends React.Component {
             )
         // } else if (!this.props.products || !this.state.pages[0])  {
         } else if (!this.props.products || !this.state.pages || !this.state.pages[0])  {
-            return null;
+            return (null);
+            //   <div>
+            //     <p>{noResults}</p>
+            //     {/* <button onClick={e => this.handleBackBtn(e)}>Go back</button> */}
+            //     <button onClick={(e) => this.handleBackBtn(e)}>
+            //       Go back
+            //     </button>
+            //   </div>
+            // );
         } 
 
         // || !this.state.pages[0])

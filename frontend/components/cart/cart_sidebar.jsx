@@ -27,7 +27,7 @@ class CartSidebar extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        debugger
+        
         if (this.props.currentUserId) {
             this.setState({ user_id: this.props.currentUserId}, () =>   
             this.props.addCartItem(this.state).then(this.toggleCartPopup))

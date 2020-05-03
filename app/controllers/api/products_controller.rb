@@ -3,37 +3,6 @@ class Api::ProductsController < ApplicationController
     
     def index
       @products = Product.search(params[:search])
-      # debugger
-      # if @products.length == 0
-      #   # render json: `We couldn\'t find any results for #{params[:search]}`
-      #   # render json: @products.errors.full_messages, status: 401
-      #   # render json: { error: `We couldn\'t find any results for #{params[:search]}`}
-      # else
-      #   return @products
-      # end
-      # debugger
-      # if params[:search] == nil
-      #   @products = Product.all
-      # else 
-      #   @products = Product.search(params[:search])
-      #   if !@products 
-      #     render json: "No products found"
-      #   else
-      #     return @products
-      #   end
-      # end
-
-        # debugger
-        #  if params[:search] == ""
-        #   return @products
-        # else
-        #   selected = @products.select {|product| product.name.split(" ").include?(params[:search])}
-          
-        #   if selected
-        #     return selected
-        #   else
-        #     render json: @product.errors.full_messages, status: 401
-        #   end
     end
 
     def show
