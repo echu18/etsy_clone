@@ -1,6 +1,7 @@
 import { getCartItem, getCartItems, createCartItem, modifyCartItem, destroyCartItem } from '../util/cart_item_api_util';
 
 export const RECEIVE_CART_ITEMS = 'RECEIVE_CART_ITEMS';
+export const RECEIVE_CART_ITEM_PRODUCTS = 'RECEIVE_CART_ITEM_PRODUCTS';
 export const UPDATE_CART_ITEMS = 'UPDATE_CART_ITEMS';
 export const RECEIVE_CART_ITEM = 'RECEIVE_CART_ITEM';
 export const ADD_CART_ITEM = 'ADD_CART_ITEM';
@@ -13,6 +14,11 @@ export const CLEAR_CART_ITEM = 'CLEAR_CART_ITEM';
 
 const receiveCartItems = payload => ({
     type: RECEIVE_CART_ITEMS,
+    payload
+});
+
+const receiveCartItemProducts = payload => ({
+    type: RECEIVE_CART_ITEM_PRODUCTS,
     payload
 });
 
@@ -43,6 +49,10 @@ const removeCartItems = () => ({
 
 export const fetchCartItems = () => dispatch => getCartItems()
     .then(cartItems => dispatch(receiveCartItems(cartItems)),
+        error => dispatch(receiveErrors(error.responseJSON)))
+
+export const fetchCartItemProducts = () => dispatch => getCartItems()
+    .then(cartItems => dispatch(receiveCartItemProducts(cartItems)),
         error => dispatch(receiveErrors(error.responseJSON)))
 
 // export const fetchCartItem = (userId, cartItemId) => dispatch => getCartItem(userId, cartItemId)

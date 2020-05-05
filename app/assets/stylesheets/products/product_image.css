@@ -56,6 +56,12 @@
     opacity: 1;
 }
 
+.active-listing {
+    opacity: 1;
+    /* border: 1.5px solid black; */
+    border-radius: 5px;
+}
+
 
 .photo-large-container {
     /* position: relative; */
@@ -84,9 +90,6 @@
       position: absolute;
 }
 
-.active-listing {
-    opacity: 1;
-}
 
 
 

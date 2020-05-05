@@ -1,5 +1,5 @@
 import { RECEIVE_PRODUCTS, RECEIVE_PRODUCT, RECEIVE_SPLASH_PRODUCTS, CLEAR_PRODUCTS } from '../actions/product_actions';
-import { RECEIVE_CART_ITEM, RECEIVE_CART_ITEMS } from '../actions/cart_item_actions'
+import { RECEIVE_CART_ITEM, RECEIVE_CART_ITEM_PRODUCTS } from '../actions/cart_item_actions'
 import { RECEIVE_CURRENT_USER } from '../actions/session_actions'
 
 
@@ -30,7 +30,7 @@ export default (state = {}, action) => {
         case RECEIVE_PRODUCT:
             return Object.assign({}, state, action.payload.products)
             
-        case RECEIVE_CART_ITEMS:
+        case RECEIVE_CART_ITEM_PRODUCTS:
             return Object.assign({}, state, action.payload.products)
         case RECEIVE_CURRENT_USER:
             return Object.assign({}, state, action.payload.products)

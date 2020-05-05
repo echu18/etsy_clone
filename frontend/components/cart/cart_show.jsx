@@ -22,7 +22,7 @@ class CartShow extends React.Component {
         // this.props.clearCartItems()
         debugger
         // Promise.all(this.props.fetchCartItems())
-        this.props.fetchCartItems()
+        this.props.fetchCartItemProducts()
       }
       
       componentDidUpdate(prevProps){
