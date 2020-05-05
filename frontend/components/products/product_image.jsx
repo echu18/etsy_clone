@@ -20,6 +20,12 @@ class ProductImage extends React.Component {
 
 
     changePhoto(idx) {
+        document
+          .getElementById(`${this.state.currentPhotoIdx}`)
+          .classList.remove("active-listing");
+        document.getElementById(`${idx}`).classList.add("active-listing");
+
+
         this.setState({currentPhotoIdx: idx});
     }
 

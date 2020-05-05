@@ -64,7 +64,7 @@ class Footer extends React.Component {
                                 <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank"><div className='download-app-btn'><img src='https://etsy-clone-dev.s3-us-west-1.amazonaws.com/splash-images/micon-white.png'/> Download the Memesy App</div></a>
 
                                 <div className='footer-logo-container'>
-                                    <a href="https:/www.github.com/echu18" target="_blank">{githubIcon}</a>
+                                    <a href="https://www.github.com/echu18" target="_blank">{githubIcon}</a>
                                     <a href="https://www.linkedin.com/in/echu18" target="_blank">{linkedinIcon}</a>
                                     <a href="https://echu18.github.io/" target="_blank">{briefcaseIcon}</a>
                                     <a href="mailto:elizabethchu18@gmail.com">{convoIcon}</a>

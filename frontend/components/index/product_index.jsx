@@ -273,7 +273,7 @@ class ProductIndex extends React.Component {
                     </div>
                     
                     <div className='index-btn-container'>
-                        {this.state.pages.length > 1 ? <p className='index-btn-text'>There's so much more for you to discover</p> : null}
+                        {this.state.pages.length > 1  && this.state.currentPage !== this.state.pages.length-1 ? <p className='index-btn-text'>There's so much more for you to discover</p> : null}
 
                         <div className='index-btns-group'>
                             <button className={`index-btn ${this.state.currentPage === 0 ? 'grayed-btn' : null}`} onClick={this.handlePrevPage}>{leftPageArrow}</button>

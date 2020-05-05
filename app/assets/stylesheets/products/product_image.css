@@ -80,6 +80,9 @@
       position: absolute;
 }
 
+.active-listing {
+    opacity: 1;
+}
 
 
 
