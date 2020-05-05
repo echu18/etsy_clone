@@ -59,6 +59,7 @@ class Product < ApplicationRecord
             if query.include?("?query=")
                 query = query[7..-1].split("%20").join(" ")
                 
+                # result = self.where("LOWER(name) LIKE ? OR LOWER(description) LIKE ?", "%#{query}%", "%#{query}%")
                 result = self.where("LOWER(name) LIKE ? OR LOWER(description) LIKE ?", "%#{query}%", "%#{query}%")
                 if result 
                     @products = result

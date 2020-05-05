@@ -35,6 +35,10 @@
     height: 64px;
     width: 100%;
     /* margin: 3px; */
+    /* opacity: 0.6; */
+}
+
+.photo-small-container {
     opacity: 0.6;
 }
 

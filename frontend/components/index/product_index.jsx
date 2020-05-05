@@ -211,8 +211,9 @@ class ProductIndex extends React.Component {
                 </div>
             )
         // } else if (!this.props.products || !this.state.pages[0])  {
-        } else if (!this.props.products || !this.state.pages || !this.state.pages[0])  {
-            return (null);
+        } else if ((!this.props.products || !this.state.pages || !this.state.pages[0]) && this.state.rendered)  {
+            // return (null);
+            return <p>{noResults}</p>;
             //   <div>
             //     <p>{noResults}</p>
             //     {/* <button onClick={e => this.handleBackBtn(e)}>Go back</button> */}

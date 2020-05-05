@@ -35,6 +35,8 @@
 
 .suggestion-visible {
     visibility: visible;
+        z-index: 1000;
+
 }
 .suggestion-hidden {
     visibility: hidden;

@@ -17,7 +17,9 @@ class ProductImage extends React.Component {
         this.handlePreviousPhoto = this.handlePreviousPhoto.bind(this);
     }
 
-
+    componentDidMount(){
+        this.changePhoto(0)
+    }
 
     changePhoto(idx) {
         document
