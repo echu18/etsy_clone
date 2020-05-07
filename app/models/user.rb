@@ -27,7 +27,7 @@ class User < ApplicationRecord
     ## AASPIRE
 
     after_initialize :ensure_session_token
-    attr_reader :password 
+    attr_reader :password, :store_name 
 
     def self.find_by_credentials(email, password)
         user = User.find_by(email: email)

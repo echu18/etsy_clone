@@ -95,7 +95,7 @@
     z-index: 0;
 }
 
-.hero-block-large:hover {
+.hero-block-large:hover, .hero-block-medium:hover {
     cursor: pointer;
 }
 

@@ -85,7 +85,8 @@ class Navbar extends React.Component {
 
     if (this.props.location.search != prevProps.location.search) {
       let params = this.props.location.search;
-      window.location.reload(), () => this.props.searchProducts(params).then(this.setState({ rendered: true }));
+      // window.location.reload(), () => this.props.searchProducts(params).then(this.setState({ rendered: true }));
+      this.props.searchProducts(params).then(this.setState({ rendered: true }));
     }
 
     if (this.props.cartItems != prevProps.cartItems) {

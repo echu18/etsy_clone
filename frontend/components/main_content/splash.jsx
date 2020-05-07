@@ -53,7 +53,6 @@ class Splash extends React.Component{
                         {/* <p>If it’s handcrafted, vintage, custom, or unique, it’s on Etsy.</p> */}
                         {/* <p className='headline-p1'>Welcome to Memesy! Take a look around, we won't judge.</p> */}
                         <p className='headline-p2'>See what's trending on Memesy.</p>
-                        {/* <p className='headline-p3'>What's the difference between a blep and a blop? 🤔</p> */}
                     </div>
 
                 <div className='splash-inner'>

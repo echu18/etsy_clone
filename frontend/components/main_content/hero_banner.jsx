@@ -11,9 +11,14 @@ class HeroBanner extends React.Component {
         this.searchHeroBanner = this.searchHeroBanner.bind(this)
     }
 
-    searchHeroBanner(e){
+    searchHeroBanner(e, bannerSize){
         e.preventDefault() 
-        this.props.history.push("/search?category=Cosplay")
+        
+        if (bannerSize === 'large') {
+          this.props.history.push("/search?category=Cosplay")
+        } else if (bannerSize === 'medium')  {
+          this.props.history.push("/search?category=anime");
+        }
     }
 
 
@@ -22,7 +27,7 @@ class HeroBanner extends React.Component {
           <div className="main-hero-banner" id="inner">
             <div
               className="hero-block-large"
-              onClick={(e) => this.searchHeroBanner(e)}
+              onClick={(e) => this.searchHeroBanner(e, "large")}
             >
               <div className="hero-large-text">
                 <h3>Standing out just got so easy.</h3>
@@ -42,7 +47,10 @@ class HeroBanner extends React.Component {
             </div>
 
             <div className="hero-medium-small">
-              <div className="hero-block-medium">
+              <div
+                className="hero-block-medium"
+                onClick={(e) => this.searchHeroBanner(e, "medium")}
+              >
                 <div className="hero-medium-text">
                   <h3>Anime must-haves</h3>
                   <p>

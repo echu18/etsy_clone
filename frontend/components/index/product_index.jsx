@@ -22,6 +22,7 @@ class ProductIndex extends React.Component {
         this.handleBackBtn = this.handleBackBtn.bind(this);
         this.organizeProducts = this.organizeProducts.bind(this);
         this.filterProducts = this.filterProducts.bind(this);
+        this.header = this.header.bind(this);
     }
 
     componentDidMount() {
@@ -195,12 +196,47 @@ class ProductIndex extends React.Component {
         // window.location.reload()
         this.props.history.go(-1), () => window.location.reload()
     }
+
+
+    header() {
+            debugger
+            if (this.props.location.search.includes('?category=')) {
+
+                switch (this.props.location.search) {
+                  case "?category=Jewelry%20&%20Clothing":
+                      return <img src="clothing.png" alt="jewelry clothing category header"/>
+
+                    case "?category=Home%20&%20Living":
+                      return <img src="homeliving2.png" alt="home living category header"/>
+                
+                case "?category=Tech%20&%20Accessories":
+                    return <img src="tech-accessories2.png" alt="tech accessories category header"/>
+
+                  case "?category=Art%20&%20Collectibles":
+                      return <img src="art.png" alt="art collectibles category header"/>
+                    
+                case "?category=Pins%20&%20Stickers":
+                    return <img src="pins-stickers8.png" alt="pins stickers category header"/>
+
+                case "?category=Anime%20&%20Gaming":
+                    return <img src="game-anime3.png" alt="anime gaming category header"/>;
+
+                case "?category=Memes":
+                    return <img src="memes2.png" alt="memes category header"/>;
+
+                case "?category=Cosplay":
+                    return <img src="cosplay.png" alt="cosplay category header"/>;
+                }
+            }
+        }
+
     
     render() {
         window.scrollTo(0, 0);
         
         const noResults = "We couldn\'t find any results"
-
+        
+    
 
         if (this.state.rendered === true && this.state.results === false){
             return (
@@ -229,58 +265,64 @@ class ProductIndex extends React.Component {
         // || !this.state.pages[this.state.currentPage]
    
         
+        
 
         if (!this.state.rendered) {
             return <LoadingPage />
         } else {
             return (
                 <div className='index-container'>
-
-                    <div className='index-filter-sidebar'>
-
-
-
-                        <div className='price-filter'>
-                            <p>Price ($)</p>
-                            <label>
-                                <button className={`price-filter-btn ${this.state.checked === 'any' ? 'price-filter-btn-checked' : null}`} onClick={e => this.filterProducts(e, 'price', 'any')} ></button>Any Price</label>
-
-                            <label>
-                                <button className={`price-filter-btn ${this.state.checked === 'under 25' ? 'price-filter-btn-checked' : null}`} onClick={e => this.filterProducts(e, 'price', 'under 25')} ></button>Under $25</label>
-
-                            <label>
-                                <button className={`price-filter-btn ${this.state.checked === '25 to 250' ? 'price-filter-btn-checked' : null}`} onClick={e => this.filterProducts(e, 'price', '25 to 250')} ></button>$25 to $250</label>
-
-                            <label>
-                                <button className={`price-filter-btn ${this.state.checked === '250 to 500' ? 'price-filter-btn-checked' : null}`} onClick={e => this.filterProducts(e, 'price', '250 to 500')} ></button>$250 to $500</label>
-
-                            <label>
-                                <button className={`price-filter-btn ${this.state.checked === 'over 500' ? 'price-filter-btn-checked' : null}`} onClick={e => this.filterProducts(e, 'price', 'over 500')} ></button>Over $500</label>
-                        </div>
+                    <div className='index-header'>
+                        {/* <p>Tech & Accessories</p> */}
+                        {this.header()}
                     </div>
 
+                    <div className='index-bottom-container'>
+
+                        <div className='index-filter-sidebar'>
+                            <div className='price-filter'>
+                                <p>Price ($)</p>
+                                <label>
+                                    <button className={`price-filter-btn ${this.state.checked === 'any' ? 'price-filter-btn-checked' : null}`} onClick={e => this.filterProducts(e, 'price', 'any')} ></button>Any Price</label>
+
+                                <label>
+                                    <button className={`price-filter-btn ${this.state.checked === 'under 25' ? 'price-filter-btn-checked' : null}`} onClick={e => this.filterProducts(e, 'price', 'under 25')} ></button>Under $25</label>
+
+                                <label>
+                                    <button className={`price-filter-btn ${this.state.checked === '25 to 250' ? 'price-filter-btn-checked' : null}`} onClick={e => this.filterProducts(e, 'price', '25 to 250')} ></button>$25 to $250</label>
+
+                                <label>
+                                    <button className={`price-filter-btn ${this.state.checked === '250 to 500' ? 'price-filter-btn-checked' : null}`} onClick={e => this.filterProducts(e, 'price', '250 to 500')} ></button>$250 to $500</label>
+
+                                <label>
+                                    <button className={`price-filter-btn ${this.state.checked === 'over 500' ? 'price-filter-btn-checked' : null}`} onClick={e => this.filterProducts(e, 'price', 'over 500')} ></button>Over $500</label>
+                            </div>
+                        </div>
 
 
-                    <div className='index-products'>
-                        { (this.state.pages[0].length === 0 || this.state.pages === 0 || !this.state.pages[0] || !this.state.pages[this.state.currentPage]) ? <p>{noResults}</p> : (
+            
+                        <div className='index-products'>
+                            { (this.state.pages[0].length === 0 || this.state.pages === 0 || !this.state.pages[0] || !this.state.pages[this.state.currentPage]) ? <p>{noResults}</p> : (
+                            
+                            this.state.pages[this.state.currentPage].map((row, idx)=>{
+                                return (
+                                        <div className='index-row'>
+                                            <CatModuleContainer row={row} />
+                                        </div>
+                                        )
+                            }))}
+                        </div>
                         
-                        this.state.pages[this.state.currentPage].map((row, idx)=>{
-                            return (
-                                    <div className='index-row'>
-                                        <CatModuleContainer row={row} />
-                                    </div>
-                                    )
-                        }))}
-                    </div>
-                    
-                    <div className='index-btn-container'>
-                        {this.state.pages.length > 1  && this.state.currentPage !== this.state.pages.length-1 ? <p className='index-btn-text'>There's so much more for you to discover</p> : null}
+                        <div className='index-btn-container'>
+                            {this.state.pages.length > 1  && this.state.currentPage !== this.state.pages.length-1 ? <p className='index-btn-text'>There's so much more for you to discover</p> : null}
 
-                        <div className='index-btns-group'>
-                            <button className={`index-btn ${this.state.currentPage === 0 ? 'grayed-btn' : null}`} onClick={this.handlePrevPage}>{leftPageArrow}</button>
-                            {this.state.pages.map((page, idx) => <button onClick={e => this.handlePageClick(e, idx)}className={`index-btn ${this.state.currentPage === idx ? 'active-page' : null}`}>{idx + 1}</button>)}
-                            <button className={`index-btn ${this.state.currentPage === this.state.pages.length-1 ? 'grayed-btn' : null}`} onClick={this.handleNextPage}>{rightPageArrow}</button>
+                            <div className='index-btns-group'>
+                                <button className={`index-btn ${this.state.currentPage === 0 ? 'grayed-btn' : null}`} onClick={this.handlePrevPage}>{leftPageArrow}</button>
+                                {this.state.pages.map((page, idx) => <button onClick={e => this.handlePageClick(e, idx)}className={`index-btn ${this.state.currentPage === idx ? 'active-page' : null}`}>{idx + 1}</button>)}
+                                <button className={`index-btn ${this.state.currentPage === this.state.pages.length-1 ? 'grayed-btn' : null}`} onClick={this.handleNextPage}>{rightPageArrow}</button>
+                            </div>
                         </div>
+                                    
                     </div>
                 </div>
 
