@@ -113,11 +113,9 @@ class CartShow extends React.Component {
       
         // if (!this.props.cartItems) return null;
         // if (!this.props.currentUserId) return null;
-        if (!this.props.products) return null;
+        if (!this.props.products || !this.props.users) return null;
         // const cartItems = Array.from(this.props.cartItems);
         const {products, cartItems, users} = this.props
-
-        
 
         return (
           <div className='cart-outer-container'>

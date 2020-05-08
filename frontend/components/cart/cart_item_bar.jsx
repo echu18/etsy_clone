@@ -17,7 +17,7 @@ class CartItemBar extends React.Component {
     }
 
     componentDidMount(){
-        // debugger
+        debugger
     //     if (!this.props.products || !this.props.cartItem ) return null;
 
     //    const price = this.props.products[this.props.cartItem.product_id].price;
@@ -129,11 +129,15 @@ class CartItemBar extends React.Component {
 
         return (
             <div className="cart-item-bar">
-                <section>
-                    <img src={users[product.seller_id].photoUrls[0] ? users[product.seller_id].photoUrls[0] : `store.png`} />
-                    <p className='ci-store-name'>{users[product.seller_id].store_name ? users[product.seller_id].store_name : users[product.seller_id].username}</p>
-                    <p className='ci-contact-shop'>Contact shop</p>
-                </section>
+
+                {users[product.seller_id] === undefined ? null : (
+                    <section>
+                        <img src={users[product.seller_id].photoUrls[0] ? users[product.seller_id].photoUrls[0] : `store.png`} />
+                        <p className='ci-store-name'>{users[product.seller_id].store_name ? users[product.seller_id].store_name : users[product.seller_id].username}</p>
+                        <p className='ci-contact-shop'>Contact shop</p>
+                    </section>
+                    )
+                }
 
                 <div className="ci-block-upper">
                     <img
@@ -177,10 +181,13 @@ class CartItemBar extends React.Component {
                 </label>
 
                 <div className="ci-block-lower">
-                    <textarea
-                        className="add-note"
-                        placeholder={'Add a note to ' + `${users[product.seller_id].store_name ? users[product.seller_id].store_name : 'seller'}` + ' (optional)'}
-                    />
+                    
+                    {users[product.seller_id] === undefined ? null : (
+                        <textarea
+                            className="add-note"
+                            placeholder={'Add a note to ' + `${users[product.seller_id].store_name ? users[product.seller_id].store_name : 'seller'}` + ' (optional)'}
+                        />
+                    )}
                     <section>
                         <h3>Shipping: $3.99</h3>
                         <p>Estimated delivery: {this.shippingDate()} from United States</p>

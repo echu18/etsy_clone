@@ -61,7 +61,7 @@ class Splash extends React.Component{
                    <BuzzwordsBanner />
 
                     <div className='cat-modules cat-mod'>
-                        <div className='cat-module-1'>
+                        <div className='cat-module-1 cat-mod'>
                             <div className='cat-module-header'>
                                 <p className='cat-title'>Our picks for you</p> 
                                 <a href="#">See more</a>
