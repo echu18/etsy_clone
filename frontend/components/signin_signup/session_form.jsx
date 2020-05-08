@@ -18,7 +18,7 @@ class SessionForm extends React.Component {
         debugger
         if (e) e.preventDefault();
         const user = Object.assign({}, this.state);
-        this.props.processForm(user)
+        this.props.processForm(user).done(() => window.location.reload());
     }
 
     handleInput(type) {
@@ -28,14 +28,11 @@ class SessionForm extends React.Component {
     }
 
     loginDemoUser(){
-        debugger
         
         this.setState({
           email: "DemoUser",
           password: "123456",
         })
-        
-        // , () => this.handleSubmit())
     }
 
     render() {
