@@ -130,7 +130,7 @@ class CartItemBar extends React.Component {
         return (
             <div className="cart-item-bar">
                 <section>
-                    <img src={users[product.seller_id].photoUrls[0]} />
+                    <img src={users[product.seller_id].photoUrls[0] ? users[product.seller_id].photoUrls[0] : `store.png`} />
                     <p className='ci-store-name'>{users[product.seller_id].store_name ? users[product.seller_id].store_name : users[product.seller_id].username}</p>
                     <p className='ci-contact-shop'>Contact shop</p>
                 </section>
