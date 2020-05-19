@@ -35,9 +35,9 @@
     width: 100%;
 }
 
-@media only screen and (max-width: 1500px) {
+@media only screen and (max-width: 1900px) {
     #main {
-        min-width: 93vw;
+        min-width: 75vw;
         display: block;
         /* max-width: 95%; */
 
