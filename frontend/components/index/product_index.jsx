@@ -199,7 +199,6 @@ class ProductIndex extends React.Component {
 
 
     header() {
-            debugger
             if (this.props.location.search.includes('?category=')) {
 
                 switch (this.props.location.search) {
