@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import CartItemBar from './cart_item_bar'
 import {paypalIcon, visaIcon, discoverIcon, amexIcon, mastercardIcon } from '../../../app/assets/images/svgs/icons';
+import BioPopup from '../bio_popup';
 
 class CartShow extends React.Component {
     constructor(props) {
@@ -144,7 +145,8 @@ class CartShow extends React.Component {
                   <div className="cart-inner">
                     {this.state.showCheckoutPopup ? (
                       <div className="checkout-container">
-                        <div className="checkout-popup-overlay" onClick={this.toggleCheckoutPopup}></div>
+                        <BioPopup togglePopup={this.toggleCheckoutPopup}/>
+                        {/* <div className="checkout-popup-overlay" onClick={this.toggleCheckoutPopup}></div>
                         <div className="checkout-popup-text">
                           <h3>Thank you for your interest in Memesy!</h3>
                           <p className='checkout-bio'>
@@ -156,10 +158,9 @@ class CartShow extends React.Component {
                           <p>
                             The products on this site are for demo purposes only
                             and are unavailable for purchase (truly sorry!) Credits go to their original creators.
-                          </p>
+                          </p> */}
     
-                          <button onClick={this.toggleCheckoutPopup}>Close</button>
-                        </div>
+                      
                       </div>
                     ) : null}
 

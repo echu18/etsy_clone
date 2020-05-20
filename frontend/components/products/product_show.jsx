@@ -4,14 +4,19 @@ import { withRouter } from 'react-router'
 import ProductImage from './product_image';
 import ReviewContainer from '../reviews/review_container.jsx';
 import CartSidebarContainer from '../cart/cart_sidebar_container';
+import BioPopup from '../bio_popup';
 import { starIcon, halfStarIcon, rightArrow } from '../../../app/assets/images/svgs/icons'
 
 class ProductShow extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      showBioPopup: false,
+    };
 
     this.handleBackBtn = this.handleBackBtn.bind(this);
     this.getStars = this.getStars.bind(this);
+    this.toggleBioPopup = this.toggleBioPopup.bind(this);
   }
 
   componentDidMount() {
@@ -28,20 +33,24 @@ class ProductShow extends React.Component {
   getStars(rating) {
     if (!rating) return null;
 
-    const star = starIcon
-    const halfStar = halfStarIcon
+    const star = starIcon;
+    const halfStar = halfStarIcon;
 
     let stars = [];
-    for (let i = 0; i < rating -1 ; i++) {
+    for (let i = 0; i < rating - 1; i++) {
       stars.push(star);
     }
-    
+
     if (!Number.isInteger(rating)) stars.push(halfStar);
 
-    return stars
+    return stars;
   }
 
-
+  toggleBioPopup() {
+    this.setState({
+      showBioPopup: !this.state.showBioPopup,
+    });
+  }
 
   render() {
     window.scrollTo(0, 0);
@@ -122,9 +131,31 @@ class ProductShow extends React.Component {
                     </p>
                   </div>
                 </div>
-                <button className="message-seller-btn">
+                <button
+                  className="message-seller-btn"
+                  onClick={this.toggleBioPopup}
+                >
                   Message {seller.username}
                 </button>
+
+                {this.state.showBioPopup ? (
+                  <div className="bio-container">
+                    <BioPopup togglePopup={this.toggleBioPopup} offset={"bio-offset"}/>
+                    {/* <div className="checkout-popup-overlay" onClick={this.toggleCheckoutPopup}></div>
+                        <div className="checkout-popup-text">
+                          <h3>Thank you for your interest in Memesy!</h3>
+                          <p className='checkout-bio'>
+                            Memesy is a project by <span className='bio-name'>Jamie Chu</span>, a web developer
+                            and meme-lover from sunny California. To see more of
+                            her projects, please visit her{" "}
+                            <a href="https://www.jamiechu.dev" target="_blank">website</a>.
+                          </p>
+                          <p>
+                            The products on this site are for demo purposes only
+                            and are unavailable for purchase (truly sorry!) Credits go to their original creators.
+                          </p> */}
+                  </div>
+                ) : null}
               </div>
             </div>
           </div>
