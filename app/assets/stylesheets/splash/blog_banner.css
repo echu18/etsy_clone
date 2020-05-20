@@ -1,5 +1,7 @@
 .blog-banner-container {
     font-family: 'Helvetica', sans-serif;
+        color: rgb(53, 53, 53);
+
     letter-spacing: 0.02em;
     font-weight: 500;
     min-height: 500px;
@@ -30,7 +32,7 @@
     font-size: 12px;
     text-decoration: none;
     margin: 3px 10px 0px 10px;
-    color: rgb(73, 73, 73);
+    /* color: rgb(73, 73, 73); */
 }
 
 .blog-card-container {
@@ -84,6 +86,8 @@
 
 .blog-card-text > h4 {
     font-family: 'Arial', sans-serif;
+        /* color: rgb(73, 73, 73); */
+
     font-size: 16px;
     font-weight: 700;
     margin: 5px 0px 10px 0px;
@@ -91,6 +95,7 @@
 
 
 .blog-card-text > p {
+    /* color: rgb(73, 73, 73); */
     font-family: 'Arial', sans-serif;
     font-size: 13px;
     margin: 10px 0px 10px 0px;
