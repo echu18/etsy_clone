@@ -15,6 +15,7 @@ import FooterContainer from './footer/footer_container';
 import AboutBanner from '../components/main_content/about_banner';
 import NotFoundPage from '../components/not_found_page';
 import GiftsPage from "../components/gifts_page";
+import BlogBanner from '../components/main_content/blog_banner';
 
 const App = () => (
     <div id='app'>
@@ -41,6 +42,7 @@ const App = () => (
             </div>
             {/* <AboutBanner /> */}
         <Route exact path="/" component={AboutBanner} />
+        <Route exact path="/" component={BlogBanner} />
         {/* <span id='content-placeholder'></span> */}
         {/* <Route path="/" except="/cart_items" component={FooterContainer} /> */}
         <Route exact path="/" except="/cart_items" component={FooterContainer} />
