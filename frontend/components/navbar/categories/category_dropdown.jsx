@@ -24,6 +24,7 @@ class CategoryDropdown extends React.Component {
     } else if (this.props.location.search.includes(`category=${header.split(" ").join("%20").slice(0, -1)}`)) {
             window.location.reload()
     } else { 
+        this.props.clearSearchbar()
         this.props.history.push(`/search?category=${header}`)
     }
     }

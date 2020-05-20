@@ -50,10 +50,6 @@ class CartSidebar extends React.Component {
         });
     }
 
-    // handleAddToCart(e) {
-    //     e.preventDefault();
-    //     this.toggleCartPopup()
-    // }
 
     updateQuantity(e){
         this.setState({quantity: e.target.value})

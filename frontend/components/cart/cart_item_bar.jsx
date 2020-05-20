@@ -29,7 +29,7 @@ class CartItemBar extends React.Component {
     componentWillReceiveProps(nextProps){
 
         if (!!this.props.products[this.props.cartItem.product_id]){
-            debugger
+            
             const price = this.props.products[this.props.cartItem.product_id].price;
             const qty = nextProps.cartItem.quantity;
             const newPrice = price * qty;
@@ -144,7 +144,7 @@ class CartItemBar extends React.Component {
                     />
                     <div className="ci-name">
                         <p onClick={e => this.redirectToProductPage(e, product.id)}>{product.name}</p>
-                        <button>Save for later</button>
+                        {/* <button>Save for later</button> */}
                         <button onClick={this.handleDelete}>Remove</button>
                     </div>
                     <select id='ci-qty-dropdown' onChange={this.updateQuantity} quantity={this.state.quantity}>
