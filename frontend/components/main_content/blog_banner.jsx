@@ -34,7 +34,7 @@ class BlogBanner extends React.Component {
             <img src="spongebob.jpg" alt="" />
 
             <div className="blog-card-text">
-              <caption>ENTERTAINMENT</caption>
+              <aside>ENTERTAINMENT</aside>
               <h4>Mihoy Minoy: Spongebob's Most Meme-able Moments</h4>
               <p>
                 From Caveman Spongebob to Handsome Squidward, the Spongebob
@@ -49,8 +49,8 @@ class BlogBanner extends React.Component {
             <img src="print.jpg" alt="" />
 
             <div className="blog-card-text">
-              <caption>HEALTH & LIFESTYLE</caption>
-              <h4>Brighten Up Your Home</h4>
+              <aside>HEALTH & LIFESTYLE</aside>
+              <h4>Brighten Up Your Home With Custom Prints</h4>
               <p>
                 Start fresh this summer! We've rounded up the best products to
                 enhance your home and lifestyle. Brighten up your living space
@@ -64,7 +64,7 @@ class BlogBanner extends React.Component {
             <img src="surprised-pikachu.png" alt="" />
 
             <div className="blog-card-text">
-              <caption>FUNNY</caption>
+              <aside>FUNNY</aside>
               <h4>What Surprised Pikachu Saw Will Shock You</h4>
               <p>
                 Ever wonder why Ash never grows old? And what do carnivore

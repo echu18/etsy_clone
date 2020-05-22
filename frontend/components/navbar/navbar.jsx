@@ -429,7 +429,7 @@ class Navbar extends React.Component {
             return <CategoryDropdownContainer header={cat} key={idx} clearSearchbar={this.clearSearchbar}/>;
           })}
 
-          <CategoryDropdownContainer header={"Gifts"} />
+          {/* <CategoryDropdownContainer header={"Gifts"} /> */}
         </div>
 
         {this.state.receiveProducts < 1 ? <LoadingPage /> : null}
