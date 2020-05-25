@@ -22,10 +22,6 @@ const receiveProduct = payload => ({
     payload
 });
 
-// const receiveProduct = product => ({
-//     type: RECEIVE_PRODUCT,
-//     product
-// });
 
 const receiveErrors = errors => ({
     type: RECEIVE_ERRORS,
