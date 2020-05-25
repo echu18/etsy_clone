@@ -141,19 +141,6 @@ class ProductShow extends React.Component {
                 {this.state.showBioPopup ? (
                   <div className="bio-container">
                     <BioPopup togglePopup={this.toggleBioPopup} offset={"bio-offset"}/>
-                    {/* <div className="checkout-popup-overlay" onClick={this.toggleCheckoutPopup}></div>
-                        <div className="checkout-popup-text">
-                          <h3>Thank you for your interest in Memesy!</h3>
-                          <p className='checkout-bio'>
-                            Memesy is a project by <span className='bio-name'>Jamie Chu</span>, a web developer
-                            and meme-lover from sunny California. To see more of
-                            her projects, please visit her{" "}
-                            <a href="https://www.jamiechu.dev" target="_blank">website</a>.
-                          </p>
-                          <p>
-                            The products on this site are for demo purposes only
-                            and are unavailable for purchase (truly sorry!) Credits go to their original creators.
-                          </p> */}
                   </div>
                 ) : null}
               </div>

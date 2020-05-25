@@ -4,7 +4,6 @@
     flex-direction: column;
     height: 200px;
     margin: 50px 0px 0px 0px;
-    /* border: 1px solid red; */
 }
 
 .cart-sidebar-container > p {
@@ -35,9 +34,6 @@
     margin-bottom: 15px;
 }
 
-/* #sidebar-quantity-dropdown:hover {
-    cursor: pointer;
-} */
 
 
 .addtocart-btn {
@@ -144,8 +140,7 @@
     height: 25px;
     width: 100px;
     border: 1px solid gainsboro;
-    /* margin-top: 10px;
-    margin-bottom: 40px; */
+
 }
 
 .gotocart-btn:hover {

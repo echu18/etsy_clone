@@ -409,7 +409,6 @@ class Navbar extends React.Component {
           {display}
 
           {!!this.props.currentUserId ? (
-            // <Link to={`/users/${this.props.currentUser.id}/cart_items`}>
             <Link to={`/cart_items`}>
               <div className="navbar-icon cart-icon">
                 {cartIcon}{" "}
@@ -417,7 +416,6 @@ class Navbar extends React.Component {
                   <p className="cart-badge">{this.state.cartQty}</p>
                 ) : null}
               </div>
-              {/* </Link>) : <div className="navbar-icon cart-icon">{cartIcon}<p className='cart-badge'>{this.props.cartItems ? this.props.cartItems.length : null} </p> </div> }             */}
             </Link>
           ) : (
             <div className="navbar-icon cart-icon">{cartIcon} </div>
@@ -433,7 +431,6 @@ class Navbar extends React.Component {
         </div>
 
         {this.state.receiveProducts < 1 ? <LoadingPage /> : null}
-        {/* <LoadingPage />  */}
       </div>
     );
   }
