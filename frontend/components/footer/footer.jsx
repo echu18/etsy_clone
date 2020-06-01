@@ -66,7 +66,7 @@ class Footer extends React.Component {
                                 <div className='footer-logo-container'>
                                     <a href="https://www.github.com/echu18" target="_blank">{githubIcon}</a>
                                     <a href="https://www.linkedin.com/in/echu18" target="_blank">{linkedinIcon}</a>
-                                    <a href="https://echu18.github.io/" target="_blank">{briefcaseIcon}</a>
+                                    <a href="https://jamiechu.dev" target="_blank">{briefcaseIcon}</a>
                                     <a href="mailto:elizabethchu18@gmail.com">{convoIcon}</a>
                                     {/* {githubIcon}  {linkedinIcon} {briefcaseIcon} {convoIcon}  */}
                                 </div>

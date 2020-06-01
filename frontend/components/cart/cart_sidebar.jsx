@@ -50,10 +50,6 @@ class CartSidebar extends React.Component {
         });
     }
 
-    // handleAddToCart(e) {
-    //     e.preventDefault();
-    //     this.toggleCartPopup()
-    // }
 
     updateQuantity(e){
         this.setState({quantity: e.target.value})
@@ -65,16 +61,32 @@ class CartSidebar extends React.Component {
 
     render() {
         
+
+
+        const price = new Intl.NumberFormat("en-US", {
+          style: "currency",
+          currency: "USD",
+        }).format(this.props.product.price * this.state.quantity);
         // if (this.props.currentUser.id === undefined) return null;
         // if (this.props.product.id === undefined) return null;
 
         const addToCartPopup = 
         (
             <div className='addtocart-confirm'>
-                    <p>Added to your cart!</p>
-                    {/* <Link to={`/cart_items`}>Go to Cart</Link> */}
-                    <button onClick={this.redirectToCart}>Go to Cart</button>
-                    <button onClick={this.toggleCartPopup}>Close</button>
+                    <h3>Added to your cart!</h3>
+                    
+                    <div className='prod-cart-preview'>
+                        <img src={this.props.product.photoUrls[0]} alt="product photo"/>
+                        <div className='preview-text'>
+                            <p className='preview-prod-name'>{this.props.product.name}</p>
+                            <p className='preview-prod-qty'>Quantity: {this.state.quantity}</p>
+                            <p className='preview-prod-price'>{price}</p>
+                            <button className='gotocart-btn' onClick={this.redirectToCart}>Go to Cart</button>
+                        </div>
+                    </div>
+                    
+
+                    <button className='close-preview-btn' onClick={this.toggleCartPopup}>X</button>
             </div>
         )
 

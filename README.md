@@ -40,6 +40,54 @@ On the main page, users can view featured items.
 
 
 
+
+## Navbar
+-----------------
+![Navbar](https://etsy-clone-seed.s3-us-west-1.amazonaws.com/readme/navbar.png)
+
+The navbar is displayed on every page, and dynamically displays the user's login status, and if logged in, the number of items in the shopping cart. It is done by gathering session status from state, as well as updating cart items in the state whenever the cart is modified.
+
+<pre><code>
+{!!this.props.currentUserId ? (
+            <Link to={`/cart_items`}>
+              <div className="navbar-icon cart-icon">
+                {cartIcon}{" "}
+                {this.state.cartQty !== 0 ? (
+                  <p className="cart-badge">{this.state.cartQty}</p>
+                ) : null}
+              </div>
+            </Link>
+          ) : (
+            <div className="navbar-icon cart-icon">{cartIcon} </div>
+          )}
+        </div>
+</code></pre>
+
+Product categories on the navbar each lead to corresponding product result pages.
+
+Upon clicking the search bar, a popup will appear with search suggestions. Clicking on a search suggestion will automatically pre-fill the search bar with the search term, and then initate the search.
+
+
+![Search suggestion](https://etsy-clone-seed.s3-us-west-1.amazonaws.com/readme/suggestion.png)
+
+
+
+## Category Pages
+-----------------
+Several predefined category pages are available from the navbar. Clicking on these will lead to a product index page with that category, each with its own custom header.
+
+
+![Clothing category](https://etsy-clone-seed.s3-us-west-1.amazonaws.com/readme/clothing.png)
+
+<br/>
+<br/>
+
+![Cosplay category](https://etsy-clone-seed.s3-us-west-1.amazonaws.com/readme/cosplay.png)
+
+
+
+
+
 ## Product Page
 -----------------
 <br/>
@@ -66,6 +114,39 @@ On the main page, users can view featured items.
 * If the user does not have a profile image, it defaults to the grey user icon.
 <br/>
 
-![Product Page](https://etsy-clone-dev.s3-us-west-1.amazonaws.com/readme-images/review.png)
+![Review](https://etsy-clone-dev.s3-us-west-1.amazonaws.com/readme-images/review.png)
+
+
+
+<br/>
+<br/>
+
+
+
+
+
+
+## Cart
+-----------------
+<br/>
+
+Each item in the user's cart is passed into a CartItemBar component, which displays the individual item along with information such as its seller, quantity, and price.
+
+<pre><code> 
+{cartItems.map((cartItem, idx) => {
+                        return (
+                          <CartItemBar
+                            idx={idx}
+                            cartItem={cartItem}
+                            products={products}
+                            {...this.props}
+                            callbackFromParent={this.childCallback}
+                          />
+                        );
+                      })}
+                      </code></pre>
+
+
+![Cart](https://etsy-clone-seed.s3-us-west-1.amazonaws.com/readme/cart.png)
 
 

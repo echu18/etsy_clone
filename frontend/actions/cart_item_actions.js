@@ -55,9 +55,6 @@ export const fetchCartItemProducts = () => dispatch => getCartItems()
     .then(cartItems => dispatch(receiveCartItemProducts(cartItems)),
         error => dispatch(receiveErrors(error.responseJSON)))
 
-// export const fetchCartItem = (userId, cartItemId) => dispatch => getCartItem(userId, cartItemId)
-//     .then(cartItem => dispatch(receiveCartItem(cartItem)),
-//         error => dispatch(receiveErrors(error.responseJSON)))
 
 
 

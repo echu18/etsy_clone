@@ -29,7 +29,7 @@ class CartItemBar extends React.Component {
     componentWillReceiveProps(nextProps){
 
         if (!!this.props.products[this.props.cartItem.product_id]){
-            debugger
+            
             const price = this.props.products[this.props.cartItem.product_id].price;
             const qty = nextProps.cartItem.quantity;
             const newPrice = price * qty;
@@ -144,24 +144,16 @@ class CartItemBar extends React.Component {
                     />
                     <div className="ci-name">
                         <p onClick={e => this.redirectToProductPage(e, product.id)}>{product.name}</p>
-                        <button>Save for later</button>
+                        {/* <button>Save for later</button> */}
                         <button onClick={this.handleDelete}>Remove</button>
                     </div>
                     <select id='ci-qty-dropdown' onChange={this.updateQuantity} quantity={this.state.quantity}>
-                        {/* <option value='1' {cartItem.quantity === 1 ? selected : "" }>1</option> */}
-                        {/* <option value='1' selected={cartItem.quantity === 1 ? true : false}>1</option>
-                        <option value='2' selected={cartItem.quantity === 2 ? true : false}>2</option>
-                        <option value='3' selected={cartItem.quantity === 3 ? true : false}>3</option>
-                        <option value='4' selected={cartItem.quantity === 4 ? true : false}>4</option>
-                        <option value='5' selected={cartItem.quantity === 5 ? true : false}>5</option>
-                        <option value='6' selected={cartItem.quantity === 6 ? true : false}>6</option>
-                        <option value='7' selected={cartItem.quantity === 7 ? true : false}>7</option> */}
+            
 
                         {this.qtyDropdown()}
                     </select>
                     <p className="ci-price">
-                        {/* {this.updatePrice(product.price)} */}
-                        {/* {this.state.totalPrice} */}
+                   
                         {this.formatPrice(price)}
                     </p>
                 </div>

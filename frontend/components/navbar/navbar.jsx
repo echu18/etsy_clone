@@ -29,7 +29,8 @@ class Navbar extends React.Component {
     this.handleSearchClick = this.handleSearchClick.bind(this);
     this.toggleSuggestionBox = this.toggleSuggestionBox.bind(this);
     this.cartItemLength = this.cartItemLength.bind(this);
-    // this.resetForm = this.resetForm.bind(this);
+    this.clearSearchbar = this.clearSearchbar.bind(this);
+    this.setSearchBar = this.setSearchBar.bind(this);
   }
 
     componentDidMount() {
@@ -54,13 +55,13 @@ class Navbar extends React.Component {
 
     componentWillReceiveProps(nextProps, nextState) {
         
-        let receiveProducts;
-        if (this.state.receiveProducts === 0) {
-            receiveProducts = this.state.receiveProducts + 1
-        } 
+        // let receiveProducts;
+        // if (this.state.receiveProducts === 0) {
+        //     receiveProducts = this.state.receiveProducts + 1
+        // } 
 
         if (this.props.products !== nextProps.products && this.state.receiveProducts === 0) {
-            this.setState({receiveProducts: receiveProducts });
+            this.setState({receiveProducts: 1 });
         } else if (this.props.products === nextProps.products) {
             this.setState({receiveProducts: 0 });
         }
@@ -83,10 +84,12 @@ class Navbar extends React.Component {
       this.setState({ receiveProducts: 2 });
     }
 
-    if (this.props.location.search != prevProps.location.search) {
+    if (this.props.location.search !== prevProps.location.search && this.state.receiveProducts !== 2) {
       let params = this.props.location.search;
       // window.location.reload(), () => this.props.searchProducts(params).then(this.setState({ rendered: true }));
       this.props.searchProducts(params).then(this.setState({ rendered: true }));
+    } else if (this.props.location.search === prevProps.location.search && this.state.receiveProducts !== 2) {
+      this.setState({ receiveProducts: 2 });
     }
 
     if (this.props.cartItems != prevProps.cartItems) {
@@ -99,12 +102,9 @@ class Navbar extends React.Component {
         
 
 
-
-
-
     // if (this.props.location.search != prevProps.location.search) {
     //   let params = this.props.location.search;
-    //   this.props.searchProducts(params).then(this.setState({ rendered: true }));
+    //   this.props.searchProducts(params)
     // }
 
     // if (this.props.cartItems != prevProps.cartItems) {
@@ -119,7 +119,7 @@ class Navbar extends React.Component {
   }
 
   toggleSuggestionBox(e) {
-    e.preventDefault();
+    if (e) e.preventDefault();
     let suggestionBox = document.getElementsByClassName(
       "search-suggestion-box"
     )[0];
@@ -135,6 +135,11 @@ class Navbar extends React.Component {
     }
   }
 
+
+
+
+
+
   // toggleOverlay() {
   //     (this.state.showOverlay === "show-overlay") ?
   //         (this.setState({
@@ -147,7 +152,6 @@ class Navbar extends React.Component {
   // }
 
   signOutAndClear() {
-    debugger
     if (this.props.location.pathname === '/') {
       this.props.signOut()
     } else {
@@ -156,17 +160,16 @@ class Navbar extends React.Component {
     this.setState({ showPopup: false, receiveProducts: 1 })
   }
 
+
   redirectToHome() {
     // this.props.fetchSplashProducts()
-    // this.clearSearchbar()
+    this.clearSearchbar()
     this.props.clearProducts();
     // this.resetForm()
     this.props.history.push("/");
   }
 
-  // resetForm() {
-  //     document.forms['sb-form'].reset();
-  // }
+
 
   handleSubmit(e) {
     // e.preventDefault();
@@ -176,9 +179,13 @@ class Navbar extends React.Component {
         e.keyCode === 13 &&
         $(".searchbar-form input[type=text]").is(":focus")
       ) {
+        if (this.state.suggestionBox){
+          this.toggleSuggestionBox(e)
+        }
         this.props.searchProducts(this.state.query);
         // this.props.history.push(`/search`)
         this.props.history.push(`/search?query=${this.state.query}`);
+        
       }
     } else if (e.type === "click") {
       this.props.searchProducts(this.state.query);
@@ -194,13 +201,18 @@ class Navbar extends React.Component {
     this.setState({ query: e.target.value });
   }
 
-  // clearSearchbar(){
-  //     $('.searchbar-input').clearSearch();
-  // }
+  clearSearchbar(){
+    document.getElementsByClassName('searchbar-input')[0].value=''
+  }
+
+  setSearchBar(value){
+    document.getElementsByClassName("searchbar-input")[0].value = value;
+  }
 
   handleSearchClick(e, type, searchTerm) {
     e.preventDefault();
     // this.props.searchProducts({query: searchTerm})
+    this.setSearchBar(searchTerm)
     this.props.history.push(`/search?${type}=${searchTerm}`);
     this.toggleSuggestionBox(e);
   }
@@ -218,6 +230,12 @@ class Navbar extends React.Component {
 
   render() {
     // window.scrollTo(0, 0);
+
+ 
+
+
+
+
 
     const { currentUserId, signOut, signIn, clearErrors } = this.props;
     // debugger
@@ -279,7 +297,11 @@ class Navbar extends React.Component {
 
           <div className="searchbar">
             <div className="searchbar-form">
-              <form name="sb-form" onSubmit={(e) => e.preventDefault()}>
+              <form
+                name="sb-form"
+                id="sb-form"
+                onSubmit={(e) => e.preventDefault()}
+              >
                 <input
                   type="text"
                   onClick={this.toggleSuggestionBox}
@@ -297,6 +319,8 @@ class Navbar extends React.Component {
                 <div
                   className={this.state.showOverlay}
                   onClick={this.toggleSuggestionBox}
+                  // onClick={this.toggleSuggestionBox}
+                  // onKeyPress={e=>toggleSearchSuggestionBox(e)}
                 ></div>
                 <div className="search-suggestion-box suggestion-hidden">
                   <p
@@ -385,7 +409,6 @@ class Navbar extends React.Component {
           {display}
 
           {!!this.props.currentUserId ? (
-            // <Link to={`/users/${this.props.currentUser.id}/cart_items`}>
             <Link to={`/cart_items`}>
               <div className="navbar-icon cart-icon">
                 {cartIcon}{" "}
@@ -393,7 +416,6 @@ class Navbar extends React.Component {
                   <p className="cart-badge">{this.state.cartQty}</p>
                 ) : null}
               </div>
-              {/* </Link>) : <div className="navbar-icon cart-icon">{cartIcon}<p className='cart-badge'>{this.props.cartItems ? this.props.cartItems.length : null} </p> </div> }             */}
             </Link>
           ) : (
             <div className="navbar-icon cart-icon">{cartIcon} </div>
@@ -402,16 +424,13 @@ class Navbar extends React.Component {
 
         <div className="categories-bar">
           {categories.map((cat, idx) => {
-            return <CategoryDropdownContainer header={cat} key={idx} />;
+            return <CategoryDropdownContainer header={cat} key={idx} clearSearchbar={this.clearSearchbar}/>;
           })}
 
-          <CategoryDropdownContainer header={"Gifts"} />
+          {/* <CategoryDropdownContainer header={"Gifts"} /> */}
         </div>
 
-        {(this.state.receiveProducts < 1) ? <LoadingPage /> : null}
-        {/* {(this.state.receiveProducts !== 2) ? <LoadingPage /> : null} */}
-        {/* {(this.props.currentUserId && this.state.receiveProducts !== 2) ?  null : <LoadingPage /> } */}
-        {/* {(!this.props.currentUserId && this.state.receiveProducts === 1) ? null : <LoadingPage /> } */}
+        {this.state.receiveProducts < 1 ? <LoadingPage /> : null}
       </div>
     );
   }
@@ -419,16 +438,3 @@ class Navbar extends React.Component {
 
 export default withRouter(Navbar);
 
-
-
-
-
-// <categoryDropdownContainer header={'Jewelry & Accessories'} />
-//     <categoryDropdownContainer header={'Clothing & Shoes'} />
-//     <categoryDropdownContainer header={'Hom e& Living'} />
-//     <categoryDropdownContainer header={'Wedding & Party'} />
-//     <categoryDropdownContainer header={'Toys & Entertainment'} />
-//     <categoryDropdownContainer header={'Art & Collectibles'} />
-//     <categoryDropdownContainer header={'Craft Supplies'} />
-//     <categoryDropdownContainer header={'Vintage'} />
-//     <categoryDropdownContainer header={'Gifts'} />

@@ -13,7 +13,7 @@
     padding-right: 0px;
     margin-top: -1px;
     /* border: 1px solid blue; */
-    z-index: 50;
+    /* z-index: 50; */
 }
 
 .navbar-inner {
@@ -231,6 +231,7 @@
 
 .signin-signout:hover {
     background-color: gainsboro;
+    transition: background-color 0.2s ease-in;
     cursor: pointer;
 }
 
@@ -263,8 +264,12 @@
 
 .cart-icon:hover {
     background-color: gainsboro;
+    transition: background-color 0.2s ease-in;
     cursor: pointer;
 }
+
+
+
 
 
 .cart-badge {
@@ -286,7 +291,7 @@
     border: 1.5px solid whitesmoke;
 }
 
-
+/* 
 
 
 @media only screen and (min-width: 80%) {
@@ -294,33 +299,28 @@
       flex-wrap: wrap;
   }
 }
+*/
 
 
-@media only screen and (max-width: 1500px) {
+@media only screen and (max-width: 1900px) {
   .searchbar-form input[type="text"] {
-        min-width: 72vw;
-    }
-  /* .searchbar-form input[type="text"] {
-        min-width: 76vw;
-    } */
+        /* min-width: 57vw; */
+        width: 57vw;
+  }
 }
 
 
+/*
 
 @media only screen and (max-width: 900px) {
     .navbar {
         background-color: #FFFFFF;
-        /* width: 100%; */
-        /* min-width: 1000px; */
         height: auto;
-        /* height: 100px; */
         display: flex; 
         justify-content: flex-start;
-        /* flex-wrap: wrap; */
-        /* align-items: center; */
+
         font-family: 'Roboto', sans-serif;
         font-size: 13px;
-        /* padding-left: 10px; */
     }
 
     .searchbar-form {
@@ -338,13 +338,6 @@
         width: 75vw;
     }
 
-    /* .etsyLogo > svg {
-        box-sizing: border-box;
-        width: 87px;
-        height: 40px;
-        margin: 0px 0px 40px 0px;
-        fill: #F1651F;
-    } */
 
   
     .signin-signout {
@@ -356,7 +349,7 @@
         display: flex;
         justify-content: center;
         min-width: auto;
-        padding: 10px; /* this is for the hover circle, do not remove */
+        padding: 10px; 
         border-radius: 30px;
         box-sizing: border-box;
         margin: 0px 15% 40px -220px;
@@ -374,4 +367,4 @@
     }
 
 
-}
+} */
