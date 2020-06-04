@@ -1,21 +1,16 @@
 .image-and-sidebar {
     display: flex;
-    /* justify-content: space-between; */
     margin-top: 30px;
     height: 80vh;
-    /* border: 1px solid red; */
 }
 
 
 .product-sidebar {
     display: block;
-    /* max-width: 22vw; */
     min-width: 430px;
     max-width: 410px;
-    /* height: auto; */
     height: 2000px;
     margin-left: 10px;
-    /* border: 1px solid green; */
 }
 
 
@@ -55,10 +50,7 @@
     font-size: 25px;
     line-height: 1.2;
     font-family: 'Martel', serif;  /* font-weight is specify in font import url */
-    /* letter-spacing: 0rem; */
     margin: 5px 5px 30px 0px;
-    /* font-weight: 700; */
-    /* border: 1px solid orange; */
 }
 
 
@@ -70,7 +62,6 @@
     line-height: 1px;
     margin-bottom: 20px;
     font-weight: 400;
-    /* border: 1px solid orange; */
 }
 
 .product-price > span {
@@ -80,7 +71,6 @@
 
 .product-text {
     font-family: 'Arial', sans-serif;
-    /* min-width: 350px; */
     max-width: 100%;
     color: rgb(46, 46, 46)
 }
@@ -92,7 +82,6 @@
     height: auto;
     width: auto;
     margin: 20px 0px 20px 0px;
-    /* border: 1px solid fuchsia; */
 }
 
 .product-description-container > label {
@@ -100,7 +89,6 @@
     height: auto;
     font-size: 14px;
     padding: 1.5px 1.5px;
-    /* border: 1px solid blue; */
     margin-bottom: 10px;
     color: rgb(114, 114, 114);
 }
@@ -108,7 +96,6 @@
 .product-description-text {
     font-family: 'Raleway', sans-serif;
     line-height: 1.5;
-    /* margin: 100px 0px 500px 0px; */
 }
 
 
@@ -120,7 +107,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* width: 90px; */
     width: fit-content;
     font-weight: 500;
     white-space: nowrap;
@@ -138,7 +124,6 @@
     width: 12px;
     height: 12px;
     transform: rotate(90deg);
-    /* border: 1px solid red; */
 }
 
 .faqs-btn:hover {
@@ -156,7 +141,6 @@
     height: 150px;
     width: 100%;
     margin: -10px 0px 0px 0px;
-    /* border: 1px solid green; */
 }
 
 
@@ -166,7 +150,6 @@
     align-items: center;
     width: 100%;
     margin: 10px 0px 20px 0px;
-    /* border: 1px solid fuchsia; */
 }
 
 .seller-info-container > h3 {
@@ -179,7 +162,6 @@
     padding: 10px 0px 10px 0px;
     margin: 10px 0px 0px 0px;
     margin: 10px 0px 0px 0px;
-    /* border: 1px solid red; */
 }
 
 .seller-info {
@@ -189,7 +171,6 @@
     flex-wrap: wrap;
     max-width: 60%;
     margin: 20px 0px 20px 10px;
-    /* border: 1px solid red; */
 }
 
 .seller-info > h2 {
@@ -197,7 +178,6 @@
     font-size: 18px ;
     height: 25px;
     width: 100%;
-    /* border: 1px solid pink; */
 }
 
 .seller-info > p {
@@ -218,7 +198,6 @@
     width: 90px;
     height: 90px;
     border-radius: 50%;
-    /* border: 1px solid blue; */
 }
 
 
@@ -229,10 +208,8 @@
     border-style: none;
     background: none;
     color: #212121;
-    /* padding: 10px; */
     border-radius: 25px;
     font-size: 16px;
-    /* margin-top: px; */
     margin-bottom: 5px;
     border: 1.5px solid #212121;
 }
