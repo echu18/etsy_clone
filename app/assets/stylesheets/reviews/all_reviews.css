@@ -1,21 +1,16 @@
 .all-reviews-container {
     margin-top: 50px;
     margin-bottom: 400px;
-    /* border: 1px solid red; */
 }
 
 
 
 .review-header-divider {
     box-sizing: border-box;
-    /* width: 95%; */
     width: 44.5vw;
     height: auto;
-    /* margin-bottom: -40px; */
-    /* padding: 12px 0px 12px 0px; */
     margin: 20px 0px 20px 0px;
     border-bottom: 1.5px solid gainsboro;
-    /* border: 1px solid red; */
     z-index: -5;
 }
 
@@ -41,5 +36,4 @@
     height: auto;
     width: 68.5%;
     margin-top: 20px;
-    /* border: 1px solid orange; */
 }
