@@ -2,7 +2,6 @@
     display: flex;
     height: 170px;
     width: 80%;
-    /* border: 1px solid fuchsia; */
     font-family: 'Roboto', sans-serif;
 }
 
@@ -22,13 +21,8 @@
     height: auto;
     width: 200px;
     margin-bottom: 10px;
-    /* border: 1px solid blue; */
 }
 
-/* .reviewer-info {
-    display: flex;
-    align-items: center;
-} */
 
 
 .review-author {
