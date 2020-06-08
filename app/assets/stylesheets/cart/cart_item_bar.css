@@ -4,7 +4,6 @@
     height: 400px;
     width: 63%;
     margin: 20px 20px 50px 20px;
-    /* border: 1px solid purple; */
 }
 
 .cart-item-bar > section {
@@ -39,7 +38,6 @@
 .ci-block-upper, .ci-block-lower {
     position: relative;
     display: flex;
-    /* border: 1px solid blue; */
 }
 
 
@@ -151,7 +149,6 @@
 
 .ci-block-lower > textarea::placeholder {
     color: gray;
-    /* padding: 3px 0px 5px 5px; */
 }
 
 
@@ -195,7 +192,5 @@
     height: 1px;
     width: 100%;
     border-bottom: 1px solid gainsboro;
-    /* border: 1px solid blue; */
 
-    /* margin-bottom: 50px; */
 }

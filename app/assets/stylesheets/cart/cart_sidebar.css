@@ -104,7 +104,6 @@
     width: 200px;
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
 }
 
 .preview-prod-qty{
@@ -207,14 +206,3 @@
 }
 
 
-/* 
-#add-cart-signin::after {
-  content: " ";
-  position: absolute;
-  top: 100%; 
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: black transparent transparent transparent;
-} */
