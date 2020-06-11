@@ -24,8 +24,6 @@ class User < ApplicationRecord
     has_many_attached :photos
 
 
-    ## AASPIRE
-
     after_initialize :ensure_session_token
     attr_reader :password, :store_name 
 

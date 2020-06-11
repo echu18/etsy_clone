@@ -29,8 +29,6 @@ class Product < ApplicationRecord
 
     after_initialize :avg_rating
     attr_reader :avg_rating, :search
-    # belongs_to :category, foreign_key: :category_id, class_name: :Category   - category table not created yet
-    # has_many :cart_items, foreign_key: :product_id, class_name: :CartItem - cart table not created yet
 
     
 
@@ -42,16 +40,7 @@ class Product < ApplicationRecord
         
         @avg_rating
     end
-    # def self.avg_rating(product_id)
-    #     product = Product.find_by(id: product_id)
-    #     return 0 if product.nil?
-
-    #     total = 0 
-        
-    #     product.reviews.each {|review| total += review.rating}
-
-    #     @avg_rating = (total/product.reviews.count)
-    # end
+   
 
 
     def self.search(query)
@@ -59,7 +48,6 @@ class Product < ApplicationRecord
             if query.include?("?query=")
                 query = query[7..-1].split("%20").join(" ")
                 
-                # result = self.where("LOWER(name) LIKE ? OR LOWER(description) LIKE ?", "%#{query}%", "%#{query}%")
                 result = self.where("LOWER(name) LIKE ? OR LOWER(description) LIKE ?", "%#{query}%", "%#{query}%")
                 if result 
                     @products = result
