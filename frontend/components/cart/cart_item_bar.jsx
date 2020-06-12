@@ -4,27 +4,16 @@ class CartItemBar extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            // user_id: this.props.currentUserId,
             product_id: this.props.cartItem.id,
-            // quantity: this.props.cartItem.quantity,
             totalPrice: 0,
             fulfilled: false
         }
-        // this.handleSubmit = this.handleSubmit.bind(this);
         this.updateQuantity = this.updateQuantity.bind(this);
         this.handleDelete = this.handleDelete.bind(this);
         this.redirectToProductPage = this.redirectToProductPage.bind(this)
     }
 
-    componentDidMount(){
-        // debugger
-    //     if (!this.props.products || !this.props.cartItem ) return null;
 
-    //    const price = this.props.products[this.props.cartItem.product_id].price;
-    //    const qty = this.props.cartItem.quantity;
-    //    const initialPrice = price * qty;
-    //     this.setState({ totalPrice: initialPrice, quantity: qty})
-    }
 
     componentWillReceiveProps(nextProps){
 

@@ -9,10 +9,6 @@ const receiveCurrentUser = payload => ({
     type: RECEIVE_CURRENT_USER,
     payload
 });
-// const receiveCurrentUser = currentUser => ({
-//     type: RECEIVE_CURRENT_USER,
-//     currentUser
-// });
 
 const signoutCurrentUser = () => ({
     type: LOGOUT_CURRENT_USER

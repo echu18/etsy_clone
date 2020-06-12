@@ -37,10 +37,7 @@ const receiveErrors = errors => ({
     errors
 })
 
-// const removeCartItem = (cartItem) => ({
-//     type: CLEAR_CART_ITEM,
-//     cartItem
-// })
+
 
 const removeCartItems = () => ({
     type: CLEAR_CART_ITEMS
