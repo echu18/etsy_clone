@@ -5,8 +5,7 @@ import { signUp, signIn, signOut, clearErrors } from '../../actions/session_acti
 import CartSidebar from './cart_sidebar';
 
 
-const mapStateToProps = (state, ownProps) => ({
-    // products: state.entities.products,
+const mapStateToProps = (state) => ({
     cartItems: state.entities.cartItems,
     currentUserId: state.session.currentUserId
 })
