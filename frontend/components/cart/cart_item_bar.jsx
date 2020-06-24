@@ -72,7 +72,6 @@ class CartItemBar extends React.Component {
 
     handleDelete(e){
         e.preventDefault()
-        debugger
         this.props.deleteCartItem(this.props.cartItem.id)
     }
 
@@ -120,7 +119,7 @@ class CartItemBar extends React.Component {
             <div className="cart-item-bar">
                 <section>
                     <img src={users[product.seller_id].photoUrls[0] ? users[product.seller_id].photoUrls[0] : `store.png`} />
-                    <p className='ci-store-name'>{users[product.seller_id].store_name ? users[product.seller_id].store_name : users[product.seller_id].username}</p>
+                    <p className='ci-store-name'>{users[product.seller_id].store_name ? users[product.seller_id].store_name : users[product.seller_id].username + "\'s Store"}</p>
                     <p className='ci-contact-shop'>Contact shop</p>
                 </section>
 

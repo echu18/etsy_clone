@@ -33,6 +33,9 @@ class Review extends React.Component {
         const stars = [starIcon, starIcon, starIcon, starIcon, starIcon]
         const starSeq = stars.slice(0, rating)
         
+        
+        const reviewDate = new Date(this.props.review.updated_at)
+
         return(
             <div className='review-container'>
                 {(Array.from(author.photoUrls).length === 0) ? <img src='https://etsy-clone-seed.s3-us-west-1.amazonaws.com/profile-images/anon.png'/> : <img src={(Array.from(author.photoUrls)[0])}/>}
@@ -41,7 +44,9 @@ class Review extends React.Component {
                     <div className='review-content'>
                         <div className='min-header'>
                             <h3 className='review-author'>{author.username}</h3>
-                            <h3 className='review-date'>Jan 23, 2020</h3>
+                            {/* <h3 className='review-date'>Jan 23, 2020</h3> */}
+                        {/* <h3 className='review-date'>{!!review.updated_at ? review.updated_at : "Jan 23, 2020" }</h3> */}
+                        <h3 className='review-date'>{reviewDate.toDateString()}</h3>
                         </div>
                         
                         <div className='review-rating'>

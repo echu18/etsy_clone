@@ -35,6 +35,8 @@ json.reviews do
         json.body review.body
         json.author_id review.author_id
         json.rating review.rating
+        json.created_at review.created_at
+        json.updated_at review.updated_at
     end
 end
 

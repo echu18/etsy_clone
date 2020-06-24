@@ -15,7 +15,6 @@ class SessionForm extends React.Component {
     }
 
     handleSubmit(e) {
-        debugger
         if (e) e.preventDefault();
         const user = Object.assign({}, this.state);
         this.props.processForm(user).done(() => window.location.reload());

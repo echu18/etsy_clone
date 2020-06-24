@@ -15,7 +15,9 @@ class Popup extends React.Component {
     }
 
     componentDidUpdate() {
-        this.props.clearErrors()
+        if (this.props.errors) {
+            this.props.clearErrors()
+        }
     }
 
     toggleOverlay() {

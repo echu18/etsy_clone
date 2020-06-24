@@ -34,7 +34,6 @@ class Navbar extends React.Component {
   }
 
     componentDidMount() {
-        // debugger
         
         //  if (this.props.history.location === this.props.location) {
         //   this.setState({receiveProducts: 1, rendered: true})

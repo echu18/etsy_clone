@@ -28,3 +28,19 @@ export const fetchReview = (productId, reviewId) => dispatch => getReview(produc
 
 
 export const clearReviews = () => dispatch => dispatch(removeReviews())
+
+
+
+
+export const addReview = (data) => dispatch => createReview(data)
+    .then(review => dispatch(receiveReview(review)),
+        error => dispatch(receiveErrors(error.responseJSON)))
+
+
+export const editReview = (reviewId) => dispatch => modifyReview(reviewId)
+    .then(review => dispatch(receiveReview(review)),
+        error => dispatch(receiveErrors(error.responseJSON)))
+
+
+export const deleteReview = (reviewId) => dispatch => destroyReview(reviewId)
+    .then(review => dispatch(receiveReview(review)));

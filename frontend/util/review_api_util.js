@@ -19,3 +19,20 @@ export const createReview = review => {
         data: { review }
     })
 };
+
+
+export const modifyReview = review => {
+    return $.ajax({
+        method: 'PATCH',
+        url: `api/reviews/${reviewId}`,
+        data: { review }
+    })
+};
+
+
+export const destroyReview = (reviewId) => {
+    return $.ajax({
+        url: `/api/reviews/${reviewId}`,
+        method: "DELETE"
+    });
+};

@@ -68,8 +68,7 @@ class Api::CartItemsController < ApplicationController
             if @cart_item.delete
                 @cart_items = CartItem.all.select {|cart_item| cart_item.user_id == current_user.id && cart_item.fulfilled == false}        
 
-                # debugger
-                # @cart_items = CartItem.all.select {|cart_item| cart_item.user_id == current_user.id && cart_item.fulfilled == false}        
+            
                 render :show
             end
         else  
