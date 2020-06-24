@@ -57,13 +57,12 @@
         min-width: 900px;
         border: 1px solid green;
     }
-} 
+} */ 
  
 @media only screen and (max-width: 900px) {
     #main {
-        /* margin-left: 5%;
-        margin-right: 5%; */
-        /* min-width: 900px;
-        border: 1px solid blue;
+       
+        min-width: 600px;
+        /* border: 1px solid blue; */
     }
-} */ 
+} 
