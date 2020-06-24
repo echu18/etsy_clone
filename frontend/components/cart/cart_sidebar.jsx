@@ -16,7 +16,6 @@ class CartSidebar extends React.Component {
             showSigninPopup: false
         }
         this.handleSubmit = this.handleSubmit.bind(this);
-        // this.handleAddToCart = this.handleAddToCart.bind(this);
         this.updateQuantity = this.updateQuantity.bind(this);
         this.toggleCartPopup = this.toggleCartPopup.bind(this);
         this.toggleSigninPopup = this.toggleSigninPopup.bind(this);
@@ -37,14 +36,12 @@ class CartSidebar extends React.Component {
     }
 
     toggleCartPopup() {
-        // e.preventDefault();
         this.setState({
             showCartPopup: !this.state.showCartPopup
         });
     }
 
     toggleSigninPopup() {
-        // e.preventDefault();
         this.setState({
             showSigninPopup: !this.state.showSigninPopup
         });
@@ -67,8 +64,7 @@ class CartSidebar extends React.Component {
           style: "currency",
           currency: "USD",
         }).format(this.props.product.price * this.state.quantity);
-        // if (this.props.currentUser.id === undefined) return null;
-        // if (this.props.product.id === undefined) return null;
+     
 
         const addToCartPopup = 
         (

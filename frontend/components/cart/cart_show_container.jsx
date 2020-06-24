@@ -8,7 +8,6 @@ import {
   deleteCartItem,
   clearCartItems,
 } from "../../actions/cart_item_actions";
-// import {cur} from '../../actions/user_actions';
 import CartShow from './cart_show';
 import { connect } from 'react-redux';
 

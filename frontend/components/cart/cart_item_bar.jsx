@@ -168,7 +168,7 @@ class CartItemBar extends React.Component {
                     </section>
                 </div>
                 <button className="checkout-shop-btn">
-                    Check out from only this shop >{" "}
+                    Check out from only this shop {"> "}
                 </button>
 
                 {this.props.idx === this.props.cartItems.length-1 ? null : (
