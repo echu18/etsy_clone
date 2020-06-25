@@ -5,7 +5,7 @@ import ProductImage from './product_image';
 import ReviewContainer from '../reviews/review_container.jsx';
 import CartSidebarContainer from '../cart/cart_sidebar_container';
 import BioPopup from '../bio_popup';
-import ReviewFormContainer from '../../components/reviews/review_form_container';
+import ReviewFormcontainer from '../../components/reviews/review_form_container.jsx'
 import { starIcon, halfStarIcon, rightArrow } from '../../../app/assets/images/svgs/icons'
 
 class ProductShow extends React.Component {
@@ -76,7 +76,7 @@ class ProductShow extends React.Component {
     // const starSeq = stars.slice(0, this.props.product.avg_rating);
 
     const starSeq = this.getStars(this.props.product.avg_rating);
-    
+
     return (
       <div className="product-listing-container">
         {/* <button onClick={e=>this.handleBackBtn(e)}> Back to search results</button> */}
@@ -159,16 +159,14 @@ class ProductShow extends React.Component {
             reviews.map((review, idx) => {
               return (
                 <div className="single-review" key={idx}>
-                  <ReviewContainer review={review} />
+                  <ReviewContainer review={review} reviewNumber={reviews.length-1-idx} productId={this.props.product.id}/>
                 </div>
               );
             })
           )}
-            <ReviewFormContainer product={this.props.product}/>
-
-
         </div>
 
+            {/* <ReviewFormContainer /> */}
 
 
 

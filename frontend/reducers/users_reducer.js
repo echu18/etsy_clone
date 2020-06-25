@@ -13,7 +13,10 @@ export default (state = {}, action) => {
             // return Object.assign({}, state, { [user.id]: user })
             return Object.assign({}, state, action.payload.users )
         case RECEIVE_REVIEW:
-            return Object.assign({},state, action.payload.authors)
+            // debugger
+            let author = Object.values(action.review)[0].author_id
+
+            return Object.assign({},state, author )
         case RECEIVE_PRODUCT: 
             return Object.assign({}, state, action.payload.users)
         case RECEIVE_CART_ITEMS: 

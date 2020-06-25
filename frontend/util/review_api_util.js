@@ -13,6 +13,7 @@ export const getReview = (productId, reviewId) => {
 }
 
 export const createReview = review => {
+    
     return $.ajax({
         method: 'POST',
         url: 'api/reviews',
@@ -21,7 +22,7 @@ export const createReview = review => {
 };
 
 
-export const modifyReview = review => {
+export const modifyReview = (reviewId, review) => {
     return $.ajax({
         method: 'PATCH',
         url: `api/reviews/${reviewId}`,

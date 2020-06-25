@@ -1,13 +1,39 @@
-.review-form-stars {
+/* .review-form-stars {
     width: 200px;
     height: 50px;
     border: 1px solid blue;
+} */
+
+
+.review-form-container {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid red;
+}
+
+.review-form-container > h3 {
+    margin: 10px 0px;
+}
+
+.delete-review-confirm {
+    display: block;
+    position: absolute;
+    /* margin-top: 50%;
+    margin-left: auto; */
+    height: 300px;
+    width: 500px;
+    border: 1px solid blue;
+}
+
+
+.review-form-content {
+    margin: 0px 0px;
 }
 
 .rev-star {
     min-height: 20px;
     min-width: 20px;
-    border: 1px solid red;
 }
 
 .rev-star > svg {

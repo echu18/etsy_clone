@@ -8,25 +8,29 @@ class ReviewForm extends React.Component {
         super(props)
         this.state = {
             user_id: this.props.currentUser,
+            productId: this.props.productId,
             reviewText: "",
-            rating: null,
+            rating: this.props.rating,
             starRating: [emptyStarIcon, emptyStarIcon, emptyStarIcon, emptyStarIcon, emptyStarIcon],
-            showSigninPopup: false
+            showSigninPopup: false,
+            prefill: ""
         }
         this.toggleSigninPopup = this.toggleSigninPopup.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
         this.starSeq = this.starSeq.bind(this);
     }
 
     // componentDidUpdate() {
-    //     if (this.props.currentUser){
-
-    //         if (this.props.currentUser.id !== this.state.user_id) {
+    //     if (this.props.currentUser !== this.state.user_id){
     //             this.setState({user_id: this.props.currentUser.id})
-    //         }
+            
     //     }
     // }
 
  
+    // componentDidMount(){
+    //     this.setState({user_id:})
+    // }
 
 
     toggleSigninPopup() {
@@ -38,15 +42,28 @@ class ReviewForm extends React.Component {
 
 
     handleSubmit(e) {
+        
         if (e) e.preventDefault();
-        this.props.addReview({author_id: this.state.user_id,
-                                product_id: this.props.product.id,
-                                rating: this.state.rating,
-                                reviewText: this.state.reviewText
 
-        })
-
+        if (this.props.type === 'editReview') {
+            
+            this.props.editReview(this.props.review.id, {
+                author_id: this.state.user_id,
+                product_id: this.state.productId,
+                rating: this.state.rating,
+                body: this.state.reviewText
+            }).then(() => window.location.reload())
+        } else if (this.props.type === 'createReview'){
+            this.props.addReview({author_id: this.state.user_id,
+                product_id: this.state.productId,
+                rating: this.state.rating,
+                body: this.state.reviewText
+            })
+            .then(() => window.location.reload())   
+        }
     }
+
+
 
     handleInput(type) {
         return (e) => {
@@ -67,12 +84,12 @@ class ReviewForm extends React.Component {
         for (let j= 5; j > num; j--){
             starSeq.push(emptyStarIcon)
         }
-        this.setState({starRating: starSeq})
+        this.setState({starRating: starSeq, rating: num})
     }
 
     render() {
 
-    
+        
 
         return (
             <div className='review-form-container'>
@@ -89,10 +106,10 @@ class ReviewForm extends React.Component {
 
                     <h3>Add a review</h3>
 
-                <div className='review-content'>
+                <div className='review-form-content'>
                     <form for='review-form' onSubmit={this.handleSubmit}>
                         <div className='min-header'>
-                            <h3 className='review-author'>{currentUser.username}</h3>
+                            {/* <h3 className='review-author'>{currentUser.username}</h3> */}
                             {/* <h3 className='review-date'>{todayDate.toDateString()}</h3> */}
                         </div>
 
@@ -112,11 +129,11 @@ class ReviewForm extends React.Component {
 
                         <textarea onClick={this.props.currentUser ? null : this.toggleSigninPopup}
                             className="add-review"
-                            placeholder={'Write your review here...'}
+                            placeholder={this.props.prefill ? this.props.prefill : 'Write your review here...'}
                             onChange={this.handleInput('reviewText')} 
                         />
 
-                        <button></button>
+                        <button >Save Review</button><div onClick={this.props.toggleEditOff}>Cancel</div> 
                     </form>
                 </div>
 
