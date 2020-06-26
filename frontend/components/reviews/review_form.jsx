@@ -107,7 +107,7 @@ class ReviewForm extends React.Component {
                     <h3>Add a review</h3>
 
                 <div className='review-form-content'>
-                    <form for='review-form' onSubmit={this.handleSubmit}>
+                    <form for='review-form'>
                         <div className='min-header'>
                             {/* <h3 className='review-author'>{currentUser.username}</h3> */}
                             {/* <h3 className='review-date'>{todayDate.toDateString()}</h3> */}
@@ -115,9 +115,6 @@ class ReviewForm extends React.Component {
 
                         <div className='review-form-stars'>
                             {/* {this.state.starRating.forEach((star, i) => <span class='rev-star-1' onClick={e=> this.starSeq(e, i + 1)}>{star}</span>)} */}
-
-
-
 
                            <span class='rev-star rev-star-1' onMouseEnter={e => this.starSeq(e, 1)}>{this.state.starRating[0]}</span>
                             <span class='rev-star rev-star-2' onMouseEnter={e => this.starSeq(e, 2)}>{this.state.starRating[1]}</span>
@@ -132,8 +129,10 @@ class ReviewForm extends React.Component {
                             placeholder={this.props.prefill ? this.props.prefill : 'Write your review here...'}
                             onChange={this.handleInput('reviewText')} 
                         />
-
-                        <button >Save Review</button><div onClick={this.props.toggleEditOff}>Cancel</div> 
+                        
+                        <div className='review-btns'>
+                            <div onClick={this.handleSubmit} >Save Review</div><div onClick={this.props.toggleEditOff}>Cancel</div> 
+                        </div>
                     </form>
                 </div>
 

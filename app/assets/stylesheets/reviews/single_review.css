@@ -5,15 +5,12 @@
     font-family: 'Roboto', sans-serif;
 }
 
-
-
-.review-content {  /* aligns all review content */
-    display: flex;
-    line-height: 1.5;
-    flex-direction: column;
-    margin-top: -27px;
-    margin-left: 55px;
+.review-img-container {
+    width: 45px;
+    margin: 0;
 }
+
+
 
 .min-header {
     display: flex;
@@ -36,7 +33,7 @@
     margin-left: 7px;
 }
 
-.review-container > img {
+.review-img-container > img {
     display: block;
     height: 45px;
     width: 45px;

@@ -41,8 +41,17 @@
 
 .review-container {
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     height: auto;
     width: 68.5%;
-    margin-top: 20px;
+    /* margin-top: 20px; */
+}
+
+.review-content {  /* aligns all review content */
+    display: flex;
+    line-height: 1.5;
+    flex-direction: column;
+    /* margin-top: -27px; */
+    margin-left: 55px;
+    /* margin: 50px 0; */
 }

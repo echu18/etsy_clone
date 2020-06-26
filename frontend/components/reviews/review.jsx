@@ -86,8 +86,9 @@ class Review extends React.Component {
                 </div>
 
 
-
-                {(Array.from(author.photoUrls).length === 0) ? <img src='https://etsy-clone-seed.s3-us-west-1.amazonaws.com/profile-images/anon.png'/> : <img src={(Array.from(author.photoUrls)[0])}/>}
+                <div className='review-img-container'>
+                    {(Array.from(author.photoUrls).length === 0) ? <img src='https://etsy-clone-seed.s3-us-west-1.amazonaws.com/profile-images/anon.png'/> : <img src={(Array.from(author.photoUrls)[0])}/>}
+                </div>
                 
                 {this.state.editable ? <ReviewFormContainer prefill={review.body} review={review} toggleEditOff={this.toggleEditOff} productId={this.props.productId} currentUserId={currentUserId} rating={review.rating} type={'editReview'}/> : (
                     <div className='review-content'>
@@ -104,16 +105,16 @@ class Review extends React.Component {
 
                         <div className='review-body' id={'review' + review.id}>
                             <p>{review.body}</p>
-                    </div>
+                        </div>
 
                     {currentUserId === author.id ? 
-                    <div>
-                                <button onClick={this.toggleEditOn}>Edit</button><button onClick={this.handleDelete}>Delete</button>
-                    </div>
+                        <div>
+                            <button onClick={this.toggleEditOn}>Edit</button><button onClick={this.handleDelete}>Delete</button>
+                        </div>
                         : null}
 
                         {reviewNumber !== 0 ? null : (this.state.editable) ? null: <ReviewFormContainer productId={this.props.productId} type={'createReview'}/>}
-                </div>
+                    </div>
                 )}
             </div>
 
