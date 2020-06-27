@@ -44,22 +44,22 @@ class ReviewForm extends React.Component {
         
         if (e) e.preventDefault();
 
-        if (this.props.type === 'editReview') {
+        // if (this.props.type === 'editReview') {
             
-            this.props.editReview(this.props.review.id, {
-                author_id: this.state.user_id,
-                product_id: this.state.productId,
-                rating: this.state.rating,
-                body: this.state.reviewText
-            }).then(() => window.location.reload())
-        } else if (this.props.type === 'createReview'){
+        //     this.props.editReview(this.props.review.id, {
+        //         author_id: this.state.user_id,
+        //         product_id: this.state.productId,
+        //         rating: this.state.rating,
+        //         body: this.state.reviewText
+        //     }).then(() => window.location.reload())
+        // } else if (this.props.type === 'createReview'){
             this.props.addReview({author_id: this.state.user_id,
                 product_id: this.state.productId,
                 rating: this.state.rating,
                 body: this.state.reviewText
             })
             .then(() => window.location.reload())   
-        }
+        // }
     }
 
 

@@ -25,6 +25,13 @@
     background: white;
 }
 
+ .edit-review {
+    height: 100px; 
+    width: 600px;
+    border-radius: 3px;
+    background: white;
+ }
+
 .review-form-content textarea:focus {
     outline: none;
 }

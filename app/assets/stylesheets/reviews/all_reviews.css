@@ -68,3 +68,28 @@
     margin-left: 55px;
     /* margin: 50px 0; */
 }
+
+
+
+
+.review-edit-btns {
+    font-size: 12px;
+    display: flex;
+    /* justify-content: flex-end; */
+    margin-top: 10px;
+
+}
+
+.review-edit-btns > div {
+    border: 1px solid gainsboro;
+    border-radius: 3px;
+    padding: 1px 3px;
+}
+
+.review-edit-btns > div:first-of-type {
+    margin-right: 5px;
+}
+
+.review-edit-btns > div:hover {
+    cursor: pointer;
+}
