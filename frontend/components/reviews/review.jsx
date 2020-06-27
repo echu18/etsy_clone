@@ -80,9 +80,11 @@ class Review extends React.Component {
             <div className='review-container'>
 
                 <div className={this.state.deletePopup === true ? 'delete-review-confirm' : 'hidden'}>
-                    <h3>Confirm deletion</h3>
-                    <button onClick={this.confirmDelete}>Delete</button>
-                    <button onClick={this.cancelDelete}>Cancel</button>
+                    <h3>Confirm deletion?</h3>
+                    <div>
+                        <button onClick={this.confirmDelete}>Delete</button>
+                        <button onClick={this.cancelDelete}>Cancel</button>
+                    </div>
                 </div>
 
 

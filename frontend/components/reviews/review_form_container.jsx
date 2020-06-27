@@ -8,7 +8,7 @@ import ReviewForm from './review_form';
 const mapStateToProps = (state, ownProps) => ({
     currentUser: state.session.currentUserId,
     // product: state.product,
-    errors: [state.errors.session.errors],
+    errors: Object.values(state.errors.review),
 });
 
 const mapDispatchToProps = (dispatch) => ({

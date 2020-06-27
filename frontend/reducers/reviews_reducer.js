@@ -20,6 +20,7 @@ export default (state = {}, action) => {
             return Object.assign({}, state, action.payload.reviews)
         case CLEAR_REVIEWS:
             return {}
+   
         default:
             return state
     }

@@ -4,7 +4,9 @@ export const RECEIVE_REVIEW = 'RECEIVE_REVIEW';
 export const RECEIVE_REVIEWS = 'RECEIVE_REVIEWS';
 export const CLEAR_REVIEWS = 'CLEAR_REVIEWS';
 export const REMOVE_REVIEW = 'REMOVE_REVIEW';
-export const RECEIVE_ERRORS = 'RECEIVE_ERRORS';
+export const RECEIVE_REVIEW_ERRORS = 'RECEIVE_REVIEW_ERRORS';
+export const CLEAR_ERRORS = 'CLEAR_ERRORS';
+
 
 
 const receiveReviews = reviews => ({
@@ -27,8 +29,12 @@ const removeReview = review => ({
 })
 
 const receiveErrors = errors => ({
-    type: RECEIVE_ERRORS,
+    type: RECEIVE_REVIEW_ERRORS,
     errors
+})
+
+const removeErrors = () => ({
+    type: CLEAR_ERRORS
 })
 
 
@@ -56,3 +62,6 @@ export const editReview = (reviewId, data) => dispatch => modifyReview(reviewId,
 
 export const deleteReview = (reviewId) => dispatch => destroyReview(reviewId)
     .then(review => dispatch(removeReview(review)));
+
+
+export const clearErrors = () => dispatch => dispatch(removeErrors())

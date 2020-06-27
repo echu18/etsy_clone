@@ -47,6 +47,19 @@
     /* margin-top: 20px; */
 }
 
+
+
+.delete-review-confirm  button:first-of-type {
+    margin-right: 5px;
+}
+
+.delete-review-confirm  button:hover {
+    cursor: pointer;
+}
+
+
+
+
 .review-content {  /* aligns all review content */
     display: flex;
     line-height: 1.5;

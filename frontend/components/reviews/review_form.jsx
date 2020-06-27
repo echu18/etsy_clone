@@ -20,10 +20,9 @@ class ReviewForm extends React.Component {
         this.starSeq = this.starSeq.bind(this);
     }
 
-    // componentDidUpdate() {
-    //     if (this.props.currentUser !== this.state.user_id){
-    //             this.setState({user_id: this.props.currentUser.id})
-            
+    // componentDidUpdate(prevProps) {
+    //     if (this.props.errors !== prevProps.errors){
+    //         this.setState({user_id: this.props.currentUser.id})
     //     }
     // }
 
@@ -88,8 +87,18 @@ class ReviewForm extends React.Component {
     }
 
     render() {
+        let errors;
 
-        
+        if (this.props.errors.length !== 0){
+            errors = (
+                <div className='review-errors'>
+
+                    <p>{this.props.errors[0]}</p> 
+                    <p>{this.props.errors[1]}</p>
+                    
+                </div>
+            )
+        }
 
         return (
             <div className='review-form-container'>
@@ -105,6 +114,8 @@ class ReviewForm extends React.Component {
                 {/* {(Array.from(currentUser.photoUrls).length === 0) ? <img src='https://etsy-clone-seed.s3-us-west-1.amazonaws.com/profile-images/anon.png' /> : <img src={(Array.from(currentUser.photoUrls)[0])} />} */}
 
                     <h3>Add a review</h3>
+
+                    {errors}
 
                 <div className='review-form-content'>
                     <form for='review-form'>

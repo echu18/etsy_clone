@@ -32,10 +32,18 @@
 .delete-review-confirm {
     display: block;
     position: absolute;
-    /* margin-top: 50%;
-    margin-left: auto; */
-    height: 300px;
-    width: 500px;
+    /* margin-top: 50%; */
+    margin-left: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    width: 200px;
+    /* padding: 30px 5px; */
+    border: 1px solid gainsboro;
+    border-radius: 3px;
+    background-color: gainsboro;
     /* border: 1px solid blue; */
 }
 
@@ -74,4 +82,8 @@
 
 .review-btns > div:hover {
     cursor: pointer;
+}
+
+.review-errors {
+    color: red;
 }
