@@ -31,7 +31,7 @@ class BlogBanner extends React.Component {
 
         <div className="blog-card-container">
           <div className="blog-card" onClick={(e) => this.clickBlogCard(e, "spongebob")}>
-            <img src="spongebob.jpg" alt="" />
+            <img src="spongebob-memes.jpg" alt="" />
 
             <div className="blog-card-text">
               <aside>ENTERTAINMENT</aside>
@@ -61,7 +61,7 @@ class BlogBanner extends React.Component {
           </div>
 
           <div className="blog-card" onClick={(e) => this.clickBlogCard(e, "pikachu")}>
-            <img src="surprised-pikachu.png" alt="" />
+            <img src="pikachu-perler.jpg" alt="" />
 
             <div className="blog-card-text">
               <aside>FUNNY</aside>
