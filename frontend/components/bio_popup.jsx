@@ -17,7 +17,7 @@ class BioPopup extends React.Component {
                 <span className="bio-name">Jamie Chu</span>, a web developer and
                 meme-lover from sunny California. To see more of her projects,
                 please visit her{" "}
-                <a href="https://www.jamiechu.dev" target="_blank">
+                <a href="https://echu18.github.io/" target="_blank">
                   website
                 </a>
                 .
