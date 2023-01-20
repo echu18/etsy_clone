@@ -1,9 +1,12 @@
 {
   "name": "etsy_clone",
   "private": true,
+   "repository": {
+   "url": "git+https://github.com/echu18/etsy_clone.git"
+ },
   "dependencies": {
     "@babel/core": "^7.8.6",
-    "@babel/preset-env": "^7.8.6",
+    "@babel/preset-env": "^7.20.2",
     "@babel/preset-react": "^7.8.3",
     "babel-loader": "^8.0.6",
     "css-loader": "^3.5.3",
@@ -31,9 +34,12 @@
     "test": "test"
   },
   "scripts": {
+    "build": "webpack --mode=development",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack --watch --mode=development",
-    "postinstall": "webpack"
+    "postinstall": "webpack",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "engines": {
     "node": "12.14.1",
