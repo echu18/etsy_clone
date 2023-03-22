@@ -1,14 +1,14 @@
 {
   "name": "etsy_clone",
   "private": true,
-   "repository": {
-   "url": "git+https://github.com/echu18/etsy_clone.git"
- },
+  "repository": {
+    "url": "git+https://github.com/echu18/etsy_clone.git"
+  },
   "dependencies": {
     "@babel/core": "^7.8.6",
     "@babel/preset-env": "^7.20.2",
     "@babel/preset-react": "^7.8.3",
-    "babel-loader": "^8.0.6",
+    "babel-loader": "^9.1.2",
     "css-loader": "^3.5.3",
     "file-loader": "^6.0.0",
     "react": "^16.13.0",
@@ -20,11 +20,11 @@
     "redux-thunk": "^2.3.0",
     "style-loader": "^1.2.0",
     "url-loader": "^4.1.0",
-    "webpack": "^4.41.6",
-    "webpack-cli": "^3.3.11"
+    "webpack": "^5.76.3",
+    "webpack-cli": "^5.0.1"
   },
   "devDependencies": {
-    "@svgr/webpack": "^5.2.0"
+    "@svgr/webpack": "^6.5.1"
   },
   "description": "This README would normally document whatever steps are necessary to get the application up and running.",
   "version": "1.0.0",
