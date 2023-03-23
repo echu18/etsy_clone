@@ -80,9 +80,9 @@ test:
 #
 production:
   <<: *default
-  url: ENV['DATABASE_URL']
+  url:  <%= ENV['DATABASE_URL'] %>
 
-  
+
 # database: etsy_clone_production
 # username: admin
 # password: <%= ENV['STACKHERO_POSTGRESQL_ADMIN_PASSWORD'] %>
