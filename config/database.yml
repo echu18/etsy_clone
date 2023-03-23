@@ -80,12 +80,6 @@ test:
 #
 production:
   <<: *default
-  host: 4blb5h.stackhero-network.com
-  username: admin
-  password: P5qkVt4ZbPL8dVHyGuNgGZWqucHg1l5w
-
-# production:
-#   <<: *default
-#   database: etsy_clone_production
-#   username: etsy_clone
-#   password: <%= ENV['ETSY_CLONE_DATABASE_PASSWORD'] %>
+  database: etsy_clone_production
+  username: etsy_clone
+  password: <%= ENV['ETSY_CLONE_DATABASE_PASSWORD'] %>
