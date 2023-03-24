@@ -77,17 +77,17 @@ u50= User.create(username: 'Tony', email: 'tony@cc.com', password: '123456', sto
 
 # Seed user profile pictures
 
-file200 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/profile-images/crying_cat.jpg')
-file201 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/profile-images/pizza_cat.png')
-file202 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/profile-images/smug_knife_cat.jpg')
-file203 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/profile-images/tired_cat.png')
-file204 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/profile-images/sitting_cat.png')
+file200 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/profile-images/crying_cat.jpg')
+file201 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/profile-images/pizza_cat.png')
+file202 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/profile-images/smug_knife_cat.jpg')
+file203 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/profile-images/tired_cat.png')
+file204 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/profile-images/sitting_cat.png')
 
-file205 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/profile-images/cat1.jpg')
-file206 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/profile-images/cat2.jpeg')
-file207 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/profile-images/cat3.jpg')
-file208 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/profile-images/cat4.jpg')
-file209 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/profile-images/cat5.jpg')
+file205 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/profile-images/cat1.jpg')
+file206 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/profile-images/cat2.jpeg')
+file207 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/profile-images/cat3.jpg')
+file208 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/profile-images/cat4.jpg')
+file209 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/profile-images/cat5.jpg')
 
 u1.photos.attach(io: file200, filename: 'crying_cat.jpg')
 u2.photos.attach(io: file201, filename: 'pizza_cat.png')
@@ -205,11 +205,11 @@ tag2 = Tag.create(category_id: cat16.id , product_id: p1.id)
 
 
 
-file100 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/catmeme1.jpg')
-file101 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/catmeme2.jpg')
-file102 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/catmeme3.jpg')
-file103 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/catmeme4.jpg')
-file104 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/catmeme5.jpg')
+file100 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/catmeme1.jpg')
+file101 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/catmeme2.jpg')
+file102 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/catmeme3.jpg')
+file103 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/catmeme4.jpg')
+file104 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/catmeme5.jpg')
 
 p1.photos.attach(io: file100, filename: 'catmeme1.jpg')
 p1.photos.attach(io: file101, filename: 'catmeme2.jpg')
@@ -233,11 +233,11 @@ tag4_1 = Tag.create(category_id: cat6.id , product_id: p2.id)
 # Tag.create(category_id: cat38.id , product_id: p2.id)
 
 
-file106 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/pikachu1.jpg')
-file107 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/pikachu2.jpg')
-file108 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/pikachu3.jpg')
-file109 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/pikachu4.jpg')
-file110 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/pikachu5.jpg')
+file106 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/pikachu1.jpg')
+file107 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/pikachu2.jpg')
+file108 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/pikachu3.jpg')
+file109 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/pikachu4.jpg')
+file110 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/pikachu5.jpg')
 
 p2.photos.attach(io: file106, filename: 'pikachu1.jpg')
 p2.photos.attach(io: file107, filename: 'pikachu2.jpg')
@@ -274,12 +274,12 @@ tag6 = Tag.create(category_id: cat13.id , product_id: p3.id)
 
 
 
-file111 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/doge_poster1.jpg')
-file112 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/doge_poster2.jpg')
-file113 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/doge_poster3.jpg')
-file114 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/doge_poster4.jpg')
-file115 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/doge_poster5.jpg')
-file116 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/doge_poster6.jpg')
+file111 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/doge_poster1.jpg')
+file112 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/doge_poster2.jpg')
+file113 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/doge_poster3.jpg')
+file114 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/doge_poster4.jpg')
+file115 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/doge_poster5.jpg')
+file116 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/doge_poster6.jpg')
 
 p3.photos.attach(io: file111, filename: 'doge_poster1.jpg')
 p3.photos.attach(io: file112, filename: 'doge_poster2.jpg')
@@ -309,9 +309,9 @@ tag7_1 = Tag.create(category_id: cat6.id , product_id: p4.id)
 # Tag.create(category_id: cat22.id , product_id: p4.id)
 
 
-file117 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/gundam11.jpg')
-file118 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/gundam12.jpg')
-file119 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/gundam13.jpg')
+file117 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/gundam11.jpg')
+file118 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/gundam12.jpg')
+file119 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/gundam13.jpg')
 
 p4.photos.attach(io: file117, filename: 'gundam11.jpg')
 p4.photos.attach(io: file118, filename: 'gundam11.jpg')
@@ -344,8 +344,8 @@ p5 = Product.create(name:'Kawaii Anime Magical Girl T-Shirt | Japanese Kanji Shi
 tag8 = Tag.create(category_id: cat2.id , product_id: p5.id)
 
 
-file120 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/shirt1.jpg')
-file121 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/shirt2.jpg')
+file120 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/shirt1.jpg')
+file121 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/shirt2.jpg')
 
 p5.photos.attach(io: file120, filename: 'shirt1.jpg')
 p5.photos.attach(io: file121, filename: 'shirt2.jpg')
@@ -367,11 +367,11 @@ p6 = Product.create(name:'Pokemon Terrarium Sleepy Charmander Terrarium Pokeball
 tag9 = Tag.create(category_id: cat6.id , product_id: p6.id)
 
 
-file122 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/pokeball1.jpg')
-file123 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/pokeball2.jpg')
-file124 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/pokeball3.jpg')
-file125 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/pokeball4.jpg')
-file126 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/pokeball5.jpg')
+file122 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/pokeball1.jpg')
+file123 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/pokeball2.jpg')
+file124 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/pokeball3.jpg')
+file125 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/pokeball4.jpg')
+file126 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/pokeball5.jpg')
 
 p6.photos.attach(io: file122, filename: 'pokeball1.jpg')
 p6.photos.attach(io: file123, filename: 'pokeball2.jpg')
@@ -396,8 +396,8 @@ tag10 = Tag.create(category_id: cat5.id , product_id: p7.id)
 tag11 = Tag.create(category_id: cat16.id , product_id: p7.id)
 
 
-file127 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/gundam1.jpg')
-file128 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/gundam2.jpg')
+file127 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/gundam1.jpg')
+file128 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/gundam2.jpg')
 
 p7.photos.attach(io: file127, filename: 'gundam1.jpg')
 p7.photos.attach(io: file128, filename: 'gundam2.jpg')
@@ -426,8 +426,8 @@ p8 = Product.create(name:'Instant Ramen (Shin) Cube | Aesthetic Anime Sticker | 
 
 
 
-file129 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/ramen1.jpg')
-file130 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/ramen2.jpg')
+file129 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/ramen1.jpg')
+file130 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/ramen2.jpg')
 
 p8.photos.attach(io: file129, filename: 'ramen1.jpg')
 p8.photos.attach(io: file130, filename: 'ramen2.jpg')
@@ -449,7 +449,7 @@ p9 = Product.create(name:'Overwatch Logo Coaster', description: "Collector coast
       tag15 = Tag.create(category_id: cat9.id , product_id: p9.id)
 
 
-file143 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/ow1.jpg')
+file143 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/ow1.jpg')
 
 p9.photos.attach(io: file143, filename: 'ow1.jpg')
 
@@ -463,9 +463,9 @@ p10 = Product.create(name:'Vinyl Waterproof Animal Crossing Sticker', descriptio
       tag18 = Tag.create(category_id: cat5.id , product_id: p10.id)
 
 
-file133 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/animalcrossing1.jpg')
-file134 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/animalcrossing2.jpg')
-file135 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/animalcrossing3.jpg')
+file133 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/animalcrossing1.jpg')
+file134 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/animalcrossing2.jpg')
+file135 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/animalcrossing3.jpg')
 
 p10.photos.attach(io: file133, filename: 'animalcrossing1.jpg')
 p10.photos.attach(io: file134, filename: 'animalcrossing2.jpg')
@@ -493,8 +493,8 @@ p11 = Product.create(name:'Pokemon Bulbasaur Ivysaur Venusaur Perler', descripti
     
 
 
-file152 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/pokeperler1.jpg')
-file153 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/pokeperler2.jpg')
+file152 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/pokeperler1.jpg')
+file153 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/pokeperler2.jpg')
 
 
 p11.photos.attach(io: file152, filename: 'pokeperler1.jpg')
@@ -514,9 +514,9 @@ p13 = Product.create(name:'Legend of Zelda Triforce Stud Earring Set - Gold Plat
 
 
 
-file140 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/triforce1.jpg')
-file141 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/triforce2.jpg')
-file142 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/triforce3.jpg')
+file140 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/triforce1.jpg')
+file141 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/triforce2.jpg')
+file142 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/triforce3.jpg')
 
 p13.photos.attach(io: file140, filename: 'triforce1.jpg')
 p13.photos.attach(io: file141, filename: 'triforce2.jpg')
@@ -539,9 +539,9 @@ p14 = Product.create(name:'My Hero Academia Froppy TSUYU Chan Large Hard Enamel 
 
 
 
-file131 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/froggy1.jpg')
-file132 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/froggy2.jpg')
-file133 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/froggy2.jpg')
+file131 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/froggy1.jpg')
+file132 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/froggy2.jpg')
+file133 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/froggy2.jpg')
 
 p14.photos.attach(io: file131, filename: 'froggy1.jpg')
 p14.photos.attach(io: file132, filename: 'froggy2.jpg')
@@ -560,8 +560,8 @@ p15 = Product.create(name:'League of Legends - DJ Sona LED panel for Cosplay - c
 
 
 
-file160 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/sona1.jpg')
-file161 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/sona2.jpg')
+file160 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/sona1.jpg')
+file161 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/sona2.jpg')
 
 p15.photos.attach(io: file160, filename: 'sona1.jpg')
 p15.photos.attach(io: file161, filename: 'sona2.jpg')
@@ -578,9 +578,9 @@ p16 = Product.create(name:'Kirby X Sailor Moon Enamel Pin', description: "The pi
 
 
 
-file162 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/kirby1.jpg')
-file163 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/kirby2.jpg')
-file164 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/kirby3.jpg')
+file162 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/kirby1.jpg')
+file163 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/kirby2.jpg')
+file164 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/kirby3.jpg')
 
 p16.photos.attach(io: file162, filename: 'kirby1.jpg')
 p16.photos.attach(io: file163, filename: 'kirby2.jpg')
@@ -599,8 +599,8 @@ p17 = Product.create(name:'One Piece - Iron On Patch', description: "Can be used
     tag32 = Tag.create(category_id: cat8.id , product_id: p17.id)
 
 
-file150 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/onepiece1.jpg')
-file151 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/onepiece2.jpg')
+file150 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/onepiece1.jpg')
+file151 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/onepiece2.jpg')
 
 
 p17.photos.attach(io: file150, filename: 'onepiece1.jpg')
@@ -617,8 +617,8 @@ tag33 = Tag.create(category_id: cat3.id , product_id: p18.id)
 tag34 = Tag.create(category_id: cat8.id , product_id: p18.id)
 
 
-file136 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/onepunch1.jpg')
-file137 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/onepunch2.jpg')
+file136 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/onepunch1.jpg')
+file137 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/onepunch2.jpg')
 
 p18.photos.attach(io: file136, filename: 'onepunch1.jpg')
 p18.photos.attach(io: file137, filename: 'onepunch2.jpg')
@@ -633,9 +633,9 @@ p19 = Product.create(name:'Cute Sleeping Corgi T-Shirt Corgi Shirt Gift For Dog 
     tag35 = Tag.create(category_id: cat2.id , product_id: p19.id)
 
 
-file154 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/corgishirt1.jpg')
-file155 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/corgishirt2.jpg')
-file156 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/corgishirt3.jpg')
+file154 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/corgishirt1.jpg')
+file155 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/corgishirt2.jpg')
+file156 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/corgishirt3.jpg')
 
 
 p19.photos.attach(io: file154, filename: 'corgishirt1.jpg')
@@ -653,7 +653,7 @@ p20 = Product.create(name:'Spongebob - Patrick Star Eamel pin', description: "Pe
         tag48 = Tag.create(category_id: cat15.id , product_id: p20.id)
 
 
-file157 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/patrick1.jpg')
+file157 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/patrick1.jpg')
 
 
 p20.photos.attach(io: file157, filename: 'patrick1.jpg')
@@ -670,8 +670,8 @@ p21 = Product.create(name:'Cute UwU Mug', description: "Printed using direct to 
         tag50 = Tag.create(category_id: cat10.id , product_id: p21.id)
 
 
-file158 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/uwu1.jpg')
-file159 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/uwu2.jpg')
+file158 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/uwu1.jpg')
+file159 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/uwu2.jpg')
 
 
 p21.photos.attach(io: file158, filename: 'uwu1.jpg')
@@ -687,9 +687,9 @@ p22 = Product.create(name:'Green Frog Meme, Meme pin, Sad Pepe Meme Pin Brooch',
         tag53 = Tag.create(category_id: cat15.id , product_id: p22.id)
 
 
-file144 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/pepe1.jpg')
-file145 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/pepe2.jpg')
-file146 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/pepe3.jpg')
+file144 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/pepe1.jpg')
+file145 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/pepe2.jpg')
+file146 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/pepe3.jpg')
 
 p22.photos.attach(io: file144, filename: 'pepe1.jpg')
 p22.photos.attach(io: file145, filename: 'pepe2.jpg')
@@ -707,8 +707,8 @@ p23 = Product.create(name:'This Is Fine Dog Meme Cross Stitch Pattern', descript
 
 
 
-file147 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/thisisfine1.jpg')
-file148 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/thisisfine2.jpg')
+file147 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/thisisfine1.jpg')
+file148 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/thisisfine2.jpg')
 
 p23.photos.attach(io: file147, filename: 'thisisfine1.jpg')
 p23.photos.attach(io: file148, filename: 'thisisfine2.jpg')
@@ -723,9 +723,9 @@ p24 = Product.create(name:'You\'re My National Treasure Mug - Nicolas Cage Meme 
         tag57 = Tag.create(category_id: cat10.id , product_id: p24.id)
 
 
-file165 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/cage1.jpg')
-file166 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/cage2.jpg')
-file167 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/cage3.jpg')
+file165 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/cage1.jpg')
+file166 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/cage2.jpg')
+file167 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/cage3.jpg')
 
 p24.photos.attach(io: file165, filename: 'cage1.jpg')
 p24.photos.attach(io: file166, filename: 'cage2.jpg')
@@ -743,8 +743,8 @@ p25 = Product.create(name:'Michael Scott Sequin Pillow | The Office TV Show | 16
 
 
 
-file168 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/office1.jpg')
-file169 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/office2.jpg')
+file168 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/office1.jpg')
+file169 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/office2.jpg')
 
 p25.photos.attach(io: file168, filename: 'office1.jpg')
 p25.photos.attach(io: file169, filename: 'office2.jpg')
@@ -764,8 +764,8 @@ p26 = Product.create(name:'Doodlebob Spongebob Embroidery Hoop', description: "M
     tag61 = Tag.create(category_id: cat10.id , product_id: p26.id)
 
 
-file170 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/mihoy1.jpg')
-file171 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/mihoy2.jpg')
+file170 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/mihoy1.jpg')
+file171 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/mihoy2.jpg')
 
 p26.photos.attach(io: file170, filename: 'mihoy1.jpg')
 p26.photos.attach(io: file171, filename: 'mihoy2.jpg')
@@ -784,9 +784,9 @@ p27 = Product.create(name:'Kawaii Watercolor Miyazaki Totoro Japanese Anime Ghib
     tag64 = Tag.create(category_id: cat13.id , product_id: p27.id)
 
 
-file172 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/ghibli11.jpg')
-file173 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/ghibli12.jpg')
-file174 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/ghibli13.jpg')
+file172 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/ghibli11.jpg')
+file173 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/ghibli12.jpg')
+file174 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/ghibli13.jpg')
 
 p27.photos.attach(io: file172, filename: 'ghibli11.jpg')
 p27.photos.attach(io: file173, filename: 'ghibli12.jpg')
@@ -803,11 +803,11 @@ p28 = Product.create(name:'NEW My Hero Academia Double-Sided Pillow Plush', desc
         tag67 = Tag.create(category_id: cat17.id , product_id: p28.id)
 
 
-file175 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/heropillow1.jpg')
-file176 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/heropillow2.jpg')
-file177 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/heropillow3.jpg')
-file178 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/heropillow4.jpg')
-file179 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/heropillow5.jpg')
+file175 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/heropillow1.jpg')
+file176 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/heropillow2.jpg')
+file177 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/heropillow3.jpg')
+file178 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/heropillow4.jpg')
+file179 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/heropillow5.jpg')
 
 p28.photos.attach(io: file175, filename: 'heropillow1.jpg')
 p28.photos.attach(io: file176, filename: 'heropillow2.jpg')
@@ -838,12 +838,12 @@ p29 = Product.create(name:'Boku No Hero Academia (My Hero Academia) X Animal Cro
         tag70 = Tag.create(category_id: cat16.id , product_id: p29.id)
 
 
-file180 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/herosticker1.jpg')
-file181 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/herosticker2.jpg')
-file182 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/herosticker3.jpg')
-file183 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/herosticker4.jpg')
-file184 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/herosticker5.jpg')
-file185 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/herosticker6.jpg')
+file180 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/herosticker1.jpg')
+file181 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/herosticker2.jpg')
+file182 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/herosticker3.jpg')
+file183 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/herosticker4.jpg')
+file184 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/herosticker5.jpg')
+file185 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/herosticker6.jpg')
 
 
 p29.photos.attach(io: file180, filename: 'herosticker1.jpg')
@@ -877,9 +877,9 @@ p30 = Product.create(name:'Large Magikarp Plush', description: "ミ☆ Magikarp 
     tag73 = Tag.create(category_id: cat17.id , product_id: p30.id)
 
 
-file186 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/magikarp1.jpg')
-file187 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/magikarp2.jpg')
-file188 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/magikarp3.jpg')
+file186 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/magikarp1.jpg')
+file187 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/magikarp2.jpg')
+file188 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/magikarp3.jpg')
 
 p30.photos.attach(io: file186, filename: 'magikarp1.jpg')
 p30.photos.attach(io: file187, filename: 'magikarp2.jpg')
@@ -907,9 +907,9 @@ YOU and your beloved pet or pokemon cute anime style !",
         tag76 = Tag.create(category_id: cat13.id , product_id: p31.id)
 
 
-file189 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/pokeillust1.jpg')
-file190 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/pokeillust2.jpg')
-file191 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/pokeillust3.jpg')
+file189 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/pokeillust1.jpg')
+file190 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/pokeillust2.jpg')
+file191 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/pokeillust3.jpg')
 
 p31.photos.attach(io: file189, filename: 'pokeillust1.jpg')
 p31.photos.attach(io: file190, filename: 'pokeillust2.jpg')
@@ -938,8 +938,8 @@ price: 1.99, seller_id: u21.id )
         tag78 = Tag.create(category_id: cat16.id , product_id: p32.id)
 
 
-file192 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/goku1.jpg')
-file193 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/goku2.jpg')
+file192 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/goku1.jpg')
+file193 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/goku2.jpg')
 
 p32.photos.attach(io: file193, filename: 'goku2.jpg')
 p32.photos.attach(io: file192, filename: 'goku1.jpg')
@@ -961,8 +961,8 @@ p33 = Product.create(name:'Plus Ultra Hoodie, Manga My Hero Academia Shirt - BNH
             tag80 = Tag.create(category_id: cat8.id , product_id: p33.id)
 
 
-file194 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/plusultra1.jpg')
-file195 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/plusultra2.jpg')
+file194 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/plusultra1.jpg')
+file195 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/plusultra2.jpg')
 
 p33.photos.attach(io: file194, filename: 'plusultra1.jpg')
 p33.photos.attach(io: file195, filename: 'plusultra2.jpg')
@@ -988,8 +988,8 @@ p34 = Product.create(name:'Mob Psycho 100 anime Psycho Helmet Cult Poster Unisex
     # tag83 = Tag.create(category_id: cat13.id , product_id: p34.id)
 
 
-file196 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/mobpsycho1.jpg')
-file197 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/mobpsycho2.jpg')
+file196 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/mobpsycho1.jpg')
+file197 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/mobpsycho2.jpg')
 
 p34.photos.attach(io: file196, filename: 'mobpsycho1.jpg')
 p34.photos.attach(io: file197, filename: 'mobpsycho2.jpg')
@@ -1010,7 +1010,7 @@ p35 = Product.create(name:'Casual Weeb UwU Decal, Japan Inspired, Weeaboo Vinyl 
     tag86 = Tag.create(category_id: cat16.id , product_id: p35.id)
 
 
-file198 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/weebsticker1.jpg')
+file198 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/weebsticker1.jpg')
 p35.photos.attach(io: file198, filename: 'weebsticker1.jpg')
 
 r129 = Review.create(body: 'Looks amazing but the sticker was a little hard to install it kept sticking to its self instead of the glass', 
@@ -1030,8 +1030,8 @@ p36 = Product.create(name:'Studio Ghibli No-Face Spirited Away Vinyl Sticker Dec
     tag89 = Tag.create(category_id: cat16.id , product_id: p36.id)
 
 
-file199 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/noface11.jpg')
-file200 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/noface12.jpg')
+file199 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/noface11.jpg')
+file200 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/noface12.jpg')
 p36.photos.attach(io: file199, filename: 'noface11.jpg')
 p36.photos.attach(io: file200, filename: 'noface12.jpg')
 
@@ -1050,9 +1050,9 @@ p37 = Product.create(name:'Hatsune Miku keycaps - Clay and resin keycap Cherry M
         tag92 = Tag.create(category_id: cat12.id , product_id: p37.id)
 
 
-file201 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/mikukey1.jpg')
-file202 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/mikukey2.jpg')
-file203 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/mikukey3.jpg')
+file201 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/mikukey1.jpg')
+file202 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/mikukey2.jpg')
+file203 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/mikukey3.jpg')
 
 p37.photos.attach(io: file201, filename: 'mikukey1.jpg')
 p37.photos.attach(io: file202, filename: 'mikukey2.jpg')
@@ -1073,9 +1073,9 @@ p38 = Product.create(name:'Noface Keycap', description: "When I was a child, I f
 
     
 
-file204 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/nofacekey1.jpg')
-file205 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/nofacekey2.jpg')
-file206 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/nofacekey3.jpg')
+file204 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/nofacekey1.jpg')
+file205 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/nofacekey2.jpg')
+file206 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/nofacekey3.jpg')
 
 p38.photos.attach(io: file204, filename: 'nofacekey1.jpg')
 p38.photos.attach(io: file205, filename: 'nofacekey2.jpg')
@@ -1102,8 +1102,8 @@ This is a R4(keyboard area including ESC,F1-F12,etc) keycap that best performanc
         tag98 = Tag.create(category_id: cat12.id , product_id: p39.id)
 
 
-file207 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/evakey1.jpg')
-file208 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/evakey2.jpg')
+file207 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/evakey1.jpg')
+file208 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/evakey2.jpg')
 
 p39.photos.attach(io: file207, filename: 'evakey1.jpg')
 p39.photos.attach(io: file208, filename: 'evakey2.jpg')
@@ -1130,10 +1130,10 @@ p40 = Product.create(name:'Neon Genesis Evangelion - Asuka and Rei 3" Acrylic Ch
             tag100 = Tag.create(category_id: cat8.id , product_id: p40.id)
 
 
-file209 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/evacharm1.jpg')
-file210 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/evacharm2.jpg')
-file211 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/evacharm3.jpg')
-file212 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/evacharm4.jpg')
+file209 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/evacharm1.jpg')
+file210 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/evacharm2.jpg')
+file211 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/evacharm3.jpg')
+file212 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/evacharm4.jpg')
 
 p40.photos.attach(io: file209, filename: 'evacharm1.jpg')
 p40.photos.attach(io: file210, filename: 'evacharm2.jpg')
@@ -1160,10 +1160,10 @@ The name of this kit: Premium (Limited Edition) Bandai MG 1/100 "Altron Gundam E
     tag103 = Tag.create(category_id: cat18.id , product_id: p41.id)
 
 
-file213 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/altron1.jpg')
-file214 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/altron2.jpg')
-file215 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/altron3.jpg')
-file216 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/altron4.jpg')
+file213 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/altron1.jpg')
+file214 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/altron2.jpg')
+file215 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/altron3.jpg')
+file216 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/altron4.jpg')
 
 p41.photos.attach(io: file213, filename: 'altron1.jpg')
 p41.photos.attach(io: file214, filename: 'altron2.jpg')
@@ -1189,7 +1189,7 @@ A3 -High Quality Production digital Press Print 350 GSM (*buisness card thicknes
     tag106 = Tag.create(category_id: cat13.id , product_id: p42.id)
 
 
-file217 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/yourname1.jpg')
+file217 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/yourname1.jpg')
 
 p42.photos.attach(io: file217, filename: 'yourname1.jpg')
 
@@ -1210,10 +1210,10 @@ After watching the show I had to make one for myself. These guys are so soft and
 
 
 
-file218 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/finnjake1.jpg')
-file219 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/finnjake2.jpg')
-file220 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/finnjake3.jpg')
-file221 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/finnjake4.jpg')
+file218 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/finnjake1.jpg')
+file219 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/finnjake2.jpg')
+file220 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/finnjake3.jpg')
+file221 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/finnjake4.jpg')
 
 p43.photos.attach(io: file218, filename: 'finnjake1.jpg')
 p43.photos.attach(io: file219, filename: 'finnjake2.jpg')
@@ -1243,8 +1243,8 @@ p44 = Product.create(name:'Bubbline | Hard Enamel Pin | Adventure Time Marceline
 
 
 
-file222 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/bubbeline1.jpg')
-file223 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/bubbeline2.jpg')
+file222 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/bubbeline1.jpg')
+file223 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/bubbeline2.jpg')
 
 
 p44.photos.attach(io: file222, filename: 'bubbeline1.jpg')
@@ -1276,7 +1276,7 @@ Photographic Art Print:",
     tag115 = Tag.create(category_id: cat13.id , product_id: p45.id)
 
 
-file224 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/korrasami1.jpg')
+file224 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/korrasami1.jpg')
 
 
 p45.photos.attach(io: file224, filename: 'korrasami1.jpg')
@@ -1304,9 +1304,9 @@ p46 = Product.create(name:'Adventure Time: Lumpy Space Princess Soft Enamel Pin'
     tag118 = Tag.create(category_id: cat15.id , product_id: p46.id)
 
 
-file225 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/lsp1.jpg')
-file226 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/lsp2.jpg')
-file227 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/lsp3.jpg')
+file225 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/lsp1.jpg')
+file226 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/lsp2.jpg')
+file227 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/lsp3.jpg')
 
 
 p46.photos.attach(io: file225, filename: 'lsp1.jpg')
@@ -1340,10 +1340,10 @@ The design has a wordplay on the word yare, wich is place on top another yare. T
         tag120 = Tag.create(category_id: cat8.id , product_id: p47.id)
 
 
-file228 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/jojohoodie1.jpg')
-file229 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/jojohoodie2.jpg')
-file230 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/jojohoodie3.jpg')
-file231 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/jojohoodie4.jpg')
+file228 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/jojohoodie1.jpg')
+file229 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/jojohoodie2.jpg')
+file230 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/jojohoodie3.jpg')
+file231 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/jojohoodie4.jpg')
 
 
 
@@ -1377,9 +1377,9 @@ p47_1 = Product.create(name:'Double Sided Inuyasha Keychain', description: "A cu
     tag122 = Tag.create(category_id: cat8.id , product_id: p47_1.id)
 
 
-file232 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/inuyasha1.jpg')
-file233 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/inuyasha2.jpg')
-file234 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/inuyasha3.jpg')
+file232 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/inuyasha1.jpg')
+file233 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/inuyasha2.jpg')
+file234 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/inuyasha3.jpg')
 
 
 
@@ -1411,7 +1411,7 @@ p48 = Product.create(name:'Aesthetic Cowboy Bebop || Anime Vinyl Sticker', descr
     tag125 = Tag.create(category_id: cat15.id , product_id: p48.id)
 
 
-file235 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/cowboybebop1.jpg')
+file235 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/cowboybebop1.jpg')
 
 p48.photos.attach(io: file235, filename: 'cowboybebop1.jpg')
 
@@ -1433,7 +1433,7 @@ p49 = Product.create(name:'Ryuko Kill la Kill Double Sided Acrylic Charms 1.5"',
         tag129 = Tag.create(category_id: cat15.id , product_id: p49.id)
 
 
-file236 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/klk1.jpg')
+file236 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/klk1.jpg')
 
 p49.photos.attach(io: file236, filename: 'klk1.jpg')
 
@@ -1451,8 +1451,8 @@ p50 = Product.create(name:'symphogear holographic sticker', description: "a desi
             tag132 = Tag.create(category_id: cat16.id , product_id: p50.id)
 
 
-file237 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/symphogear1.jpg')
-file238 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/symphogear2.jpg')
+file237 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/symphogear1.jpg')
+file238 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/symphogear2.jpg')
 
 p50.photos.attach(io: file237, filename: 'symphogear1.jpg')
 p50.photos.attach(io: file238, filename: 'symphogear2.jpg')
@@ -1476,11 +1476,11 @@ p50_1 = Product.create(name:'Attack on Titan Backpack', description: "The perfec
     tag133 = Tag.create(category_id: cat8.id , product_id: p50_1.id)
 
 
-file239 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/snk1.jpg')
-file240 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/snk2.jpg')
-file241 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/snk3.jpg')
-file242 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/snk4.jpg')
-file243 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/snk5.jpg')
+file239 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/snk1.jpg')
+file240 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/snk2.jpg')
+file241 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/snk3.jpg')
+file242 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/snk4.jpg')
+file243 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/snk5.jpg')
 
 p50_1.photos.attach(io: file239, filename: 'snk1.jpg')
 p50_1.photos.attach(io: file240, filename: 'snk2.jpg')
@@ -1509,7 +1509,7 @@ p51 = Product.create(name:'Polymer Clay Umaru -Chan Chibi Figurine Keychain or B
     tag135 = Tag.create(category_id: cat8.id , product_id: p51.id)
 
 
-file244 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/umaru1.jpg')
+file244 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/umaru1.jpg')
 
 
 p51.photos.attach(io: file244, filename: 'umaru1.jpg')
@@ -1529,9 +1529,9 @@ Can be used for some cosplay or just to have on your desk. It'll look fantastic 
     tag136 = Tag.create(category_id: cat6.id , product_id: p52.id)
     tag137 = Tag.create(category_id: cat8.id , product_id: p52.id)
 
-file245 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/yugioh1.jpg')
-file246 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/yugioh2.jpg')
-file247 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/yugioh3.jpg')
+file245 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/yugioh1.jpg')
+file246 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/yugioh2.jpg')
+file247 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/yugioh3.jpg')
 
 
 p52.photos.attach(io: file245, filename: 'yugioh1.jpg')
@@ -1556,10 +1556,10 @@ p53 = Product.create(name:'MLP Applejack plush', description: "Adorable Applejac
     tag139 = Tag.create(category_id: cat8.id , product_id: p53.id)
     tag140 = Tag.create(category_id: cat17.id , product_id: p53.id)
 
-file248 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/applejack1.jpg')
-file249 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/applejack2.jpg')
-file250 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/applejack3.jpg')
-file251 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/applejack4.jpg')
+file248 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/applejack1.jpg')
+file249 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/applejack2.jpg')
+file250 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/applejack3.jpg')
+file251 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/applejack4.jpg')
 
 
 
@@ -1593,10 +1593,10 @@ p54 = Product.create(name:'Japanese Peach Soft Drink - T-Shirt/Shirt/Top/Tee - A
 
     tag141 = Tag.create(category_id: cat2.id , product_id: p54.id)
 
-file252 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/peachshirt1.jpg')
-file253 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/peachshirt2.jpg')
-file254 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/peachshirt3.jpg')
-file255 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/peachshirt4.jpg')
+file252 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/peachshirt1.jpg')
+file253 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/peachshirt2.jpg')
+file254 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/peachshirt3.jpg')
+file255 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/peachshirt4.jpg')
 
 
 
@@ -1627,9 +1627,9 @@ p55 = Product.create(name:'Sailor Moon Themed Nintendo Switch Joy Cons', descrip
     tag142 = Tag.create(category_id: cat4.id , product_id: p55.id)
     tag143 = Tag.create(category_id: cat8.id , product_id: p55.id)
 
-file256 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/switchsailormoon1.jpg')
-file257 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/switchsailormoon2.jpg')
-file258 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/switchsailormoon3.jpg')
+file256 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/switchsailormoon1.jpg')
+file257 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/switchsailormoon2.jpg')
+file258 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/switchsailormoon3.jpg')
 
 p55.photos.attach(io: file256, filename: 'switchsailormoon1.jpg')
 p55.photos.attach(io: file257, filename: 'switchsailormoon2.jpg')
@@ -1649,9 +1649,9 @@ p56 = Product.create(name:'Shiba Inu Earrings - Hand Painted Wooden Dog Studs wi
     tag144 = Tag.create(category_id: cat1.id , product_id: p56.id)
 
 
-file259 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/shibeearring1.jpg')
-file260 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/shibeearring2.jpg')
-file261 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/shibeearring3.jpg')
+file259 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/shibeearring1.jpg')
+file260 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/shibeearring2.jpg')
+file261 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/shibeearring3.jpg')
 
 p56.photos.attach(io: file259, filename: 'shibeearring1.jpg')
 p56.photos.attach(io: file260, filename: 'shibeearring2.jpg')
@@ -1674,8 +1674,8 @@ p57 = Product.create(name:'Pond Koi Keycaps Artisan Mechanical Keyboard Cherry M
     tag145 = Tag.create(category_id: cat4.id , product_id: p57.id)
     tag146 = Tag.create(category_id: cat12.id , product_id: p57.id)
 
-file262 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/koikey1.jpg')
-file263 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/koikey2.jpg')
+file262 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/koikey1.jpg')
+file263 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/koikey2.jpg')
 
 
 p57.photos.attach(io: file262, filename: 'koikey1.jpg')
@@ -1697,9 +1697,9 @@ p58 = Product.create(name:'Summer Fruit Keycap - Artisan Keycap - Handmade Keyca
     tag148 = Tag.create(category_id: cat12.id , product_id: p58.id)
     
 
-file264 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/fruitkey1.jpg')
-file265 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/fruitkey2.jpg')
-file266 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/fruitkey3.jpg')
+file264 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/fruitkey1.jpg')
+file265 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/fruitkey2.jpg')
+file266 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/fruitkey3.jpg')
 
 
 p58.photos.attach(io: file264, filename: 'fruitkey1.jpg')
@@ -1725,10 +1725,10 @@ p59 = Product.create(name:'Deep Sea Jellyfish handmade resin artisan Cherry MX k
      tag149 = Tag.create(category_id: cat4.id , product_id: p59.id)
     tag150= Tag.create(category_id: cat12.id , product_id: p59.id)
 
-file267 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/jellykey1.jpg')
-file268 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/jellykey2.jpg')
-file269 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/jellykey3.jpg')
-file270 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/jellykey4.jpg')
+file267 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/jellykey1.jpg')
+file268 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/jellykey2.jpg')
+file269 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/jellykey3.jpg')
+file270 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/jellykey4.jpg')
 
 
 p59.photos.attach(io: file267, filename: 'jellykey1.jpg')
@@ -1759,9 +1759,9 @@ Please handle these handmade charms with care~",
     tag152 = Tag.create(category_id: cat12.id , product_id: p60.id)
     tag153 = Tag.create(category_id: cat9.id , product_id: p60.id)
 
-file271 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/pokekey1.jpg')
-file272 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/pokekey2.jpg')
-file273 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/pokekey3.jpg')
+file271 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/pokekey1.jpg')
+file272 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/pokekey2.jpg')
+file273 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/pokekey3.jpg')
 
 
 p60.photos.attach(io: file271, filename: 'pokekey1.jpg')
@@ -1789,9 +1789,9 @@ p61 = Product.create(name: 'Cherry Blossom WASD Keycaps', description: "Take you
     tag154 = Tag.create(category_id: cat4.id , product_id: p61.id)
     tag155 = Tag.create(category_id: cat12.id , product_id: p61.id)  
 
-file274 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/cherrykey1.jpg')
-file275 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/cherrykey2.jpg')
-file276 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/cherrykey3.jpg')
+file274 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/cherrykey1.jpg')
+file275 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/cherrykey2.jpg')
+file276 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/cherrykey3.jpg')
 
 
 p61.photos.attach(io: file274, filename: 'cherrykey1.jpg')
@@ -1818,8 +1818,8 @@ author_id: u25.id, product_id: p61.id, rating: 5)
 p62 = Product.create(name: 'Starcraft Crystal Cherry MX Keycap', description: "Crystal Cherry MX keyboard keycap. 3D resin print using Anycubic Photon 3D printer. Hand painted and test fitted. Black base with clear top. Clear top coated in gloss finish.",
     price: 15.00, seller_id: u33.id )
 
-file277 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/crystalkey1.jpg')
-file278 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/crystalkey2.jpg')
+file277 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/crystalkey1.jpg')
+file278 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/crystalkey2.jpg')
 
     tag156 = Tag.create(category_id: cat4.id , product_id: p62.id)
     tag157 = Tag.create(category_id: cat12.id , product_id: p62.id)
@@ -1841,9 +1841,9 @@ p63 = Product.create(name: 'GOLD PLATED Harry Potter Necklace Harry Potter Jewel
 
     tag159 = Tag.create(category_id: cat1.id , product_id: p63.id)
 
-file279 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/hp11.jpg')
-file280 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/hp12.jpg')
-file281 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/hp13.jpg')
+file279 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/hp11.jpg')
+file280 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/hp12.jpg')
+file281 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/hp13.jpg')
 
 
 p63.photos.attach(io: file279, filename: 'hp11.jpg')
@@ -1872,7 +1872,7 @@ p64 = Product.create(name: 'Elven ears (a pair). Earcuffs, Elf ears, cosplay fan
 
     tag160 = Tag.create(category_id: cat1.id , product_id: p64.id)
 
-file282 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/earcuff1.jpg')
+file282 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/earcuff1.jpg')
 
 p64.photos.attach(io: file282, filename: 'earcuff1.jpg')
 
@@ -1899,8 +1899,8 @@ p65 = Product.create(name: 'Gudetama Just Chillin Enamel Pin // Gudetama Pins //
     tag162 = Tag.create(category_id: cat15.id , product_id: p65.id)
 
 
-file283 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/gudetama1.jpg')
-file284 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/gudetama2.jpg')
+file283 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/gudetama1.jpg')
+file284 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/gudetama2.jpg')
 
 p65.photos.attach(io: file283, filename: 'gudetama1.jpg')
 p65.photos.attach(io: file284, filename: 'gudetama2.jpg')
@@ -1920,9 +1920,9 @@ The black interior has two bill pockets, six upward facing card pockets, and two
 
     tag163 = Tag.create(category_id: cat9.id , product_id: p66.id)
 
-file285 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/zeldawallet1.jpg')
-file286 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/zeldawallet2.jpg')
-file287 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/zeldawallet3.jpg')
+file285 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/zeldawallet1.jpg')
+file286 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/zeldawallet2.jpg')
+file287 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/zeldawallet3.jpg')
 
 p66.photos.attach(io: file285, filename: 'zeldawallet1.jpg')
 p66.photos.attach(io: file286, filename: 'zeldawallet2.jpg')
@@ -1948,9 +1948,9 @@ We are a small business and love what we do and strive to see our customers smil
     tag165 = Tag.create(category_id: cat9.id , product_id: p67.id)
 
 
-file288 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/acshirt1.jpg')
-file289 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/acshirt2.jpg')
-file290 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/acshirt3.jpg')
+file288 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/acshirt1.jpg')
+file289 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/acshirt2.jpg')
+file290 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/acshirt3.jpg')
 
 p67.photos.attach(io: file288, filename: 'acshirt1.jpg')
 p67.photos.attach(io: file289, filename: 'acshirt2.jpg')
@@ -1973,10 +1973,10 @@ Welcome all visitors to your town with a beautiful wall hanging lamp built with 
     tag166 = Tag.create(category_id: cat3.id , product_id: p68.id)
     tag167 = Tag.create(category_id: cat9.id , product_id: p68.id)
 
-file291 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/aclamp1.jpg')
-file292 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/aclamp2.jpg')
-file293 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/aclamp3.jpg')
-file294 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/aclamp4.jpg')
+file291 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/aclamp1.jpg')
+file292 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/aclamp2.jpg')
+file293 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/aclamp3.jpg')
+file294 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/aclamp4.jpg')
 
 p68.photos.attach(io: file291, filename: 'aclamp1.jpg')
 p68.photos.attach(io: file292, filename: 'aclamp2.jpg')
@@ -2006,9 +2006,9 @@ Each pin is about 1.25\" and has one clutch on the back. Select the locking pin 
     tag169 = Tag.create(category_id: cat9.id , product_id: p69.id)
     tag170 = Tag.create(category_id: cat15.id , product_id: p69.id)
 
-file295 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/acpin1.jpg')
-file296 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/acpin2.jpg')
-file297 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/acpin3.jpg')
+file295 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/acpin1.jpg')
+file296 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/acpin2.jpg')
+file297 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/acpin3.jpg')
 
 p69.photos.attach(io: file295, filename: 'acpin1.jpg')
 p69.photos.attach(io: file296, filename: 'acpin2.jpg')
@@ -2037,9 +2037,9 @@ I hope you enjoy them as much as I enjoyed making them.",
     tag172 = Tag.create(category_id: cat9.id , product_id: p70.id)
     tag173 = Tag.create(category_id: cat18.id , product_id: p70.id)
 
-file298 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/poro1.jpg')
-file299 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/poro2.jpg')
-file300 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/poro3.jpg')
+file298 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/poro1.jpg')
+file299 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/poro2.jpg')
+file300 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/poro3.jpg')
 
 p70.photos.attach(io: file298, filename: 'poro1.jpg')
 p70.photos.attach(io: file299, filename: 'poro2.jpg')
@@ -2062,8 +2062,8 @@ p71 = Product.create(name: 'Gengar Pokemon Keycap || For Mechanical Cherry MX sw
     tag176 = Tag.create(category_id: cat12.id , product_id: p71.id)     
 
 
-file301 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/gengarkey1.jpg')
-file302 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/gengarkey2.jpg')
+file301 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/gengarkey1.jpg')
+file302 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/gengarkey2.jpg')
 
 p71.photos.attach(io: file301, filename: 'gengarkey1.jpg')
 p71.photos.attach(io: file302, filename: 'gengarkey2.jpg')
@@ -2090,8 +2090,8 @@ p72 = Product.create(name: 'Crochet Chocobo from Final Fantasy Amigurumi/ Plushi
 
 
 
-file303 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/ff11.jpg')
-file304 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/ff12.jpg')
+file303 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/ff11.jpg')
+file304 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/ff12.jpg')
 
 p72.photos.attach(io: file303, filename: 'ff11.jpg')
 p72.photos.attach(io: file304, filename: 'ff12.jpg')
@@ -2115,9 +2115,9 @@ p73 = Product.create(name: 'Cute amigurumi Moogle Moguri from final fantasy - as
     tag182 = Tag.create(category_id: cat17.id , product_id: p73.id)  
 
 
-file305 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/ff1.jpg')
-file306 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/ff2.jpg')
-file307 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/ff3.jpg')
+file305 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/ff1.jpg')
+file306 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/ff2.jpg')
+file307 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/ff3.jpg')
 
 p73.photos.attach(io: file305, filename: 'ff1.jpg')
 p73.photos.attach(io: file306, filename: 'ff2.jpg')
@@ -2145,7 +2145,7 @@ Prints are shipped via a 2\" diameter tube. We know that some buyers prefer thei
     tag185 = Tag.create(category_id: cat13.id , product_id: p74.id) 
 
 
-file308 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/cordelia1.jpg')
+file308 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/cordelia1.jpg')
 
 p74.photos.attach(io: file308, filename: 'cordelia1.jpg')
 
@@ -2165,7 +2165,7 @@ p75 = Product.create(name: 'Cuphead Gaming Dictionary Art', description: "Cuphea
 
 
 
-file309 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/cuphead1.jpg')
+file309 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/cuphead1.jpg')
 
 p75.photos.attach(io: file309, filename: 'cuphead1.jpg')
 
@@ -2186,8 +2186,8 @@ author_id: u5.id, product_id: p75.id, rating: 5)
 #     tag189 = Tag.create(category_id: cat9.id , product_id: p76.id)
 #     tag190 = Tag.create(category_id: cat11.id , product_id: p76.id)
 
-# file310 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/zeldashield1.jpg')
-# file311 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/zeldashield2.jpg')
+# file310 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/zeldashield1.jpg')
+# file311 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/zeldashield2.jpg')
 
 # p76.photos.attach(io: file310, filename: 'zeldashield1.jpg')
 # p76.photos.attach(io: file311, filename: 'zeldashield2.jpg')
@@ -2214,8 +2214,8 @@ This item is 3D printed at 20% infill, very sturdy. Printed in black PLA plastic
     tag192 = Tag.create(category_id: cat9.id , product_id: p77.id)
     tag193 = Tag.create(category_id: cat18.id , product_id: p77.id)
 
-file312 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/destiny1.jpg')
-file313 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/destiny2.jpg')
+file312 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/destiny1.jpg')
+file313 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/destiny2.jpg')
 
 p77.photos.attach(io: file312, filename: 'destiny1.jpg')
 p77.photos.attach(io: file313, filename: 'destiny2.jpg')
@@ -2241,8 +2241,8 @@ It comes with 22 inches long silver plated chain.",
 
 
 
-file314 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/kh1.jpg')
-file315 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/kh2.jpg')
+file314 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/kh1.jpg')
+file315 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/kh2.jpg')
 
 p78.photos.attach(io: file314, filename: 'kh1.jpg')
 p78.photos.attach(io: file315, filename: 'kh2.jpg')
@@ -2267,7 +2267,7 @@ Comes in an organza gift bag but many people have asked for them to be gift wrap
     tag197 = Tag.create(category_id: cat9.id , product_id: p79.id)
 
 
-file316 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/kh11.jpg')
+file316 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/kh11.jpg')
 
 p79.photos.attach(io: file316, filename: 'kh11.jpg')
 
@@ -2291,10 +2291,10 @@ Also you can choose the color of the symbol.",
     tag199 = Tag.create(category_id: cat9.id , product_id: p80.id)
 
 
-file317 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/hearthstone1.jpg')
-file318 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/hearthstone2.jpg')
-file319 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/hearthstone3.jpg')
-file320 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/hearthstone4.jpg')
+file317 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/hearthstone1.jpg')
+file318 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/hearthstone2.jpg')
+file319 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/hearthstone3.jpg')
+file320 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/hearthstone4.jpg')
 
 p80.photos.attach(io: file317, filename: 'hearthstone1.jpg')
 p80.photos.attach(io: file318, filename: 'hearthstone2.jpg')
@@ -2318,10 +2318,10 @@ p81 = Product.create(name: 'Heart of Azeroth necklace | World of Warcraft', desc
     tag200 = Tag.create(category_id: cat1.id , product_id: p81.id)
     tag201 = Tag.create(category_id: cat9.id , product_id: p81.id)
 
-file321 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/wow1.jpg')
-file322 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/wow2.jpg')
-file323 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/wow3.jpg')
-file324 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/wow4.jpg')
+file321 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/wow1.jpg')
+file322 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/wow2.jpg')
+file323 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/wow3.jpg')
+file324 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/wow4.jpg')
 
 p81.photos.attach(io: file321, filename: 'wow1.jpg')
 p81.photos.attach(io: file322, filename: 'wow2.jpg')
@@ -2353,10 +2353,10 @@ This resin kit includes a mask, as well as the four large fangs (already mounted
     tag203 = Tag.create(category_id: cat9.id , product_id: p82.id)
     tag204 = Tag.create(category_id: cat11.id , product_id: p82.id)
 
-file325 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/monsterhunter1.jpg')
-file326 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/monsterhunter2.jpg')
-file327 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/monsterhunter3.jpg')
-file328 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/monsterhunter4.jpg')
+file325 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/monsterhunter1.jpg')
+file326 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/monsterhunter2.jpg')
+file327 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/monsterhunter3.jpg')
+file328 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/monsterhunter4.jpg')
 
 p82.photos.attach(io: file325, filename: 'monsterhunter1.jpg')
 p82.photos.attach(io: file326, filename: 'monsterhunter2.jpg')
@@ -2388,10 +2388,10 @@ Reduce desk clutter with this Phantom Thieves-inspired headphone hook/hanger! Pe
     tag205 = Tag.create(category_id: cat4.id , product_id: p83.id)
     tag206 = Tag.create(category_id: cat9.id , product_id: p83.id)
 
-file329 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/personaheadphone1.jpg')
-file330 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/personaheadphone2.jpg')
-file331 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/personaheadphone3.jpg')
-file332 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/personaheadphone4.jpg')
+file329 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/personaheadphone1.jpg')
+file330 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/personaheadphone2.jpg')
+file331 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/personaheadphone3.jpg')
+file332 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/personaheadphone4.jpg')
 
 p83.photos.attach(io: file329, filename: 'personaheadphone1.jpg')
 p83.photos.attach(io: file330, filename: 'personaheadphone2.jpg')
@@ -2421,10 +2421,10 @@ p84 = Product.create(name: 'PlayStation Controller Lapel Pin - PS2 Controller En
     tag208 = Tag.create(category_id: cat9.id , product_id: p84.id)
     tag209 = Tag.create(category_id: cat15.id , product_id: p84.id)
 
-file333 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/playstation1.jpg')
-file334 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/playstation2.jpg')
-file335 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/playstation3.jpg')
-file336 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/playstation4.jpg')
+file333 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/playstation1.jpg')
+file334 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/playstation2.jpg')
+file335 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/playstation3.jpg')
+file336 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/playstation4.jpg')
 
 p84.photos.attach(io: file333, filename: 'playstation1.jpg')
 p84.photos.attach(io: file334, filename: 'playstation2.jpg')
@@ -2448,8 +2448,8 @@ p85 = Product.create(name: 'Grand Theft Auto Wasted Embroidered Dad hat', descri
     tag210 = Tag.create(category_id: cat2.id , product_id: p85.id)
     tag211 = Tag.create(category_id: cat9.id , product_id: p85.id)
 
-file337 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/gtahat1.jpg')
-file338 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/gtahat2.jpg')
+file337 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/gtahat1.jpg')
+file338 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/gtahat2.jpg')
 
 
 p85.photos.attach(io: file337, filename: 'gtahat1.jpg')
@@ -2486,8 +2486,8 @@ Item Specifications:\n
     tag213 = Tag.create(category_id: cat9.id , product_id: p86.id)
     tag214 = Tag.create(category_id: cat15.id , product_id: p86.id)
 
-file339 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/maplestory1.jpg')
-file340 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/maplestory2.jpg')
+file339 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/maplestory1.jpg')
+file340 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/maplestory2.jpg')
 
 
 p86.photos.attach(io: file339, filename: 'maplestory1.jpg')
@@ -2521,10 +2521,10 @@ A2 print is approximately 8.5\"x13\" on cardstock.",
 
 
 
-file341 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/nier1.jpg')
-file342 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/nier2.jpg')
-file343 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/nier3.jpg')
-file344 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/nier4.jpg')
+file341 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/nier1.jpg')
+file342 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/nier2.jpg')
+file343 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/nier3.jpg')
+file344 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/nier4.jpg')
 
 
 p87.photos.attach(io: file341, filename: 'nier1.jpg')
@@ -2555,9 +2555,9 @@ p88 = Product.create(name: 'Cardcaptor Sakura Rug', description: "Pink Cardcapto
     tag218 = Tag.create(category_id: cat3.id , product_id: p88.id)
     tag219 = Tag.create(category_id: cat9.id , product_id: p88.id)
 
-file345 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/cardcaptor1.jpg')
-file346 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/cardcaptor2.jpg')
-file347 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/cardcaptor3.jpg')
+file345 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/cardcaptor1.jpg')
+file346 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/cardcaptor2.jpg')
+file347 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/cardcaptor3.jpg')
 
 
 p88.photos.attach(io: file345, filename: 'cardcaptor1.jpg')
@@ -2583,10 +2583,10 @@ p89 = Product.create(name: 'thank u next sticker set
     tag220 = Tag.create(category_id: cat10.id , product_id: p89.id)
     tag221 = Tag.create(category_id: cat16.id , product_id: p89.id)
 
-file348 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/thankunext1.jpg')
-file349 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/thankunext2.jpg')
-file350 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/thankunext3.jpg')
-file351 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/thankunext4.jpg')
+file348 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/thankunext1.jpg')
+file349 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/thankunext2.jpg')
+file350 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/thankunext3.jpg')
+file351 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/thankunext4.jpg')
 
 
 p89.photos.attach(io: file348, filename: 'thankunext1.jpg')
@@ -2620,7 +2620,7 @@ Based off of the original meme itself, this goofy picture is worth it in every w
      tag222 = Tag.create(category_id: cat5.id , product_id: p90.id)
      tag223 = Tag.create(category_id: cat10.id , product_id: p90.id)
 
-file352 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/elmo1.jpg')
+file352 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/elmo1.jpg')
 
 p90.photos.attach(io: file352, filename: 'elmo1.jpg')
 
@@ -2638,8 +2638,8 @@ p91 = Product.create(name: 'Spongebob Squidward meme painting (hand painted)', d
     tag225 = Tag.create(category_id: cat10.id , product_id: p91.id)
     tag226 = Tag.create(category_id: cat13.id , product_id: p91.id)
 
-file353 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/squidward1.jpg')
-file354 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/squidward2.jpg')
+file353 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/squidward1.jpg')
+file354 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/squidward2.jpg')
 
 p91.photos.attach(io: file353, filename: 'squidward1.jpg')
 p91.photos.attach(io: file354, filename: 'squidward2.jpg')
@@ -2658,9 +2658,9 @@ These embroidery hoops are perfect for a contemporary piece of decor or as a gif
     tag228 = Tag.create(category_id: cat5.id , product_id: p92.id)
     tag229 = Tag.create(category_id: cat10.id , product_id: p92.id)
 
-file355 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/peaceduck1.jpg')
-file356 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/peaceduck2.jpg')
-file357 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/peaceduck3.jpg')
+file355 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/peaceduck1.jpg')
+file356 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/peaceduck2.jpg')
+file357 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/peaceduck3.jpg')
 
 p92.photos.attach(io: file355, filename: 'peaceduck1.jpg')
 p92.photos.attach(io: file356, filename: 'peaceduck2.jpg')
@@ -2684,8 +2684,8 @@ SpongeBob Ight Imma Head Out Meme Embroidered Beanie. The beanie is 12\" long wh
     tag232 = Tag.create(category_id: cat10.id , product_id: p93.id)
 
 
-file358 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/spongebob1.jpg')
-file359 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/spongebob2.jpg')
+file358 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/spongebob1.jpg')
+file359 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/spongebob2.jpg')
 
 p93.photos.attach(io: file358, filename: 'spongebob1.jpg')
 p93.photos.attach(io: file359, filename: 'spongebob2.jpg')
@@ -2710,10 +2710,10 @@ Made with love and inspired by the Internet culture.",
     tag234 = Tag.create(category_id: cat10.id , product_id: p94.id)
     tag235 = Tag.create(category_id: cat13.id , product_id: p94.id)
 
-file360 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/dogeastronaut1.jpg')
-file361 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/dogeastronaut2.jpg')
-file362 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/dogeastronaut3.jpg')
-file363 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/dogeastronaut4.jpg')
+file360 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/dogeastronaut1.jpg')
+file361 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/dogeastronaut2.jpg')
+file362 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/dogeastronaut3.jpg')
+file363 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/dogeastronaut4.jpg')
 
 p94.photos.attach(io: file360, filename: 'dogeastronaut1.jpg')
 p94.photos.attach(io: file361, filename: 'dogeastronaut2.jpg')
@@ -2737,8 +2737,8 @@ p95 = Product.create(name: 'MEME "YOU TRIED" Enamel Pin. Funny Joke Gift Gold St
     tag236 = Tag.create(category_id: cat6.id , product_id: p95.id)
     tag237 = Tag.create(category_id: cat10.id , product_id: p95.id)
 
-file364 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/youtried1.jpg')
-file365 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/youtried2.jpg')
+file364 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/youtried1.jpg')
+file365 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/youtried2.jpg')
 
 
 p95.photos.attach(io: file364, filename: 'youtried1.jpg')
@@ -2762,7 +2762,7 @@ p96 = Product.create(name: 'Owen Wilson "WOW" Meme Mouse Pad, Neoprene Mousepad'
     tag238 = Tag.create(category_id: cat4.id , product_id: p96.id)
     tag239 = Tag.create(category_id: cat10.id , product_id: p96.id)
 
-file366 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/owenwilson1.jpg')
+file366 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/owenwilson1.jpg')
 
 p96.photos.attach(io: file366, filename: 'owenwilson1.jpg')
 
@@ -2782,8 +2782,8 @@ p97 = Product.create(name: 'Per My Last Email Funny Work Meme T-Shirt', descript
     tag240 = Tag.create(category_id: cat2.id , product_id: p97.id)
     tag241 = Tag.create(category_id: cat10.id , product_id: p97.id)
 
-file367 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/email1.jpg')
-file368 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/email2.jpg')
+file367 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/email1.jpg')
+file368 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/email2.jpg')
 
 p97.photos.attach(io: file367, filename: 'email1.jpg')
 p97.photos.attach(io: file368, filename: 'email2.jpg')
@@ -2797,8 +2797,8 @@ p98 = Product.create(name: 'BTS Jungkook "Jungshook" Meme T-Shirt', description:
     tag242 = Tag.create(category_id: cat2.id , product_id: p98.id)
     tag243 = Tag.create(category_id: cat10.id , product_id: p98.id)
 
-file369 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/bts1.jpg')
-file370 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/bts2.jpg')
+file369 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/bts1.jpg')
+file370 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/bts2.jpg')
 
 p98.photos.attach(io: file369, filename: 'bts1.jpg')
 p98.photos.attach(io: file370, filename: 'bts2.jpg')
@@ -2816,9 +2816,9 @@ This is our own carefully designed pattern and a top notch handmade work overall
     tag244 = Tag.create(category_id: cat17.id , product_id: p99.id)
     tag245 = Tag.create(category_id: cat10.id , product_id: p99.id)
 
-file371 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/knuckles1.jpg')
-file372 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/knuckles2.jpg')
-file373 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/knuckles3.jpg')
+file371 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/knuckles1.jpg')
+file372 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/knuckles2.jpg')
+file373 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/knuckles3.jpg')
 
 p99.photos.attach(io: file371, filename: 'knuckles1.jpg')
 p99.photos.attach(io: file372, filename: 'knuckles2.jpg')
@@ -2837,7 +2837,7 @@ p100 = Product.create(name: 'Cardi B Birthday Card | Meme Birthday Card | Happy 
 
     tag246 = Tag.create(category_id: cat10.id , product_id: p100.id)
 
-file374 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/cardib1.jpg')
+file374 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/cardib1.jpg')
 
 p100.photos.attach(io: file374, filename: 'cardib1.jpg')
 
@@ -2856,8 +2856,8 @@ p101 = Product.create(name: 'Unacceptable!! - Lemongrab Adventure Time Painting'
     tag248 = Tag.create(category_id: cat8.id , product_id: p101.id)
     tag249 = Tag.create(category_id: cat10.id , product_id: p101.id)
 
-file375 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/lemongrab1.jpg')
-file376 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/lemongrab2.jpg')
+file375 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/lemongrab1.jpg')
+file376 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/lemongrab2.jpg')
 
 p101.photos.attach(io: file375, filename: 'lemongrab1.jpg')
 p101.photos.attach(io: file376, filename: 'lemongrab2.jpg')
@@ -2873,7 +2873,7 @@ p102 = Product.create(name: 'Bold and Brash - Squidward Painting', description: 
     tag251 = Tag.create(category_id: cat8.id , product_id: p102.id)
     tag252 = Tag.create(category_id: cat10.id , product_id: p102.id)
 
-file376 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/boldandbrash1.jpg')
+file376 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/boldandbrash1.jpg')
 
 p102.photos.attach(io: file376, filename: 'boldandbrash1.jpg')
 
@@ -2896,9 +2896,9 @@ p103 = Product.create(name: 'Edelgard Cosplay Pattern - Edelgard Fire Emblem Thr
 
 
 
-file377 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/fecos1.jpg')
-file378 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/fecos2.jpg')
-file379 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/fecos3.jpg')
+file377 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/fecos1.jpg')
+file378 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/fecos2.jpg')
+file379 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/fecos3.jpg')
 
 p103.photos.attach(io: file377, filename: 'fecos1.jpg')
 p103.photos.attach(io: file378, filename: 'fecos2.jpg')
@@ -2918,9 +2918,9 @@ p104 = Product.create(name: 'Screen Printed & Leather Deadpool Movie (Replica) C
 
     tag255 = Tag.create(category_id: cat11.id , product_id: p104.id)
 
-file340 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/deadpool1.jpg')
-file341 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/deadpool2.jpg')
-file342 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/deadpool3.jpg')
+file340 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/deadpool1.jpg')
+file341 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/deadpool2.jpg')
+file342 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/deadpool3.jpg')
 
 p104.photos.attach(io: file340, filename: 'deadpool1.jpg')
 p104.photos.attach(io: file341, filename: 'deadpool2.jpg')
@@ -2944,9 +2944,9 @@ p105 = Product.create(name: 'Stormtrooper Armor Personalized Star Wars Cosplay C
 
     tag256 = Tag.create(category_id: cat11.id , product_id: p105.id)
 
-file343 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/starwars1.jpg')
-file344 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/starwars2.jpg')
-file345 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/starwars3.jpg')
+file343 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/starwars1.jpg')
+file344 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/starwars2.jpg')
+file345 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/starwars3.jpg')
 
 p105.photos.attach(io: file343, filename: 'starwars1.jpg')
 p105.photos.attach(io: file344, filename: 'starwars2.jpg')
@@ -2971,9 +2971,9 @@ p106 = Product.create(name: 'Akali KDA/POPSTAR League of legends uv/ glow in the
     tag257 = Tag.create(category_id: cat9.id , product_id: p106.id)
     tag258 = Tag.create(category_id: cat11.id , product_id: p106.id)
 
-file346 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/kda1.jpg')
-file347 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/kda2.jpg')
-file348 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/kda3.jpg')
+file346 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/kda1.jpg')
+file347 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/kda2.jpg')
+file348 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/kda3.jpg')
 
 p106.photos.attach(io: file346, filename: 'kda1.jpg')
 p106.photos.attach(io: file347, filename: 'kda2.jpg')
@@ -2999,9 +2999,9 @@ p107 = Product.create(name: 'League of Legends: Jhin mask Inspired for cosplay',
     tag260 = Tag.create(category_id: cat11.id , product_id: p107.id)
     
 
-file349 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/jhin1.jpg')
-file350 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/jhin2.jpg')
-file351 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/jhin3.jpg')
+file349 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/jhin1.jpg')
+file350 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/jhin2.jpg')
+file351 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/jhin3.jpg')
 
 p107.photos.attach(io: file349, filename: 'jhin1.jpg')
 p107.photos.attach(io: file350, filename: 'jhin2.jpg')
@@ -3027,9 +3027,9 @@ p108 = Product.create(name: 'Fallout Nuka Cola Thirst Zapper Blaster Prop', desc
 
 
 
-file352 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/nukacola1.jpg')
-file353 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/nukacola2.jpg')
-file354 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/nukacola3.jpg')
+file352 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/nukacola1.jpg')
+file353 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/nukacola2.jpg')
+file354 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/nukacola3.jpg')
 
 p108.photos.attach(io: file352, filename: 'nukacola1.jpg')
 p108.photos.attach(io: file353, filename: 'nukacola2.jpg')
@@ -3058,8 +3058,8 @@ Comes with shield and belt",
     tag263 = Tag.create(category_id: cat9.id , product_id: p109.id)
     tag264 = Tag.create(category_id: cat11.id , product_id: p109.id)
 
-file355 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/zeldashield1.jpg')
-file356 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/zeldashield2.jpg')
+file355 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/zeldashield1.jpg')
+file356 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/zeldashield2.jpg')
 
 p109.photos.attach(io: file355, filename: 'zeldashield1.jpg')
 p109.photos.attach(io: file356, filename: 'zeldashield2.jpg')
@@ -3082,10 +3082,10 @@ p110 = Product.create(name: 'Floating fireball prop 2.0 (cosplay, convention, ha
 
     tag265 = Tag.create(category_id: cat11.id , product_id: p110.id)
 
-file357 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/fireball1.jpg')
-file358 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/fireball2.jpg')
-file359 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/fireball3.jpg')
-file360 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/fireball4.jpg')
+file357 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/fireball1.jpg')
+file358 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/fireball2.jpg')
+file359 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/fireball3.jpg')
+file360 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/fireball4.jpg')
 
 p110.photos.attach(io: file357, filename: 'fireball1.jpg')
 p110.photos.attach(io: file358, filename: 'fireball2.jpg')
@@ -3110,9 +3110,9 @@ p111 = Product.create(name: 'Made to Order, Custom Fit Azula Cosplay- Avatar the
         tag267 = Tag.create(category_id: cat11.id , product_id: p111.id)
 
 
-file361 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/azula1.jpg')
-file362 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/azula2.jpg')
-file363 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/azula3.jpg')
+file361 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/azula1.jpg')
+file362 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/azula2.jpg')
+file363 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/azula3.jpg')
 
 p111.photos.attach(io: file361, filename: 'azula1.jpg')
 p111.photos.attach(io: file362, filename: 'azula2.jpg')
@@ -3144,9 +3144,9 @@ What’s included?\n
     tag269 = Tag.create(category_id: cat11.id , product_id: p112.id)
 
 
-file364 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/katara1.jpg')
-file365 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/katara2.jpg')
-file366 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/katara3.jpg')
+file364 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/katara1.jpg')
+file365 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/katara2.jpg')
+file366 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/katara3.jpg')
 
 p112.photos.attach(io: file364, filename: 'katara1.jpg')
 p112.photos.attach(io: file365, filename: 'katara2.jpg')
@@ -3168,11 +3168,11 @@ p113 = Product.create(name: 'Fire Emblem Awakening Avatar Mai Robin Cosplay Cost
     tag270 = Tag.create(category_id: cat9.id , product_id: p113.id)
     tag271 = Tag.create(category_id: cat11.id , product_id: p113.id)
 
-file367 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/feacos1.jpg')
-file368 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/feacos2.jpg')
-file369 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/feacos3.jpg')
-file370 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/feacos4.jpg')
-file371 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/feacos5.jpg')
+file367 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/feacos1.jpg')
+file368 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/feacos2.jpg')
+file369 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/feacos3.jpg')
+file370 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/feacos4.jpg')
+file371 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/feacos5.jpg')
 
 p113.photos.attach(io: file367, filename: 'feacos1.jpg')
 p113.photos.attach(io: file368, filename: 'feacos2.jpg')
@@ -3194,9 +3194,9 @@ p114 = Product.create(name: 'Avatar: The Last Airbender Inspired Blue Spirit Mas
     tag272 = Tag.create(category_id: cat8.id , product_id: p114.id)
     tag273 = Tag.create(category_id: cat11.id , product_id: p114.id)
 
-file372 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/bluespirit1.jpg')
-file373 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/bluespirit2.jpg')
-file374 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/bluespirit3.jpg')
+file372 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/bluespirit1.jpg')
+file373 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/bluespirit2.jpg')
+file374 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/bluespirit3.jpg')
 
 
 p114.photos.attach(io: file372, filename: 'bluespirit1.jpg')
@@ -3220,9 +3220,9 @@ p115 = Product.create(name: 'Officer D.Va Overwatch Sew-On Patches Cosplay', des
     tag274 = Tag.create(category_id: cat9.id , product_id: p115.id)
     tag275 = Tag.create(category_id: cat11.id , product_id: p115.id)
 
-file375 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/dvapatch1.jpg')
-file376 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/dvapatch2.jpg')
-file377 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/dvapatch3.jpg')
+file375 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/dvapatch1.jpg')
+file376 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/dvapatch2.jpg')
+file377 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/dvapatch3.jpg')
 
 
 p115.photos.attach(io: file375, filename: 'dvapatch1.jpg')
@@ -3254,11 +3254,11 @@ ALL QUESTIONS WRITE BEFORE BUYING!",
       tag276 = Tag.create(category_id: cat9.id , product_id: p116.id)
     tag277 = Tag.create(category_id: cat11.id , product_id: p116.id)
 
-file378 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/kawaiireaper1.jpg')
-file379 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/kawaiireaper2.jpg')
-file380 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/kawaiireaper3.jpg')
-file381 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/kawaiireaper4.jpg')
-file382 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/kawaiireaper5.jpg')
+file378 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/kawaiireaper1.jpg')
+file379 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/kawaiireaper2.jpg')
+file380 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/kawaiireaper3.jpg')
+file381 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/kawaiireaper4.jpg')
+file382 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/kawaiireaper5.jpg')
 
 
 p116.photos.attach(io: file378, filename: 'kawaiireaper1.jpg')
@@ -3283,10 +3283,10 @@ I don't know the exact price for shipping, it depends on your country. So please
       tag278 = Tag.create(category_id: cat9.id , product_id: p117.id)
     tag279 = Tag.create(category_id: cat11.id , product_id: p117.id)
 
-file383 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/ana1.jpg')
-file384 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/ana2.jpg')
-file385 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/ana3.jpg')
-file386 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/ana4.jpg')
+file383 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/ana1.jpg')
+file384 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/ana2.jpg')
+file385 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/ana3.jpg')
+file386 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/ana4.jpg')
 
 
 p117.photos.attach(io: file383, filename: 'ana1.jpg')
@@ -3308,10 +3308,10 @@ p118 = Product.create(name: 'Made to Order Genji Baihu LED Full Cosplay Costume 
     tag280 = Tag.create(category_id: cat9.id , product_id: p118.id)
     tag281 = Tag.create(category_id: cat11.id , product_id: p118.id)
 
-file387 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/genji1.jpg')
-file388 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/genji2.jpg')
-file389 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/genji3.jpg')
-file390 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/genji4.jpg')
+file387 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/genji1.jpg')
+file388 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/genji2.jpg')
+file389 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/genji3.jpg')
+file390 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/genji4.jpg')
 
 
 p118.photos.attach(io: file387, filename: 'genji1.jpg')
@@ -3338,10 +3338,10 @@ p119 = Product.create(name: 'Thor Hammer Metal, Upgraded Version Thor Mjolnir, T
     tag282 = Tag.create(category_id: cat11.id , product_id: p119.id)
 
 
-file391 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/thor1.jpg')
-file392 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/thor2.jpg')
-file393 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/thor3.jpg')
-file394 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/thor4.jpg')
+file391 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/thor1.jpg')
+file392 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/thor2.jpg')
+file393 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/thor3.jpg')
+file394 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/thor4.jpg')
 
 
 p119.photos.attach(io: file391, filename: 'thor1.jpg')
@@ -3373,9 +3373,9 @@ Make any costume of Korra 'The Legend of Korra.' You can do just the individual 
     tag284 = Tag.create(category_id: cat11.id , product_id: p119_1.id)
 
 
-file395 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/korra1.jpg')
-file396 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/korra2.jpg')
-file397 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/korra3.jpg')
+file395 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/korra1.jpg')
+file396 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/korra2.jpg')
+file397 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/korra3.jpg')
 
 
 p119_1.photos.attach(io: file395, filename: 'korra1.jpg')
@@ -3399,9 +3399,9 @@ author_id: u45.id, product_id: p119_1.id, rating: 5)
 p120 = Product.create(name: 'Crescent Rose RWBY Ruby Rose Cosplay Costume Weapons Prop', description: "Crescent Rose RWBY Ruby Rose Weapons Cosplay Costume Prop",
     price: 110.90, seller_id: u23.id )
 
-file398 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/rwby1.jpg')
-file399 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/rwby2.jpg')
-file400 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/rwby3.jpg')
+file398 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/rwby1.jpg')
+file399 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/rwby2.jpg')
+file400 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/rwby3.jpg')
 
     tag285 = Tag.create(category_id: cat8.id , product_id: p120.id)
     tag286 = Tag.create(category_id: cat11.id , product_id: p120.id)
@@ -3426,9 +3426,9 @@ p121 = Product.create(name: 'Fairy Tail Scarf (Natsu\'s Scarf)', description: "A
     tag287 = Tag.create(category_id: cat8.id , product_id: p121.id)
     tag288 = Tag.create(category_id: cat11.id , product_id: p121.id)
 
-file401 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/fairytale1.jpg')
-file402 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/fairytale2.jpg')
-file403 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/fairytale3.jpg')
+file401 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/fairytale1.jpg')
+file402 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/fairytale2.jpg')
+file403 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/fairytale3.jpg')
 
 
 p121.photos.attach(io: file401, filename: 'fairytale1.jpg')
@@ -3453,9 +3453,9 @@ You can choose different character's costume such as Roy Mustang, Maes Hughes, O
     tag289 = Tag.create(category_id: cat8.id , product_id: p122.id)
     tag290 = Tag.create(category_id: cat11.id , product_id: p122.id)
 
-file404 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/fma1.jpg')
-file405 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/fma2.jpg')
-file406 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/fma3.jpg')
+file404 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/fma1.jpg')
+file405 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/fma2.jpg')
+file406 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/fma3.jpg')
 
 
 p122.photos.attach(io: file404, filename: 'fma1.jpg')
@@ -3478,9 +3478,9 @@ Blade is around 2.5in wide.",
     tag291 = Tag.create(category_id: cat8.id , product_id: p123.id)
     tag292 = Tag.create(category_id: cat11.id , product_id: p123.id)
 
-file407 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/snk11.jpg')
-file408 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/snk12.jpg')
-file409 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/snk13.jpg')
+file407 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/snk11.jpg')
+file408 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/snk12.jpg')
+file409 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/snk13.jpg')
 
 
 p123.photos.attach(io: file407, filename: 'snk11.jpg')
@@ -3507,7 +3507,7 @@ Included - jacket, blouse, skirt, bow on the neck.",
     tag294 = Tag.create(category_id: cat11.id , product_id: p124.id)
 
 
-file410 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/seo1.jpg')
+file410 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/seo1.jpg')
 
 p124.photos.attach(io: file410, filename: 'seo1.jpg')
 
@@ -3527,7 +3527,7 @@ p125 = Product.create(name: 'Wonder Woman print, Wonderwoman poster, Justice Lea
     tag296 = Tag.create(category_id: cat13.id , product_id: p125.id)
 
 
-file411 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/wwprint1.jpg')
+file411 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/wwprint1.jpg')
 
 p125.photos.attach(io: file411, filename: 'wwprint1.jpg')
 
@@ -3549,10 +3549,10 @@ p126 = Product.create(name: 'Gold Katana, Handmade Real Katana Japanese Samurai 
     tag298 = Tag.create(category_id: cat11.id , product_id: p126.id)
 
 
-file412 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/katana1.jpg')
-file413 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/katana2.jpg')
-file414 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/katana3.jpg')
-file415 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/katana4.jpg')
+file412 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/katana1.jpg')
+file413 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/katana2.jpg')
+file414 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/katana3.jpg')
+file415 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/katana4.jpg')
 
 p126.photos.attach(io: file412, filename: 'katana1.jpg')
 p126.photos.attach(io: file413, filename: 'katana2.jpg')
@@ -3576,9 +3576,9 @@ p127 = Product.create(name: 'Porter Robinson Worlds Inspired Glowing LED Art Pie
     tag299 = Tag.create(category_id: cat3.id , product_id: p127.id)
     tag300 = Tag.create(category_id: cat7.id , product_id: p127.id)
 
-file416 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/porter1.jpg')
-file417 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/porter2.jpg')
-file418 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/porter3.jpg')
+file416 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/porter1.jpg')
+file417 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/porter2.jpg')
+file418 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/porter3.jpg')
 
 p127.photos.attach(io: file416, filename: 'porter1.jpg')
 p127.photos.attach(io: file417, filename: 'porter2.jpg')
@@ -3599,9 +3599,9 @@ p128 = Product.create(name: 'Odesza - Do you know the story of the Russian cosmo
     tag301 = Tag.create(category_id: cat7.id , product_id: p128.id)
 
 
-file419 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/odesza1.jpg')
-file420 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/odesza2.jpg')
-file421 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/odesza3.jpg')
+file419 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/odesza1.jpg')
+file420 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/odesza2.jpg')
+file421 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/odesza3.jpg')
 
 p128.photos.attach(io: file419, filename: 'odesza1.jpg')
 p128.photos.attach(io: file420, filename: 'odesza2.jpg')
@@ -3626,8 +3626,8 @@ p129 = Product.create(name: 'Madeon and Porter Robinson EDM mashup perler', desc
     tag304 = Tag.create(category_id: cat14.id , product_id: p129.id)
 
 
-file422 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/porteon1.jpg')
-file423 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/porteon2.jpg')
+file422 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/porteon1.jpg')
+file423 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/porteon2.jpg')
 
 p129.photos.attach(io: file422, filename: 'porteon1.jpg')
 p129.photos.attach(io: file423, filename: 'porteon2.jpg')
@@ -3651,7 +3651,7 @@ p130 = Product.create(name: 'Seven Lions Galaxy Perler Necklace', description: "
     tag306 = Tag.create(category_id: cat7.id , product_id: p130.id)
     tag307 = Tag.create(category_id: cat14.id , product_id: p130.id)
 
-file424 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/sevenlions1.jpg')
+file424 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/sevenlions1.jpg')
 
 p130.photos.attach(io: file424, filename: 'sevenlions1.jpg')
 
@@ -3675,10 +3675,10 @@ For DJ's, musicians and entertainers of all kind.",
      tag309 = Tag.create(category_id: cat7.id , product_id: p131.id)
      tag310 = Tag.create(category_id: cat11.id , product_id: p131.id)
 
-file425 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/maus11.jpg')
-file426 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/maus12.jpg')
-file427 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/maus13.jpg')
-file428 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/maus14.jpg')
+file425 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/maus11.jpg')
+file426 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/maus12.jpg')
+file427 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/maus13.jpg')
+file428 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/maus14.jpg')
 
 p131.photos.attach(io: file425, filename: 'maus11.jpg')
 p131.photos.attach(io: file426, filename: 'maus12.jpg')
@@ -3695,10 +3695,10 @@ p132 = Product.create(name: 'Arcane LED Goggles - Inspired by Rezz EDM', descrip
     tag311 = Tag.create(category_id: cat7.id , product_id: p132.id)
      tag312 = Tag.create(category_id: cat11.id , product_id: p132.id)
 
-file429 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/rezz1.jpg')
-file430 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/rezz2.jpg')
-file431 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/rezz3.jpg')
-file432 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/rezz4.jpg')
+file429 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/rezz1.jpg')
+file430 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/rezz2.jpg')
+file431 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/rezz3.jpg')
+file432 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/rezz4.jpg')
 
 p132.photos.attach(io: file429, filename: 'rezz1.jpg')
 p132.photos.attach(io: file430, filename: 'rezz2.jpg')
@@ -3728,8 +3728,8 @@ p133 = Product.create(name: 'Holographic Illenium + Odesza-Inspired Sticker | Fa
          tag315 = Tag.create(category_id: cat16.id , product_id: p133.id)
 
 
-file432 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/illenium1.jpg')
-file433 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/illenium2.jpg')
+file432 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/illenium1.jpg')
+file433 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/illenium2.jpg')
 
 
 p133.photos.attach(io: file432, filename: 'illenium1.jpg')
@@ -3751,8 +3751,8 @@ p134 = Product.create(name: 'Illenium x Seven Lions Kandi Cuff Bracelet, Mini Pe
     tag317 = Tag.create(category_id: cat7.id , product_id: p134.id)
     tag318 = Tag.create(category_id: cat14.id , product_id: p134.id)
 
-file434 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/lionsillenium1.jpg')
-file435 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/lionsillenium2.jpg')
+file434 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/lionsillenium1.jpg')
+file435 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/lionsillenium2.jpg')
 
 
 p134.photos.attach(io: file434, filename: 'lionsillenium1.jpg')
@@ -3775,8 +3775,8 @@ p135 = Product.create(name: 'San Holo Perler Necklace EDM', description: "Perler
     tag320 = Tag.create(category_id: cat7.id , product_id: p135.id)
     tag321 = Tag.create(category_id: cat14.id , product_id: p135.id)
 
-file436 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/sanholo1.jpg')
-file437 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/sanholo2.jpg')
+file436 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/sanholo1.jpg')
+file437 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/sanholo2.jpg')
 
 
 p135.photos.attach(io: file436, filename: 'sanholo1.jpg')
@@ -3794,8 +3794,8 @@ p136 = Product.create(name: 'EDM Rave Flag- Avicii. DJ Festival flag.', descript
 
     tag322 = Tag.create(category_id: cat7.id , product_id: p136.id)
 
-file438 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/avicii1.jpg')
-file439 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/avicii2.jpg')
+file438 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/avicii1.jpg')
+file439 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/avicii2.jpg')
 
 
 p136.photos.attach(io: file438, filename: 'avicii1.jpg')
@@ -3815,9 +3815,9 @@ p137 = Product.create(name: 'Martin Garrix Small or Large Perler Bead Art Kandi 
     tag324 = Tag.create(category_id: cat7.id , product_id: p137.id)
     tag325 = Tag.create(category_id: cat14.id , product_id: p137.id)
 
-file438 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/garrix1.jpg')
-file439 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/garrix2.jpg')
-file440 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/garrix3.jpg')
+file438 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/garrix1.jpg')
+file439 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/garrix2.jpg')
+file440 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/garrix3.jpg')
 
 
 p137.photos.attach(io: file438, filename: 'garrix1.jpg')
@@ -3839,8 +3839,8 @@ p138 = Product.create(name: 'Kaskade Turn It Down Dripping Lips Beaded Kandi Per
     tag327 = Tag.create(category_id: cat7.id , product_id: p138.id)
     tag328 = Tag.create(category_id: cat14.id , product_id: p138.id)
 
-file441 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/kaskade1.jpg')
-file442 = open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/kaskade2.jpg')
+file441 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/kaskade1.jpg')
+file442 = URI.open('https://etsy-clone-seed.s3-us-west-1.amazonaws.com/product-images/new/kaskade2.jpg')
 
 
 p138.photos.attach(io: file441, filename: 'kaskade1.jpg')
