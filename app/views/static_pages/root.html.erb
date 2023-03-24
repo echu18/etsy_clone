@@ -7,10 +7,15 @@
 
 <% if logged_in? %>
     <script type="text/javascript">
-        window.currentUser = <%= render(
-            "api/users/user.json.jbuilder",
-            user: current_user
-        ).html_safe %>
+    window.currentUser = <%= render partial: "api/users/user", 
+    formats: [:json], 
+    handlers: [:jbuilder],
+    locals: { user: current_user } %>
+    
+    // window.currentUser = <%= render(
+    //     "api/users/user.json.jbuilder",
+    //     user: current_user
+    // ).html_safe %>
     </script>
 <% end %>
 
