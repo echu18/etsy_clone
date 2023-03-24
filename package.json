@@ -6,7 +6,6 @@
   },
   "dependencies": {
     "@babel/preset-react": "^7.8.3",
-    "babel-preset-react": "^6.24.1",
     "css-loader": "^3.5.3",
     "file-loader": "^6.0.0",
     "react": "^16.13.0",
@@ -43,7 +42,7 @@
     "deploy": "gh-pages -d dist"
   },
   "engines": {
-    "node": "18.15.0",
+    "node": "16.19.1",
     "npm": "6.13.4"
   },
   "author": "",
