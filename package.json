@@ -42,7 +42,7 @@
     "deploy": "gh-pages -d dist"
   },
   "engines": {
-    "node": "18.15.0",
+    "node": "18.13.0",
     "npm": "6.13.4"
   },
   "author": "",
