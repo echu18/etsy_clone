@@ -117,13 +117,13 @@ cat10 = Category.create(name: 'Memes')
 cat11 = Category.create(name: 'Cosplay')
 
 # Sub-categories
-# cat12 = Category.create(name: 'Keycaps', main_cat_id: cat4.id)
-# cat13 = Category.create(name: 'Prints', main_cat_id: cat5.id)
-# cat14 = Category.create(name: 'Perler', main_cat_id: cat5.id)
-# cat15 = Category.create(name: 'Pins', main_cat_id: cat5.id)
-# cat16 = Category.create(name: 'Stickers', main_cat_id: cat5.id)
-# cat17 = Category.create(name: 'Plushes', main_cat_id: cat6.id)
-# cat18 = Category.create(name: 'Figurines', main_cat_id: cat6.id)
+cat12 = Category.create(name: 'Keycaps')
+cat13 = Category.create(name: 'Prints')
+cat14 = Category.create(name: 'Perler')
+cat15 = Category.create(name: 'Pins')
+cat16 = Category.create(name: 'Stickers')
+cat17 = Category.create(name: 'Plushes')
+cat18 = Category.create(name: 'Figurines')
 
 # # Sub-categories: Cosplay
 # cat49 = Category.create(name: 'Costumes', main_cat_id: cat11.id)
