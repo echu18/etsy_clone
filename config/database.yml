@@ -80,7 +80,7 @@ test:
 #
 production:
   <<: *default
-  url:  <%= ENV['HEROKU_POSTGRESQL_GOLD_URL'] %>
+  url:  <%= ENV['DATABASE_URL'] %>
 
 
 # database: etsy_clone_production
