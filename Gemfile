@@ -1,8 +1,9 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-# ruby '2.5.1'
-ruby '3.2.1'
+ruby '2.5.1'
+# ruby '3.2.1'
+# ruby '2.6.10'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 # gem 'rails', '~> 5.2.4', '>= 5.2.4.1'
@@ -29,7 +30,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'jquery-rails'
 gem "aws-sdk-s3", require: false
 gem 'mimemagic', github: 'mimemagicrb/mimemagic', ref: '01f92d86d15d85cfd0f20dabd025dcbd36a8a60f'
-
+gem "net-http"
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
