@@ -129,9 +129,9 @@
 .hero-large-text > h3 {
     font-size: 28px;
     font-family: 'Roboto Slab', serif;
-    margin:  0px 20px 20px 0px;
+    /* margin:  0px 20px 20px 0px; */
     /* margin:  0px 20px 20px 20px; */
-    /* margin-bottom: 30px; */
+    margin-bottom: 20px;
 }
 
 .hero-large-text > p {
@@ -308,7 +308,7 @@
 
     .hero-large-text {
         display: flex;
-        flex-wrap: wrap;
+        /* flex-wrap: wrap; */
         /* flex-direction: columm; */
         text-align: center;
         justify-content: center;
@@ -471,7 +471,6 @@
 
     .hero-large-text {
         display: flex;
-        flex-wrap: wrap;
         text-align: center;
         justify-content: center;
         align-items: center;

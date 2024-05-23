@@ -23,7 +23,7 @@
 .searchbar-form input[type="text"]:focus + .search-suggestion-box {
     /* display: hidden; */
     /* visibility: hidden; */
-    width: 53.5vw;
+    /* width: 53.5vw; */
     height: fit-content;
     opacity: 1;
     transition: height 1s, width 1s, opacity 0s;

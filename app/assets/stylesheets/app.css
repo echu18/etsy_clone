@@ -20,7 +20,7 @@
 
 
 #inner {  
-    width: auto;
+    /* width: auto; */
     border-collapse: collapse;
     box-sizing: border-box;
 }

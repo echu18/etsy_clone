@@ -284,7 +284,7 @@ class Navbar extends React.Component {
     // });
 
     return (
-      <div className="navbar">
+      <div className="navbar max-width">
         <div className="navbar-inner" id="inner">
           <div className="etsyLogo" onClick={this.redirectToHome}>
             <img
