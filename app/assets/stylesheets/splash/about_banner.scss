@@ -11,6 +11,16 @@
     margin-bottom: 100px;
     color: black;
     background-color: #fdebd2;
+		align-items: center;
+		
+}
+.about-text-container {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	height: 100%;
+	align-items: center;
+	width: 1400px;
 }
 
 .about-block > h2 {
@@ -35,7 +45,7 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    position: absolute;
+    // position: absolute;
     height: 200px;
     width: 100%;
     margin-top: 10px;
@@ -58,7 +68,7 @@
 
 
 .about-block-container{
-    position: absolute;
+    // position: absolute;
     top: 30%;
     display: flex;
     justify-content: space-around;
@@ -105,7 +115,7 @@
 	flex-direction: column;
 	align-items: center;
 	text-align: center;
-	position: absolute;
+	// position: absolute;
 	bottom: 0px;
 	height: 175px;
 	width: 100%;

@@ -23,7 +23,7 @@ class BlogBanner extends React.Component {
 
   render() {
     return (
-      <div className="blog-banner-container" id="inner">
+      <div className="blog-banner-container max-width inner">
         <div className="blog-banner-text">
           <h3>The Meme Exchange</h3>
           <a href="#">What's trending</a>

@@ -24,7 +24,7 @@ class HeroBanner extends React.Component {
 
     render() {
         return (
-          <div className="main-hero-banner" id="inner">
+          <div className="main-hero-banner max-width inner">
             <div
               className="hero-block-large"
               onClick={(e) => this.searchHeroBanner(e, "large")}

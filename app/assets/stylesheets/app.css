@@ -13,13 +13,7 @@
 }
 
 
-#main {
-    min-width: 69.6vw;
-    max-width: 69.6vw;
-}
-
-
-#inner {  
+.inner {  
     /* width: auto; */
     border-collapse: collapse;
     box-sizing: border-box;

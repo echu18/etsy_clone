@@ -285,7 +285,7 @@ class Navbar extends React.Component {
 
     return (
       <div className="navbar max-width">
-        <div className="navbar-inner" id="inner">
+        <div className="navbar-inner inner">
           <div className="etsyLogo" onClick={this.redirectToHome}>
             <img
               className="memesy-logo"

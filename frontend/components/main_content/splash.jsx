@@ -37,7 +37,7 @@ class Splash extends React.Component{
         
         if (!this.state.rendered) {
             return (
-              <div id="splash-main" id="inner">
+              <div id="splash-main inner">
                 <div className="splash-loading">
                   <LoadingPage />
                 </div>
@@ -48,8 +48,8 @@ class Splash extends React.Component{
         } else {
 
         return(
-            <div id='splash-main' id='inner'>
-                    <div className='main-headline-text' id='inner'>
+            <div id='splash-main inner'>
+                    <div className='main-headline-text inner max-width'>
                         {/* <p>If it’s handcrafted, vintage, custom, or unique, it’s on Etsy.</p> */}
                         {/* <p className='headline-p1'>Welcome to Memesy! Take a look around, we won't judge.</p> */}
                         <p className='headline-p2'>See what's trending on Memesy.</p>
