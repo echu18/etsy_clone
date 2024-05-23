@@ -1,3 +1,6 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import '~bootstrap/scss/bootstrap.scss';
+
 #app {
     display: flex;
     justify-content: space-around;
@@ -12,8 +15,6 @@
     min-width: 69.6vw;
     max-width: 69.6vw;
 }
-
-
 
 
 #inner {  

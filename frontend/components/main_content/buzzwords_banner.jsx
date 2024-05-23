@@ -5,7 +5,7 @@ import { checkMark } from '../../../app/assets/images/svgs/icons';
 // import { } from '../../../app/assets/images/svgs/icons';
 
 const BuzzwordsBanner = (props) => (
-    <section className='buzzwords-banner'>
+    <section className='buzzwords-banner mx-4'>
         <div className='buzzwords-block'>
 
             <h2><div className='checkmark check-1'> {checkMark}</div>Unique everything</h2>

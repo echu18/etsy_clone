@@ -85,8 +85,6 @@
 }
 
 
-
-
 .buzzwords-block {
     font-family: 'Roboto', sans-serif;
     font-weight: bolder;
@@ -102,6 +100,8 @@
     position: relative;
     font-size: 17px;
     margin-bottom: 3px;
+		display: flex;
+		justify-content: center;
 }
 
 .buzzwords-block > p {
@@ -111,33 +111,42 @@
 
 
 .checkmark > svg {
-    /* display: flex; */
-    
-    fill: #F1651F;
+	/* display: flex; */
+	fill: #F1651F;
 }
 
-
-.check-1 {
-    position: absolute;
-    height: 7%;
-    width: 7%;
-    left: 22%;
-    top: -20%;
-}
-.check-2 {
-    position: absolute;
-    height: 7%;
-    width: 7%;
-    left: 20%;
-    top: -20%;
-}
+.check-1,
+.check-2,
 .check-3 {
-    position: absolute;
-    height: 7%;
-    width: 7%;
-    left: 23%;
-    top: -20%;
+	position: relative;
+	height: 7%;
+	width: 7%;
+	margin-right: 16px;
+	top: -8%;
 }
+
+
+// .check-1 {
+//     position: absolute;
+//     height: 7%;
+//     width: 7%;
+//     left: 22%;
+//     top: -20%;
+// }
+// .check-2 {
+//     position: absolute;
+//     height: 7%;
+//     width: 7%;
+//     left: 20%;
+//     top: -20%;
+// }
+// .check-3 {
+//     position: absolute;
+//     height: 7%;
+//     width: 7%;
+//     left: 23%;
+//     top: -20%;
+// }
 
 
 
