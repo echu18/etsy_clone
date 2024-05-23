@@ -1,4 +1,3 @@
-import 'bootstrap/dist/css/bootstrap.css';
 import React from 'react';
 import { Route, Switch, Link } from 'react-router-dom';
 import { AuthRoute } from '../util/route_util';

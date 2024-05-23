@@ -3,8 +3,8 @@
     position: absolute;
     box-sizing: border-box;
     width: 100vw;
-    /* height: 124px; */
-    height: 106px;
+    height: 114px;
+    /* height: 106px; */
     border-bottom: 2px solid rgb(221, 221, 221);
     /* padding-bottom: -2px; */
     /* padding: 0px; */
@@ -76,7 +76,7 @@
 
 
 hr:after {
-    background: none repeat scroll 0 0 transparent;
+	background: none repeat scroll 0 0 transparent;
   bottom: 0;
   content: "";
   display: flex;
@@ -85,7 +85,7 @@ hr:after {
   left: 50%;
   position: absolute;
     /* background: tomato; */
-    background: black;
+  background: black;
   /* transition: width 0.3s ease 0s, left 0.3s ease 0s; */
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
   width: 0;
