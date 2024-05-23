@@ -36,6 +36,11 @@
     margin-top: 10px;
     border-radius: 3px;
     z-index: -5;
+    img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
 }
 
 

@@ -31,10 +31,11 @@ class HeroBanner extends React.Component {
             >
               <div className="hero-large-text">
                 <h3>Standing out just got so easy.</h3>
-                <p>Shop cosplay </p>
-                <div className="angle-arrow-icon arrow-hero-large">
-                  {angleArrowIcon}
-                </div>
+                <p>Shop cosplay 
+                  <div className="angle-arrow-icon arrow-hero-large">
+                    {angleArrowIcon}
+                  </div>
+                </p>
               </div>
 
               <div className="hero-container">
