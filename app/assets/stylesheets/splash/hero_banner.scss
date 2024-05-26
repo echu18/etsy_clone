@@ -388,36 +388,25 @@
 
 @media only screen and (max-width: 900px) {
     .main-hero-banner {
-        box-sizing: border-box;
-        display: flex;
-        /* justify-content: space-between; */
-        min-height: 550px;
-        width: 100vw;
-        /* height: 1000px; */
-         
+			box-sizing: border-box;
+			display: flex;
+			min-height: unset;
     }
 
     .hero-block-large {
         display: flex;
         justify-content: flex-end;
-        width: 100%;
-        min-width: 600px;
-        min-height: 10%;
-        max-height: 100%;
-        /* background-color: #DDEAE2; */
+        // width: 100%;
+        // min-width: 600px;
+        // min-height: 10%;
+        // max-height: 100%;
         background-color: rgb(202, 236, 247);
         border: 1px solid rgb(208, 208, 209);
+				margin: 0 24px;
     }
 
     .hero-medium-small {
-        display: flex;
-        flex-direction: row;
-        box-sizing: border-box;
-        width:  100%;
-        min-width: 600px;
-        min-height: 10%;
-        max-height: 45%;
-        margin-top: 10px;
+        display: none;
     }
 
     .hero-block-medium {

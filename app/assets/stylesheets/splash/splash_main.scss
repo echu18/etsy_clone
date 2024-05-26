@@ -119,10 +119,22 @@
 .check-2,
 .check-3 {
 	position: relative;
-	height: 7%;
-	width: 7%;
+	height: 18px;
+	width: 18px;
 	margin-right: 16px;
 	top: -8%;
+}
+
+@media only screen and (max-width: 900px) {
+	.check-1,
+	.check-2,
+	.check-3 {
+		margin-right: 0;
+	}
+
+	.buzzwords-banner {
+		margin: 40px 0 60px 0;
+	}
 }
 
 

@@ -199,7 +199,7 @@
     cursor: pointer;
     background-color: #e8e8e8;
     animation: zoom-in 0.3s forwards;
-     border-top-right-radius: 30px;
+    border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
     height: 43px;
     width: 50px; 
@@ -299,15 +299,14 @@
     border: 1.5px solid whitesmoke;
 }
 
-/* 
 
-
-@media only screen and (min-width: 80%) {
-  .navbar-inner {
-      flex-wrap: wrap;
+@media only screen and (max-width: 900px) {
+  .header {
+    padding-left: 24px;
+    padding-right: 24px;
   }
 }
-*/
+
 
 
 

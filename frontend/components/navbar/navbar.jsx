@@ -301,16 +301,31 @@ class Navbar extends React.Component {
                 id="sb-form"
                 onSubmit={(e) => e.preventDefault()}
               >
-                <input
-                  type="text"
-                  onClick={this.toggleSuggestionBox}
-                  className="searchbar-input"
-                  onChange={this.handleChange}
-                  onKeyUp={(e) => this.handleSubmit(e)}
-                  name="search"
-                  placeholder="Search for items or shops"
-                  autoComplete="off"
-                />
+              {
+                window.innerWidth > 900 ? (
+                  <input
+                    type="text"
+                    onClick={this.toggleSuggestionBox}
+                    className="searchbar-input"
+                    onChange={this.handleChange}
+                    onKeyUp={(e) => this.handleSubmit(e)}
+                    name="search"
+                    placeholder="Search for items or shops"
+                    autoComplete="off"
+                  />
+                ) : (
+                  <input
+                    type="text"
+                    onClick={this.toggleSuggestionBox}
+                    className="searchbar-input"
+                    onChange={this.handleChange}
+                    onKeyUp={(e) => this.handleSubmit(e)}
+                    name="search"
+                    placeholder="Search"
+                    autoComplete="off"
+                  />
+                )
+              }
                 {/* onKeyUp={e => this.handleSubmit(e)} */}
 
                 {/* <SearchSuggestionBox /> */}

@@ -31,18 +31,7 @@
     #main {
         min-width: 75vw;
         display: block;
-        /* max-width: 95%; */
-
-        /* margin-left: 5%;
-        margin-right: 5%; */
-        /* min-width: 500px; */
-        /* min-width: 69.6vw; */
-
-        /* min-width: 700px;
-        max-width: 69.6vw; */
-        height: 2000px;
-        /* border: 1px solid red; */
-
+        /* height: 2000px; */
     }
 }
 
@@ -56,10 +45,6 @@
     }
 } */ 
  
-@media only screen and (max-width: 900px) {
-    #main {
-       
-        min-width: 600px;
-        /* border: 1px solid blue; */
-    }
-} 
+/* @media only screen and (max-width: 900px) {
+
+}  */

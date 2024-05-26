@@ -139,3 +139,15 @@
     font-size: 12px;
     font-weight: normal;
 }
+
+@media only screen and (max-width: 1347px) {
+    .product-card-container {
+        min-width: unset;
+    }
+    .regular-card {
+        width: 30%;
+    }
+    .flex-start>.product-card-container {
+        margin-right: 0;
+    }
+}

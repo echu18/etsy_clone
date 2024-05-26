@@ -153,3 +153,39 @@
     transition: box-shadow, transform 0.2s ease-in-out;
     cursor: pointer;
 }
+
+
+@media only screen and (max-width: 1347px) {
+    .about-banner {
+        margin-top: 200px;
+    }
+}
+
+@media only screen and (max-width: 1347px) {
+    .about-block-container {
+        flex-direction: column;
+        height: unset;
+    }
+
+    .about-header-container {
+        margin-top: 24px;
+        h2 {
+            font-size: 32px;
+        }
+    }
+    .about-block {
+        margin: 12px 0;
+        h2 {
+           font-size: 20px; 
+        }
+        p {
+            font-size: 14px;
+        }
+    }
+    .question-block {
+        h2 {
+            font-size: 14px;
+            margin-top: 12px;
+        }
+    }
+}

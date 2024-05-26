@@ -34,3 +34,15 @@
     width: auto;
     border: 1px solid pink;
 } */
+
+@media only screen and (max-width: 1347px) {
+    .cat-modules {
+        row-gap: 248px;
+        padding: 24px;
+    }
+    #cat-module-container {
+        flex-wrap: wrap;
+        margin-top: 0;
+        row-gap: 24px;
+    }
+}
