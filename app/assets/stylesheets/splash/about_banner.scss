@@ -4,7 +4,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    height: 575px;
+    // height: 575px;
     width: 100%;
     overflow: hidden;
     margin-top: 100px;
@@ -169,6 +169,7 @@
 
     .about-header-container {
         margin-top: 24px;
+        height: 140px;
         h2 {
             font-size: 32px;
         }

@@ -130,10 +130,12 @@
 	.check-2,
 	.check-3 {
 		margin-right: 0;
+		top: 0;
 	}
 
 	.buzzwords-banner {
-		margin: 40px 0 60px 0;
+		margin: 40px 24px 60px 24px;
+		width: unset;
 	}
 }
 

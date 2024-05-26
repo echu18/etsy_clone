@@ -4,7 +4,7 @@
     justify-content: space-between;
     flex-wrap: wrap;
     min-height: 320px;
-    width: 100vw;
+    // width: 100vw;
     height: 34vh;
     /* min-height: 34vh; */
     max-height: 33.5vh;
@@ -195,9 +195,6 @@
     }
 
 
-
-
-
 @media only screen and (max-width: 1500px) {
     .main-hero-banner {
         box-sizing: border-box;
@@ -205,10 +202,10 @@
         justify-content: space-between;
         flex-wrap: wrap;
         min-height: 320px;
-        width: 100vw;
+        // width: 100vw;
         /* height: 100vh; */
         max-height: 400px;
-        /* border: 1px solid red; */
+				margin: 0 24px;
     }
 
     .main-hero-banner  div {
@@ -391,15 +388,14 @@
 			box-sizing: border-box;
 			display: flex;
 			min-height: unset;
+			justify-content: center;
     }
 
     .hero-block-large {
         display: flex;
         justify-content: flex-end;
-        // width: 100%;
-        // min-width: 600px;
-        // min-height: 10%;
-        // max-height: 100%;
+        min-width: unset;
+				width: unset;
         background-color: rgb(202, 236, 247);
         border: 1px solid rgb(208, 208, 209);
 				margin: 0 24px;
