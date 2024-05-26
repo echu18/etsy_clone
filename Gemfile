@@ -32,6 +32,7 @@ gem 'jquery-rails'
 gem "aws-sdk-s3", require: false
 gem 'mimemagic', github: 'mimemagicrb/mimemagic', ref: '01f92d86d15d85cfd0f20dabd025dcbd36a8a60f'
 gem "net-http"
+gem 'bootstrap-sass'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
