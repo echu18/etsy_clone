@@ -29,7 +29,7 @@ class Footer extends React.Component {
                         {ripTear2}
                     </div>
 
-                    <div className='footer-blocks'>
+                    <div className='footer-blocks max-width'>
                         <div className='footer-shop fblock'>
                             <h2>Shop</h2>
                                 <p>Gift cards</p>
