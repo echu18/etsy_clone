@@ -1,6 +1,6 @@
 @import 'bootstrap/dist/css/bootstrap.min.css';
-@import '~/util/overrides.scss';
-/* @import './util/overrides.scss'; */
+/* @import '~/util/overrides.scss'; */
+@import './util/overrides.scss';
 
 #app {
     display: flex;
