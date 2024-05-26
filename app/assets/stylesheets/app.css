@@ -1,7 +1,6 @@
 @import 'bootstrap/dist/css/bootstrap.min.css';
 @import './util/overrides.scss';
 
-
 #app {
     display: flex;
     justify-content: space-around;
