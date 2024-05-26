@@ -34,7 +34,7 @@ gem 'mimemagic', github: 'mimemagicrb/mimemagic', ref: '01f92d86d15d85cfd0f20dab
 gem "net-http"
 
 
-gem 'rails-assets-bootstrap', ">= 4.0.0.alpha.2"
+gem 'rails-assets-bootstrap'
 gem 'rails-assets-tether'
 
 # Use ActiveStorage variant
