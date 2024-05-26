@@ -78,3 +78,4 @@ group :production do
 end
 
 gem "bootstrap", "~> 5.3"
+gem 'bootstrap-sass'
