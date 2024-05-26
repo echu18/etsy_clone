@@ -151,3 +151,16 @@
         margin-right: 0;
     }
 }
+
+
+@media only screen and (max-width: 1300px) {
+    .large-card {
+        width: 23%;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .large-card {
+        width: 49%;
+    }
+}

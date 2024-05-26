@@ -57,7 +57,7 @@
     display: flex;
     flex-direction: column;
     bottom: -130px;
-    left: 17%;
+    left: 19%;
     /* background-color: gainsboro; */
 }
 
@@ -192,4 +192,32 @@
     padding: 5px;
     /* opacity: 1; */
     transition: opacity 3s ease-in-out;
+}
+
+
+@media only screen and (max-width: 1400px) {
+  .index-container {
+    padding: 0 12px;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .index-bottom-container {
+    flex-direction: column-reverse;
+  }
+
+  .index-filter-sidebar {
+    margin: 0;
+  }
+
+  .index-btn-container {
+    bottom: -100px;
+    left: 38%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .index-container {
+    padding: 16px 24px 0 24px;
+  }
 }
