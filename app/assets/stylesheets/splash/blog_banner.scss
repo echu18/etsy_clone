@@ -1,6 +1,6 @@
 .blog-banner-container {
     font-family: 'Helvetica', sans-serif;
-        color: rgb(53, 53, 53);
+    color: rgb(53, 53, 53);
 
     letter-spacing: 0.02em;
     font-weight: 500;
@@ -9,6 +9,7 @@
     width: 1400px;
     display: flex;
     flex-direction: column;
+    padding: 0 24px;
 }
 
 .blog-banner-text {
@@ -57,6 +58,7 @@
     
     margin: 20px 0px 20px 0px;
     /* border: 1px solid blue; */
+    width: 32%;
 }
 
 .blog-card:hover {
@@ -102,16 +104,8 @@
     margin: 10px 0px 10px 0px;
 }
 
-@media only screen and (max-width: 1200px) {
-    .blog-card {
-        width: 32%;
-    }
-}
 
 @media only screen and (max-width: 900px) {
-    .blog-banner-container {
-        padding: 0 24px;
-    }
     .blog-card-container {
         flex-wrap: wrap;
     }
