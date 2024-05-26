@@ -78,7 +78,7 @@ class ProductShow extends React.Component {
     const starSeq = this.getStars(this.props.product.avg_rating);
 
     return (
-      <div className="product-listing-container">
+      <div className="product-listing-container max-width">
         {/* <button onClick={e=>this.handleBackBtn(e)}> Back to search results</button> */}
         <div className="image-and-sidebar">
           <ProductImage

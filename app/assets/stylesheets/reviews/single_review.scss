@@ -54,5 +54,12 @@
     width: 16px;
 }
 
+@media only screen and (max-width: 900px) {
+    .single-review {
+        height: unset;
+        padding: 36px 0;
+    }
+}
+
 
 

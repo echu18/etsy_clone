@@ -94,3 +94,9 @@
 .review-errors {
     color: red;
 }
+
+@media only screen and (max-width: 900px) {
+    .review-form-content textarea {
+        width: 100%;
+    }
+}
