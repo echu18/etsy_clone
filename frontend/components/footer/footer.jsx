@@ -83,7 +83,7 @@ class Footer extends React.Component {
                     United States   |   English (US)   |   $ (USD)
                     </div>
                     <div className='terms-policies'>
-                        <p>© 2020 Memesy, Inc.</p>
+                        <p>© 2024 Memesy, Inc.</p>
                         <p><u>Terms of Use</u></p>
                         <p><u>Privacy</u></p>
                         <p><u>Interest-based ads</u></p>

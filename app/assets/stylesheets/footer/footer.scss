@@ -60,7 +60,7 @@
     z-index: 5;
 }
 
-.riptear-1 > svg{
+.riptear-1 > svg {
     display: flex;
     position: absolute;
     top: -15%;
@@ -78,6 +78,24 @@
     fill:  #2F466C;
     width: 100%;
     z-index: -1;
+}
+
+@media only screen and (max-width: 1300px) {
+    .riptear-1 > svg {
+        top: -10%;
+    }
+    .riptear-2 > svg {
+        top: -5%;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .riptear-1 > svg {
+        top: -5%;
+    }
+    .riptear-2 > svg {
+        top: -2%;
+    }
 }
 
 .footer-end-container {

@@ -152,7 +152,7 @@
     position: absolute;
     width: 28px;
     height: 24.5px;
-    bottom: 7px;
+    bottom: 8px;
     right: 10px;
     overflow: hidden;
     margin: 13px 0px auto -27px;
@@ -177,12 +177,12 @@
 .search-icon::after {
     position: absolute;
     bottom: -2px;
-    right: -1px;
+    right: 1px;
     content: ' ';
     display: flex;
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
-    height: 44px;
+    height: 40px;
     width: 50px; 
     /* height: 1px;
     width: 1px; */
