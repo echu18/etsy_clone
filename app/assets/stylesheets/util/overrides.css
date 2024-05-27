@@ -1,3 +1,7 @@
 p {
   margin: 0;
 }
+
+hr {
+  opacity: 1;
+}
