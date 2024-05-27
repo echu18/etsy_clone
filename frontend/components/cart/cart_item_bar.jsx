@@ -128,18 +128,20 @@ class CartItemBar extends React.Component {
                         alt={`Product photo: ${product.name}`}
                         onClick={e => this.redirectToProductPage(e, product.id)}
                     />
-                    <div className="ci-name">
-                        <p onClick={e => this.redirectToProductPage(e, product.id)}>{product.name}</p>
-                        {/* <button>Save for later</button> */}
-                        <button onClick={this.handleDelete}>Remove</button>
+                    <div>
+                        <div className="ci-name">
+                            <p onClick={e => this.redirectToProductPage(e, product.id)}>{product.name}</p>
+                            {/* <button>Save for later</button> */}
+                            <div className="d-flex flex-column justify-start">
+                                <select id='ci-qty-dropdown' onChange={this.updateQuantity} quantity={this.state.quantity}>
+                                    {this.qtyDropdown()}
+                                </select>
+                                <button onClick={this.handleDelete}>Remove</button>
+                            </div>
+                        </div>
                     </div>
-                    <select id='ci-qty-dropdown' onChange={this.updateQuantity} quantity={this.state.quantity}>
-            
 
-                        {this.qtyDropdown()}
-                    </select>
                     <p className="ci-price">
-                   
                         {this.formatPrice(cartItem.quantity * product.price)}
                     </p>
                 </div>

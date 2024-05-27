@@ -126,8 +126,6 @@ class CartShow extends React.Component {
         if (!this.props.products) return null;
         // const cartItems = Array.from(this.props.cartItems);
         const {products, cartItems, users} = this.props
-        debugger
-        
 
         return (
           <div className="cart-outer-container">
@@ -179,17 +177,19 @@ class CartShow extends React.Component {
                     </section>
 
                     <div className="cart-items">
-                      {cartItems.map((cartItem, idx) => {
-                        return (
-                          <CartItemBar
-                            idx={idx}
-                            cartItem={cartItem}
-                            products={products}
-                            {...this.props}
-                            callbackFromParent={this.childCallback}
-                          />
-                        );
-                      })}
+                      <div className="cart-items-inner">
+                        {cartItems.map((cartItem, idx) => {
+                          return (
+                            <CartItemBar
+                              idx={idx}
+                              cartItem={cartItem}
+                              products={products}
+                              {...this.props}
+                              callbackFromParent={this.childCallback}
+                            />
+                          );
+                        })}
+                      </div>
                       <div className="cart-pay-container">
                         <div className="cart-pay-inner">
                           <h3>How you'll pay</h3>

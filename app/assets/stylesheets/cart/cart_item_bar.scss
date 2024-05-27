@@ -74,13 +74,14 @@
     text-decoration: underline;
 }
 
-.ci-name > button {
+.ci-name button {
     font-size: 14px;
     border-style: none;
     background-color: transparent;
+    padding: 8px 0;
 }
 
-.ci-name > button:hover {
+.ci-name button:hover {
     cursor: pointer;
     text-decoration: underline;
 }
@@ -192,5 +193,11 @@
     height: 1px;
     width: 100%;
     border-bottom: 1px solid gainsboro;
+}
 
+
+@media only screen and (max-width: 900px) {
+    .ci-name p {
+        padding-right: 36px;
+    }
 }
