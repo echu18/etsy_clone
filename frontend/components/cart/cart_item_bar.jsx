@@ -102,18 +102,16 @@ class CartItemBar extends React.Component {
     render() {
         window.scrollTo(0, 0);
 
-       
-       
-
-
         if (!this.props.cartItem || !this.props.products) return null; 
+        
+        const {products, cartItem, users} = this.props;
 
-        const { cartItem, products, users} = this.props;
         const product = products[cartItem.product_id]
+
         // const price = products[cartItem.product_id].price * cartItem.quantity
         const price = this.state.totalPrice;
         
-        if (!product || !price) return null;
+        if (!product || price === null) return null;
 
         return (
             <div className="cart-item-bar">
@@ -142,7 +140,7 @@ class CartItemBar extends React.Component {
                     </select>
                     <p className="ci-price">
                    
-                        {this.formatPrice(price)}
+                        {this.formatPrice(product.price)}
                     </p>
                 </div>
 

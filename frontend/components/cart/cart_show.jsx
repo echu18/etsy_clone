@@ -120,6 +120,7 @@ class CartShow extends React.Component {
 
 
 
+
     render() {
       
         // if (!this.props.cartItems) return null;
@@ -133,7 +134,7 @@ class CartShow extends React.Component {
         return (
           <div className="cart-outer-container">
             <div className="cart-background">
-              <div className="cart-show-container">
+              <div className="cart-show-container max-width">
                 {cartItems.length === 0 ? (
                   <div className="empty-cart-msg">
                     <h3>Your cart is empty.</h3>
