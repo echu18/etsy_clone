@@ -50,13 +50,13 @@ class CartItemBar extends React.Component {
 
     }
 
-    // updatePrice(){
-    //     const updatedPrice = this.props.products[this.props.cartItem.product_id].price * this.state.quantity
-    //     this.setState({totalPrice: updatedPrice})
-    //     // this.returnPrice()
-    //     debugger
-    //     // this.props.callbackFromParent(updatedPrice);
-    // }
+    updatePrice(){
+        const updatedPrice = this.props.products[this.props.cartItem.product_id].price * this.state.quantity
+        this.setState({totalPrice: updatedPrice})
+        // this.returnPrice()
+        debugger
+        // this.props.callbackFromParent(updatedPrice);
+    }
 
     formatPrice(price){
         return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(price)
@@ -140,7 +140,7 @@ class CartItemBar extends React.Component {
                     </select>
                     <p className="ci-price">
                    
-                        {this.formatPrice(product.price)}
+                        {this.formatPrice(cartItem.quantity * product.price)}
                     </p>
                 </div>
 

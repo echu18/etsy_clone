@@ -66,15 +66,13 @@ class CartShow extends React.Component {
               });
 
       } else {
-
-      
         let sum = 0;
         (this.props.cartItems).forEach(cartItem => {
-          if (!!this.props.products[cartItem.product_id]) {
-            sum +=
-              cartItem.quantity *
-              this.props.products[cartItem.product_id].price;
-          }
+            if (!!this.props.products[cartItem.product_id]) {
+              sum +=
+                cartItem.quantity *
+                this.props.products[cartItem.product_id].price;
+            }
           })
         
         let shippingTotal = this.props.cartItems.length * 3.99;
@@ -128,7 +126,7 @@ class CartShow extends React.Component {
         if (!this.props.products) return null;
         // const cartItems = Array.from(this.props.cartItems);
         const {products, cartItems, users} = this.props
-
+        debugger
         
 
         return (
