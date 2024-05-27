@@ -295,3 +295,9 @@
         align-items: center;
     }
 }
+
+@media only screen and (max-width: 900px) {
+    .cart-background {
+        margin-top: 16px;
+    }
+}
